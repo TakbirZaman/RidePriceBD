@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RidePrice BD</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:#eef2f7;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:28px 16px 64px;
+}
+
+/* ── Header ── */
+header{width:100%;max-width:520px;text-align:center;margin-bottom:22px}
+header h1{font-size:28px;font-weight:800;color:#0f1923;letter-spacing:-.5px}
+header h1 span{color:#1a6ef5}
+header p{color:#6b7a8d;font-size:13px;margin-top:4px}
+.api-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:10px;background:#fff;border:1px solid #dde3ed;
+  border-radius:20px;padding:5px 14px;font-size:12px;color:#6b7a8d;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:#94a3b8;flex-shrink:0}
+.dot.green{background:#22c55e;box-shadow:0 0 6px #22c55e}
+.dot.red{background:#ef4444}
+
+/* ── Card ── */
+.card{
+  background:#fff;border-radius:20px;
+  box-shadow:0 4px 28px rgba(0,0,0,.08);
+  padding:24px 20px;width:100%;max-width:520px;
+}
+
+/* ── From / To row ── */
+.route-row{
+  display:grid;grid-template-columns:1fr 36px 1fr;
+  align-items:end;gap:8px;margin-bottom:18px;
+}
+.swap-btn{
+  background:#eff6ff;border:1.5px solid #bfdbfe;
+  border-radius:10px;width:36px;height:42px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;cursor:pointer;
+  transition:background .2s,transform .2s;
+  flex-shrink:0;align-self:end;
+}
+.swap-btn:hover{background:#dbeafe;transform:rotate(180deg)}
+
+/* ── Field ── */
+.field{margin-bottom:16px}
+label{
+  display:block;font-size:11px;font-weight:700;
+  color:#6b7a8d;text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:6px;
+}
+select, input[type="time"]{
+  width:100%;padding:11px 14px;
+  border:1.5px solid #e2e8f0;border-radius:10px;
+  font-size:14px;font-family:inherit;font-weight:500;
+  color:#0f1923;background:#f8fafc;outline:none;
+  appearance:none;-webkit-appearance:none;
+  transition:border-color .2s,background .2s;cursor:pointer;
+}
+select:focus, input[type="time"]:focus{border-color:#1a6ef5;background:#fff}
+
+/* ── Distance chip ── */
+.dist-chip{
+  text-align:center;margin-bottom:16px;
+}
+.dist-chip span{
+  background:#f0fdf4;border:1px solid #bbf7d0;
+  color:#166534;font-size:12px;font-weight:700;
+  padding:5px 16px;border-radius:20px;
+  display:inline-flex;align-items:center;gap:5px;
+}
+
+/* ── Vehicle selector ── */
+.vehicle-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+  margin-bottom:16px;
+}
+.v-card{
+  border:1.5px solid #e2e8f0;border-radius:12px;
+  padding:10px 4px;text-align:center;cursor:pointer;
+  background:#f8fafc;transition:all .18s;user-select:none;
+}
+.v-card:hover{border-color:#93c5fd;background:#eff6ff}
+.v-card.active{border-color:#1a6ef5;background:#eff6ff;box-shadow:0 0 0 3px rgba(26,110,245,.1)}
+.v-icon{font-size:24px;line-height:1}
+.v-name{font-size:11px;font-weight:700;color:#374151;margin-top:5px}
+.v-rate{font-size:10px;color:#94a3b8;margin-top:1px}
+
+/* ── Weather buttons ── */
+.weather-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+  margin-bottom:16px;
+}
+.w-btn{
+  border:1.5px solid #e2e8f0;border-radius:10px;
+  padding:9px 4px;text-align:center;cursor:pointer;
+  background:#f8fafc;transition:all .18s;user-select:none;
+}
+.w-btn:hover{border-color:#93c5fd;background:#eff6ff}
+.w-btn.active{border-color:#1a6ef5;background:#eff6ff}
+.w-icon{font-size:20px}
+.w-label{font-size:10px;font-weight:700;color:#374151;margin-top:3px}
+
+/* ── Time + Demand row ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+
+/* Demand slider */
+.demand-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.demand-head label{margin:0}
+.dval{
+  background:#eff6ff;color:#1a6ef5;
+  font-size:11px;font-weight:700;
+  padding:2px 9px;border-radius:6px;
+}
+input[type="range"]{
+  width:100%;accent-color:#1a6ef5;cursor:pointer;
+}
+
+/* ── Button ── */
+.btn{
+  width:100%;padding:14px;
+  background:#1a6ef5;color:#fff;
+  font-size:15px;font-weight:700;font-family:inherit;
+  border:none;border-radius:12px;cursor:pointer;
+  transition:background .2s,transform .1s;
+}
+.btn:hover{background:#1558d0}
+.btn:active{transform:scale(.98)}
+.btn:disabled{background:#93b4f8;cursor:not-allowed}
+
+/* ── Result ── */
+.result{
+  margin-top:18px;padding:20px;
+  border-radius:16px;background:#eff6ff;
+  border:1.5px solid #bfdbfe;display:none;
+  animation:pop .3s ease;
+}
+.result.show{display:block}
+.result.yellow{background:#fefce8;border-color:#fde68a}
+.result.orange{background:#fff7ed;border-color:#fed7aa}
+.result.red{background:#fef2f2;border-color:#fecaca}
+
+.res-top{display:flex;justify-content:space-between;align-items:flex-start}
+.price-lbl{font-size:11px;font-weight:700;color:#6b7a8d;text-transform:uppercase;letter-spacing:.06em}
+.price-big{font-size:50px;font-weight:800;color:#0f1923;line-height:1;letter-spacing:-2px}
+.taka{font-size:26px;vertical-align:top;margin-top:8px;display:inline-block}
+.surge-tag{
+  font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:5px 12px;border-radius:20px;
+}
+.tag-green {background:#dcfce7;color:#166534}
+.tag-yellow{background:#fef9c3;color:#854d0e}
+.tag-orange{background:#ffedd5;color:#9a3412}
+.tag-red   {background:#fee2e2;color:#991b1b}
+
+.res-meta{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:8px;margin-top:14px;padding-top:14px;
+  border-top:1px solid rgba(0,0,0,.07);
+}
+.m-lbl{font-size:10px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em}
+.m-val{font-size:13px;font-weight:700;color:#0f1923;margin-top:2px}
+
+/* ── Error ── */
+.err-box{
+  background:#fef2f2;border:1.5px solid #fecaca;
+  color:#b91c1c;border-radius:10px;
+  padding:12px 16px;font-size:13px;line-height:1.6;
+  margin-top:14px;display:none;
+}
+.err-box.show{display:block}
+
+/* ── History ── */
+.history{width:100%;max-width:520px;margin-top:18px}
+.hist-title{
+  font-size:11px;font-weight:700;color:#94a3b8;
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;
+}
+.hist-row{
+  background:#fff;border-radius:12px;padding:12px 16px;
+  margin-bottom:7px;display:flex;
+  justify-content:space-between;align-items:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+  animation:pop .25s ease;
+}
+.h-main{font-size:13px;font-weight:700;color:#0f1923}
+.h-sub {font-size:11px;color:#94a3b8;margin-top:2px}
+.h-price{font-size:20px;font-weight:800;color:#1a6ef5}
+
+@keyframes pop{
+  from{opacity:0;transform:scale(.97) translateY(5px)}
+  to  {opacity:1;transform:scale(1)   translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ride<span>Price</span> BD</h1>
+  <p>Dhaka ride fare estimator — any route, any vehicle</p>
+  <div class="api-pill">
+    <div class="dot" id="dot"></div>
+    <span id="statusText">Checking API…</span>
+  </div>
+</header>
+
+<div class="card">
+
+  <!-- From / To -->
+  <div class="route-row">
+    <div class="field" style="margin:0">
+      <label>🟢 From</label>
+      <select id="from_loc" onchange="updateDist()">
+        <option value="Jagannath University">Jagannath University</option>
+        <option value="Motijheel">Motijheel</option>
+        <option value="Lalbagh">Lalbagh</option>
+        <option value="Shahbagh">Shahbagh</option>
+        <option value="New Market">New Market</option>
+        <option value="Dhanmondi">Dhanmondi</option>
+        <option value="Farmgate">Farmgate</option>
+        <option value="Mohammadpur">Mohammadpur</option>
+        <option value="Mohakhali">Mohakhali</option>
+        <option value="BRAC University">BRAC University</option>
+        <option value="East West University">East West University</option>
+        <option value="Gulshan">Gulshan</option>
+        <option value="Banani">Banani</option>
+        <option value="UIU">UIU</option>
+        <option value="Mirpur 10">Mirpur 10</option>
+        <option value="Jamuna Future Park">Jamuna Future Park</option>
+        <option value="AIUB">AIUB</option>
+        <option value="NSU">NSU</option>
+        <option value="Uttara">Uttara</option>
+      </select>
+    </div>
+
+    <button class="swap-btn" onclick="swapLocations()" title="Swap">⇅</button>
+
+    <div class="field" style="margin:0">
+      <label>🔴 To</label>
+      <select id="to_loc" onchange="updateDist()">
+        <option value="Motijheel">Motijheel</option>
+        <option value="Jagannath University">Jagannath University</option>
+        <option value="Lalbagh">Lalbagh</option>
+        <option value="Shahbagh">Shahbagh</option>
+        <option value="New Market">New Market</option>
+        <option value="Dhanmondi">Dhanmondi</option>
+        <option value="Farmgate">Farmgate</option>
+        <option value="Mohammadpur">Mohammadpur</option>
+        <option value="Mohakhali">Mohakhali</option>
+        <option value="BRAC University">BRAC University</option>
+        <option value="East West University">East West University</option>
+        <option value="Gulshan">Gulshan</option>
+        <option value="Banani">Banani</option>
+        <option value="UIU">UIU</option>
+        <option value="Mirpur 10">Mirpur 10</option>
+        <option value="Jamuna Future Park">Jamuna Future Park</option>
+        <option value="AIUB">AIUB</option>
+        <option value="NSU">NSU</option>
+        <option value="Uttara">Uttara</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Distance chip -->
+  <div class="dist-chip">
+    <span id="distChip">📏 Calculating distance…</span>
+  </div>
+
+  <!-- Vehicle -->
+  <div class="field" style="margin-bottom:6px">
+    <label>🚗 Ride Type</label>
+  </div>
+  <div class="vehicle-grid">
+    <div class="v-card active" onclick="setVehicle('Rickshaw',this)">
+      <div class="v-icon">🛺</div>
+      <div class="v-name">Rickshaw</div>
+      <div class="v-rate">৳15/km</div>
+    </div>
+    <div class="v-card" onclick="setVehicle('Bike',this)">
+      <div class="v-icon">🏍️</div>
+      <div class="v-name">Bike</div>
+      <div class="v-rate">৳14/km</div>
+    </div>
+    <div class="v-card" onclick="setVehicle('Car',this)">
+      <div class="v-icon">🚗</div>
+      <div class="v-name">Car</div>
+      <div class="v-rate">৳28/km</div>
+    </div>
+    <div class="v-card" onclick="setVehicle('Bus',this)">
+      <div class="v-icon">🚌</div>
+      <div class="v-name">Bus</div>
+      <div class="v-rate">৳5/km</div>
+    </div>
+  </div>
+
+  <!-- Warning for rickshaw long trips -->
+  <div id="rickshawWarn" style="display:none;background:#fefce8;border:1px solid #fde68a;border-radius:8px;padding:8px 12px;font-size:12px;color:#854d0e;margin-bottom:14px">
+    ⚠️ Rickshaws aren't suitable for trips over 6 km. Consider Bike or Car.
+  </div>
+
+  <!-- Weather -->
+  <div class="field" style="margin-bottom:6px">
+    <label>🌤 Weather</label>
+  </div>
+  <div class="weather-row">
+    <div class="w-btn active" onclick="setWeather('Sunny',this)">
+      <div class="w-icon">☀️</div><div class="w-label">Sunny</div>
+    </div>
+    <div class="w-btn" onclick="setWeather('Regular',this)">
+      <div class="w-icon">⛅</div><div class="w-label">Regular</div>
+    </div>
+    <div class="w-btn" onclick="setWeather('Rainy',this)">
+      <div class="w-icon">🌧️</div><div class="w-label">Rainy</div>
+    </div>
+    <div class="w-btn" onclick="setWeather('Stormy',this)">
+      <div class="w-icon">⛈️</div><div class="w-label">Stormy</div>
+    </div>
+  </div>
+
+  <!-- Time + Demand -->
+  <div class="two-col">
+    <div class="field" style="margin:0">
+      <label>🕐 Pickup Time</label>
+      <input type="time" id="time" value="08:30"/>
+    </div>
+    <div class="field" style="margin:0">
+      <div class="demand-head">
+        <label>📊 Demand</label>
+        <span class="dval" id="dval">0.50</span>
+      </div>
+      <input type="range" id="demand" min="0" max="1" step="0.01" value="0.50"
+        oninput="document.getElementById('dval').textContent=parseFloat(this.value).toFixed(2)"/>
+    </div>
+  </div>
+
+  <button class="btn" id="btn" onclick="getPrice()">Get Price Estimate</button>
+
+  <!-- Result -->
+  <div class="result" id="result">
+    <div class="res-top">
+      <div>
+        <div class="price-lbl">Estimated Fare</div>
+        <div class="price-big"><span class="taka">৳</span><span id="priceNum">—</span></div>
+      </div>
+      <div class="surge-tag" id="surgeTag">Normal</div>
+    </div>
+    <div class="res-meta" id="resMeta"></div>
+  </div>
+
+  <!-- Error -->
+  <div class="err-box" id="err">
+    ⚠️ <strong>Failed to fetch.</strong><br>
+    The API is not running. Open Command Prompt and run:<br><br>
+    <code>cd D:\Projects\RidePriceBD</code><br>
+    <code>python api.py</code><br><br>
+    Keep that window open, then click the button again.
+  </div>
+
+</div>
+
+<!-- History -->
+<div class="history" id="histBox" style="display:none">
+  <div class="hist-title">Recent Estimates</div>
+  <div id="histList"></div>
+</div>
+
+<script>
+const API = 'http://localhost:5000';
+
+// ── Coords (same as model) for client-side distance preview ───────────
+const COORDS = {
+  "Jagannath University": [23.7066,90.4070],
+  "Motijheel":            [23.7330,90.4182],
+  "Lalbagh":              [23.7203,90.3871],
+  "Shahbagh":             [23.7394,90.3964],
+  "New Market":           [23.7313,90.3855],
+  "Dhanmondi":            [23.7461,90.3742],
+  "Farmgate":             [23.7582,90.3900],
+  "Mohammadpur":          [23.7578,90.3572],
+  "Mohakhali":            [23.7799,90.4070],
+  "BRAC University":      [23.7779,90.4351],
+  "East West University": [23.7647,90.4279],
+  "Gulshan":              [23.7925,90.4078],
+  "Banani":               [23.7937,90.4066],
+  "UIU":                  [23.7672,90.4284],
+  "Mirpur 10":            [23.8073,90.3680],
+  "Jamuna Future Park":   [23.8130,90.4224],
+  "AIUB":                 [23.8304,90.4241],
+  "NSU":                  [23.8150,90.4244],
+  "Uttara":               [23.8759,90.3795],
+};
+
+function haversine(l1, l2) {
+  const R=6371, toR=x=>x*Math.PI/180;
+  const dLat=toR(l2[0]-l1[0]), dLon=toR(l2[1]-l1[1]);
+  const a=Math.sin(dLat/2)**2 + Math.cos(toR(l1[0]))*Math.cos(toR(l2[0]))*Math.sin(dLon/2)**2;
+  return (R*2*Math.asin(Math.sqrt(a))*1.35).toFixed(1);
+}
+
+let selectedVehicle = 'Rickshaw';
+let selectedWeather = 'Sunny';
+let history = [];
+
+// ── API health check ──────────────────────────────────────────────────
+fetch(`${API}/health`).then(r=>{
+  if(r.ok){ document.getElementById('dot').className='dot green'; document.getElementById('statusText').textContent='API Online'; }
+  else throw 0;
+}).catch(()=>{
+  document.getElementById('dot').className='dot red';
+  document.getElementById('statusText').textContent='API Offline — run: python api.py';
+});
+
+// ── Distance chip ─────────────────────────────────────────────────────
+function updateDist() {
+  const f = document.getElementById('from_loc').value;
+  const t = document.getElementById('to_loc').value;
+  const chip = document.getElementById('distChip');
+  if (f === t) { chip.textContent='⚠️ From and To are the same'; return; }
+  const km = haversine(COORDS[f], COORDS[t]);
+  chip.textContent = `📏 ~${km} km  (${f} → ${t})`;
+
+  // Rickshaw warning
+  document.getElementById('rickshawWarn').style.display =
+    (selectedVehicle === 'Rickshaw' && km > 6) ? '' : 'none';
+}
+updateDist();
+
+// ── Swap locations ────────────────────────────────────────────────────
+function swapLocations() {
+  const f = document.getElementById('from_loc');
+  const t = document.getElementById('to_loc');
+  const tmp = f.value;
+  f.value = t.value;
+  t.value = tmp;
+  updateDist();
+}
+
+// ── Vehicle ───────────────────────────────────────────────────────────
+function setVehicle(val, el) {
+  selectedVehicle = val;
+  document.querySelectorAll('.v-card').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');
+  updateDist();
+}
+
+// ── Weather ───────────────────────────────────────────────────────────
+function setWeather(val, el) {
+  selectedWeather = val;
+  document.querySelectorAll('.w-btn').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ── Predict ───────────────────────────────────────────────────────────
+async function getPrice() {
+  const from_loc = document.getElementById('from_loc').value;
+  const to_loc   = document.getElementById('to_loc').value;
+  const btn      = document.getElementById('btn');
+  const err      = document.getElementById('err');
+
+  if (from_loc === to_loc) { alert('Please select different From and To locations.'); return; }
+
+  err.classList.remove('show');
+  btn.disabled = true;
+  btn.textContent = 'Calculating…';
+
+  const hour   = parseInt(document.getElementById('time').value.split(':')[0]);
+  const demand = parseFloat(document.getElementById('demand').value);
+
+  try {
+    const resp = await fetch(`${API}/predict`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ from_loc, to_loc, vehicle: selectedVehicle, weather: selectedWeather, hour, demand }),
+    });
+    if (!resp.ok) throw new Error();
+    const data = await resp.json();
+    showResult(data, from_loc, to_loc);
+    addHistory(from_loc, to_loc, data);
+  } catch {
+    err.classList.add('show');
+    document.getElementById('result').classList.remove('show');
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Get Price Estimate';
+}
+
+function showResult(data, from_loc, to_loc) {
+  document.getElementById('priceNum').textContent = data.price.toLocaleString();
+
+  const tagMap = { Normal:['tag-green',''], Moderate:['tag-yellow','yellow'], High:['tag-orange','orange'], Peak:['tag-red','red'] };
+  const [tc, rc] = tagMap[data.surge_label];
+  document.getElementById('surgeTag').className = `surge-tag ${tc}`;
+  document.getElementById('surgeTag').textContent = data.surge_label + ' Demand';
+  document.getElementById('result').className = `result show ${rc}`;
+
+  const icons = { Rickshaw:'🛺', Bike:'🏍️', Car:'🚗', Bus:'🚌' };
+  document.getElementById('resMeta').innerHTML = `
+    <div class="meta-item">
+      <div class="m-lbl">Vehicle</div>
+      <div class="m-val">${icons[selectedVehicle]} ${selectedVehicle}</div>
+    </div>
+    <div class="meta-item">
+      <div class="m-lbl">Distance</div>
+      <div class="m-val">~${data.distance_km} km</div>
+    </div>
+    <div class="meta-item">
+      <div class="m-lbl">Weather</div>
+      <div class="m-val">${selectedWeather}</div>
+    </div>
+  `;
+}
+
+function addHistory(from_loc, to_loc, data) {
+  history.unshift({ from_loc, to_loc, vehicle: selectedVehicle, price: data.price, surge: data.surge_label });
+  if (history.length > 6) history.pop();
+
+  const icons = { Rickshaw:'🛺', Bike:'🏍️', Car:'🚗', Bus:'🚌' };
+  document.getElementById('histBox').style.display = '';
+  document.getElementById('histList').innerHTML = history.map(h=>`
+    <div class="hist-row">
+      <div>
+        <div class="h-main">${h.from_loc} → ${h.to_loc}</div>
+        <div class="h-sub">${icons[h.vehicle]} ${h.vehicle} · ${h.surge} demand</div>
+      </div>
+      <div class="h-price">৳${h.price.toLocaleString()}</div>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>
