@@ -517,7 +517,7 @@ input[type="range"]{
     <div class="v-card" onclick="setVehicle('Bike',this)">
       <div class="v-icon">🏍️</div>
       <div class="v-name">Bike</div>
-      <div class="v-rate">৳14/km</div>
+      <div class="v-rate">৳12/km</div>
     </div>
     <div class="v-card" onclick="setVehicle('Car',this)">
       <div class="v-icon">🚗</div>
@@ -780,188 +780,132 @@ function pingAPI(){ fetch(`${API}/health`).catch(()=>{}); }
 pingAPI();
 setInterval(pingAPI, 14 * 60 * 1000);
 
-// ── API health check ──────────────────────────────────────────────────
-fetch(`${API}/health`).then(r=>{
-  if(r.ok){ document.getElementById('dot').className='dot green'; document.getElementById('statusText').textContent='API Online'; }
-  else throw 0;
-}).catch(()=>{
-  document.getElementById('dot').className='dot red';
-  document.getElementById('statusText').textContent='API Offline — run: python api.py';
-});
+// ── Pricing engine — runs in browser, instant ─────────────────────────
+const VEHICLES_DATA = {
+  Rickshaw: { base: 25,  per_km: 20,   per_min: 0    },
+  Bike:     { base: 27,  per_km: 12,   per_min: 0.75 },
+  Car:      { base: 45,  per_km: 23,   per_min: 3    },
+  Bus:      { base: 10,  per_km:  4,   per_min: 0    },
+  CNG:      { base: 40,  per_km: 27,   per_min: 2    },
+};
+const WEATHER_MULT = { Sunny:1.0, Regular:1.1, Rainy:1.4, Stormy:1.65 };
 
-// ── Distance chip ─────────────────────────────────────────────────────
-function updateDist() {
-  const f = document.getElementById('from_loc').value;
-  const t = document.getElementById('to_loc').value;
-  const chip = document.getElementById('distChip');
-  if (f === t) { chip.textContent='⚠️ From and To are the same'; return; }
-  const km = haversine(COORDS[f], COORDS[t]);
-  chip.textContent = `📏 ~${km} km  (${f} → ${t})`;
+function calcPrice(from_loc, to_loc, vehicle, weather, hour, demand) {
+  const dist   = haversine(COORDS[from_loc], COORDS[to_loc]);
+  const v      = VEHICLES_DATA[vehicle];
+  const isRush = (hour>=8&&hour<=10)||(hour>=17&&hour<=20);
+  const isNight= hour>=23||hour<=5;
+  const isFri  = new Date().getDay()===5;
+  const speed  = isRush ? 8 : (isNight ? 20 : 15);
+  const mins   = (dist/speed)*60;
 
-  // Rickshaw warning
-  document.getElementById('rickshawWarn').style.display =
-    (selectedVehicle === 'Rickshaw' && km > 6) ? '' : 'none';
-}
-updateDist();
+  let base = v.base + dist*v.per_km + mins*v.per_min;
+  const wm = vehicle==='Bus' ? Math.min(WEATHER_MULT[weather]||1,1.10) : (WEATHER_MULT[weather]||1);
+  const dAdd = vehicle==='Bus' ? demand*8 : demand*25;
 
-// ── Swap locations ────────────────────────────────────────────────────
-function swapLocations() {
-  const f = document.getElementById('from_loc');
-  const t = document.getElementById('to_loc');
-  const tmp = f.value;
-  f.value = t.value;
-  t.value = tmp;
-  updateDist();
-}
+  if(isRush)  base*=1.30;
+  if(isNight) base*=1.15;
+  if(isFri)   base*=0.90;
 
-// ── Vehicle ───────────────────────────────────────────────────────────
-function setVehicle(val, el) {
-  selectedVehicle = val;
-  document.querySelectorAll('.v-card').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
-  updateDist();
-}
+  let price = Math.max(v.base, Math.round(base*wm + dAdd));
 
-// ── Demand ────────────────────────────────────────────────────────────
-function setDemand(val, el) {
-  document.getElementById('demand').value = val;
-  document.querySelectorAll('.d-btn').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
-}
+  const distFare   = Math.round(v.base + dist*v.per_km);
+  const timeFare   = Math.round(mins*v.per_min);
+  const weatherAdd = Math.round(base*(wm-1));
+  const rushAdd    = Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isRush?0.30:isNight?0.15:0));
+  const friDisc    = isFri ? Math.round((v.base+dist*v.per_km)*0.10) : 0;
 
-// ── Weather ───────────────────────────────────────────────────────────
-function setWeather(val, el) {
-  selectedWeather = val;
-  document.querySelectorAll('.w-btn').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
+  const T={Rickshaw:[60,100,140],Bike:[120,200,280],Car:[200,350,500],Bus:[30,60,90],CNG:[120,200,300]}[vehicle];
+  const surge = price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
+
+  return {
+    price, distance_km: Math.round(dist*10)/10,
+    price_low:  Math.round(price*0.92),
+    price_high: Math.round(price*1.08),
+    surge_label: surge,
+    factors:{
+      base_fare:distFare, time_fare:timeFare, est_mins:Math.round(mins),
+      weather_add:weatherAdd, time_add:rushAdd,
+      demand_add:Math.round(dAdd), friday_disc:friDisc,
+      is_rush:isRush, is_night:isNight, is_friday:isFri,
+    }
+  };
 }
 
-// ── Predict ───────────────────────────────────────────────────────────
-async function getPrice() {
+// ── Get Price — instant, no API call ─────────────────────────────────────
+function getPrice() {
   const from_loc = document.getElementById('from_loc').value;
   const to_loc   = document.getElementById('to_loc').value;
-  const btn      = document.getElementById('btn');
   const err      = document.getElementById('err');
-  const loadBox  = document.getElementById('loadingBox');
-  const loadMsg  = document.getElementById('loadingMsg');
-  const loadSub  = document.getElementById('loadingSub');
 
-  if (from_loc === to_loc) { alert('Please select different From and To locations.'); return; }
-
+  if(from_loc===to_loc){ alert('Please select different From and To locations.'); return; }
   err.classList.remove('show');
-  document.getElementById('result').classList.remove('show');
-  document.getElementById('mlPanel').classList.remove('show');
-  btn.disabled = true;
-  btn.textContent = 'Calculating…';
-  loadBox.classList.add('show');
-  loadMsg.textContent = 'Calculating fare…';
-  loadSub.textContent = 'Asking the ML model';
-
-  // After 3s show a hint if still waiting
-  const hint = setTimeout(() => {
-    loadMsg.textContent = 'Almost there…';
-    loadSub.textContent = 'Server is warming up, just a moment';
-  }, 3000);
+  document.getElementById('loadingBox').classList.remove('show');
 
   const hour   = parseInt(document.getElementById('time').value.split(':')[0]);
   const demand = parseFloat(document.getElementById('demand').value);
 
   try {
-    const resp = await fetch(`${API}/predict`, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ from_loc, to_loc, vehicle: selectedVehicle, weather: selectedWeather, hour, demand }),
-    });
-    clearTimeout(hint);
-    if (!resp.ok) throw new Error();
-    const data = await resp.json();
-    loadBox.classList.remove('show');
+    const data = calcPrice(from_loc, to_loc, selectedVehicle, selectedWeather, hour, demand);
     showResult(data, from_loc, to_loc);
     addHistory(from_loc, to_loc, data);
-  } catch {
-    clearTimeout(hint);
-    loadBox.classList.remove('show');
+  } catch(e) {
     err.classList.add('show');
   }
-
-  btn.disabled = false;
-  btn.textContent = 'Get Price Estimate';
 }
 
 function showResult(data, from_loc, to_loc) {
   document.getElementById('priceNum').textContent = data.price.toLocaleString();
 
-  const tagMap = { Normal:['tag-green',''], Moderate:['tag-yellow','yellow'], High:['tag-orange','orange'], Peak:['tag-red','red'] };
-  const [tc, rc] = tagMap[data.surge_label];
+  const tagMap = {Normal:['tag-green',''],Moderate:['tag-yellow','yellow'],High:['tag-orange','orange'],Peak:['tag-red','red']};
+  const [tc,rc] = tagMap[data.surge_label];
   document.getElementById('surgeTag').className = `surge-tag ${tc}`;
-  document.getElementById('surgeTag').textContent = data.surge_label + ' Demand';
+  document.getElementById('surgeTag').textContent = data.surge_label+' Demand';
   document.getElementById('result').className = `result show ${rc}`;
 
-  // Price range
   const pr = document.getElementById('priceRange');
-  pr.style.display = '';
+  pr.style.display='';
   document.getElementById('priceLow').textContent  = data.price_low.toLocaleString();
   document.getElementById('priceHigh').textContent = data.price_high.toLocaleString();
 
-  const icons = { Rickshaw:'🚲', Bike:'🏍️', Car:'🚗', Bus:'🚌', CNG:'🛺' };
-  document.getElementById('resMeta').innerHTML = `
-    <div class="meta-item">
-      <div class="m-lbl">Vehicle</div>
-      <div class="m-val">${icons[selectedVehicle]} ${selectedVehicle}</div>
-    </div>
-    <div class="meta-item">
-      <div class="m-lbl">Distance</div>
-      <div class="m-val">~${data.distance_km} km</div>
-    </div>
-    <div class="meta-item">
-      <div class="m-lbl">Weather</div>
-      <div class="m-val">${selectedWeather}</div>
-    </div>
+  const icons={Rickshaw:'🚲',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛺'};
+  document.getElementById('resMeta').innerHTML=`
+    <div class="meta-item"><div class="m-lbl">Vehicle</div><div class="m-val">${icons[selectedVehicle]} ${selectedVehicle}</div></div>
+    <div class="meta-item"><div class="m-lbl">Distance</div><div class="m-val">~${data.distance_km} km</div></div>
+    <div class="meta-item"><div class="m-lbl">Weather</div><div class="m-val">${selectedWeather}</div></div>
   `;
 
-  // ── ML Breakdown ──────────────────────────────────────────────────
-  const f   = data.factors;
-  const max = f.base_fare + f.time_fare + f.weather_add + f.time_add + f.demand_add + 1;
-
-  function setBar(barId, valId, amount, maxVal, prefix='৳') {
-    const pct = Math.min(100, Math.round((amount / maxVal) * 100));
-    document.getElementById(barId).style.width = pct + '%';
-    document.getElementById(valId).textContent = prefix + Math.abs(amount).toLocaleString();
+  // ML breakdown
+  const f=data.factors;
+  const max=f.base_fare+f.time_fare+f.weather_add+f.time_add+f.demand_add+1;
+  function setBar(bId,vId,amt,mx,prefix='৳'){
+    document.getElementById(bId).style.width=Math.min(100,Math.round((amt/mx)*100))+'%';
+    document.getElementById(vId).textContent=prefix+Math.abs(amt).toLocaleString();
   }
+  setBar('fBarBase','fValBase',f.base_fare,max);
+  const tcRow=document.getElementById('timeChargeRow');
+  if(f.time_fare>0){
+    tcRow.style.display='';
+    setBar('fBarTimeCharge','fValTimeCharge',f.time_fare,max);
+    document.getElementById('fValTimeCharge').textContent='৳'+f.time_fare+' (~'+f.est_mins+' min)';
+  } else { tcRow.style.display='none'; }
+  setBar('fBarWeather','fValWeather',f.weather_add,max);
+  setBar('fBarTime','fValTime',f.time_add,max);
+  setBar('fBarDemand','fValDemand',f.demand_add,max);
+  const friRow=document.getElementById('fridayRow');
+  if(f.is_friday&&f.friday_disc>0){
+    friRow.style.display='';
+    setBar('fBarFriday','fValFriday',f.friday_disc,max);
+    document.getElementById('fValFriday').textContent='-৳'+f.friday_disc;
+  } else { friRow.style.display='none'; }
 
-  setBar('fBarBase',       'fValBase',       f.base_fare,   max);
-  // Time charge only shown for Bike and Car
-  const tcRow = document.getElementById('timeChargeRow');
-  if (f.time_fare > 0) {
-    tcRow.style.display = '';
-    setBar('fBarTimeCharge','fValTimeCharge', f.time_fare,   max);
-    document.getElementById('fValTimeCharge').textContent =
-      '৳' + f.time_fare + ' (~' + Math.round(f.est_mins) + ' min)';
-  } else {
-    tcRow.style.display = 'none';
-  }
-  setBar('fBarWeather', 'fValWeather', f.weather_add, max);
-  setBar('fBarTime',    'fValTime',    f.time_add,    max);
-  setBar('fBarDemand',  'fValDemand',  f.demand_add,  max);
-
-  const fridayRow = document.getElementById('fridayRow');
-  if (f.is_friday && f.friday_disc > 0) {
-    fridayRow.style.display = '';
-    setBar('fBarFriday', 'fValFriday', f.friday_disc, max);
-    document.getElementById('fValFriday').textContent = '-৳' + f.friday_disc.toLocaleString();
-  } else {
-    fridayRow.style.display = 'none';
-  }
-
-  // Condition tags
-  const tags = [];
-  if (f.is_rush)   tags.push('<span class="tag tag-rush">🚦 Rush Hour</span>');
-  if (f.is_night)  tags.push('<span class="tag tag-night">🌙 Late Night</span>');
-  if (f.is_friday) tags.push('<span class="tag tag-friday">🕌 Friday</span>');
-  if (selectedWeather === 'Rainy')  tags.push('<span class="tag tag-weather-rainy">🌧️ Rain Surge</span>');
-  if (selectedWeather === 'Stormy') tags.push('<span class="tag tag-weather-stormy">⛈️ Storm Surge</span>');
-  document.getElementById('tagsRow').innerHTML = tags.join('');
-
+  const tags=[];
+  if(f.is_rush)   tags.push('<span class="tag tag-rush">🚦 Rush Hour</span>');
+  if(f.is_night)  tags.push('<span class="tag tag-night">🌙 Late Night</span>');
+  if(f.is_friday) tags.push('<span class="tag tag-friday">🕌 Friday</span>');
+  if(selectedWeather==='Rainy')  tags.push('<span class="tag tag-weather-rainy">🌧️ Rain Surge</span>');
+  if(selectedWeather==='Stormy') tags.push('<span class="tag tag-weather-stormy">⛈️ Storm Surge</span>');
+  document.getElementById('tagsRow').innerHTML=tags.join('');
   document.getElementById('mlPanel').classList.add('show');
 }
 
