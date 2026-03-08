@@ -94,10 +94,12 @@ LOCATIONS = {
 }
 
 VEHICLES = {
-    "Rickshaw": {"base": 30,  "per_km": 15,  "max_km": 6},
-    "Bike":     {"base": 35,  "per_km": 14,  "max_km": 999},
-    "Car":      {"base": 80,  "per_km": 28,  "max_km": 999},
-    "Bus":      {"base": 10,  "per_km":  5,  "max_km": 999},
+    # base=minimum fare, per_km=avg negotiated rate, per_min=time charge, max_km=practical limit
+    "Rickshaw": {"base": 25,  "per_km": 20,  "per_min": 0,   "max_km": 5},
+    "Bike":     {"base": 28,  "per_km": 13,  "per_min": 1,   "max_km": 999},
+    "Car":      {"base": 45,  "per_km": 23,  "per_min": 3,   "max_km": 999},
+    "Bus":      {"base": 10,  "per_km":  4,  "per_min": 0,   "max_km": 999},
+    "CNG":      {"base": 40,  "per_km": 27,  "per_min": 2,   "max_km": 999},
 }
 
 WEATHER_MULT = {
@@ -134,15 +136,18 @@ for _ in range(1500):
     if vehicle == "Rickshaw" and dist > v["max_km"]:
         continue
 
-    base = v["base"] + dist * v["per_km"]
-    w_m  = WEATHER_MULT[weather]
+    # Estimate travel time: base speed 15km/h in Dhaka, slower in rush
+    is_rush  = 8 <= hour <= 10 or 17 <= hour <= 20
+    is_night = hour >= 23 or hour <= 5
+    speed    = 8 if is_rush else (20 if is_night else 15)
+    est_mins = (dist / speed) * 60
 
-    if 8 <= hour <= 10 or 17 <= hour <= 20:
-        base *= 1.30
-    if 23 <= hour or hour <= 5:
-        base *= 1.15
-    if dow == 4:
-        base *= 0.90
+    base  = v["base"] + dist * v["per_km"] + est_mins * v["per_min"]
+    w_m   = WEATHER_MULT[weather]
+
+    if is_rush:  base *= 1.30
+    if is_night: base *= 1.15
+    if dow == 4: base *= 0.90
     if vehicle == "Bus":
         w_m     = min(w_m, 1.10)
         demand *= 0.3

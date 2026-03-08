@@ -1,1262 +1,1265 @@
 from_loc,to_loc,vehicle,weather,hour,dow,demand,distance_km,price
-Kalabagan,Merul Badda,Car,Rainy,20,6,0.5,9.4,636.0
-Jashimuddin (Uttara),Sayedabad Bus Terminal,Bike,Sunny,23,3,0.94,23.1,428.0
-Tikatuli,Mirpur 10,Bus,Sunny,11,1,0.17099999999999999,14.6,73.0
-Kalyanpur,Mohakhali Bus Terminal,Bus,Sunny,15,6,0.153,6.5,42.0
-Cantonment (Radisson),Mirpur 1,Car,Sunny,19,0,0.14,4.9,277.0
-Farmgate,Notun Bazar,Bus,Stormy,13,1,0.135,9.4,69.0
-Dhanmondi 15/32,Tikatuli,Bus,Sunny,6,3,0.165,7.7,59.0
-Tikatuli,Kamalapur,Bike,Regular,21,4,0.97,1.5,70.0
-Chairman Bari,High Court,Bike,Rainy,13,6,0.93,8.1,230.0
-Dhanmondi 15/32,Jashimuddin (Uttara),Bike,Stormy,12,0,0.37,18.5,492.0
-Mirpur 1,Malibagh Railgate,Car,Rainy,2,2,0.79,10.6,625.0
-Nabisco,Abdullahpur,Car,Rainy,11,1,0.19,18.2,825.0
-Airport,Mirpur 1,Bus,Rainy,11,5,0.27,9.0,59.0
-Sayedabad Bus Terminal,Jagannath University,Rickshaw,Regular,13,6,0.14,3.8,99.0
-Merul Badda,Amtoli (Mohakhali),Bus,Sunny,6,0,0.11399999999999999,3.9,40.0
-Airport,Merul Badda,Car,Sunny,12,6,0.36,10.7,389.0
-Abdullahpur,Pallabi,Bike,Rainy,20,5,0.51,10.6,343.0
-Mazar Road,Chandpur,Bus,Rainy,6,5,0.06,92.7,511.0
-Jashimuddin (Uttara),Technical,Bike,Sunny,23,0,0.46,14.0,277.0
-Malibagh Chowdhury Para,Satrasta,Bike,Rainy,4,0,1.0,5.9,214.0
-Kalyanpur,Tikatuli,Bike,Regular,22,4,0.41,11.7,219.0
-Dhanmondi 15/32,Chairman Bari,Bike,Stormy,22,3,0.17,8.0,255.0
-College Gate,Badda,Car,Rainy,4,3,0.99,11.2,668.0
-Middle Badda,Gulshan 2,Bus,Regular,15,4,0.261,3.7,32.0
-Kalyanpur,Shahbagh,Car,Rainy,18,3,0.68,7.3,539.0
-Farmgate,Jagannath University,Car,Sunny,17,6,0.59,8.1,406.0
-Mohakhali Bus Terminal,Kamalapur,Bus,Sunny,15,0,0.168,7.2,51.0
-Paltan,Shahjahanpur,Rickshaw,Sunny,15,2,0.87,2.4,92.0
-Dhanmondi 27,Press Club,Bus,Rainy,16,3,0.273,6.1,54.0
-Notun Bazar,Pallabi,Bike,Regular,8,3,0.74,12.1,305.0
-Press Club,Azimpur / Palashi,Bus,Regular,21,6,0.099,3.2,34.0
-City College / Science Lab,Asad Gate,Bus,Regular,1,4,0.165,3.2,34.0
-Mirpur 2,Azimpur / Palashi,Bus,Sunny,13,4,0.27,10.6,68.0
-Technical,Mirpur 2,Rickshaw,Sunny,22,0,0.39,3.1,71.0
-Notun Bazar,Azampur,Bike,Stormy,2,5,0.19,15.8,491.0
-Tikatuli,Notun Bazar,Bus,Rainy,10,5,0.126,10.5,83.0
-Mohakhali Bus Terminal,Azampur,Car,Sunny,23,4,0.17,15.1,520.0
-Merul Badda,Pallabi,Bus,Regular,21,2,0.156,11.5,77.0
-Mirpur 1,Mazar Road,Rickshaw,Rainy,21,0,0.13,0.7,56.0
-Mugda,MES,Car,Regular,19,4,0.97,13.1,608.0
-Mazar Road,Airport,Car,Rainy,20,0,0.26,9.7,643.0
-MES,Jagannath University,Bus,Regular,4,5,0.22799999999999998,15.6,112.0
-Pallabi,Azampur,Bus,Sunny,21,0,0.12299999999999998,9.0,64.0
-Press Club,Airport,Bike,Regular,4,3,0.14,16.9,352.0
-Rajarbagh,Bashundhara / Jamuna FP,Bike,Regular,23,4,0.72,11.0,238.0
-Tikatuli,Press Club,Car,Rainy,11,1,0.62,2.2,215.0
-Press Club,High Court,Rickshaw,Regular,4,3,0.45,0.8,67.0
-Khilgaon Flyover,House Building,Bike,Sunny,1,2,0.35,21.1,384.0
-Kuril / Kuratoli (AIUB),Bangla Motor,Bike,Regular,23,2,0.99,11.8,264.0
-Jashimuddin (Uttara),Airport,Bike,Regular,11,0,0.71,3.8,105.0
-Kochukhet,Abdullahpur,Bike,Rainy,19,2,0.54,14.5,456.0
-Dhanmondi 15/32,Airport,Bus,Rainy,12,4,0.162,15.1,106.0
-Farmgate,Abul Hotel,Car,Sunny,2,6,0.59,6.1,310.0
-Badda,Kamalapur,Bike,Rainy,9,0,0.84,8.4,303.0
-Nadda,Mazar Road,Bus,Regular,9,1,0.12,9.5,73.0
-Shyamoli,Bashundhara / Jamuna FP,Bus,Rainy,8,6,0.23099999999999998,10.7,93.0
-Mazar Road,Mirpur 2,Bus,Sunny,23,0,0.09,1.7,24.0
-Badda Link Road,Shahbagh,Car,Rainy,17,6,0.67,9.1,634.0
-Abul Hotel,Middle Badda,Car,Stormy,21,5,0.45,1.9,234.0
-Gulshan 2,Middle Badda,Bus,Sunny,23,3,0.12,3.7,37.0
-Shahbagh,Khilgaon Flyover,Bike,Sunny,4,0,0.33,4.5,117.0
-Matsya Bhaban,Mugda,Bike,Regular,4,6,0.93,6.0,173.0
-Rajarbagh,Shishu Mela,Bike,Rainy,12,4,0.12,9.8,229.0
-Press Club,Jagannath University,Rickshaw,Sunny,5,3,0.83,3.7,115.0
-Maniknagar,Sayedabad Bus Terminal,Rickshaw,Regular,20,4,0.78,1.1,69.0
-Gulshan 1,Jagannath University,Car,Sunny,3,5,0.89,11.3,473.0
-Paltan,Matsya Bhaban,Bus,Sunny,6,1,0.165,2.6,37.0
-Shishu Mela,Badda,Bus,Regular,22,6,0.243,11.3,78.0
-Abul Hotel,Pallabi,Car,Sunny,5,3,0.98,12.2,522.0
-City College / Science Lab,Mirpur 2,Bike,Sunny,5,0,0.81,9.2,219.0
-Naya Bazar,Kalabagan,Rickshaw,Stormy,3,1,0.93,5.4,220.0
-Agargaon (IDB Bhaban),High Court,Bike,Regular,12,5,0.67,7.3,167.0
-Badda Link Road,Airport,Car,Regular,10,5,0.73,10.1,542.0
-Rajlakshmi,Mirpur 12,Bus,Regular,17,4,0.081,7.5,56.0
-Nadda,Khilkhet,Rickshaw,Sunny,9,4,0.13,4.7,134.0
-Malibagh Chowdhury Para,Cantonment (Radisson),Bike,Sunny,12,2,0.14,8.6,178.0
-Cantonment (Radisson),Shishu Mela,Bike,Sunny,15,4,0.1,7.7,132.0
-Cantonment (Radisson),Shishu Mela,Bike,Sunny,22,5,0.52,7.7,156.0
-Azampur,Abul Hotel,Car,Sunny,6,2,0.91,17.9,629.0
-Notun Bazar,Farmgate,Car,Sunny,22,4,0.26,9.4,324.0
-Farmgate,Shyamoli,Rickshaw,Sunny,11,0,0.9,4.1,127.0
-Pallabi,Notun Bazar,Car,Regular,21,1,0.6,12.1,483.0
-Satrasta,Amtoli (Mohakhali),Rickshaw,Sunny,19,1,0.65,3.5,123.0
-Jatrabari,Chandpur,Bike,Sunny,23,6,0.86,77.6,1298.0
-Sayedabad Bus Terminal,Paltan,Bus,Rainy,23,6,0.273,3.1,45.0
-Mugda,Kalabagan,Bike,Stormy,14,2,0.61,9.1,284.0
-City College / Science Lab,Kakali (Banani),Bus,Sunny,21,3,0.144,8.7,44.0
-Cantonment (Radisson),Jagannath University,Bike,Rainy,5,4,0.56,14.5,359.0
-Sayedabad Bus Terminal,High Court,Bike,Sunny,9,4,0.16,4.3,111.0
-Gulshan 1,Badda,Rickshaw,Regular,23,5,0.47,4.0,132.0
-Azimpur / Palashi,Jahangir Gate,Bike,Rainy,17,5,0.94,7.1,273.0
-Mirpur 2,Khilkhet,Bus,Rainy,7,2,0.24599999999999997,8.1,60.0
-Abul Hotel,Darussalam,Bike,Rainy,4,4,0.31,10.1,269.0
-Mohakhali Bus Terminal,Notun Bazar,Bus,Regular,7,5,0.273,5.9,52.0
-Karwan Bazar,Airport,Car,Regular,16,0,0.45,13.6,512.0
-City College / Science Lab,Farmgate,Car,Regular,2,6,0.76,2.9,223.0
-Mohakhali Bus Terminal,Mirpur 10,Bus,Rainy,0,3,0.23099999999999998,6.8,68.0
-Tikatuli,Abdullahpur,Car,Regular,3,3,0.74,25.7,1038.0
-House Building,Jahangir Gate,Bus,Sunny,9,5,0.09,15.3,101.0
-Malibagh Chowdhury Para,Abul Hotel,Bus,Regular,0,6,0.22499999999999998,2.3,28.0
-Amtoli (Mohakhali),Agargaon (IDB Bhaban),Rickshaw,Stormy,7,6,0.24,3.8,165.0
-City College / Science Lab,Ray Saheb Bazar,Bike,Stormy,21,2,0.51,5.5,208.0
-Sainik Club / Banani Railgate,Kuril / Kuratoli (AIUB),Bike,Rainy,21,6,0.93,4.4,159.0
-Karwan Bazar,Tikatuli,Car,Sunny,1,2,0.51,6.1,310.0
-Amtoli (Mohakhali),Technical,Bus,Stormy,21,0,0.165,6.2,56.0
-Azimpur / Palashi,Ray Saheb Bazar,Car,Sunny,17,4,0.56,4.1,241.0
-Azimpur / Palashi,Bashundhara / Jamuna FP,Bike,Rainy,7,0,0.37,13.2,310.0
-City College / Science Lab,Shishu Mela,Car,Sunny,16,4,0.44,4.4,181.0
-Middle Badda,Nabisco,Car,Sunny,13,2,0.51,6.1,242.0
-Karwan Bazar,Kalabagan,Car,Sunny,7,4,0.17,2.5,148.0
-Sayedabad Bus Terminal,Press Club,Bike,Sunny,13,1,0.47,3.6,105.0
-Mirpur 10,Shishu Mela,Car,Sunny,22,2,0.55,6.5,286.0
-Khilgaon Flyover,Matsya Bhaban,Car,Sunny,13,5,0.85,4.0,226.0
-Abul Hotel,College Gate,Bus,Sunny,9,6,0.22799999999999998,9.3,71.0
-Nadda,Bashundhara / Jamuna FP,Bus,Regular,17,1,0.276,1.6,21.0
-Tikatuli,Mirpur 12,Car,Sunny,19,4,0.41,17.3,680.0
-Shahjahanpur,Dhanmondi 27,Bus,Sunny,21,3,0.069,6.9,46.0
-Abul Hotel,Shahjahanpur,Bus,Rainy,6,0,0.069,3.4,40.0
-Jatrabari,House Building,Bike,Stormy,1,6,0.71,26.8,797.0
-Mohakhali Bus Terminal,Nabisco,Bike,Sunny,4,0,0.55,2.2,100.0
-Dhanmondi 15/32,Mirpur 14,Bike,Stormy,20,3,0.79,11.1,413.0
-Dhanmondi 27,Mirpur 11,Car,Sunny,18,1,0.16,9.8,457.0
-Malibagh Railgate,Nabisco,Car,Sunny,16,2,0.37,5.2,227.0
-Jashimuddin (Uttara),Khilkhet,Rickshaw,Regular,3,6,0.34,5.9,179.0
-Mazar Road,Gulshan 2,Bike,Regular,8,0,0.42,7.2,218.0
-Mohakhali Bus Terminal,Rajlakshmi,Car,Sunny,17,4,0.1,14.2,556.0
-City College / Science Lab,Malibagh Chowdhury Para,Car,Sunny,16,4,0.81,7.0,270.0
-Malibagh Chowdhury Para,Mirpur 1,Bus,Rainy,7,6,0.24899999999999997,10.8,92.0
-Jahangir Gate,Gulshan 1,Rickshaw,Stormy,11,6,0.72,5.0,192.0
-Paltan,Rajarbagh,Bus,Stormy,22,1,0.183,2.1,24.0
-Kamalapur,Merul Badda,Car,Rainy,8,2,0.93,7.0,535.0
-Farmgate,Notun Bazar,Car,Rainy,16,5,0.64,9.4,496.0
-Technical,Kakali (Banani),Bike,Rainy,10,1,0.75,6.5,247.0
-Mirpur 11,Asad Gate,Car,Rainy,22,4,0.58,8.6,415.0
-Paltan,Satrasta,Bike,Sunny,16,4,0.13,6.0,131.0
-Rajarbagh,Gulistan,Rickshaw,Sunny,19,4,0.76,2.8,98.0
-Bangla Motor,Rajlakshmi,Bus,Sunny,13,6,0.144,18.8,120.0
-Malibagh Chowdhury Para,Technical,Bike,Rainy,4,2,0.63,10.3,296.0
-Farmgate,Shishu Mela,Car,Stormy,10,5,0.65,3.7,419.0
-Gulshan 2,Shishu Mela,Bike,Sunny,2,5,0.82,8.3,207.0
-Dhanmondi 27,Cantonment (Radisson),Car,Rainy,2,3,1.0,9.1,561.0
-Gulshan 1,Mirpur 12,Bike,Rainy,10,0,0.45,9.6,310.0
-Ray Saheb Bazar,Shahjahanpur,Car,Stormy,11,1,0.83,5.8,426.0
-Kalyanpur,Karwan Bazar,Bus,Rainy,15,1,0.174,5.6,62.0
-Bangla Motor,Darussalam,Bus,Rainy,4,4,0.261,7.1,30.0
-Shyamoli,Mirpur 12,Bus,Rainy,7,2,0.264,8.7,58.0
-Press Club,Mugda,Bus,Rainy,7,3,0.261,4.5,46.0
-Kakali (Banani),Dhanmondi 27,Bike,Sunny,5,3,0.24,8.4,187.0
-Dhanmondi 15/32,Naya Bazar,Car,Sunny,3,1,0.85,6.1,308.0
-Rampura Bridge,Cantonment (Radisson),Car,Stormy,16,6,0.44,7.4,485.0
-Mirpur 2,Matsya Bhaban,Bus,Sunny,6,1,0.147,9.9,60.0
-Bangla Motor,Khilkhet,Bus,Sunny,3,1,0.285,13.3,104.0
-Mirpur 2,Badda,Bus,Sunny,9,5,0.12299999999999998,10.5,80.0
-New Market / Nilkhet,Abul Hotel,Bus,Rainy,11,3,0.20400000000000001,8.5,64.0
-Kalabagan,Kamalapur,Rickshaw,Sunny,5,6,0.54,5.9,156.0
-Azampur,Cantonment (Radisson),Bike,Stormy,16,2,0.51,11.5,345.0
-Farmgate,Merul Badda,Car,Rainy,10,3,0.86,6.9,513.0
-Badda Link Road,House Building,Car,Stormy,11,3,0.76,16.6,924.0
-Cantonment (Radisson),Technical,Bus,Sunny,4,2,0.11399999999999999,6.3,60.0
-High Court,Mazar Road,Car,Sunny,23,3,0.61,10.2,428.0
-House Building,Gulshan 1,Bus,Sunny,16,4,0.24,15.6,90.0
-Bashundhara / Jamuna FP,Cantonment (Radisson),Car,Regular,13,6,0.21,3.4,202.0
-Shahjahanpur,Farmgate,Bus,Regular,21,5,0.11699999999999999,4.3,26.0
-Karwan Bazar,Paltan,Car,Rainy,0,3,0.8,4.4,363.0
-Khilgaon Flyover,Malibagh Chowdhury Para,Bike,Rainy,8,0,0.19,1.0,91.0
-Press Club,Naya Bazar,Rickshaw,Rainy,21,6,0.22,2.0,90.0
-Sainik Club / Banani Railgate,Merul Badda,Bike,Sunny,11,0,0.96,4.8,140.0
-Paltan,Mohakhali Bus Terminal,Bike,Stormy,7,1,0.66,7.2,252.0
-Mazar Road,Kamalapur,Car,Rainy,3,5,0.84,11.5,685.0
-Nabisco,Darussalam,Bike,Regular,17,5,0.63,5.1,162.0
-Malibagh Chowdhury Para,Abul Hotel,Rickshaw,Rainy,18,6,0.52,2.3,135.0
-Dhanmondi 15/32,College Gate,Bus,Regular,17,5,0.22499999999999998,2.4,40.0
-Khilkhet,Karwan Bazar,Bus,Regular,2,3,0.084,12.4,89.0
-Mirpur 1,Kamalapur,Bus,Sunny,20,6,0.141,11.7,94.0
-Mirpur 11,High Court,Bus,Regular,9,2,0.189,13.1,125.0
-Merul Badda,House Building,Bus,Regular,22,1,0.093,17.2,119.0
-Abul Hotel,Tikatuli,Car,Sunny,1,2,0.69,6.5,327.0
-College Gate,Shahbagh,Rickshaw,Sunny,10,1,0.17,5.2,139.0
-Abul Hotel,Badda Link Road,Rickshaw,Sunny,8,0,0.5,2.7,109.0
-Shishu Mela,Mirpur 10,Bike,Sunny,10,4,0.42,6.5,159.0
-Mugda,Mazar Road,Bus,Sunny,1,0,0.174,13.9,95.0
-Kalyanpur,Jahangir Gate,Rickshaw,Regular,13,3,0.23,2.5,72.0
-Dhanmondi 15/32,Amtoli (Mohakhali),Bike,Stormy,17,4,0.88,7.0,287.0
-New Market / Nilkhet,Airport,Bus,Regular,22,5,0.11399999999999999,17.0,84.0
-New Market / Nilkhet,Khilgaon Flyover,Bike,Sunny,22,4,0.5,6.3,122.0
-High Court,Mirpur 11,Car,Stormy,10,1,0.12,13.1,963.0
-Badda,House Building,Bus,Rainy,16,3,0.06,16.8,110.0
-Abul Hotel,Dhanmondi 27,Bus,Rainy,1,1,0.192,9.1,76.0
-Gulistan,Chandpur,Bus,Rainy,5,5,0.279,80.9,539.0
-Rampura Bridge,Jashimuddin (Uttara),Car,Rainy,0,5,0.59,16.5,886.0
-Merul Badda,Mirpur 11,Bus,Regular,14,4,0.132,10.9,85.0
-Matsya Bhaban,Kakali (Banani),Bike,Sunny,2,5,0.68,8.0,195.0
+Kalabagan,Merul Badda,Car,Rainy,20,6,0.5,9.4,872.0
+Jashimuddin (Uttara),Sayedabad Bus Terminal,CNG,Stormy,11,5,0.29,23.1,1400.0
+Mirpur 2,Technical,CNG,Regular,21,4,0.49,3.1,166.0
+Mohakhali Bus Terminal,Darussalam,Car,Sunny,19,0,0.14,6.2,417.0
+City College / Science Lab,Kamalapur,CNG,Regular,17,3,0.95,5.3,383.0
+Dhanmondi 15/32,Tikatuli,Bus,Sunny,6,3,0.165,7.7,54.0
+Mugda,Asad Gate,Bike,Regular,17,1,0.5,10.9,378.0
+MES,Merul Badda,Bus,Sunny,7,4,0.135,7.0,36.0
+Dhanmondi 15/32,Jashimuddin (Uttara),Bike,Stormy,12,0,0.37,18.5,559.0
+Khilgaon Flyover,Mirpur 2,Car,Sunny,7,2,0.81,11.5,457.0
+Maniknagar,Mohakhali Bus Terminal,Bus,Rainy,7,3,0.12,10.1,57.0
+Bangla Motor,Kakali (Banani),Car,Regular,2,4,0.97,7.3,338.0
+Sayedabad Bus Terminal,Jagannath University,CNG,Regular,13,6,0.14,3.8,189.0
+Merul Badda,Chairman Bari,CNG,Sunny,6,2,0.73,4.3,211.0
+Abdullahpur,Pallabi,Bike,Rainy,20,5,0.51,10.6,456.0
+Mazar Road,Chandpur,Bike,Sunny,6,5,0.2,92.7,1598.0
+Farmgate,Tikatuli,Car,Sunny,16,0,0.34,6.9,294.0
+Jagannath University,Bashundhara / Jamuna FP,Bike,Regular,5,6,0.7,16.1,382.0
+Badda Link Road,College Gate,Car,Sunny,5,4,0.67,10.8,426.0
+Middle Badda,Gulshan 2,Bus,Regular,15,4,0.261,3.7,49.0
+Kalyanpur,Shahbagh,Car,Rainy,18,3,0.68,7.3,708.0
+Farmgate,Jagannath University,Car,Sunny,17,6,0.59,8.1,545.0
+Mohakhali Bus Terminal,Kamalapur,Bus,Sunny,15,0,0.168,7.2,44.0
+Paltan,Shahjahanpur,Rickshaw,Sunny,15,2,0.87,2.4,99.0
+Dhanmondi 27,Press Club,Bus,Sunny,7,3,0.273,6.1,44.0
+Notun Bazar,Pallabi,Car,Rainy,8,3,0.74,12.1,1097.0
+Press Club,Abul Hotel,CNG,Sunny,23,6,0.75,6.4,311.0
+Kalyanpur,Khilkhet,CNG,Regular,7,2,0.49,11.5,484.0
+MES,Nadda,Bus,Sunny,16,0,0.3,4.5,21.0
+Mugda,Karwan Bazar,CNG,Regular,20,6,0.97,7.5,530.0
+Dhanmondi 27,Kalyanpur,Car,Regular,23,1,0.65,4.1,248.0
+Bashundhara / Jamuna FP,Mirpur 11,Bus,Rainy,14,3,0.186,7.7,50.0
+Paltan,Mirpur 2,Car,Regular,21,1,0.87,12.1,540.0
+Khilgaon Flyover,Dhanmondi 27,Bus,Sunny,4,6,0.054,8.0,35.0
+Cantonment (Radisson),College Gate,Bus,Sunny,17,3,0.222,8.0,59.0
+Nadda,Kalyanpur,Bike,Sunny,20,5,0.85,10.6,336.0
+Shahjahanpur,Rampura Bridge,CNG,Sunny,0,6,0.33,2.7,171.0
+Jagannath University,Badda,CNG,Rainy,4,5,0.76,12.8,767.0
+Pallabi,Azampur,Car,Rainy,13,3,0.14,9.0,506.0
+MES,Farmgate,Bus,Sunny,4,6,0.042,7.9,64.0
+Agargaon (IDB Bhaban),High Court,Bus,Sunny,18,1,0.165,7.3,71.0
+Middle Badda,Rajlakshmi,Bike,Sunny,19,3,0.45,15.6,467.0
+Press Club,High Court,CNG,Regular,4,3,0.45,0.8,97.0
+Khilgaon Flyover,House Building,Bike,Sunny,1,2,0.35,21.1,424.0
+Mirpur 12,Shyamoli,CNG,Sunny,10,4,0.14,8.7,481.0
+Shahbagh,Rajarbagh,CNG,Rainy,2,0,0.76,4.6,327.0
+Shahbagh,Jashimuddin (Uttara),CNG,Sunny,22,4,0.77,19.3,658.0
+Mazar Road,Rampura Bridge,Car,Sunny,3,3,0.96,10.3,444.0
+Nadda,Shahjahanpur,Bus,Stormy,19,2,0.162,8.5,76.0
+Abul Hotel,Maniknagar,Car,Rainy,10,2,0.21,7.3,709.0
+Chandpur,Shahjahanpur,Bike,Rainy,16,4,0.85,83.9,1842.0
+Shahjahanpur,City College / Science Lab,Car,Rainy,4,4,0.18,5.4,317.0
+Khilgaon Flyover,Mirpur 11,Bus,Sunny,6,0,0.189,13.2,78.0
+Nadda,Mazar Road,Bus,Regular,9,1,0.12,9.5,64.0
+Pallabi,Kakali (Banani),CNG,Regular,19,3,0.79,6.9,496.0
+Karwan Bazar,Mugda,Bike,Sunny,12,4,0.39,7.5,156.0
+Badda Link Road,Shahbagh,Car,Rainy,17,6,0.67,9.1,849.0
+Abdullahpur,Khilgaon Flyover,Bike,Sunny,7,1,0.31,22.7,437.0
+Abdullahpur,Mohakhali Bus Terminal,Bus,Stormy,21,6,0.174,17.1,98.0
+Ray Saheb Bazar,Rampura Bridge,Car,Rainy,17,2,0.75,8.3,783.0
+Cantonment (Radisson),Rajlakshmi,Bike,Sunny,17,2,0.14,10.6,322.0
+Press Club,Jagannath University,CNG,Sunny,5,3,0.83,3.7,205.0
+Maniknagar,Sayedabad Bus Terminal,CNG,Regular,20,4,0.78,1.1,120.0
+Gulshan 1,Jagannath University,Car,Sunny,3,5,0.89,11.3,485.0
+Paltan,Matsya Bhaban,Bus,Sunny,6,1,0.165,2.6,35.0
+Shishu Mela,Badda,CNG,Regular,1,2,0.29,11.3,529.0
+Karwan Bazar,Mirpur 10,Bus,Stormy,17,1,0.201,8.8,63.0
+Kalabagan,Karwan Bazar,Rickshaw,Rainy,22,1,0.88,2.5,128.0
+Maniknagar,Naya Bazar,Bus,Regular,16,1,0.237,4.7,25.0
+Amtoli (Mohakhali),Chandpur,Car,Regular,22,6,0.63,89.2,3509.0
+Badda Link Road,Middle Badda,Bus,Sunny,23,0,0.273,0.8,38.0
+New Market / Nilkhet,Mazar Road,Bike,Sunny,20,4,0.41,9.3,264.0
+Mohakhali Bus Terminal,Mazar Road,CNG,Regular,4,0,0.42,6.2,310.0
+Kalabagan,Cantonment (Radisson),Bike,Rainy,13,1,0.77,9.5,275.0
+Abul Hotel,Technical,Car,Rainy,14,6,0.56,9.9,554.0
+Kalabagan,Azampur,Bike,Sunny,12,5,0.65,20.3,390.0
+Press Club,Dhanmondi 27,CNG,Sunny,22,3,0.87,6.1,277.0
+Mirpur 11,Chandpur,Bike,Sunny,11,4,0.27,95.8,1505.0
+Mirpur 12,Nadda,Bus,Regular,16,3,0.06,9.6,43.0
+Bangla Motor,Malibagh Railgate,Bus,Sunny,2,0,0.129,4.7,43.0
+Rajarbagh,Maniknagar,Bike,Stormy,12,1,0.18,3.3,143.0
+Karwan Bazar,Matsya Bhaban,Rickshaw,Rainy,11,1,0.21,2.0,88.0
+Badda Link Road,Shahjahanpur,Bike,Sunny,2,0,0.77,6.1,173.0
+Azampur,Mirpur 1,Bus,Sunny,9,0,0.213,12.8,87.0
+Mirpur 14,Farmgate,Car,Regular,0,6,0.49,9.7,447.0
+Mirpur 11,Dhanmondi 15/32,Car,Regular,5,5,0.4,10.3,492.0
+City College / Science Lab,Gulshan 1,Bike,Sunny,14,6,0.66,7.6,181.0
+Shahbagh,Ray Saheb Bazar,Rickshaw,Sunny,4,2,0.77,4.4,150.0
+Mirpur 12,Mirpur 11,Bike,Regular,9,0,0.19,1.8,80.0
+Kalabagan,Shishu Mela,CNG,Regular,14,3,0.75,3.7,211.0
+Tikatuli,Abdullahpur,Car,Rainy,3,1,0.33,25.7,1396.0
+Gulshan 2,Karwan Bazar,Bike,Stormy,11,1,0.63,6.8,249.0
+Mazar Road,Technical,Car,Stormy,3,3,0.81,1.5,192.0
+Shahjahanpur,Kalabagan,CNG,Sunny,8,5,0.92,5.8,402.0
+Jagannath University,Cantonment (Radisson),CNG,Stormy,13,3,0.21,14.5,929.0
+Kuril / Kuratoli (AIUB),MES,Rickshaw,Rainy,9,3,0.81,4.0,216.0
+Azampur,Mohakhali Bus Terminal,Car,Sunny,10,5,0.41,15.1,972.0
+Badda,Chairman Bari,Car,Regular,18,5,0.26,5.0,390.0
+Kochukhet,Kalabagan,CNG,Stormy,16,4,0.62,8.1,488.0
+Azimpur / Palashi,Bashundhara / Jamuna FP,Bus,Regular,7,0,0.111,13.2,76.0
+Rampura Bridge,Kalabagan,Car,Rainy,16,4,0.44,8.0,423.0
+Jagannath University,MES,Bike,Regular,16,1,0.55,15.6,346.0
+City College / Science Lab,Mirpur 2,Bus,Sunny,22,6,0.23399999999999999,9.2,57.0
+High Court,College Gate,Bus,Rainy,6,4,0.141,6.8,38.0
+Shishu Mela,Mirpur 12,Car,Regular,7,5,0.41,9.3,426.0
+Khilgaon Flyover,Matsya Bhaban,Car,Sunny,13,5,0.85,4.0,208.0
+Mirpur 12,Bangla Motor,CNG,Regular,22,1,0.11,12.5,515.0
+Tikatuli,Jagannath University,CNG,Sunny,9,6,0.44,3.7,279.0
+Malibagh Chowdhury Para,Kuril / Kuratoli (AIUB),CNG,Sunny,8,1,0.87,10.1,622.0
+Shyamoli,Ray Saheb Bazar,CNG,Rainy,4,2,0.84,10.5,645.0
+Mohakhali Bus Terminal,Nabisco,Bike,Regular,5,1,0.75,2.2,92.0
+Satrasta,Malibagh Chowdhury Para,CNG,Rainy,6,1,0.92,5.9,361.0
+Azampur,Mirpur 1,Bike,Regular,1,3,0.96,12.8,317.0
+Shahbagh,Technical,Car,Stormy,22,6,0.96,7.7,553.0
+Mazar Road,Gulshan 2,Bike,Regular,8,0,0.42,7.2,275.0
+Mohakhali Bus Terminal,Rajlakshmi,Car,Rainy,4,3,0.73,14.2,817.0
+Malibagh Chowdhury Para,Bashundhara / Jamuna FP,CNG,Sunny,16,4,0.81,9.1,345.0
+Malibagh Chowdhury Para,Mirpur 1,Car,Rainy,20,0,0.69,10.8,1009.0
+Jahangir Gate,Gulshan 1,Rickshaw,Stormy,11,6,0.72,5.0,225.0
+Paltan,Rajarbagh,Rickshaw,Sunny,20,5,0.92,2.1,107.0
+Farmgate,Notun Bazar,Car,Rainy,16,5,0.64,9.4,536.0
+Sayedabad Bus Terminal,Karwan Bazar,Car,Sunny,22,6,0.16,7.5,309.0
+Merul Badda,Jatrabari,CNG,Rainy,12,1,0.57,10.2,578.0
+Mirpur 11,Asad Gate,Car,Rainy,22,4,0.58,8.6,449.0
+Paltan,Satrasta,Bus,Sunny,16,4,0.039,6.0,52.0
+Rajarbagh,Gulistan,Rickshaw,Sunny,19,4,0.76,2.8,109.0
+Azimpur / Palashi,Sayedabad Bus Terminal,CNG,Sunny,17,3,0.74,6.5,413.0
+Bangla Motor,Mazar Road,CNG,Sunny,5,6,0.89,7.7,366.0
+Sainik Club / Banani Railgate,Malibagh Railgate,CNG,Stormy,6,3,0.16,7.3,501.0
+Dhanmondi 27,Badda Link Road,Car,Sunny,8,0,0.96,11.0,730.0
+Mugda,Maniknagar,CNG,Regular,22,0,0.57,2.0,140.0
+Matsya Bhaban,City College / Science Lab,Bike,Rainy,23,2,0.83,2.5,150.0
+Rampura Bridge,Gulshan 2,Bus,Regular,1,2,0.267,5.1,40.0
+Rajlakshmi,Maniknagar,Car,Sunny,23,3,0.44,24.0,943.0
+Mirpur 14,Maniknagar,Bike,Regular,4,3,0.2,17.8,408.0
+Pallabi,College Gate,Bike,Regular,12,4,0.76,9.0,198.0
+Nadda,Nabisco,Bus,Rainy,15,0,0.12,7.1,48.0
+Technical,Kamalapur,CNG,Rainy,18,6,0.84,10.6,899.0
+Rajarbagh,Press Club,Car,Sunny,6,6,0.1,3.1,169.0
+Malibagh Chowdhury Para,Satrasta,Bike,Sunny,13,2,0.98,5.9,156.0
+Badda,Darussalam,CNG,Rainy,5,2,0.78,11.1,678.0
+Mirpur 1,Abdullahpur,Bus,Sunny,4,4,0.243,14.5,77.0
+Bashundhara / Jamuna FP,Agargaon (IDB Bhaban),Car,Sunny,11,5,0.74,7.9,334.0
+New Market / Nilkhet,Abul Hotel,CNG,Regular,2,3,0.78,8.5,425.0
+Kamalapur,Naya Bazar,Car,Rainy,14,6,0.84,3.0,230.0
+Paltan,Tikatuli,Bus,Rainy,2,0,0.291,1.7,19.0
+College Gate,Kuril / Kuratoli (AIUB),CNG,Regular,5,2,0.35,12.1,564.0
+Karwan Bazar,Merul Badda,Bike,Sunny,16,0,0.74,6.9,166.0
+Notun Bazar,Merul Badda,Bus,Regular,7,3,0.081,2.8,28.0
+House Building,Cantonment (Radisson),Bike,Rainy,2,4,0.22,11.9,326.0
+Dhanmondi 15/32,Jashimuddin (Uttara),Bus,Stormy,19,5,0.156,18.5,113.0
+Shahjahanpur,Farmgate,Rickshaw,Sunny,21,5,0.39,4.3,126.0
+Tikatuli,Gulshan 1,Car,Stormy,16,4,0.17,8.6,514.0
+Karwan Bazar,Paltan,Car,Rainy,0,3,0.8,4.4,300.0
+Khilgaon Flyover,Malibagh Chowdhury Para,Car,Sunny,16,3,0.99,1.0,105.0
+Bashundhara / Jamuna FP,High Court,Bike,Rainy,17,3,0.17,11.7,482.0
+Press Club,Naya Bazar,Rickshaw,Rainy,21,6,0.22,2.0,111.0
+Merul Badda,Kakali (Banani),Rickshaw,Stormy,2,2,0.13,4.6,230.0
+Mazar Road,Kamalapur,Car,Rainy,3,5,0.84,11.5,703.0
+Nabisco,Darussalam,Bike,Regular,17,5,0.63,5.1,200.0
+Malibagh Chowdhury Para,Abul Hotel,Rickshaw,Rainy,18,6,0.52,2.3,147.0
+Dhanmondi 15/32,College Gate,Car,Sunny,5,1,0.69,2.4,160.0
+Bangla Motor,Shishu Mela,Rickshaw,Regular,9,2,0.71,4.7,186.0
+Gulistan,Kalyanpur,CNG,Rainy,4,3,0.76,10.7,639.0
+Bashundhara / Jamuna FP,Darussalam,Bike,Rainy,8,3,0.13,9.3,414.0
+High Court,Bangla Motor,Bike,Stormy,21,4,0.29,2.6,102.0
+Notun Bazar,Nabisco,CNG,Rainy,2,1,0.74,8.0,511.0
+Nabisco,Mirpur 1,Bus,Regular,13,6,0.126,5.4,36.0
+Mirpur 10,Satrasta,Bus,Sunny,12,6,0.153,7.0,42.0
+Rajarbagh,Jagannath University,CNG,Sunny,10,3,0.74,5.9,382.0
+Azimpur / Palashi,Chairman Bari,Bus,Rainy,5,3,0.177,9.2,61.0
+Amtoli (Mohakhali),City College / Science Lab,CNG,Rainy,23,6,0.57,7.2,458.0
+Airport,Kakali (Banani),Bus,Sunny,12,3,0.219,7.5,50.0
+Jagannath University,Shahjahanpur,CNG,Regular,4,6,0.26,6.6,324.0
+High Court,Mirpur 11,Bike,Sunny,17,1,0.66,13.1,404.0
+Abul Hotel,Dhanmondi 27,CNG,Regular,1,1,0.64,9.1,455.0
+Gulistan,Chandpur,Bus,Rainy,5,5,0.279,80.9,436.0
+Rampura Bridge,Jashimuddin (Uttara),Car,Rainy,0,5,0.59,16.5,936.0
+Merul Badda,Mirpur 11,Bus,Regular,14,4,0.132,10.9,74.0
+Matsya Bhaban,Kakali (Banani),Bike,Regular,7,5,0.68,8.0,206.0
 Azampur,Rajlakshmi,Bus,Sunny,15,4,0.096,1.0,10.0
-Jahangir Gate,Sainik Club / Banani Railgate,Bike,Rainy,10,4,0.84,4.7,182.0
-Rampura Bridge,Bashundhara / Jamuna FP,Bike,Sunny,3,4,0.36,7.6,163.0
-Matsya Bhaban,Khilgaon Flyover,Bus,Sunny,17,1,0.105,4.0,37.0
-Jatrabari,Chandpur,Car,Rainy,9,6,0.57,77.6,4110.0
-Mohakhali Bus Terminal,Mazar Road,Bike,Stormy,19,3,0.18,6.2,268.0
-Dhanmondi 27,Jagannath University,Bus,Sunny,9,6,0.288,8.1,82.0
-Mohakhali Bus Terminal,Gulshan 1,Bus,Sunny,4,3,0.105,1.0,23.0
-Nadda,Darussalam,Car,Rainy,17,2,0.66,9.8,679.0
-Cantonment (Radisson),New Market / Nilkhet,Car,Rainy,0,6,0.58,10.9,625.0
-Shishu Mela,Rajlakshmi,Bike,Sunny,6,4,0.71,16.5,242.0
-Nabisco,Chandpur,Car,Sunny,13,2,0.64,88.2,2550.0
-Mohakhali Bus Terminal,Paltan,Car,Rainy,3,4,0.9,7.2,426.0
-Jahangir Gate,Nabisco,Car,Sunny,16,3,0.16,2.6,149.0
-Maniknagar,Kakali (Banani),Car,Regular,7,5,0.63,12.0,465.0
-Shyamoli,Sayedabad Bus Terminal,Bike,Rainy,22,3,0.7,12.2,311.0
-Matsya Bhaban,Naya Bazar,Bus,Sunny,11,1,0.288,3.5,39.0
-Asad Gate,Mirpur 1,Bike,Regular,15,3,0.41,5.6,128.0
-Malibagh Chowdhury Para,Khilgaon Flyover,Bus,Regular,12,6,0.138,1.0,21.0
-Naya Bazar,Kuril / Kuratoli (AIUB),Bus,Regular,17,6,0.264,15.5,138.0
-Middle Badda,Farmgate,Bus,Rainy,13,3,0.111,7.4,48.0
-Mirpur 12,Asad Gate,Bike,Stormy,10,6,0.99,10.4,401.0
-Malibagh Chowdhury Para,New Market / Nilkhet,Bike,Regular,12,2,0.71,7.0,178.0
-Pallabi,Kamalapur,Bus,Rainy,14,4,0.036,15.0,87.0
-Tikatuli,Shahbagh,Bike,Stormy,17,1,0.84,4.5,231.0
-Dhanmondi 27,Kalabagan,Car,Stormy,5,0,0.7,1.4,250.0
-Khilgaon Flyover,Khilkhet,Bike,Regular,14,3,0.17,13.0,240.0
-Rampura Bridge,Paltan,Bike,Rainy,5,4,0.12,5.0,158.0
-Tikatuli,Darussalam,Car,Sunny,18,4,0.8,12.5,518.0
-Middle Badda,Jatrabari,Bus,Stormy,16,4,0.195,10.5,66.0
-Kalabagan,Dhanmondi 15/32,Bus,Regular,6,1,0.066,0.7,15.0
-Kamalapur,Abdullahpur,Bus,Regular,6,4,0.135,24.3,141.0
-Maniknagar,College Gate,Bike,Sunny,20,5,0.81,11.8,295.0
-Kakali (Banani),Paltan,Bus,Sunny,16,3,0.20400000000000001,9.2,67.0
-Kuril / Kuratoli (AIUB),Dhanmondi 15/32,Bus,Sunny,3,1,0.11699999999999999,13.1,88.0
-Kalabagan,Ray Saheb Bazar,Bike,Sunny,9,4,0.22,6.2,162.0
-Mirpur 2,Badda,Bus,Sunny,0,1,0.147,10.5,81.0
-Shyamoli,Darussalam,Bus,Regular,10,6,0.207,2.6,34.0
-Kuril / Kuratoli (AIUB),Kalyanpur,Car,Sunny,10,3,0.8,11.2,523.0
-Malibagh Chowdhury Para,Tikatuli,Bike,Regular,15,3,0.24,4.3,115.0
-Kalyanpur,Khilkhet,Bus,Sunny,20,3,0.084,11.5,92.0
-Paltan,Satrasta,Rickshaw,Sunny,14,1,0.67,6.0,143.0
-Kuril / Kuratoli (AIUB),Khilgaon Flyover,Bike,Rainy,6,6,0.69,11.0,283.0
-New Market / Nilkhet,Airport,Bus,Sunny,21,2,0.23399999999999999,17.0,90.0
-College Gate,Sayedabad Bus Terminal,Car,Sunny,22,4,0.18,11.0,362.0
-Khilgaon Flyover,Kalyanpur,Bus,Rainy,11,4,0.267,10.2,69.0
-Jatrabari,Mirpur 10,Bike,Rainy,9,4,0.76,17.5,468.0
-Nabisco,Rampura Bridge,Rickshaw,Regular,21,1,0.78,5.2,142.0
-Badda Link Road,Middle Badda,Car,Rainy,5,2,1.0,0.8,183.0
-Bashundhara / Jamuna FP,Rajarbagh,Bus,Sunny,4,5,0.141,11.0,62.0
-Kuril / Kuratoli (AIUB),Badda Link Road,Bike,Sunny,12,3,0.46,5.6,125.0
-Sayedabad Bus Terminal,Kalyanpur,Car,Rainy,23,5,0.54,13.1,741.0
-Naya Bazar,Nadda,Car,Sunny,18,0,0.67,13.5,616.0
-Chandpur,Naya Bazar,Bike,Rainy,3,2,0.5,80.4,1875.0
-Asad Gate,College Gate,Rickshaw,Sunny,19,0,0.64,0.5,66.0
-Badda,Kochukhet,Bus,Regular,14,2,0.216,6.8,58.0
-Cantonment (Radisson),Chandpur,Car,Regular,15,4,0.27,92.5,2639.0
-Jahangir Gate,City College / Science Lab,Rickshaw,Sunny,2,5,0.3,5.7,131.0
-Agargaon (IDB Bhaban),Mirpur 2,Rickshaw,Regular,20,1,0.94,3.8,155.0
-Farmgate,Matsya Bhaban,Rickshaw,Rainy,3,5,0.15,2.9,134.0
-Sainik Club / Banani Railgate,Darussalam,Bus,Sunny,19,0,0.288,6.3,53.0
-Matsya Bhaban,College Gate,Bus,Rainy,9,5,0.147,5.5,50.0
-Jahangir Gate,Chairman Bari,Rickshaw,Regular,23,2,0.16,4.4,106.0
-Kamalapur,Kochukhet,Car,Sunny,23,2,0.97,9.8,439.0
-Merul Badda,Azimpur / Palashi,Car,Sunny,11,5,0.76,9.6,359.0
-Azimpur / Palashi,Nadda,Car,Stormy,11,0,0.26,12.5,721.0
-Press Club,City College / Science Lab,Rickshaw,Sunny,9,0,0.87,4.1,149.0
-Darussalam,Mazar Road,Bike,Regular,10,0,0.81,0.8,108.0
-Azimpur / Palashi,Badda,Bike,Sunny,5,1,0.54,11.1,236.0
-Technical,Kalyanpur,Bike,Stormy,18,6,0.55,0.8,120.0
-Paltan,Kamalapur,Rickshaw,Sunny,3,5,0.78,0.4,53.0
-Sayedabad Bus Terminal,Gulshan 1,Bus,Regular,19,2,0.056999999999999995,9.8,89.0
-Malibagh Railgate,Rampura Bridge,Bike,Sunny,8,3,0.35,1.9,97.0
-Merul Badda,Azimpur / Palashi,Bike,Regular,9,3,0.73,9.6,249.0
-Malibagh Chowdhury Para,Tikatuli,Car,Regular,12,2,0.91,4.3,243.0
-Jahangir Gate,Nadda,Bus,Sunny,10,5,0.11699999999999999,8.2,59.0
-Jatrabari,Ray Saheb Bazar,Bike,Stormy,22,2,0.72,4.1,166.0
-Maniknagar,Mazar Road,Bus,Rainy,19,5,0.177,14.9,130.0
-Sayedabad Bus Terminal,Gulistan,Bike,Sunny,23,1,0.19,2.4,79.0
-Nabisco,Kalabagan,Car,Sunny,10,0,0.49,4.7,284.0
-Middle Badda,Matsya Bhaban,Bike,Sunny,23,3,0.71,7.8,187.0
-Jagannath University,Gulshan 1,Car,Sunny,2,3,0.88,11.3,470.0
-Cantonment (Radisson),Karwan Bazar,Car,Sunny,2,0,0.37,7.6,350.0
-Chandpur,Badda,Car,Rainy,12,6,0.33,87.8,3563.0
-Mugda,Jashimuddin (Uttara),Car,Sunny,23,5,0.51,21.3,792.0
-Matsya Bhaban,Nadda,Bike,Rainy,19,0,0.14,10.5,344.0
-Abul Hotel,House Building,Bike,Sunny,15,0,0.36,18.4,303.0
-Gulshan 1,Abdullahpur,Bus,Stormy,13,6,0.18,17.2,113.0
-Nadda,MES,Bus,Sunny,5,4,0.177,4.5,36.0
-Mirpur 2,Press Club,Bus,Sunny,13,2,0.051000000000000004,11.9,68.0
-Kalyanpur,Nabisco,Bus,Sunny,7,1,0.21,4.9,47.0
-Malibagh Railgate,Mirpur 10,Bike,Rainy,20,4,0.33,11.7,336.0
-Matsya Bhaban,Mirpur 11,Bus,Regular,14,3,0.276,11.9,74.0
-Nadda,House Building,Bus,Regular,7,4,0.201,13.3,80.0
-Bashundhara / Jamuna FP,Naya Bazar,Car,Sunny,6,3,0.19,14.4,486.0
-Mirpur 11,High Court,Car,Rainy,0,6,0.47,13.1,712.0
-College Gate,Azimpur / Palashi,Rickshaw,Regular,16,5,0.14,5.2,125.0
-Farmgate,New Market / Nilkhet,Bus,Regular,10,5,0.282,4.1,53.0
-Shahjahanpur,Karwan Bazar,Rickshaw,Regular,23,4,0.41,3.8,118.0
-Rampura Bridge,Mirpur 10,Car,Sunny,10,4,0.94,11.0,478.0
-Kakali (Banani),Jagannath University,Bus,Regular,11,4,0.222,13.1,68.0
-Kakali (Banani),Jahangir Gate,Bus,Rainy,13,6,0.22499999999999998,4.6,49.0
-Cantonment (Radisson),New Market / Nilkhet,Car,Rainy,17,1,0.7,10.9,723.0
-Nadda,Ray Saheb Bazar,Bus,Rainy,0,3,0.051000000000000004,14.3,113.0
-Merul Badda,Mohakhali Bus Terminal,Car,Regular,8,1,0.43,3.9,281.0
-Tikatuli,Farmgate,Car,Regular,7,1,0.11,6.9,303.0
-Malibagh Chowdhury Para,Shahbagh,Car,Regular,12,6,0.14,5.2,253.0
-Rajlakshmi,Airport,Bus,Rainy,20,5,0.261,5.0,48.0
-Shahbagh,Sainik Club / Banani Railgate,Car,Regular,5,1,0.63,8.6,417.0
-Pallabi,Abdullahpur,Bus,Stormy,22,2,0.186,10.6,63.0
-Shishu Mela,Press Club,Bus,Sunny,23,3,0.147,8.0,53.0
-Ray Saheb Bazar,Badda Link Road,Bus,Sunny,2,2,0.135,11.8,79.0
-College Gate,Mirpur 11,Car,Rainy,12,1,0.54,8.1,443.0
-Badda Link Road,Kakali (Banani),Bus,Sunny,13,5,0.279,4.8,37.0
-City College / Science Lab,New Market / Nilkhet,Bike,Rainy,14,4,0.36,1.4,77.0
-Mugda,Agargaon (IDB Bhaban),Bike,Rainy,16,4,0.36,10.9,247.0
-Azimpur / Palashi,Rampura Bridge,Bike,Sunny,20,2,0.85,7.8,217.0
-City College / Science Lab,Sainik Club / Banani Railgate,Car,Sunny,11,2,0.6,9.0,343.0
-Jagannath University,Mirpur 2,Bus,Stormy,12,6,0.252,15.0,105.0
-Shahbagh,Nadda,Car,Stormy,20,1,0.75,10.9,840.0
-Kakali (Banani),MES,Bus,Sunny,21,2,0.177,2.7,29.0
-Nabisco,Cantonment (Radisson),Bike,Stormy,16,2,0.52,5.0,183.0
-MES,Dhanmondi 15/32,Bus,Regular,22,1,0.162,10.1,92.0
-Airport,Merul Badda,Car,Regular,18,1,0.75,10.7,569.0
-Dhanmondi 15/32,City College / Science Lab,Car,Rainy,3,6,0.96,1.4,214.0
-Kakali (Banani),Gulshan 1,Car,Sunny,2,2,0.13,2.1,162.0
-Cantonment (Radisson),Mazar Road,Car,Rainy,17,5,0.72,5.4,446.0
-Mohakhali Bus Terminal,Mirpur 10,Bike,Regular,11,1,0.4,6.8,162.0
-Matsya Bhaban,Shishu Mela,Bike,Stormy,14,2,1.0,6.0,229.0
-Kochukhet,Naya Bazar,Car,Sunny,3,0,0.67,11.7,490.0
-Jagannath University,Bangla Motor,Car,Regular,7,6,0.54,6.4,297.0
-Naya Bazar,Chandpur,Car,Regular,13,3,0.62,80.4,2574.0
-High Court,Middle Badda,Bike,Sunny,1,1,0.46,7.8,169.0
-Farmgate,Mirpur 12,Bus,Sunny,23,5,0.10200000000000001,10.8,70.0
-Dhanmondi 15/32,Farmgate,Rickshaw,Regular,20,4,0.64,2.8,120.0
-Gulistan,College Gate,Car,Rainy,9,1,0.84,8.6,594.0
-Dhanmondi 27,Kalabagan,Bus,Rainy,13,1,0.222,1.4,28.0
-Khilkhet,Gulistan,Car,Sunny,22,1,0.46,16.1,546.0
-Gulistan,Matsya Bhaban,Bike,Rainy,10,0,0.77,3.2,159.0
-Karwan Bazar,City College / Science Lab,Bus,Sunny,4,3,0.23099999999999998,2.5,32.0
-Ray Saheb Bazar,Abdullahpur,Car,Rainy,10,2,0.61,27.1,1544.0
-Badda,Kalyanpur,Car,Regular,0,3,0.67,11.5,534.0
-Asad Gate,Rajarbagh,Car,Sunny,20,2,0.7,8.9,446.0
-Gulshan 1,Kuril / Kuratoli (AIUB),Bus,Rainy,11,4,0.042,6.0,42.0
-MES,Abdullahpur,Bus,Regular,14,1,0.201,12.4,82.0
-Rampura Bridge,Paltan,Bike,Sunny,8,5,0.53,5.0,152.0
-Sayedabad Bus Terminal,Ray Saheb Bazar,Bike,Regular,20,3,0.74,3.4,138.0
-Dhanmondi 15/32,Badda Link Road,Bike,Sunny,5,1,0.12,10.8,216.0
-Abul Hotel,Rajarbagh,Car,Regular,14,5,0.58,4.2,231.0
-Amtoli (Mohakhali),Rajlakshmi,Bus,Sunny,5,0,0.11399999999999999,13.8,94.0
-Abdullahpur,Middle Badda,Car,Sunny,11,2,0.62,18.6,615.0
-High Court,Karwan Bazar,Bike,Regular,20,0,0.8,3.3,131.0
-Shyamoli,Kamalapur,Bus,Regular,11,2,0.21,9.4,76.0
-City College / Science Lab,Gulshan 2,Bus,Rainy,0,6,0.24,9.3,79.0
-Mirpur 14,Kakali (Banani),Bike,Sunny,7,2,0.74,6.4,144.0
-Chairman Bari,Jatrabari,Bike,Stormy,22,4,0.58,12.7,336.0
-New Market / Nilkhet,Chandpur,Car,Regular,21,0,0.28,83.5,2673.0
-Dhanmondi 15/32,Gulshan 1,Bus,Stormy,10,2,0.24899999999999997,7.6,86.0
-Cantonment (Radisson),Dhanmondi 15/32,Bike,Sunny,14,6,0.74,9.2,174.0
-New Market / Nilkhet,Karwan Bazar,Car,Rainy,20,5,0.17,3.4,322.0
-Karwan Bazar,Mirpur 1,Bike,Rainy,13,1,0.26,7.2,215.0
-Mugda,Shahjahanpur,Bus,Rainy,11,0,0.066,4.0,22.0
-Badda Link Road,New Market / Nilkhet,Car,Sunny,11,5,0.2,11.0,393.0
-College Gate,Mirpur 10,Car,Stormy,11,2,0.51,7.1,491.0
-Notun Bazar,Bashundhara / Jamuna FP,Car,Sunny,21,1,0.98,4.7,240.0
-Kalyanpur,Badda,Car,Sunny,15,1,0.97,11.5,422.0
-Khilgaon Flyover,Abul Hotel,Bike,Regular,3,6,0.31,3.2,121.0
-Mohakhali Bus Terminal,Chairman Bari,Rickshaw,Sunny,7,1,0.56,1.5,65.0
-MES,Khilkhet,Rickshaw,Sunny,2,3,0.7,4.2,122.0
-House Building,Matsya Bhaban,Car,Regular,6,0,0.67,21.1,749.0
-Bashundhara / Jamuna FP,Shahbagh,Car,Stormy,13,0,0.81,11.6,691.0
-Mirpur 12,Mirpur 10,Bike,Stormy,12,3,0.19,2.9,117.0
-Rajarbagh,Technical,Car,Rainy,4,1,0.96,11.1,657.0
-Nabisco,Agargaon (IDB Bhaban),Rickshaw,Rainy,23,2,0.48,2.3,109.0
-Chandpur,Azampur,Car,Sunny,6,6,0.91,103.8,3007.0
-Jatrabari,Jashimuddin (Uttara),Bike,Rainy,17,3,0.28,24.4,701.0
-Khilgaon Flyover,Mohakhali Bus Terminal,Bus,Sunny,6,5,0.087,5.7,41.0
-Pallabi,Jashimuddin (Uttara),Car,Rainy,3,1,0.8,8.4,533.0
-Jashimuddin (Uttara),Jatrabari,Car,Regular,16,6,0.14,24.4,846.0
-Rajarbagh,Nabisco,Car,Sunny,20,4,0.49,6.6,321.0
-City College / Science Lab,Cantonment (Radisson),Bus,Stormy,5,2,0.21,9.8,85.0
-Shyamoli,New Market / Nilkhet,Bike,Sunny,15,2,0.34,6.4,137.0
-Shishu Mela,Cantonment (Radisson),Bike,Regular,15,5,0.45,7.7,182.0
-Kalyanpur,Gulistan,Bike,Rainy,1,6,0.57,10.7,320.0
-Malibagh Railgate,Rajarbagh,Bike,Sunny,3,3,0.67,1.7,86.0
-Mirpur 10,Mirpur 1,Rickshaw,Sunny,16,0,0.5,2.0,64.0
-Mirpur 11,Merul Badda,Bus,Sunny,5,0,0.063,10.9,74.0
-Nabisco,Gulshan 2,Rickshaw,Sunny,19,3,0.24,4.5,132.0
-Mirpur 1,Azimpur / Palashi,Bus,Rainy,12,6,0.177,9.8,68.0
-Paltan,Agargaon (IDB Bhaban),Bike,Sunny,10,3,0.21,8.3,186.0
-Shyamoli,Press Club,Bike,Rainy,22,3,0.6,8.6,248.0
-Azimpur / Palashi,Satrasta,Car,Regular,4,2,0.53,5.1,295.0
-Rampura Bridge,Mirpur 10,Bike,Regular,11,2,0.89,11.0,235.0
-Chairman Bari,Airport,Bike,Rainy,18,0,0.82,8.0,296.0
-Kamalapur,Shishu Mela,Car,Regular,15,6,0.92,8.9,386.0
-Shishu Mela,Abdullahpur,Bike,Regular,23,2,0.42,19.0,386.0
-New Market / Nilkhet,Nadda,Bike,Sunny,1,5,0.44,12.6,255.0
-Dhanmondi 27,Kamalapur,Car,Sunny,22,2,0.81,7.2,306.0
-Bashundhara / Jamuna FP,Naya Bazar,Bus,Sunny,9,0,0.294,14.4,114.0
-Badda,Pallabi,Bike,Regular,8,4,0.27,11.9,260.0
-Nabisco,New Market / Nilkhet,Car,Regular,6,2,0.64,6.0,302.0
-Tikatuli,Rajlakshmi,Bike,Rainy,10,6,0.17,22.7,647.0
-Ray Saheb Bazar,Bashundhara / Jamuna FP,Car,Regular,19,3,0.51,15.3,741.0
-Dhanmondi 15/32,High Court,Bike,Stormy,14,2,0.71,4.9,182.0
-MES,Kochukhet,Rickshaw,Regular,1,4,0.26,2.3,79.0
-Dhanmondi 15/32,Technical,Bike,Stormy,20,2,0.8,5.4,249.0
-Azimpur / Palashi,Shahjahanpur,Bus,Stormy,9,3,0.22499999999999998,5.3,69.0
-Mugda,Azimpur / Palashi,Bike,Sunny,17,2,0.49,7.7,203.0
-Matsya Bhaban,Rajlakshmi,Bus,Rainy,3,4,0.168,19.8,130.0
-Nabisco,Amtoli (Mohakhali),Bike,Rainy,7,6,0.28,2.4,91.0
-Airport,Dhanmondi 15/32,Car,Sunny,0,0,0.11,15.1,573.0
-Mazar Road,Shyamoli,Rickshaw,Rainy,17,5,0.96,3.3,154.0
-Rajarbagh,Farmgate,Car,Rainy,12,5,0.46,6.1,349.0
-Khilgaon Flyover,Kalabagan,Bike,Sunny,8,4,0.63,6.9,170.0
-Farmgate,Darussalam,Bus,Stormy,4,0,0.039,5.6,46.0
-Shyamoli,Darussalam,Bike,Regular,3,1,0.68,2.6,118.0
-Bangla Motor,Notun Bazar,Bike,Regular,10,1,0.12,10.1,255.0
-Darussalam,Dhanmondi 27,Bus,Stormy,14,0,0.237,5.5,32.0
-Karwan Bazar,Jagannath University,Bike,Sunny,15,4,0.16,7.2,131.0
-Kochukhet,Pallabi,Rickshaw,Rainy,18,2,0.83,5.6,220.0
-Jagannath University,Agargaon (IDB Bhaban),Bus,Sunny,23,1,0.174,11.2,69.0
-Azimpur / Palashi,Kalyanpur,Car,Sunny,16,4,0.91,7.5,273.0
-Mugda,Shahbagh,Car,Sunny,21,4,0.71,6.5,255.0
-Rampura Bridge,Press Club,Bike,Sunny,15,6,0.49,5.7,128.0
-Mirpur 11,Mugda,Bus,Regular,21,5,0.054,16.1,99.0
-Rajarbagh,Bangla Motor,Bike,Regular,10,5,0.25,5.2,164.0
-Cantonment (Radisson),Nadda,Bike,Sunny,23,2,0.6,4.1,109.0
-Nadda,Mirpur 12,Bike,Regular,9,0,0.28,9.6,234.0
-Rampura Bridge,Jagannath University,Bike,Sunny,14,4,0.73,9.1,170.0
-Amtoli (Mohakhali),Rajlakshmi,Car,Regular,14,4,0.67,13.8,478.0
-Paltan,Azampur,Bus,Rainy,21,3,0.219,22.3,137.0
-Nabisco,Kalabagan,Bike,Rainy,13,4,0.27,4.7,147.0
-Shishu Mela,Notun Bazar,Car,Sunny,1,5,0.53,12.3,506.0
-Shishu Mela,Azimpur / Palashi,Rickshaw,Regular,12,4,0.99,5.8,135.0
-Mirpur 2,Satrasta,Car,Rainy,3,2,0.43,6.1,413.0
-Naya Bazar,Tikatuli,Bike,Rainy,8,3,0.67,2.8,149.0
-Kakali (Banani),Mirpur 1,Car,Rainy,19,0,0.11,5.6,439.0
-Kalyanpur,Mirpur 14,Bus,Sunny,5,4,0.072,6.9,41.0
-Mazar Road,Mohakhali Bus Terminal,Bus,Regular,12,2,0.10200000000000001,6.2,43.0
-Satrasta,Technical,Bike,Regular,11,1,0.56,4.5,114.0
-Tikatuli,City College / Science Lab,Bus,Regular,22,1,0.288,6.3,65.0
-Pallabi,Karwan Bazar,Car,Regular,0,5,0.34,10.8,475.0
-Abdullahpur,Kuril / Kuratoli (AIUB),Bike,Sunny,3,6,0.34,12.6,260.0
-Jatrabari,Jashimuddin (Uttara),Car,Sunny,19,1,0.73,24.4,1015.0
-Chandpur,Press Club,Bus,Sunny,4,6,0.10200000000000001,82.0,493.0
-Maniknagar,Darussalam,Bus,Rainy,15,5,0.147,14.5,93.0
-Kalyanpur,Ray Saheb Bazar,Car,Stormy,5,1,0.86,11.5,788.0
-Karwan Bazar,Azimpur / Palashi,Car,Stormy,10,4,0.77,3.4,345.0
-Darussalam,Badda Link Road,Car,Stormy,2,6,0.14,10.7,716.0
-MES,Matsya Bhaban,Bike,Sunny,13,1,0.74,10.4,197.0
-Paltan,College Gate,Car,Regular,2,2,0.66,8.1,407.0
-New Market / Nilkhet,Jatrabari,Bike,Rainy,19,5,0.63,7.9,289.0
-Badda Link Road,Paltan,Car,Rainy,22,5,0.44,8.4,468.0
-Dhanmondi 27,Badda Link Road,Bike,Sunny,6,3,0.47,11.0,201.0
-Chandpur,Khilkhet,Bike,Regular,16,4,0.95,95.9,1389.0
-Press Club,Technical,Car,Regular,7,5,0.72,9.9,408.0
-Karwan Bazar,Sayedabad Bus Terminal,Bus,Regular,12,4,0.189,7.5,55.0
-Dhanmondi 27,Azampur,Car,Regular,7,2,0.15,19.4,698.0
-Khilgaon Flyover,Naya Bazar,Bus,Sunny,16,3,0.267,5.3,46.0
-Kamalapur,Sainik Club / Banani Railgate,Car,Rainy,15,2,0.76,9.6,514.0
-Gulshan 1,Matsya Bhaban,Car,Sunny,9,0,0.66,6.4,353.0
-Bashundhara / Jamuna FP,Dhanmondi 27,Car,Sunny,16,1,0.94,12.0,443.0
-Nadda,Malibagh Railgate,Bike,Sunny,11,1,0.31,8.1,142.0
-Rajarbagh,Press Club,Bus,Regular,19,2,0.297,3.1,42.0
-Satrasta,Gulshan 1,Bus,Sunny,22,2,0.11699999999999999,4.1,25.0
-Technical,Rajarbagh,Car,Sunny,3,4,0.37,11.1,408.0
-Shahbagh,Azampur,Bike,Rainy,17,5,0.88,20.9,603.0
-Sainik Club / Banani Railgate,Mirpur 1,Rickshaw,Regular,9,5,0.38,5.5,169.0
-Chairman Bari,Darussalam,Bike,Rainy,0,6,0.99,6.2,233.0
-Dhanmondi 15/32,Shishu Mela,Bike,Regular,12,0,0.62,3.0,94.0
-Farmgate,Rampura Bridge,Rickshaw,Rainy,7,3,0.11,5.8,146.0
-Gulshan 1,Mirpur 1,Bus,Regular,18,3,0.129,6.9,83.0
-MES,Notun Bazar,Bus,Sunny,3,2,0.237,7.4,58.0
-Mugda,Darussalam,Bike,Rainy,21,3,0.97,13.6,337.0
-Dhanmondi 15/32,Mirpur 12,Bus,Regular,21,1,0.273,12.1,95.0
-Mirpur 14,Mazar Road,Rickshaw,Rainy,2,1,0.43,4.6,185.0
-Kalyanpur,Azimpur / Palashi,Car,Rainy,4,5,0.99,7.5,511.0
-Dhanmondi 27,Shahbagh,Rickshaw,Regular,12,0,0.36,3.9,124.0
-Mirpur 14,Airport,Bike,Regular,14,2,0.63,5.8,150.0
-Badda,Gulistan,Car,Stormy,17,4,0.74,9.6,704.0
-Rampura Bridge,Chairman Bari,Rickshaw,Rainy,15,6,0.68,5.3,176.0
-Kalabagan,Badda Link Road,Bus,Regular,22,3,0.105,10.6,63.0
-Shishu Mela,Kalabagan,Rickshaw,Rainy,0,3,0.12,3.7,128.0
-Merul Badda,Malibagh Chowdhury Para,Rickshaw,Rainy,7,2,0.26,3.8,126.0
-Mirpur 10,Mohakhali Bus Terminal,Bike,Sunny,6,2,0.69,6.8,150.0
-Satrasta,Airport,Bus,Sunny,17,5,0.036,11.9,80.0
-Mirpur 2,Dhanmondi 27,Bus,Rainy,2,2,0.12299999999999998,7.7,68.0
-Abdullahpur,Badda,Bike,Rainy,5,3,0.86,18.3,492.0
-Bangla Motor,Agargaon (IDB Bhaban),Bike,Sunny,10,3,0.97,4.9,166.0
-Shyamoli,College Gate,Car,Rainy,9,1,0.99,1.3,248.0
-Mirpur 1,Gulshan 1,Bus,Sunny,3,5,0.048,6.9,44.0
-Abul Hotel,Azampur,Car,Regular,23,5,0.15,17.9,741.0
-Gulshan 1,Azampur,Bus,Rainy,9,2,0.273,15.2,134.0
-Merul Badda,Shahbagh,Bus,Rainy,11,1,0.22499999999999998,7.9,66.0
-New Market / Nilkhet,Malibagh Chowdhury Para,Car,Sunny,15,6,0.2,7.0,294.0
-Karwan Bazar,Merul Badda,Bike,Sunny,19,6,0.49,6.9,180.0
-Kuril / Kuratoli (AIUB),Maniknagar,Bike,Stormy,15,3,0.76,15.2,432.0
-Airport,Mirpur 10,Car,Regular,9,0,0.95,7.3,432.0
-College Gate,Technical,Rickshaw,Regular,4,0,0.91,3.1,125.0
-City College / Science Lab,Naya Bazar,Car,Regular,11,6,0.26,4.7,247.0
-Mirpur 14,Mirpur 1,Bus,Stormy,21,3,0.297,3.9,25.0
-Khilkhet,Farmgate,Car,Sunny,7,5,0.83,11.7,421.0
-Badda,Rampura Bridge,Rickshaw,Rainy,15,5,0.92,3.6,130.0
-Mirpur 14,Darussalam,Car,Rainy,12,0,0.35,5.4,335.0
-Matsya Bhaban,Darussalam,Bike,Rainy,16,6,0.58,8.4,228.0
-Bashundhara / Jamuna FP,Mugda,Bike,Rainy,17,1,0.4,12.3,383.0
-Abul Hotel,Rampura Bridge,Car,Regular,22,6,0.65,0.8,130.0
-Matsya Bhaban,Nadda,Bus,Regular,15,3,0.24899999999999997,10.5,79.0
-Darussalam,Badda,Car,Sunny,0,2,0.42,11.1,474.0
-Abul Hotel,Karwan Bazar,Bus,Sunny,3,2,0.039,5.9,40.0
-Middle Badda,Mirpur 1,Bus,Regular,12,1,0.18,10.1,71.0
-Shishu Mela,Naya Bazar,Bike,Sunny,17,4,0.8,9.0,196.0
-Farmgate,Darussalam,Bike,Rainy,12,6,0.85,5.6,190.0
-Jatrabari,Jashimuddin (Uttara),Bike,Sunny,17,6,0.54,24.4,504.0
-Gulshan 1,Badda Link Road,Bus,Sunny,23,2,0.18,3.6,41.0
-Jatrabari,Mirpur 2,Bus,Sunny,18,4,0.261,16.6,122.0
-Jahangir Gate,Matsya Bhaban,Bike,Sunny,21,6,0.34,6.3,145.0
-Notun Bazar,Gulshan 2,Car,Sunny,14,4,0.38,4.5,203.0
-Naya Bazar,Rajlakshmi,Bus,Sunny,23,6,0.23399999999999999,23.3,145.0
-Nabisco,Rajlakshmi,Bike,Sunny,15,1,0.17,15.4,253.0
-Badda Link Road,Malibagh Railgate,Rickshaw,Rainy,12,6,0.22,5.4,165.0
-Chandpur,Mohakhali Bus Terminal,Bike,Sunny,10,0,0.11,88.9,1663.0
-Kalyanpur,Middle Badda,Bike,Rainy,10,6,0.32,10.7,337.0
-Jatrabari,Tikatuli,Bike,Sunny,14,6,0.78,2.9,106.0
-Mirpur 1,Sainik Club / Banani Railgate,Car,Sunny,11,4,0.85,5.5,227.0
-Shahbagh,Khilgaon Flyover,Rickshaw,Sunny,3,3,0.15,4.5,121.0
-Cantonment (Radisson),Naya Bazar,Car,Sunny,9,6,0.15,12.8,550.0
-Pallabi,Merul Badda,Bus,Rainy,19,2,0.087,11.5,96.0
-Jahangir Gate,Mirpur 1,Bus,Regular,15,1,0.045,2.9,27.0
-High Court,Rampura Bridge,Car,Regular,3,5,0.4,5.2,292.0
-Shahbagh,Gulshan 2,Car,Sunny,5,5,0.89,8.5,384.0
-Paltan,Jatrabari,Bike,Sunny,19,6,0.76,4.5,149.0
-Bangla Motor,Khilkhet,Bike,Sunny,11,1,0.13,13.3,226.0
-Mirpur 12,Nadda,Bike,Rainy,2,0,0.56,9.6,263.0
-Gulistan,Dhanmondi 27,Bus,Regular,19,1,0.144,7.3,76.0
-Middle Badda,Badda,Bike,Sunny,10,0,0.22,1.0,54.0
-Jatrabari,Mirpur 14,Bike,Regular,11,6,0.52,19.0,333.0
-Cantonment (Radisson),Dhanmondi 27,Bike,Rainy,9,3,0.19,9.1,300.0
-Azampur,Chandpur,Bus,Sunny,10,4,0.066,103.8,613.0
-Rajarbagh,Darussalam,Bike,Sunny,12,0,0.69,11.5,210.0
-Cantonment (Radisson),Bangla Motor,Bike,Sunny,21,0,0.86,8.5,173.0
-Mirpur 11,Malibagh Chowdhury Para,Bus,Sunny,8,1,0.051000000000000004,12.8,81.0
-MES,Bashundhara / Jamuna FP,Car,Regular,0,2,0.59,3.4,232.0
-Gulistan,Shyamoli,Bike,Sunny,14,3,0.63,9.8,181.0
-Jashimuddin (Uttara),Kuril / Kuratoli (AIUB),Bike,Regular,4,1,0.21,8.2,198.0
-Khilkhet,Kochukhet,Bus,Stormy,21,5,0.243,6.3,54.0
-Darussalam,College Gate,Rickshaw,Sunny,12,3,0.65,3.8,91.0
-Jahangir Gate,Malibagh Chowdhury Para,Bus,Stormy,22,5,0.063,8.2,62.0
-Sainik Club / Banani Railgate,Paltan,Car,Sunny,8,5,0.93,9.6,471.0
-Amtoli (Mohakhali),Gulistan,Car,Sunny,18,5,0.11,8.5,418.0
-Jahangir Gate,Rajlakshmi,Car,Sunny,12,4,0.45,14.1,436.0
-Chairman Bari,Chandpur,Car,Stormy,23,2,0.58,90.3,4962.0
-Middle Badda,Kuril / Kuratoli (AIUB),Bike,Regular,20,6,0.39,6.3,195.0
-Khilgaon Flyover,Naya Bazar,Bus,Sunny,2,3,0.066,5.3,43.0
-Kakali (Banani),Amtoli (Mohakhali),Rickshaw,Rainy,21,3,0.5,1.8,101.0
-Mirpur 14,Gulshan 1,Bike,Regular,18,1,0.37,8.4,230.0
-Abdullahpur,Shahjahanpur,Bus,Rainy,15,6,0.294,22.0,133.0
-Malibagh Railgate,House Building,Bike,Rainy,5,1,0.55,20.5,532.0
-Mirpur 2,Mugda,Bike,Regular,16,1,0.24,14.4,267.0
-Kalabagan,Cantonment (Radisson),Bus,Sunny,6,4,0.3,9.5,63.0
-Malibagh Chowdhury Para,House Building,Bike,Regular,10,2,0.92,20.4,473.0
-Jatrabari,Chandpur,Bus,Rainy,13,1,0.141,77.6,451.0
-Dhanmondi 27,Kakali (Banani),Car,Sunny,10,6,0.41,8.4,419.0
-Shahbagh,Abul Hotel,Bike,Sunny,16,2,0.51,6.6,151.0
-Naya Bazar,Sainik Club / Banani Railgate,Car,Regular,18,5,0.45,11.7,588.0
-Karwan Bazar,Mirpur 10,Car,Regular,6,5,0.22,8.8,380.0
-Nabisco,Badda Link Road,Bike,Sunny,15,4,0.2,6.6,116.0
-Dhanmondi 15/32,Darussalam,Bike,Sunny,3,2,0.73,6.1,163.0
-Jatrabari,Jagannath University,Car,Regular,8,4,0.62,4.3,282.0
-New Market / Nilkhet,Amtoli (Mohakhali),Car,Regular,17,3,0.37,8.2,447.0
-Middle Badda,MES,Car,Regular,3,4,0.17,7.1,331.0
-Naya Bazar,Khilkhet,Car,Rainy,11,5,0.42,17.3,803.0
-Jahangir Gate,Chairman Bari,Bus,Rainy,18,4,0.144,4.4,49.0
-Farmgate,Shahjahanpur,Bike,Sunny,22,4,0.35,4.3,105.0
-Mazar Road,Merul Badda,Bike,Regular,20,3,0.15,10.1,263.0
-Karwan Bazar,Bangla Motor,Bike,Regular,10,3,0.28,0.9,77.0
-Mirpur 12,Khilkhet,Bike,Rainy,5,1,0.81,7.1,224.0
-Middle Badda,Abul Hotel,Car,Regular,18,6,0.53,1.9,218.0
-Shyamoli,Kakali (Banani),Bike,Sunny,22,4,0.79,7.3,131.0
-Farmgate,Merul Badda,Car,Regular,14,2,0.27,6.9,308.0
-Ray Saheb Bazar,Shahbagh,Bike,Sunny,5,4,0.96,4.4,121.0
-Cantonment (Radisson),Jatrabari,Car,Sunny,12,6,0.57,14.9,516.0
-Pallabi,Shahjahanpur,Bus,Sunny,20,0,0.279,13.1,110.0
-Azampur,Mohakhali Bus Terminal,Bus,Sunny,10,5,0.216,15.1,121.0
-Amtoli (Mohakhali),Rajlakshmi,Bike,Stormy,10,5,0.36,13.8,491.0
-City College / Science Lab,Shishu Mela,Car,Rainy,8,3,0.62,4.4,389.0
-Jashimuddin (Uttara),Azimpur / Palashi,Car,Sunny,12,4,0.19,20.6,600.0
-Mirpur 11,Badda Link Road,Car,Sunny,14,6,0.8,11.1,407.0
-Asad Gate,Chandpur,Car,Stormy,20,1,0.89,88.0,5475.0
-Mirpur 10,City College / Science Lab,Car,Stormy,22,5,0.28,10.3,620.0
-Chandpur,Asad Gate,Bus,Regular,0,2,0.17099999999999999,88.0,569.0
-Karwan Bazar,Asad Gate,Bike,Sunny,15,2,0.46,3.5,112.0
-Sainik Club / Banani Railgate,Gulshan 1,Bus,Rainy,21,4,0.147,2.5,24.0
-Mugda,Jashimuddin (Uttara),Car,Rainy,10,2,0.48,21.3,1235.0
-Naya Bazar,Notun Bazar,Car,Sunny,20,0,0.28,12.5,557.0
-Cantonment (Radisson),Satrasta,Car,Sunny,17,3,0.73,5.9,331.0
-Shahjahanpur,Shyamoli,Car,Sunny,7,4,0.54,8.5,297.0
-Jashimuddin (Uttara),Nadda,Bike,Rainy,19,4,0.21,10.5,298.0
-Middle Badda,Bashundhara / Jamuna FP,Car,Regular,15,5,0.92,5.4,267.0
-High Court,College Gate,Bike,Sunny,12,5,0.63,6.8,148.0
-Jahangir Gate,MES,Car,Sunny,9,1,0.57,5.5,313.0
-Gulshan 1,Merul Badda,Bus,Regular,8,4,0.24599999999999997,2.9,30.0
-Jatrabari,Badda,Car,Sunny,19,4,0.51,11.3,492.0
-Tikatuli,Abul Hotel,Bus,Stormy,9,4,0.108,6.5,63.0
-Khilgaon Flyover,Mirpur 12,Bus,Sunny,8,5,0.099,14.8,108.0
-Rampura Bridge,Bangla Motor,Bus,Regular,4,1,0.276,5.9,54.0
-Gulshan 1,Kalabagan,Car,Sunny,23,3,0.29,7.6,344.0
-Airport,Naya Bazar,Bike,Sunny,4,6,0.24,18.8,350.0
-Gulistan,City College / Science Lab,Bus,Sunny,16,4,0.21,5.2,42.0
-Jahangir Gate,Pallabi,Bike,Sunny,10,5,0.38,6.6,188.0
-Agargaon (IDB Bhaban),Kalyanpur,Bus,Sunny,14,5,0.243,2.8,28.0
-Asad Gate,Matsya Bhaban,Car,Sunny,18,5,0.68,5.0,309.0
-Naya Bazar,New Market / Nilkhet,Rickshaw,Stormy,21,2,0.32,3.5,152.0
-Mohakhali Bus Terminal,Badda,Car,Stormy,6,2,0.81,5.0,379.0
-Shahbagh,Rajlakshmi,Bike,Rainy,22,5,0.71,20.0,459.0
-Jashimuddin (Uttara),Chandpur,Bike,Sunny,1,3,0.82,101.7,1681.0
-Karwan Bazar,Mazar Road,Bike,Regular,15,4,0.71,6.9,145.0
-Sayedabad Bus Terminal,Khilgaon Flyover,Car,Stormy,15,5,0.18,4.4,345.0
-Nabisco,Chandpur,Bike,Regular,17,6,0.75,88.2,1854.0
-MES,Maniknagar,Bus,Rainy,19,6,0.056999999999999995,14.7,123.0
-Abul Hotel,Mirpur 2,Bus,Rainy,16,3,0.22499999999999998,10.1,70.0
-Jahangir Gate,House Building,Car,Rainy,22,6,0.32,15.3,712.0
-Cantonment (Radisson),Mazar Road,Bus,Stormy,19,0,0.09,5.4,45.0
-Kochukhet,Gulistan,Bus,Regular,5,5,0.294,10.8,89.0
-Darussalam,Khilkhet,Car,Rainy,17,1,0.71,10.2,680.0
-Tikatuli,Maniknagar,Rickshaw,Rainy,5,0,1.0,2.2,121.0
-Agargaon (IDB Bhaban),Jahangir Gate,Bus,Sunny,18,0,0.183,0.3,29.0
-Mirpur 11,Shahjahanpur,Car,Stormy,21,5,0.84,12.3,721.0
-Ray Saheb Bazar,Farmgate,Car,Sunny,17,6,0.94,7.4,389.0
-Jatrabari,Abdullahpur,Car,Rainy,0,3,0.31,28.4,1415.0
-Asad Gate,Darussalam,Bike,Sunny,1,6,0.78,4.3,135.0
-College Gate,Notun Bazar,Bike,Sunny,4,2,0.71,12.2,243.0
-Mohakhali Bus Terminal,Notun Bazar,Car,Rainy,1,1,0.13,5.9,393.0
-Kamalapur,Nabisco,Bike,Sunny,0,3,0.99,6.5,178.0
-Mohakhali Bus Terminal,Kalabagan,Bus,Rainy,19,2,0.03,6.8,55.0
-Jashimuddin (Uttara),MES,Car,Sunny,22,3,0.48,8.7,329.0
-Naya Bazar,Khilkhet,Car,Stormy,18,0,0.58,17.3,1221.0
-Notun Bazar,Badda,Bike,Sunny,14,5,0.92,1.3,84.0
-Pallabi,College Gate,Car,Sunny,11,1,0.92,9.0,359.0
-Jahangir Gate,Bangla Motor,Rickshaw,Stormy,20,4,0.23,5.1,208.0
-Darussalam,Dhanmondi 27,Bus,Sunny,0,3,0.282,5.5,49.0
-Kochukhet,High Court,Bike,Stormy,13,5,0.5,9.0,280.0
-Nadda,Tikatuli,Bike,Sunny,16,4,0.85,12.0,196.0
-Jagannath University,Asad Gate,Car,Regular,5,2,0.44,9.3,456.0
-Kakali (Banani),Airport,Car,Sunny,6,6,0.96,7.5,311.0
-Asad Gate,Mirpur 10,Car,Stormy,1,6,0.85,7.6,576.0
-Karwan Bazar,Ray Saheb Bazar,Bike,Rainy,2,6,0.67,6.5,232.0
-Kochukhet,Sayedabad Bus Terminal,Bike,Regular,17,2,0.16,12.6,286.0
-Jagannath University,Mazar Road,Bike,Rainy,5,6,0.66,13.9,390.0
-City College / Science Lab,Mirpur 10,Bus,Regular,8,6,0.23399999999999999,10.3,101.0
-Abdullahpur,Mirpur 10,Bike,Regular,1,6,0.2,12.5,268.0
-Technical,Khilkhet,Bus,Rainy,0,2,0.045,10.8,88.0
-MES,Amtoli (Mohakhali),Rickshaw,Sunny,12,5,0.37,4.4,105.0
-Mazar Road,Shahjahanpur,Bus,Stormy,20,1,0.291,10.0,91.0
-Satrasta,Kalyanpur,Car,Sunny,17,6,0.35,4.4,265.0
-Kakali (Banani),Badda,Rickshaw,Rainy,3,1,0.55,5.2,196.0
-Nadda,Dhanmondi 15/32,Bike,Regular,13,3,0.66,11.7,232.0
-Mohakhali Bus Terminal,Nadda,Rickshaw,Sunny,11,0,0.38,4.9,117.0
-Sayedabad Bus Terminal,New Market / Nilkhet,Car,Rainy,7,3,0.81,6.7,382.0
-Middle Badda,Kalyanpur,Bus,Rainy,5,3,0.081,10.7,91.0
-Amtoli (Mohakhali),Azampur,Bike,Regular,0,1,0.12,14.8,303.0
-Mirpur 12,Azampur,Car,Regular,11,5,0.37,8.2,348.0
-Abdullahpur,Azimpur / Palashi,Bus,Sunny,9,0,0.126,23.9,163.0
-MES,Tikatuli,Bus,Rainy,13,2,0.162,13.3,76.0
-Satrasta,Pallabi,Bus,Stormy,15,2,0.12299999999999998,8.9,58.0
-Mirpur 2,Khilkhet,Bike,Sunny,21,5,0.39,8.1,160.0
-Kochukhet,MES,Car,Sunny,20,2,0.18,2.3,203.0
-Merul Badda,Mirpur 10,Car,Sunny,22,4,0.58,10.2,335.0
-Karwan Bazar,Gulshan 1,Bike,Rainy,2,6,0.96,5.2,200.0
-High Court,Mohakhali Bus Terminal,Bike,Rainy,16,2,0.37,6.6,189.0
-Jagannath University,Rampura Bridge,Car,Regular,12,1,0.44,9.1,382.0
-Agargaon (IDB Bhaban),Nadda,Bike,Sunny,9,1,0.27,8.0,199.0
-City College / Science Lab,Malibagh Railgate,Car,Sunny,11,0,0.47,6.4,265.0
-Rajarbagh,Khilgaon Flyover,Bus,Sunny,11,4,0.207,1.1,16.0
-Dhanmondi 27,Kuril / Kuratoli (AIUB),Bus,Sunny,6,3,0.279,13.1,66.0
-Karwan Bazar,Farmgate,Bike,Rainy,21,3,0.87,0.9,89.0
-Mirpur 14,Kuril / Kuratoli (AIUB),Bus,Sunny,6,0,0.147,7.6,48.0
-House Building,Badda Link Road,Bike,Rainy,9,1,0.62,16.6,507.0
-Badda Link Road,Airport,Bike,Regular,7,5,0.44,10.1,208.0
-Press Club,Tikatuli,Bike,Sunny,4,1,0.66,2.2,106.0
-City College / Science Lab,Notun Bazar,Bike,Sunny,7,4,0.9,12.0,201.0
-Azimpur / Palashi,Malibagh Railgate,Bike,Stormy,3,0,0.64,6.2,236.0
-Satrasta,Agargaon (IDB Bhaban),Bike,Regular,4,5,0.53,2.3,92.0
-Mirpur 10,Malibagh Chowdhury Para,Bus,Regular,7,1,0.276,11.9,91.0
-Maniknagar,House Building,Bike,Sunny,18,4,0.3,25.5,459.0
-Chandpur,Tikatuli,Car,Rainy,17,4,0.87,80.3,3836.0
-Chandpur,Tikatuli,Car,Rainy,23,3,0.21,80.3,3766.0
-Nabisco,Dhanmondi 27,Bike,Sunny,9,6,0.7,4.7,152.0
-Abdullahpur,Press Club,Car,Sunny,15,3,0.78,24.3,768.0
-Satrasta,Airport,Car,Sunny,3,6,0.12,11.9,477.0
-Rajlakshmi,Kakali (Banani),Bus,Sunny,15,0,0.054,12.1,79.0
-Dhanmondi 27,Abdullahpur,Bus,Sunny,1,5,0.081,21.2,136.0
-Shyamoli,Chandpur,Bike,Regular,20,0,0.29,89.8,1860.0
-City College / Science Lab,Badda Link Road,Car,Rainy,5,6,0.16,10.4,603.0
-Dhanmondi 27,City College / Science Lab,Bike,Sunny,3,6,0.68,2.1,101.0
-Jatrabari,Mohakhali Bus Terminal,Car,Regular,14,3,0.31,11.3,440.0
-Chandpur,Agargaon (IDB Bhaban),Bike,Regular,6,1,0.21,90.0,1444.0
-Azimpur / Palashi,Mirpur 1,Bike,Rainy,3,0,0.35,9.8,292.0
-Mirpur 12,Mirpur 14,Car,Sunny,23,6,0.82,1.2,164.0
-MES,Kalabagan,Car,Regular,23,0,0.75,10.4,489.0
-Shishu Mela,Merul Badda,Car,Regular,11,5,0.97,10.0,416.0
-Azimpur / Palashi,College Gate,Rickshaw,Regular,11,6,0.3,5.2,128.0
-Dhanmondi 15/32,Airport,Bus,Sunny,20,6,0.165,15.1,119.0
-Kakali (Banani),Notun Bazar,Bike,Sunny,3,3,0.8,5.7,160.0
-Agargaon (IDB Bhaban),Asad Gate,Bike,Regular,8,4,0.15,3.5,99.0
-Naya Bazar,New Market / Nilkhet,Rickshaw,Sunny,19,4,0.94,3.5,117.0
-Amtoli (Mohakhali),Mirpur 2,Car,Rainy,0,4,0.79,6.0,378.0
-Azimpur / Palashi,Shahbagh,Bike,Sunny,5,0,0.9,1.8,99.0
-Shyamoli,Kuril / Kuratoli (AIUB),Bus,Stormy,23,5,0.168,11.7,77.0
-Abdullahpur,Maniknagar,Bus,Regular,14,5,0.288,27.0,164.0
-Pallabi,Rajlakshmi,Car,Sunny,12,6,0.17,8.3,331.0
-Jahangir Gate,Gulshan 2,Rickshaw,Regular,18,2,0.71,5.6,179.0
-Mirpur 1,Mohakhali Bus Terminal,Bike,Stormy,8,0,0.12,6.0,274.0
-Nadda,Badda,Rickshaw,Stormy,20,5,0.58,3.5,194.0
-Farmgate,Shahbagh,Bus,Sunny,5,0,0.261,3.0,55.0
-Gulshan 1,Mirpur 12,Car,Sunny,4,1,0.18,9.6,405.0
-Malibagh Chowdhury Para,Notun Bazar,Bike,Rainy,2,6,0.45,6.3,203.0
-Merul Badda,Ray Saheb Bazar,Bus,Sunny,2,5,0.24599999999999997,10.6,63.0
-Kalyanpur,Mirpur 1,Car,Regular,17,5,0.17,3.0,247.0
-Azimpur / Palashi,Chairman Bari,Bus,Regular,1,6,0.135,9.2,85.0
-Karwan Bazar,Technical,Car,Regular,8,5,0.21,5.9,365.0
-Abul Hotel,Gulistan,Bus,Rainy,11,1,0.17099999999999999,6.7,70.0
-Khilkhet,Paltan,Car,Sunny,5,6,0.14,15.0,566.0
-Shishu Mela,Malibagh Chowdhury Para,Bike,Sunny,17,1,0.38,9.4,216.0
-Malibagh Chowdhury Para,Nadda,Bike,Regular,11,1,0.81,7.8,176.0
-High Court,Kochukhet,Bike,Regular,18,5,0.46,9.0,250.0
-Merul Badda,Kochukhet,Bike,Regular,2,2,0.22,6.1,153.0
-Kamalapur,Abul Hotel,Bus,Rainy,9,6,0.222,5.5,50.0
-Kalabagan,Mugda,Car,Regular,9,0,0.3,9.1,476.0
-Jatrabari,Rajlakshmi,Car,Regular,3,0,0.37,25.4,997.0
-MES,Asad Gate,Car,Sunny,11,0,0.8,9.0,353.0
-Tikatuli,Dhanmondi 15/32,Bike,Sunny,10,2,0.79,7.7,206.0
-Asad Gate,Mirpur 12,Car,Rainy,11,4,0.72,10.4,494.0
-Gulshan 2,Shishu Mela,Bus,Regular,12,2,0.159,8.3,73.0
-Maniknagar,Malibagh Chowdhury Para,Bike,Rainy,23,1,0.67,5.1,183.0
-Shishu Mela,New Market / Nilkhet,Bus,Regular,6,6,0.279,5.7,50.0
-Notun Bazar,Farmgate,Bike,Sunny,18,6,0.37,9.4,222.0
-Chairman Bari,Middle Badda,Bike,Regular,1,3,0.57,4.5,125.0
-Rampura Bridge,Mohakhali Bus Terminal,Bus,Sunny,22,3,0.264,4.3,42.0
-Shyamoli,House Building,Bike,Sunny,9,6,0.33,17.0,372.0
-Karwan Bazar,Jahangir Gate,Car,Rainy,20,6,0.51,4.3,400.0
-Mirpur 2,Ray Saheb Bazar,Bus,Rainy,5,1,0.051000000000000004,14.3,107.0
-Kuril / Kuratoli (AIUB),Satrasta,Car,Sunny,1,2,0.18,9.6,412.0
-Mirpur 1,Matsya Bhaban,Car,Sunny,0,0,0.78,9.2,411.0
-Pallabi,Mirpur 1,Car,Sunny,11,4,0.51,3.9,182.0
-Technical,Mazar Road,Car,Regular,11,3,0.57,1.5,143.0
-Azimpur / Palashi,Kochukhet,Bus,Sunny,9,4,0.126,9.6,80.0
-Sayedabad Bus Terminal,Dhanmondi 15/32,Car,Rainy,23,6,0.54,9.0,558.0
-Mirpur 11,Dhanmondi 27,Car,Rainy,5,5,0.94,9.8,588.0
-Kochukhet,Mirpur 2,Bike,Sunny,18,5,0.84,3.8,120.0
-Mirpur 2,Bashundhara / Jamuna FP,Bus,Rainy,17,0,0.17099999999999999,7.7,88.0
-Rajarbagh,Naya Bazar,Bike,Sunny,19,4,0.27,4.7,131.0
-Karwan Bazar,Gulistan,Bike,Stormy,8,0,0.64,5.2,253.0
-Mirpur 14,Maniknagar,Bike,Sunny,3,0,0.21,17.8,343.0
-Kalabagan,Rajlakshmi,Bike,Sunny,5,4,0.39,19.4,336.0
-Khilkhet,Karwan Bazar,Bus,Rainy,15,3,0.20400000000000001,12.4,89.0
-Jagannath University,Jatrabari,Bike,Rainy,23,5,0.66,4.3,170.0
-Jashimuddin (Uttara),Badda Link Road,Car,Stormy,3,2,0.68,13.8,897.0
-Dhanmondi 27,Middle Badda,Car,Rainy,10,0,0.78,10.4,691.0
-Rampura Bridge,Rajarbagh,Car,Sunny,6,0,0.42,3.5,174.0
-Kochukhet,Kalyanpur,Car,Stormy,6,0,0.91,5.7,420.0
-Kochukhet,Paltan,Bus,Regular,20,3,0.081,9.8,80.0
-Jagannath University,Darussalam,Bus,Sunny,21,3,0.069,13.3,77.0
-Mirpur 10,Jahangir Gate,Bus,Regular,23,2,0.22799999999999998,4.6,40.0
-Dhanmondi 15/32,Shahbagh,Bus,Stormy,20,1,0.126,3.2,44.0
-Kuril / Kuratoli (AIUB),Kakali (Banani),Car,Sunny,21,1,0.51,4.7,241.0
-Technical,Gulistan,Car,Rainy,13,0,0.25,11.1,562.0
-Kalyanpur,Shyamoli,Car,Sunny,18,3,0.35,1.1,162.0
-Nabisco,Middle Badda,Bus,Regular,6,5,0.147,6.1,57.0
-Paltan,Badda Link Road,Car,Sunny,12,1,0.76,8.4,328.0
-Azimpur / Palashi,Chairman Bari,Car,Sunny,13,2,0.46,9.2,342.0
-Kakali (Banani),Kalyanpur,Car,Sunny,15,0,0.82,7.0,298.0
-Chandpur,Ray Saheb Bazar,Car,Sunny,8,1,0.46,79.5,3013.0
-City College / Science Lab,Rampura Bridge,Car,Stormy,22,6,0.35,7.7,475.0
-Darussalam,Nabisco,Bus,Sunny,11,6,0.282,5.1,52.0
-Shyamoli,Chairman Bari,Bike,Rainy,10,6,0.43,7.0,253.0
-Naya Bazar,Mirpur 14,Car,Sunny,22,2,1.0,16.1,567.0
-Dhanmondi 15/32,Kochukhet,Car,Sunny,16,1,0.83,7.9,321.0
-Mirpur 11,Malibagh Railgate,Car,Stormy,17,4,0.66,12.6,853.0
-Dhanmondi 15/32,Technical,Bike,Sunny,7,1,0.25,5.4,115.0
-Gulshan 1,Bashundhara / Jamuna FP,Bus,Rainy,4,2,0.237,4.9,50.0
-Mazar Road,New Market / Nilkhet,Bike,Rainy,8,0,0.5,9.3,311.0
-Middle Badda,Jashimuddin (Uttara),Car,Regular,11,4,0.5,14.4,492.0
-Maniknagar,Airport,Car,Rainy,0,2,0.5,19.2,1001.0
-Notun Bazar,Gulistan,Bike,Sunny,6,0,0.53,10.8,222.0
-Mugda,Cantonment (Radisson),Bike,Regular,23,1,0.63,12.1,270.0
-Mugda,House Building,Car,Stormy,13,5,0.91,23.8,1245.0
-Rampura Bridge,Rajarbagh,Rickshaw,Sunny,8,6,0.52,3.5,119.0
-Rajlakshmi,Rampura Bridge,Bike,Rainy,1,2,0.57,17.6,457.0
-Nadda,Mirpur 12,Bike,Stormy,19,3,0.68,9.6,388.0
-Malibagh Railgate,Kalyanpur,Bike,Rainy,15,5,0.14,9.9,240.0
-Paltan,Mirpur 10,Car,Sunny,22,1,0.71,13.0,460.0
-Azampur,Naya Bazar,Car,Rainy,15,0,0.21,24.2,1072.0
-Chandpur,Mirpur 11,Bus,Regular,22,5,0.069,95.8,542.0
-Malibagh Railgate,Jahangir Gate,Car,Regular,1,6,0.62,7.9,402.0
-Darussalam,Karwan Bazar,Bus,Rainy,1,0,0.237,6.4,60.0
-Jahangir Gate,Nabisco,Rickshaw,Rainy,0,2,0.87,2.6,137.0
-Shishu Mela,Matsya Bhaban,Bus,Rainy,1,5,0.10200000000000001,6.0,43.0
-Shishu Mela,Cantonment (Radisson),Bike,Rainy,20,3,0.55,7.7,286.0
-Mirpur 14,New Market / Nilkhet,Bus,Regular,17,3,0.144,13.5,112.0
-Farmgate,Cantonment (Radisson),Bus,Sunny,23,6,0.15,6.9,58.0
-Azimpur / Palashi,Notun Bazar,Car,Regular,4,3,0.36,12.4,550.0
-Nadda,Dhanmondi 27,Car,Sunny,17,6,0.4,11.8,544.0
-Gulshan 1,Press Club,Bus,Regular,16,2,0.093,7.6,50.0
-High Court,Rajlakshmi,Bus,Stormy,23,4,0.06,20.7,126.0
-Kamalapur,Badda,Car,Regular,7,5,0.42,8.4,361.0
-Kuril / Kuratoli (AIUB),City College / Science Lab,Car,Sunny,16,0,0.55,13.4,477.0
-Azampur,Abul Hotel,Bike,Rainy,13,6,0.75,17.9,411.0
-Kalyanpur,Ray Saheb Bazar,Bike,Sunny,13,3,0.17,11.5,200.0
-Naya Bazar,Dhanmondi 27,Bus,Sunny,10,6,0.264,6.8,66.0
-Nadda,Malibagh Chowdhury Para,Car,Sunny,4,4,0.78,7.8,322.0
-Tikatuli,Middle Badda,Bus,Regular,17,5,0.201,8.4,80.0
-Badda Link Road,Abdullahpur,Bus,Stormy,7,4,0.063,18.1,98.0
-Abul Hotel,Badda Link Road,Car,Stormy,10,6,0.71,2.7,353.0
-Pallabi,Dhanmondi 15/32,Car,Sunny,10,6,0.28,11.2,518.0
-Matsya Bhaban,Kuril / Kuratoli (AIUB),Bike,Sunny,7,2,0.35,12.3,233.0
-Amtoli (Mohakhali),Mugda,Bike,Sunny,11,3,0.61,8.9,185.0
-Ray Saheb Bazar,Kamalapur,Bike,Stormy,11,5,0.82,3.6,154.0
-Jahangir Gate,Mugda,Car,Sunny,4,5,0.8,11.2,474.0
-Jashimuddin (Uttara),Mirpur 11,Bike,Rainy,10,3,0.65,9.1,315.0
-Mohakhali Bus Terminal,Abdullahpur,Car,Sunny,17,3,0.15,17.1,722.0
-Mirpur 14,Jatrabari,Car,Stormy,0,0,0.34,19.0,1170.0
-Mirpur 14,Mirpur 1,Car,Sunny,4,1,0.43,3.9,238.0
-Dhanmondi 15/32,Jatrabari,Bike,Rainy,15,0,0.62,10.3,263.0
-Abdullahpur,Jahangir Gate,Car,Regular,14,1,0.97,16.8,626.0
-Pallabi,Kamalapur,Car,Stormy,13,1,0.59,15.0,832.0
-Shyamoli,Shahjahanpur,Bus,Regular,8,4,0.24599999999999997,8.5,70.0
-Nadda,Satrasta,Car,Sunny,7,1,0.46,8.1,320.0
-Naya Bazar,Khilkhet,Car,Sunny,17,2,0.91,17.3,762.0
-Tikatuli,Gulshan 2,Car,Sunny,0,1,0.63,10.4,440.0
-Agargaon (IDB Bhaban),Badda,Bike,Regular,9,1,0.37,8.7,225.0
-Mazar Road,Asad Gate,Bike,Rainy,13,5,0.8,5.0,175.0
-Khilgaon Flyover,Satrasta,Car,Regular,13,5,0.61,5.9,282.0
-Shahjahanpur,High Court,Bus,Sunny,12,4,0.11399999999999999,2.6,24.0
-Agargaon (IDB Bhaban),Rajarbagh,Bike,Regular,12,0,0.17,8.9,167.0
-Gulshan 1,Pallabi,Car,Regular,16,0,0.98,8.9,370.0
-Mazar Road,Shahbagh,Car,Regular,13,6,0.21,8.9,379.0
-Naya Bazar,Malibagh Chowdhury Para,Bus,Sunny,19,6,0.201,6.3,55.0
-Mirpur 12,Kalabagan,Bus,Rainy,10,0,0.10200000000000001,12.6,105.0
-Gulshan 1,Asad Gate,Car,Sunny,23,3,0.32,7.3,347.0
-Rampura Bridge,Paltan,Rickshaw,Sunny,14,6,0.55,5.0,109.0
-Kochukhet,Karwan Bazar,Bus,Regular,12,6,0.105,6.3,52.0
-Khilgaon Flyover,Dhanmondi 15/32,Car,Regular,16,1,0.5,7.4,338.0
-Khilgaon Flyover,Jashimuddin (Uttara),Bus,Rainy,16,2,0.24599999999999997,18.7,122.0
-Bashundhara / Jamuna FP,Middle Badda,Rickshaw,Rainy,23,5,0.47,5.4,199.0
-Gulistan,Kakali (Banani),Bus,Rainy,16,6,0.084,10.3,63.0
-Mohakhali Bus Terminal,Azimpur / Palashi,Bus,Rainy,6,1,0.24599999999999997,7.8,64.0
-Matsya Bhaban,Asad Gate,Rickshaw,Sunny,17,0,0.34,5.0,142.0
-Gulistan,Rajarbagh,Bus,Regular,20,3,0.198,2.8,30.0
-Shyamoli,Technical,Rickshaw,Regular,13,5,0.12,1.8,78.0
-Bashundhara / Jamuna FP,Kalabagan,Bike,Regular,17,1,0.97,12.1,311.0
-Dhanmondi 27,Chairman Bari,Bike,Sunny,16,5,0.39,8.0,157.0
-Sainik Club / Banani Railgate,Shishu Mela,Car,Sunny,2,2,0.14,7.5,327.0
-Naya Bazar,Badda,Car,Sunny,19,1,0.87,11.3,530.0
-Kalyanpur,Mirpur 1,Car,Stormy,22,1,0.5,3.0,285.0
-Cantonment (Radisson),High Court,Bus,Regular,7,5,0.23099999999999998,10.1,84.0
-Satrasta,Nadda,Car,Regular,18,2,0.97,8.1,460.0
-Kalabagan,MES,Car,Regular,16,0,0.64,10.4,420.0
-Rajarbagh,Mirpur 14,Bike,Sunny,16,3,0.5,14.6,250.0
-Matsya Bhaban,Mirpur 2,Bus,Rainy,12,6,0.12299999999999998,9.9,76.0
-Farmgate,Malibagh Chowdhury Para,Bike,Rainy,12,6,0.75,5.7,174.0
-Mirpur 11,Middle Badda,Car,Sunny,16,4,0.12,11.1,349.0
-Nadda,Mirpur 14,Bike,Sunny,4,1,0.31,8.5,182.0
-Mirpur 11,Nadda,Bus,Sunny,16,0,0.291,8.9,56.0
-Rajarbagh,Malibagh Chowdhury Para,Rickshaw,Sunny,4,3,0.37,2.0,82.0
-Jatrabari,Bangla Motor,Bike,Rainy,12,5,0.45,8.3,209.0
-Azampur,College Gate,Car,Sunny,13,3,0.67,17.8,594.0
-Khilgaon Flyover,Sayedabad Bus Terminal,Rickshaw,Rainy,1,6,0.89,4.4,172.0
-Gulshan 2,Khilkhet,Bike,Sunny,12,0,0.36,5.9,121.0
-Jashimuddin (Uttara),Mirpur 12,Car,Regular,16,5,0.45,7.7,326.0
-Mirpur 1,Malibagh Chowdhury Para,Bus,Rainy,10,0,0.15,10.8,101.0
-Jahangir Gate,Amtoli (Mohakhali),Car,Rainy,12,4,0.13,4.0,246.0
-Mugda,City College / Science Lab,Bike,Rainy,14,1,0.28,8.4,223.0
-Jahangir Gate,Mirpur 10,Bus,Stormy,11,5,0.216,4.6,26.0
-Mohakhali Bus Terminal,Farmgate,Car,Regular,19,6,0.7,4.0,310.0
-Jashimuddin (Uttara),Gulshan 2,Bus,Regular,8,1,0.15,11.5,103.0
-Merul Badda,Sayedabad Bus Terminal,Car,Regular,2,6,0.55,9.0,441.0
-Tikatuli,Chairman Bari,Bike,Sunny,9,4,0.37,10.1,208.0
-High Court,Jagannath University,Car,Sunny,19,4,0.9,4.4,254.0
-Khilkhet,Bashundhara / Jamuna FP,Bike,Rainy,0,5,0.89,3.2,160.0
-Badda Link Road,Jashimuddin (Uttara),Bus,Sunny,12,4,0.099,13.8,84.0
-Mirpur 10,Chandpur,Car,Sunny,4,0,0.11,94.8,3168.0
-Farmgate,Amtoli (Mohakhali),Bus,Rainy,2,3,0.24599999999999997,4.3,43.0
-Mohakhali Bus Terminal,Paltan,Bus,Regular,18,0,0.126,7.2,79.0
-Tikatuli,Gulistan,Bus,Rainy,19,2,0.111,1.2,36.0
-Gulshan 1,Dhanmondi 15/32,Car,Rainy,7,4,0.19,7.6,372.0
-Khilkhet,Notun Bazar,Bus,Sunny,6,0,0.072,7.6,42.0
-Mirpur 2,Mazar Road,Bus,Sunny,0,1,0.24899999999999997,1.7,34.0
-Bashundhara / Jamuna FP,Darussalam,Bike,Sunny,9,3,0.7,9.3,225.0
-Mirpur 11,MES,Rickshaw,Rainy,8,3,0.68,4.4,196.0
-Rajarbagh,Mirpur 11,Bike,Rainy,14,6,1.0,14.2,348.0
-Mirpur 2,Nabisco,Car,Sunny,22,3,0.5,5.8,258.0
-Mugda,Matsya Bhaban,Car,Regular,16,0,0.24,6.0,275.0
-Nabisco,Mirpur 1,Rickshaw,Regular,3,3,0.65,5.4,150.0
-Khilgaon Flyover,House Building,Bus,Sunny,3,5,0.042,21.1,144.0
-Mohakhali Bus Terminal,Ray Saheb Bazar,Car,Stormy,9,6,0.42,10.2,798.0
-High Court,Azimpur / Palashi,Rickshaw,Regular,9,5,0.21,3.0,115.0
-Merul Badda,Ray Saheb Bazar,Car,Stormy,12,2,0.23,10.6,622.0
-Rampura Bridge,Merul Badda,Car,Regular,2,4,0.49,2.3,182.0
-Rajarbagh,Khilgaon Flyover,Rickshaw,Regular,17,4,0.19,1.1,71.0
-Badda,Chandpur,Bus,Rainy,1,4,0.045,87.8,518.0
-Sayedabad Bus Terminal,Rajarbagh,Bike,Regular,9,1,0.98,3.3,141.0
-Khilkhet,Kochukhet,Bike,Rainy,1,1,0.21,6.3,201.0
-Chairman Bari,Khilgaon Flyover,Bike,Stormy,17,2,0.43,7.1,307.0
-Malibagh Railgate,Chairman Bari,Bus,Regular,17,0,0.22499999999999998,6.5,67.0
-Gulistan,Amtoli (Mohakhali),Car,Regular,5,5,0.87,8.5,437.0
-Badda,Bashundhara / Jamuna FP,Rickshaw,Regular,5,6,0.56,5.1,137.0
-Matsya Bhaban,Mohakhali Bus Terminal,Rickshaw,Rainy,21,1,0.87,5.9,199.0
-Nabisco,Pallabi,Bike,Sunny,7,1,0.34,8.6,158.0
-Asad Gate,Jatrabari,Car,Rainy,14,2,0.94,11.9,607.0
-Pallabi,Ray Saheb Bazar,Bike,Rainy,13,1,0.54,17.3,403.0
-Badda,Abul Hotel,Car,Sunny,20,3,0.98,2.9,245.0
-Malibagh Railgate,Kuril / Kuratoli (AIUB),Car,Regular,13,2,0.78,10.4,431.0
-Cantonment (Radisson),Chairman Bari,Bus,Sunny,20,3,0.183,2.2,48.0
-MES,Azampur,Bike,Rainy,6,3,0.24,10.4,258.0
-Abul Hotel,Middle Badda,Bus,Sunny,23,5,0.069,1.9,19.0
-Mazar Road,Cantonment (Radisson),Bus,Rainy,16,2,0.15,5.4,49.0
-Azimpur / Palashi,Mirpur 2,Bike,Stormy,18,5,0.46,10.6,388.0
-Kalyanpur,Merul Badda,Bike,Sunny,22,5,0.91,10.3,200.0
-Merul Badda,Cantonment (Radisson),Bus,Sunny,23,0,0.177,6.1,60.0
-Badda Link Road,Ray Saheb Bazar,Car,Sunny,19,5,0.22,11.8,540.0
-Asad Gate,Mazar Road,Rickshaw,Rainy,21,4,0.95,5.0,173.0
-Merul Badda,Mirpur 11,Bike,Rainy,21,5,0.91,10.9,277.0
-Rajarbagh,New Market / Nilkhet,Car,Regular,10,0,0.43,6.3,359.0
-Shishu Mela,Merul Badda,Car,Rainy,22,3,0.71,10.0,525.0
-Airport,Jashimuddin (Uttara),Car,Rainy,8,4,0.17,3.8,300.0
-City College / Science Lab,Mirpur 10,Bus,Sunny,3,0,0.11399999999999999,10.3,77.0
-Asad Gate,Amtoli (Mohakhali),Bus,Stormy,0,3,0.033,6.5,61.0
-Rajarbagh,Kuril / Kuratoli (AIUB),Bike,Regular,11,2,0.85,12.0,242.0
-Mirpur 1,Rajlakshmi,Bus,Regular,10,0,0.072,12.0,89.0
-Mazar Road,Azimpur / Palashi,Bike,Sunny,7,4,0.57,9.4,164.0
-Middle Badda,MES,Bus,Regular,23,6,0.192,7.1,69.0
-Mirpur 14,High Court,Bike,Sunny,2,6,0.43,13.6,286.0
-Mirpur 1,Mirpur 11,Bus,Regular,0,0,0.183,3.0,28.0
-Mirpur 2,Paltan,Bus,Regular,1,3,0.039,12.1,96.0
-Merul Badda,Rajarbagh,Rickshaw,Stormy,8,3,0.78,5.7,287.0
-Mirpur 10,Badda,Car,Sunny,4,5,0.85,10.8,451.0
-Jahangir Gate,Dhanmondi 15/32,Bike,Stormy,9,5,0.34,4.8,235.0
-Gulistan,Kamalapur,Bike,Rainy,9,4,0.47,1.2,100.0
-Shyamoli,Press Club,Bus,Sunny,17,2,0.23399999999999999,8.6,77.0
-Mirpur 14,Jahangir Gate,Bike,Sunny,21,1,0.93,6.4,155.0
-Matsya Bhaban,Kuril / Kuratoli (AIUB),Bus,Regular,1,0,0.22499999999999998,12.3,102.0
-Mugda,Press Club,Bus,Rainy,20,5,0.252,4.5,55.0
-Merul Badda,Mugda,Bus,Sunny,19,1,0.048,6.8,80.0
-City College / Science Lab,Gulshan 2,Bus,Sunny,23,2,0.153,9.3,62.0
-Rampura Bridge,Chairman Bari,Bus,Sunny,20,2,0.126,5.3,44.0
-Jashimuddin (Uttara),House Building,Rickshaw,Stormy,23,1,0.29,3.1,140.0
-Chairman Bari,Mazar Road,Car,Rainy,9,0,0.93,6.0,475.0
-Tikatuli,New Market / Nilkhet,Bike,Regular,2,2,0.54,5.5,145.0
-College Gate,Cantonment (Radisson),Bike,Rainy,5,5,0.92,8.0,260.0
-Naya Bazar,Maniknagar,Car,Regular,18,6,0.48,4.7,318.0
-Rampura Bridge,Malibagh Railgate,Bus,Sunny,21,3,0.291,1.9,31.0
-Rajarbagh,Gulshan 2,Car,Sunny,2,5,0.88,8.3,375.0
-Jashimuddin (Uttara),Mirpur 10,Bus,Sunny,17,2,0.252,9.9,99.0
-Farmgate,Mirpur 2,Car,Sunny,23,3,0.87,7.0,337.0
-Malibagh Railgate,Badda Link Road,Car,Regular,3,6,0.98,5.4,320.0
-College Gate,Gulistan,Bike,Sunny,17,3,0.54,8.6,205.0
-Shahbagh,Paltan,Bike,Sunny,9,1,0.89,3.0,113.0
-Naya Bazar,Kuril / Kuratoli (AIUB),Bus,Rainy,0,6,0.207,15.5,116.0
-Jagannath University,Press Club,Bike,Stormy,16,2,0.54,3.7,165.0
-Ray Saheb Bazar,City College / Science Lab,Bike,Rainy,16,3,0.36,5.5,178.0
-Technical,Bashundhara / Jamuna FP,Bike,Rainy,17,3,0.46,9.7,314.0
-Bangla Motor,Cantonment (Radisson),Bike,Regular,15,2,0.43,8.5,181.0
-Mirpur 10,Gulshan 2,Bike,Sunny,14,5,0.83,6.8,148.0
-Gulshan 2,Darussalam,Bike,Sunny,11,5,0.62,7.4,143.0
-Dhanmondi 15/32,Mazar Road,Bike,Stormy,15,6,0.93,6.8,240.0
-Kalabagan,Gulistan,Car,Stormy,3,5,0.72,5.9,506.0
-Matsya Bhaban,Jatrabari,Bus,Regular,3,2,0.297,7.0,45.0
-Kakali (Banani),Azampur,Bike,Rainy,23,3,0.51,13.1,374.0
-Badda,Nabisco,Bike,Sunny,8,4,0.56,7.0,171.0
-Middle Badda,Tikatuli,Bike,Regular,10,5,0.64,8.4,215.0
-Tikatuli,City College / Science Lab,Bike,Sunny,0,5,0.98,6.3,172.0
-Press Club,Kamalapur,Bus,Sunny,15,5,0.189,1.4,35.0
-Nadda,Mugda,Car,Sunny,17,0,0.72,11.0,526.0
-Airport,Asad Gate,Bike,Regular,10,3,0.56,13.8,324.0
-Shishu Mela,Badda,Car,Regular,22,4,0.33,11.3,400.0
-Kuril / Kuratoli (AIUB),Khilkhet,Bus,Regular,19,2,0.078,2.4,35.0
-Agargaon (IDB Bhaban),Mirpur 12,Bike,Rainy,19,2,0.6,7.6,269.0
-Badda,Mirpur 12,Bike,Rainy,23,6,0.36,12.5,336.0
-Kalyanpur,Jagannath University,Car,Regular,18,4,0.1,12.1,540.0
-Karwan Bazar,Malibagh Railgate,Rickshaw,Sunny,22,3,0.99,4.7,125.0
-Sainik Club / Banani Railgate,New Market / Nilkhet,Bike,Sunny,13,3,0.44,10.1,189.0
-Malibagh Chowdhury Para,College Gate,Car,Regular,0,0,0.84,9.0,421.0
-Kalabagan,Rajarbagh,Bus,Sunny,12,2,0.056999999999999995,7.2,50.0
-Kalabagan,High Court,Rickshaw,Regular,22,4,0.46,4.3,99.0
-Darussalam,Airport,Bike,Sunny,23,4,0.17,10.4,205.0
-Agargaon (IDB Bhaban),Gulshan 1,Car,Regular,1,4,0.21,4.8,251.0
-Azampur,Jagannath University,Bus,Sunny,0,0,0.081,26.0,155.0
-Mohakhali Bus Terminal,Malibagh Chowdhury Para,Rickshaw,Rainy,2,3,0.43,5.2,208.0
-Cantonment (Radisson),Khilkhet,Car,Regular,20,6,0.28,5.0,324.0
-Bashundhara / Jamuna FP,Kochukhet,Rickshaw,Rainy,5,3,0.85,4.6,183.0
-Azampur,Shishu Mela,Bus,Rainy,16,6,0.099,17.3,110.0
-House Building,Sainik Club / Banani Railgate,Bus,Regular,23,5,0.21,13.2,104.0
-Asad Gate,Malibagh Chowdhury Para,Car,Stormy,5,3,0.13,8.7,613.0
-Nadda,Shishu Mela,Bike,Rainy,15,5,0.3,11.0,272.0
-Kalyanpur,Kalabagan,Rickshaw,Rainy,20,5,0.1,5.4,211.0
-Press Club,Jagannath University,Bus,Sunny,22,4,0.22499999999999998,3.7,39.0
-New Market / Nilkhet,Press Club,Car,Sunny,6,6,0.66,3.4,182.0
-Karwan Bazar,Mohakhali Bus Terminal,Car,Regular,20,6,0.9,4.5,316.0
-Rampura Bridge,Gulshan 1,Bus,Regular,8,2,0.216,3.7,56.0
-New Market / Nilkhet,Shishu Mela,Bus,Sunny,17,1,0.06,5.7,47.0
-College Gate,Sainik Club / Banani Railgate,Car,Rainy,2,6,0.93,7.7,500.0
-Darussalam,Airport,Car,Sunny,12,0,0.49,10.4,378.0
-Azimpur / Palashi,Gulshan 2,Bus,Regular,23,1,0.069,10.1,74.0
-Amtoli (Mohakhali),Khilgaon Flyover,Car,Rainy,11,3,0.2,6.0,346.0
-Mirpur 11,Rajarbagh,Bus,Regular,12,4,0.078,14.2,86.0
-Cantonment (Radisson),Gulshan 1,Car,Stormy,3,1,0.94,3.8,362.0
-Jagannath University,Jatrabari,Car,Regular,2,6,0.53,4.3,268.0
-Naya Bazar,Chandpur,Car,Sunny,5,0,0.61,80.4,2691.0
-Sayedabad Bus Terminal,Bangla Motor,Car,Stormy,8,2,0.47,6.9,601.0
-Shahbagh,Press Club,Rickshaw,Rainy,22,5,0.73,2.3,104.0
-Dhanmondi 27,Jatrabari,Bike,Regular,8,4,0.39,11.0,262.0
-Technical,Sainik Club / Banani Railgate,Bike,Regular,4,6,0.3,6.5,166.0
-City College / Science Lab,New Market / Nilkhet,Bus,Stormy,7,5,0.183,1.4,29.0
-Mirpur 11,Satrasta,Bike,Sunny,10,0,0.94,8.1,230.0
-Mirpur 12,Chandpur,Bus,Sunny,1,6,0.201,97.6,598.0
-Kalyanpur,Nadda,Bus,Regular,23,3,0.075,10.6,74.0
-Paltan,City College / Science Lab,Rickshaw,Regular,19,3,0.11,4.9,159.0
-Mohakhali Bus Terminal,Mirpur 11,Bus,Sunny,8,3,0.066,7.6,52.0
-Darussalam,Sainik Club / Banani Railgate,Bike,Stormy,17,5,0.6,6.3,276.0
-Merul Badda,Azimpur / Palashi,Bus,Regular,10,3,0.264,9.6,90.0
-Khilkhet,College Gate,Car,Sunny,14,6,0.55,12.9,458.0
-Gulshan 2,Kochukhet,Bike,Rainy,12,1,0.51,2.8,100.0
-Kalabagan,Abdullahpur,Bike,Rainy,11,6,0.34,22.1,489.0
-Gulistan,Naya Bazar,Bike,Sunny,2,1,0.3,1.9,66.0
-Notun Bazar,Badda,Bike,Regular,9,5,0.51,1.3,86.0
-Chandpur,Matsya Bhaban,Car,Sunny,3,0,0.46,83.9,2807.0
-Karwan Bazar,Mirpur 2,Car,Regular,4,5,0.72,7.8,394.0
-Badda,Mirpur 1,Car,Regular,2,2,0.52,10.7,497.0
-City College / Science Lab,Asad Gate,Bus,Sunny,12,3,0.063,3.2,37.0
-Mohakhali Bus Terminal,Kamalapur,Car,Rainy,18,2,0.22,7.2,503.0
-Mirpur 12,Gulshan 2,Car,Regular,10,6,0.95,8.6,494.0
-Sayedabad Bus Terminal,Notun Bazar,Bike,Rainy,17,3,0.3,11.3,348.0
-Azampur,Malibagh Railgate,Bike,Regular,2,6,0.54,20.0,398.0
-Matsya Bhaban,Middle Badda,Car,Sunny,14,4,0.46,7.8,280.0
-Matsya Bhaban,Sainik Club / Banani Railgate,Bike,Regular,6,4,0.98,8.3,165.0
-Cantonment (Radisson),Shishu Mela,Bike,Rainy,14,0,0.71,7.7,229.0
-Azampur,Sainik Club / Banani Railgate,Car,Regular,5,0,0.49,12.7,568.0
-Paltan,Bashundhara / Jamuna FP,Car,Stormy,3,2,0.87,12.0,814.0
-Abul Hotel,Jahangir Gate,Car,Regular,23,6,0.34,7.7,386.0
-Asad Gate,Nadda,Car,Sunny,5,6,0.53,11.2,477.0
-Nabisco,New Market / Nilkhet,Rickshaw,Sunny,11,4,0.66,6.0,114.0
-Gulshan 2,Asad Gate,Car,Sunny,3,2,0.16,8.5,365.0
-Sayedabad Bus Terminal,Pallabi,Car,Rainy,10,1,0.79,17.9,1079.0
-Jashimuddin (Uttara),Satrasta,Bus,Rainy,11,4,0.036,15.5,95.0
-Azampur,Karwan Bazar,Car,Sunny,20,5,0.12,18.8,804.0
-Dhanmondi 27,Jahangir Gate,Rickshaw,Rainy,7,3,0.53,4.5,157.0
-Darussalam,Dhanmondi 27,Bus,Rainy,8,5,0.093,5.5,52.0
-Chandpur,Malibagh Railgate,Bike,Regular,1,1,0.66,83.8,1538.0
-Rajlakshmi,Gulistan,Bike,Rainy,16,1,0.19,22.3,483.0
-Airport,Shishu Mela,Bus,Rainy,12,1,0.216,13.1,105.0
-Matsya Bhaban,Gulshan 1,Bike,Rainy,21,1,0.75,6.4,187.0
-Gulshan 2,Airport,Car,Sunny,9,4,0.51,7.6,349.0
-Darussalam,Gulshan 1,Car,Rainy,11,1,0.44,7.2,411.0
-Mirpur 1,Kuril / Kuratoli (AIUB),Bike,Rainy,23,6,0.83,9.0,275.0
-Mirpur 10,Mirpur 2,Bike,Sunny,14,2,0.51,1.1,64.0
-Mazar Road,Cantonment (Radisson),Car,Sunny,7,3,0.22,5.4,236.0
-Paltan,Mirpur 2,Bus,Rainy,0,2,0.12,12.1,91.0
-Jatrabari,MES,Car,Stormy,23,0,0.11,16.0,1010.0
-Rajarbagh,Middle Badda,Bike,Regular,22,2,0.23,6.1,134.0
-Shahjahanpur,Bangla Motor,Rickshaw,Rainy,15,2,0.96,3.7,160.0
-Mugda,House Building,Car,Sunny,2,3,0.47,23.8,859.0
-Technical,Mirpur 2,Rickshaw,Sunny,11,5,0.45,3.1,87.0
-Mirpur 11,New Market / Nilkhet,Bike,Sunny,21,2,0.12,12.7,220.0
-Khilkhet,Agargaon (IDB Bhaban),Car,Rainy,8,3,0.84,9.7,671.0
-Airport,Malibagh Railgate,Car,Rainy,12,2,0.94,14.2,696.0
-Darussalam,City College / Science Lab,Bike,Rainy,1,5,0.97,7.3,257.0
-Maniknagar,Technical,Bus,Regular,21,2,0.108,14.0,82.0
-Darussalam,City College / Science Lab,Bike,Sunny,16,4,0.12,7.3,130.0
-Mirpur 1,Kalyanpur,Car,Rainy,3,2,0.95,3.0,286.0
-City College / Science Lab,Dhanmondi 15/32,Car,Rainy,3,5,0.46,1.4,202.0
-Nabisco,MES,Bike,Sunny,22,6,0.72,6.0,129.0
-Kalyanpur,Mirpur 11,Bus,Rainy,7,2,0.111,5.9,35.0
-Khilgaon Flyover,Kalabagan,Car,Sunny,14,6,0.37,6.9,290.0
-Rajarbagh,Shishu Mela,Bus,Sunny,6,0,0.282,9.8,48.0
-Technical,Kochukhet,Rickshaw,Rainy,17,5,0.31,5.1,204.0
-Mirpur 14,Ray Saheb Bazar,Bus,Regular,10,5,0.03,17.0,148.0
-Mirpur 2,Jagannath University,Car,Regular,6,1,0.83,15.0,567.0
-Kamalapur,Shishu Mela,Bus,Sunny,11,0,0.129,8.9,60.0
-Malibagh Chowdhury Para,Khilkhet,Bike,Stormy,21,1,0.19,12.2,339.0
-Mugda,Dhanmondi 15/32,Car,Sunny,6,0,0.39,9.7,360.0
-Dhanmondi 15/32,Technical,Bike,Rainy,3,5,0.24,5.4,176.0
-College Gate,Jashimuddin (Uttara),Bike,Regular,21,6,0.7,16.7,317.0
-Mirpur 1,Matsya Bhaban,Bus,Rainy,17,1,0.198,9.2,74.0
-Press Club,Mirpur 10,Bike,Sunny,16,6,0.65,12.8,235.0
-MES,Gulistan,Bus,Sunny,9,6,0.192,12.9,96.0
-MES,Mirpur 14,Bus,Sunny,13,2,0.048,4.1,36.0
-MES,Badda Link Road,Car,Sunny,16,0,0.65,6.9,310.0
-High Court,Sainik Club / Banani Railgate,Bus,Stormy,15,2,0.12,9.0,72.0
-Chandpur,Darussalam,Bike,Rainy,11,6,0.5,92.1,1869.0
-Bashundhara / Jamuna FP,City College / Science Lab,Bus,Sunny,4,4,0.237,12.3,83.0
-Satrasta,Asad Gate,Bike,Sunny,12,6,0.53,3.3,103.0
-Mazar Road,Cantonment (Radisson),Rickshaw,Sunny,11,5,0.26,5.4,110.0
-Pallabi,Mohakhali Bus Terminal,Car,Sunny,12,1,0.64,8.3,314.0
-Jashimuddin (Uttara),Kuril / Kuratoli (AIUB),Bus,Stormy,14,5,0.078,8.2,50.0
-Shishu Mela,MES,Bus,Sunny,15,6,0.033,8.3,51.0
-Press Club,Gulistan,Bus,Rainy,11,6,0.056999999999999995,1.2,23.0
-Gulshan 1,Badda Link Road,Bus,Rainy,5,2,0.105,3.6,37.0
-Dhanmondi 15/32,Ray Saheb Bazar,Bike,Regular,23,0,0.43,6.9,185.0
-Nabisco,Abul Hotel,Car,Sunny,0,4,0.49,5.2,256.0
-Naya Bazar,Shyamoli,Car,Regular,17,5,0.36,9.6,508.0
-Farmgate,Gulshan 1,Car,Regular,12,2,0.16,4.8,225.0
-Azimpur / Palashi,Gulistan,Bus,Rainy,12,0,0.156,4.2,23.0
-Jashimuddin (Uttara),Azimpur / Palashi,Car,Sunny,21,1,0.86,20.6,686.0
-Abul Hotel,Naya Bazar,Bus,Rainy,4,4,0.048,8.4,60.0
-Mirpur 12,Chairman Bari,Car,Rainy,19,6,0.8,8.0,573.0
-Nabisco,Sayedabad Bus Terminal,Bus,Regular,13,3,0.093,9.3,59.0
-Maniknagar,Press Club,Bus,Sunny,21,2,0.042,4.4,30.0
-Rajlakshmi,Nabisco,Bus,Stormy,13,4,0.153,15.4,90.0
-Sainik Club / Banani Railgate,Abul Hotel,Bus,Sunny,0,1,0.213,5.6,48.0
-Azimpur / Palashi,College Gate,Rickshaw,Stormy,23,6,0.68,5.2,226.0
-Khilgaon Flyover,Sainik Club / Banani Railgate,Car,Rainy,21,6,0.67,8.0,441.0
-Dhanmondi 15/32,House Building,Car,Sunny,5,6,0.3,20.1,743.0
-Kakali (Banani),Mirpur 10,Bus,Rainy,21,0,0.24,5.7,35.0
-Cantonment (Radisson),Ray Saheb Bazar,Bike,Regular,8,6,0.38,13.7,335.0
-House Building,Jagannath University,Bus,Sunny,23,4,0.069,26.3,149.0
-Mirpur 10,Sayedabad Bus Terminal,Bus,Regular,21,1,0.21,16.0,112.0
-Badda,Darussalam,Bike,Stormy,16,4,0.9,11.1,311.0
-Malibagh Railgate,Shishu Mela,Car,Rainy,4,3,0.33,8.9,548.0
-City College / Science Lab,Mirpur 1,Car,Sunny,5,6,0.58,8.4,376.0
-Khilgaon Flyover,Gulshan 2,Car,Rainy,20,0,0.92,7.2,536.0
-Nabisco,Bangla Motor,Rickshaw,Sunny,13,3,0.96,3.5,104.0
-High Court,Jashimuddin (Uttara),Bus,Rainy,23,2,0.192,19.9,152.0
-Merul Badda,Cantonment (Radisson),Car,Sunny,11,6,0.96,6.1,270.0
-Azimpur / Palashi,Kuril / Kuratoli (AIUB),Car,Regular,11,6,0.42,14.3,531.0
-Dhanmondi 15/32,Kalabagan,Car,Stormy,23,3,0.54,0.7,196.0
-Kamalapur,Amtoli (Mohakhali),Bus,Rainy,10,6,0.105,7.5,58.0
-Jatrabari,Tikatuli,Bike,Rainy,20,5,0.71,2.9,143.0
-Agargaon (IDB Bhaban),Shahjahanpur,Bus,Sunny,17,2,0.11399999999999999,6.9,58.0
-High Court,Jahangir Gate,Car,Rainy,18,3,0.11,7.5,533.0
-Jatrabari,Paltan,Rickshaw,Rainy,10,4,0.16,4.5,154.0
-Azampur,Dhanmondi 27,Car,Rainy,9,3,0.54,19.4,1134.0
-Khilkhet,Merul Badda,Car,Sunny,9,3,0.43,8.7,425.0
-Tikatuli,Kalyanpur,Car,Sunny,7,5,0.96,11.7,417.0
-House Building,Naya Bazar,Car,Regular,0,3,0.26,24.6,989.0
-Kalabagan,Darussalam,Bike,Rainy,6,2,0.52,6.7,193.0
-Khilkhet,High Court,Bike,Regular,13,2,0.83,14.6,282.0
-Merul Badda,Malibagh Railgate,Car,Sunny,23,4,0.48,4.2,228.0
-Jagannath University,Darussalam,Bike,Sunny,10,3,0.47,13.3,303.0
-Rajarbagh,Pallabi,Car,Stormy,18,2,0.91,15.0,1084.0
-Khilgaon Flyover,Malibagh Railgate,Car,Rainy,14,6,0.33,0.6,144.0
-Mirpur 11,Mirpur 12,Car,Sunny,9,2,0.74,1.8,179.0
-Farmgate,High Court,Rickshaw,Regular,7,0,0.34,4.2,111.0
-Pallabi,Mirpur 14,Bus,Stormy,11,2,0.153,0.7,16.0
-Satrasta,Darussalam,Bike,Rainy,20,2,0.9,4.9,212.0
-Bangla Motor,Shahbagh,Rickshaw,Rainy,1,6,0.75,1.2,106.0
-Naya Bazar,Kakali (Banani),Bus,Regular,16,3,0.087,11.4,69.0
-Mirpur 14,Badda Link Road,Bus,Regular,19,0,0.294,11.0,115.0
-Matsya Bhaban,Airport,Bike,Regular,1,4,0.56,15.4,290.0
-Pallabi,Jahangir Gate,Car,Stormy,18,1,0.77,6.6,587.0
-Mirpur 2,Abdullahpur,Car,Sunny,2,3,0.45,13.5,534.0
-Farmgate,MES,Bike,Rainy,19,1,0.63,7.9,293.0
-Kalyanpur,Dhanmondi 27,Bike,Regular,22,5,0.21,4.1,101.0
-Matsya Bhaban,Dhanmondi 27,Car,Rainy,4,0,0.56,4.3,346.0
-Kalabagan,Bashundhara / Jamuna FP,Bus,Sunny,19,6,0.162,12.1,99.0
-Chairman Bari,Mugda,Bus,Sunny,21,5,0.23399999999999999,9.9,61.0
-Kochukhet,Mirpur 14,Car,Sunny,11,0,0.36,5.1,233.0
-Kamalapur,Press Club,Bus,Sunny,23,5,0.111,1.4,20.0
-Dhanmondi 27,Karwan Bazar,Bike,Regular,12,4,0.45,3.2,84.0
-Chandpur,College Gate,Car,Sunny,17,6,0.7,88.5,3333.0
-Rajlakshmi,Pallabi,Bus,Sunny,4,2,0.168,8.3,64.0
-Bangla Motor,Nadda,Car,Regular,8,5,0.56,10.1,527.0
-Azampur,Cantonment (Radisson),Bike,Rainy,10,5,0.85,11.5,376.0
-Ray Saheb Bazar,Notun Bazar,Car,Rainy,11,6,0.19,13.2,623.0
-Badda Link Road,Kalyanpur,Car,Sunny,9,6,0.44,11.1,522.0
-Press Club,Mirpur 1,Car,Rainy,23,5,0.15,11.2,626.0
-Merul Badda,Jatrabari,Bus,Sunny,1,2,0.294,10.2,75.0
-Chandpur,Shishu Mela,Bike,Stormy,3,3,0.43,89.2,2447.0
-Tikatuli,College Gate,Bus,Sunny,5,1,0.036,9.7,66.0
-Bangla Motor,Rajlakshmi,Bus,Regular,10,0,0.033,18.8,151.0
-Abul Hotel,Mugda,Rickshaw,Sunny,10,3,0.48,5.4,152.0
-Karwan Bazar,City College / Science Lab,Bike,Rainy,7,4,0.72,2.5,109.0
-Asad Gate,City College / Science Lab,Bike,Rainy,12,3,0.6,3.2,121.0
-Jashimuddin (Uttara),Kamalapur,Bike,Sunny,3,1,0.68,20.5,375.0
-Maniknagar,Mirpur 10,Bike,Sunny,21,3,0.27,16.4,283.0
-Karwan Bazar,Khilkhet,Car,Regular,3,4,0.65,12.4,513.0
-Kamalapur,Shahjahanpur,Bus,Sunny,8,0,0.24,2.3,52.0
-Malibagh Chowdhury Para,Kalabagan,Bus,Rainy,20,0,0.153,7.4,64.0
-Ray Saheb Bazar,Kalabagan,Bus,Sunny,22,3,0.111,6.2,34.0
-Darussalam,High Court,Bike,Sunny,16,0,0.62,9.7,187.0
-Kalyanpur,Jahangir Gate,Car,Rainy,23,5,0.51,2.5,259.0
-House Building,Kochukhet,Car,Regular,13,2,0.69,13.0,508.0
-City College / Science Lab,Nadda,Car,Sunny,3,3,0.19,11.8,477.0
-Karwan Bazar,Mirpur 1,Car,Sunny,6,1,0.35,7.2,299.0
-Khilkhet,Rampura Bridge,Bus,Sunny,7,4,0.294,10.8,63.0
-Pallabi,Dhanmondi 27,Bike,Regular,3,1,0.57,10.7,235.0
-Rajarbagh,Azimpur / Palashi,Car,Sunny,21,5,1.0,6.1,268.0
-Airport,Mirpur 1,Bike,Sunny,6,6,0.87,9.0,172.0
-Mirpur 2,Mirpur 1,Bus,Rainy,7,6,0.252,0.9,25.0
-Shahjahanpur,Mirpur 2,Bike,Sunny,4,2,0.57,10.5,222.0
-Mirpur 2,Jashimuddin (Uttara),Car,Rainy,11,6,0.14,10.9,544.0
-Kakali (Banani),Mirpur 11,Car,Sunny,4,0,0.46,6.4,313.0
-Maniknagar,Darussalam,Bus,Sunny,23,3,0.048,14.5,111.0
-Technical,Shishu Mela,Car,Rainy,21,3,0.79,2.4,225.0
-Jahangir Gate,Abdullahpur,Car,Sunny,9,6,0.22,16.8,715.0
-Mirpur 10,Kochukhet,Rickshaw,Regular,22,1,0.57,4.1,111.0
-Cantonment (Radisson),Mirpur 12,Bus,Sunny,15,5,0.138,6.0,49.0
-Kalabagan,Rajarbagh,Bike,Regular,10,1,0.53,7.2,224.0
-MES,Ray Saheb Bazar,Car,Regular,9,1,0.64,14.8,714.0
-Mazar Road,Tikatuli,Bike,Rainy,9,3,0.67,13.0,427.0
-Azimpur / Palashi,Bangla Motor,Bike,Stormy,17,5,0.79,2.5,173.0
-Mohakhali Bus Terminal,Gulshan 1,Rickshaw,Sunny,3,6,0.49,1.0,63.0
-Jashimuddin (Uttara),Ray Saheb Bazar,Bike,Sunny,4,3,0.28,23.5,431.0
-Khilgaon Flyover,Abul Hotel,Bus,Sunny,8,6,0.075,3.2,31.0
-Azampur,Shishu Mela,Bike,Regular,23,2,0.3,17.3,357.0
-Mirpur 1,Kalabagan,Bike,Rainy,5,2,0.85,7.8,264.0
-Mazar Road,Kalabagan,Bus,Rainy,0,1,0.285,7.4,83.0
-Sayedabad Bus Terminal,Mirpur 12,Bike,Stormy,2,3,0.32,18.7,561.0
-Rajarbagh,High Court,Rickshaw,Sunny,18,2,0.4,3.1,116.0
-Satrasta,Asad Gate,Rickshaw,Regular,9,2,0.45,3.3,126.0
-College Gate,Shahbagh,Bike,Regular,10,3,0.57,5.2,155.0
-Rajlakshmi,Sayedabad Bus Terminal,Car,Rainy,22,2,0.76,24.0,1069.0
-Satrasta,Mugda,Bus,Sunny,20,3,0.12,8.7,81.0
-Abdullahpur,Kuril / Kuratoli (AIUB),Bike,Stormy,13,4,0.28,12.6,330.0
-Technical,Airport,Car,Rainy,14,5,0.39,11.1,552.0
-Merul Badda,Technical,Car,Sunny,23,0,0.14,10.0,413.0
-Agargaon (IDB Bhaban),Kamalapur,Car,Sunny,13,4,0.83,8.5,307.0
-Badda,Bangla Motor,Bike,Rainy,3,5,0.84,8.9,279.0
-Mazar Road,MES,Bike,Rainy,13,3,0.84,5.7,171.0
-Rampura Bridge,Cantonment (Radisson),Car,Regular,20,6,0.7,7.4,424.0
-Agargaon (IDB Bhaban),Kochukhet,Bike,Regular,11,3,0.12,3.4,88.0
-Mirpur 14,Mazar Road,Bus,Rainy,1,3,0.267,4.6,55.0
-Kamalapur,Agargaon (IDB Bhaban),Bus,Sunny,10,0,0.129,8.5,64.0
-College Gate,Mirpur 2,Rickshaw,Stormy,12,2,0.32,6.0,207.0
-Kamalapur,City College / Science Lab,Bike,Stormy,14,6,0.44,5.3,192.0
-Amtoli (Mohakhali),Jatrabari,Bus,Regular,8,2,0.045,11.6,106.0
-Asad Gate,Jagannath University,Bike,Sunny,8,3,0.63,9.3,235.0
-Mohakhali Bus Terminal,House Building,Car,Rainy,5,4,0.27,15.5,745.0
-Technical,New Market / Nilkhet,Car,Rainy,20,1,0.62,8.0,564.0
-Chandpur,Khilgaon Flyover,Car,Sunny,10,2,0.47,83.2,3149.0
-Mirpur 1,Azimpur / Palashi,Car,Sunny,22,6,0.44,9.8,374.0
-Mirpur 14,Pallabi,Rickshaw,Regular,6,4,0.95,0.7,65.0
-Shishu Mela,House Building,Bike,Regular,23,6,0.12,17.5,348.0
-Kuril / Kuratoli (AIUB),Dhanmondi 27,Car,Regular,21,0,0.15,13.1,503.0
-Azimpur / Palashi,Kamalapur,Rickshaw,Rainy,12,2,0.79,4.5,158.0
-Kochukhet,Maniknagar,Bus,Regular,16,4,0.285,12.8,79.0
-Technical,Kalyanpur,Rickshaw,Rainy,19,1,0.35,0.8,83.0
-Shishu Mela,Chandpur,Bike,Sunny,12,5,0.75,89.2,1308.0
-MES,Asad Gate,Bus,Regular,5,1,0.222,9.0,75.0
-Paltan,Azampur,Bike,Sunny,19,0,0.5,22.3,462.0
-Satrasta,Khilkhet,Bus,Sunny,9,0,0.252,10.8,91.0
-Shahbagh,Mirpur 11,Bus,Regular,3,0,0.288,12.0,91.0
-MES,Mirpur 1,Rickshaw,Sunny,5,2,0.83,5.0,137.0
-Cantonment (Radisson),Mirpur 12,Bus,Sunny,8,4,0.23399999999999999,6.0,50.0
-Dhanmondi 27,Mirpur 14,Bus,Sunny,7,3,0.165,10.7,67.0
-Bangla Motor,Farmgate,Car,Sunny,17,0,0.36,1.7,172.0
-Chairman Bari,Gulistan,Car,Regular,17,6,0.84,9.7,518.0
-Ray Saheb Bazar,Azimpur / Palashi,Bike,Regular,19,1,0.54,4.1,139.0
-Cantonment (Radisson),Mirpur 10,Car,Sunny,12,3,0.98,4.4,224.0
-High Court,Kalyanpur,Bike,Sunny,2,2,0.48,8.8,185.0
-Badda Link Road,Gulshan 1,Bike,Rainy,6,2,0.16,3.6,118.0
-Chairman Bari,Darussalam,Car,Sunny,22,5,0.51,6.2,259.0
-Chandpur,Satrasta,Car,Sunny,2,2,0.76,87.8,2949.0
-Mohakhali Bus Terminal,Maniknagar,Bike,Regular,14,3,0.17,10.1,209.0
-Gulistan,Malibagh Chowdhury Para,Rickshaw,Rainy,11,1,0.66,4.5,153.0
-Kalyanpur,Merul Badda,Bike,Rainy,22,1,0.29,10.3,266.0
-Chairman Bari,Middle Badda,Bike,Sunny,17,6,0.77,4.5,150.0
-Nabisco,Chairman Bari,Rickshaw,Sunny,21,3,0.26,3.4,74.0
-Mirpur 12,Khilkhet,Bus,Rainy,9,1,0.066,7.1,62.0
-Naya Bazar,Kuril / Kuratoli (AIUB),Bike,Sunny,10,4,0.92,15.5,330.0
-Mirpur 12,Farmgate,Bus,Sunny,1,6,0.207,10.8,84.0
-City College / Science Lab,Dhanmondi 15/32,Bike,Sunny,7,0,0.52,1.4,72.0
-Abdullahpur,House Building,Rickshaw,Rainy,4,5,0.36,1.6,83.0
-Mirpur 12,Kakali (Banani),Bus,Sunny,4,1,0.06,7.6,52.0
-Badda Link Road,Kakali (Banani),Car,Sunny,4,2,0.93,4.8,280.0
-Matsya Bhaban,Jashimuddin (Uttara),Bus,Regular,9,1,0.066,19.1,156.0
-Dhanmondi 15/32,Bangla Motor,Car,Regular,11,5,0.53,2.6,185.0
-Cantonment (Radisson),Dhanmondi 27,Bus,Stormy,2,1,0.10200000000000001,9.1,75.0
-Gulshan 1,Badda Link Road,Bus,Sunny,8,5,0.063,3.6,37.0
+Jahangir Gate,Sainik Club / Banani Railgate,Bike,Rainy,10,4,0.84,4.7,220.0
+Rampura Bridge,Bashundhara / Jamuna FP,Bike,Sunny,3,4,0.36,7.6,172.0
+Matsya Bhaban,Khilgaon Flyover,Bike,Regular,17,1,0.35,4.0,161.0
+Jatrabari,Chandpur,Bus,Sunny,12,6,0.222,77.6,327.0
+Mohakhali Bus Terminal,Shishu Mela,Bus,Regular,21,6,0.24899999999999997,6.4,38.0
+Chairman Bari,Sainik Club / Banani Railgate,Bike,Sunny,12,6,0.67,0.9,80.0
+Azampur,Shahjahanpur,Bike,Sunny,9,0,0.31,20.1,583.0
+Bangla Motor,Agargaon (IDB Bhaban),Bike,Rainy,3,3,0.7,4.9,193.0
+Gulshan 2,Asad Gate,Bike,Sunny,16,2,0.88,8.5,200.0
+Kochukhet,Paltan,Car,Sunny,13,4,0.64,9.8,368.0
+Matsya Bhaban,Kamalapur,CNG,Rainy,9,5,0.5,2.9,307.0
+Nabisco,Chandpur,Bus,Rainy,3,1,0.12,88.2,463.0
+Shahbagh,Bangla Motor,Car,Regular,0,2,0.41,1.2,118.0
+Kuril / Kuratoli (AIUB),Khilgaon Flyover,Bike,Rainy,11,4,0.51,11.0,272.0
+Matsya Bhaban,Naya Bazar,Bus,Sunny,11,1,0.288,3.5,21.0
+Asad Gate,Middle Badda,Bus,Sunny,11,3,0.159,10.2,47.0
+Mirpur 12,Asad Gate,Car,Rainy,14,5,0.61,10.4,586.0
+Malibagh Chowdhury Para,New Market / Nilkhet,Bike,Regular,12,2,0.71,7.0,194.0
+Pallabi,Kamalapur,Bus,Rainy,14,4,0.036,15.0,72.0
+Tikatuli,Shahbagh,Bike,Stormy,17,1,0.84,4.5,279.0
+Dhanmondi 27,Kalabagan,Car,Stormy,5,0,0.7,1.4,194.0
+Khilgaon Flyover,Khilkhet,Bike,Regular,14,3,0.17,13.0,275.0
+Rampura Bridge,Paltan,Bus,Regular,5,4,0.036,5.0,37.0
+Tikatuli,Darussalam,Car,Sunny,4,2,0.27,12.5,518.0
+New Market / Nilkhet,Gulistan,Rickshaw,Regular,8,2,0.17,4.4,154.0
+Abdullahpur,Mirpur 1,Car,Sunny,15,3,0.66,14.5,559.0
+Kalabagan,Dhanmondi 15/32,Bus,Regular,6,1,0.066,0.7,21.0
+Mirpur 1,Mazar Road,CNG,Sunny,21,5,0.26,0.7,74.0
+Asad Gate,Tikatuli,Car,Regular,5,6,0.62,9.2,444.0
+Shyamoli,Farmgate,CNG,Sunny,20,1,0.32,4.1,284.0
+Technical,Malibagh Railgate,CNG,Rainy,22,4,0.54,9.9,505.0
+Mirpur 12,High Court,Bus,Sunny,17,2,0.132,14.8,86.0
+Kuril / Kuratoli (AIUB),Amtoli (Mohakhali),CNG,Sunny,16,0,0.95,6.2,263.0
+Tikatuli,Darussalam,CNG,Sunny,17,1,0.33,12.5,747.0
+High Court,Khilgaon Flyover,Car,Regular,16,6,0.9,3.2,199.0
+Kakali (Banani),Jahangir Gate,Bus,Regular,4,4,0.039,4.6,40.0
+City College / Science Lab,Jashimuddin (Uttara),Car,Sunny,4,3,0.76,19.3,791.0
+Shyamoli,Gulistan,Bus,Sunny,14,2,0.21,9.8,51.0
+Maniknagar,Mugda,Bike,Sunny,15,3,0.91,2.0,81.0
+Malibagh Chowdhury Para,Tikatuli,CNG,Regular,15,3,0.24,4.3,209.0
+Kalyanpur,Khilkhet,Bus,Sunny,20,3,0.084,11.5,77.0
+Sainik Club / Banani Railgate,Kuril / Kuratoli (AIUB),Car,Rainy,22,6,0.86,4.4,299.0
+Rampura Bridge,Khilkhet,Bus,Sunny,21,5,0.297,10.8,63.0
+Khilkhet,Naya Bazar,CNG,Sunny,20,6,0.18,17.3,1001.0
+Airport,Kakali (Banani),CNG,Regular,4,4,0.77,7.5,351.0
+Sayedabad Bus Terminal,Mirpur 2,Car,Sunny,6,3,0.67,15.1,585.0
+Mirpur 2,Rajarbagh,CNG,Rainy,6,2,0.27,12.4,674.0
+Badda Link Road,Middle Badda,Car,Rainy,5,2,1.0,0.8,132.0
+Bashundhara / Jamuna FP,Rajarbagh,Car,Sunny,5,4,0.1,11.0,397.0
+Kuril / Kuratoli (AIUB),Badda Link Road,Bus,Sunny,12,3,0.138,5.6,36.0
+Sayedabad Bus Terminal,Kalyanpur,Bus,Regular,23,1,0.192,13.1,92.0
+Nadda,Paltan,Bus,Rainy,16,6,0.051000000000000004,11.0,59.0
+Naya Bazar,Kalyanpur,CNG,Rainy,18,4,0.23,10.6,797.0
+Asad Gate,College Gate,Rickshaw,Sunny,19,0,0.64,0.5,63.0
+Badda,Kochukhet,Bus,Regular,14,2,0.216,6.8,51.0
+Rajarbagh,City College / Science Lab,Car,Sunny,16,5,0.85,6.6,298.0
+City College / Science Lab,Nadda,Bike,Rainy,18,4,0.86,11.8,449.0
+Bangla Motor,New Market / Nilkhet,CNG,Regular,4,3,0.22,2.6,166.0
+Technical,Shishu Mela,Bus,Rainy,3,4,0.048,2.4,20.0
+Naya Bazar,Kamalapur,Car,Sunny,13,1,0.34,3.0,156.0
+Jahangir Gate,Chairman Bari,Rickshaw,Regular,23,2,0.16,4.4,159.0
+Shishu Mela,Kuril / Kuratoli (AIUB),Bus,Sunny,6,5,0.273,11.9,65.0
+Kochukhet,Kuril / Kuratoli (AIUB),Bike,Rainy,23,5,0.76,5.6,212.0
+Shyamoli,Kuril / Kuratoli (AIUB),Bike,Sunny,22,1,0.27,11.7,223.0
+Nabisco,Farmgate,Rickshaw,Regular,5,5,0.51,1.9,84.0
+Mirpur 10,Badda Link Road,CNG,Sunny,21,0,0.7,10.4,403.0
+Farmgate,Nabisco,Bus,Sunny,2,2,0.243,1.9,18.0
+Mirpur 2,Paltan,CNG,Sunny,3,5,0.78,12.1,517.0
+Abul Hotel,Abdullahpur,CNG,Regular,16,6,0.6,20.0,833.0
+Sayedabad Bus Terminal,Gulshan 1,Bus,Regular,19,2,0.056999999999999995,9.8,80.0
+New Market / Nilkhet,Amtoli (Mohakhali),Car,Regular,10,3,0.57,8.2,616.0
+Jashimuddin (Uttara),Mohakhali Bus Terminal,Bus,Sunny,7,6,0.20400000000000001,13.3,46.0
+Jahangir Gate,Malibagh Chowdhury Para,Bike,Sunny,2,4,0.92,8.2,196.0
+Satrasta,Press Club,Bus,Sunny,7,4,0.22799999999999998,5.8,31.0
+Mirpur 1,Kuril / Kuratoli (AIUB),CNG,Sunny,5,1,0.48,9.0,407.0
+Azampur,Maniknagar,Car,Sunny,8,3,0.93,25.0,1563.0
+Malibagh Railgate,Pallabi,Bus,Regular,20,1,0.252,13.4,94.0
+Chandpur,Naya Bazar,Bike,Sunny,23,1,0.19,80.4,1512.0
+Nabisco,Kalabagan,Bike,Rainy,22,5,0.76,4.7,167.0
+Malibagh Railgate,Middle Badda,Car,Regular,19,4,0.71,4.6,355.0
+Mirpur 1,Mirpur 12,Bus,Rainy,14,5,0.126,4.8,26.0
+Kuril / Kuratoli (AIUB),Shyamoli,CNG,Regular,19,5,0.91,11.7,788.0
+Mugda,Jashimuddin (Uttara),Car,Sunny,23,5,0.51,21.3,844.0
+Mirpur 14,Mazar Road,Car,Regular,13,2,0.48,4.6,237.0
+MES,Kalabagan,Car,Rainy,8,3,0.12,10.4,949.0
+Kochukhet,Mirpur 1,Rickshaw,Sunny,22,0,0.35,4.0,117.0
+Badda Link Road,Dhanmondi 15/32,Car,Sunny,13,5,0.64,10.8,454.0
+Mirpur 12,Khilgaon Flyover,Bike,Rainy,13,5,0.9,14.8,420.0
+Naya Bazar,Malibagh Chowdhury Para,Car,Sunny,13,1,0.62,6.3,276.0
+Kuril / Kuratoli (AIUB),Jahangir Gate,Bus,Sunny,11,0,0.22799999999999998,9.0,48.0
+Matsya Bhaban,Mirpur 11,CNG,Rainy,7,3,0.92,11.9,662.0
+Sainik Club / Banani Railgate,MES,Rickshaw,Sunny,19,4,0.25,2.4,91.0
+Ray Saheb Bazar,Kalabagan,Bus,Rainy,3,5,0.243,6.2,55.0
+Pallabi,Mirpur 11,Bike,Regular,8,0,0.34,0.9,82.0
+Badda,Mazar Road,Bus,Regular,7,2,0.105,11.0,60.0
+Mirpur 10,Shishu Mela,CNG,Regular,2,5,0.65,6.5,331.0
+Farmgate,New Market / Nilkhet,Bike,Sunny,8,0,0.84,4.1,161.0
+Nabisco,Farmgate,CNG,Rainy,13,2,0.51,1.9,174.0
+Mirpur 14,Gulshan 1,CNG,Rainy,11,4,0.38,8.4,425.0
+Kakali (Banani),Jahangir Gate,Rickshaw,Regular,22,5,0.33,4.6,138.0
+Notun Bazar,Pallabi,Bus,Sunny,3,1,0.054,12.1,64.0
+Abdullahpur,Nabisco,Bus,Stormy,11,1,0.11699999999999999,18.2,90.0
+Ray Saheb Bazar,Badda Link Road,Bike,Rainy,12,1,0.55,11.8,346.0
+Tikatuli,Farmgate,Car,Regular,7,1,0.11,6.9,304.0
+Mirpur 10,Asad Gate,CNG,Sunny,4,4,0.83,7.6,317.0
+Rajlakshmi,Airport,Rickshaw,Sunny,20,5,0.87,5.0,178.0
+Gulshan 1,Dhanmondi 15/32,Bike,Regular,11,1,0.45,7.6,183.0
+Pallabi,Abdullahpur,Bus,Stormy,22,2,0.186,10.6,73.0
+Press Club,Jashimuddin (Uttara),Bike,Sunny,4,6,0.23,20.7,406.0
+Notun Bazar,Shahbagh,Car,Sunny,10,0,0.19,10.6,691.0
+MES,Shishu Mela,Bus,Regular,3,0,0.069,8.3,66.0
+Agargaon (IDB Bhaban),Naya Bazar,Car,Regular,12,3,0.19,9.6,410.0
+Mugda,Technical,CNG,Regular,9,4,0.85,13.2,775.0
+Bangla Motor,Amtoli (Mohakhali),Bus,Sunny,22,5,0.192,5.6,25.0
+Khilkhet,Agargaon (IDB Bhaban),CNG,Sunny,16,4,0.59,9.7,344.0
+Dhanmondi 15/32,City College / Science Lab,Car,Sunny,12,2,0.26,1.4,117.0
+Kuril / Kuratoli (AIUB),Kakali (Banani),Car,Regular,18,0,0.62,4.7,386.0
+Jashimuddin (Uttara),Rampura Bridge,Bike,Regular,18,4,0.99,16.5,498.0
+Jashimuddin (Uttara),Nadda,CNG,Rainy,7,3,0.87,10.5,599.0
+Shahbagh,Nadda,Car,Stormy,10,5,0.58,10.9,1172.0
+Nadda,House Building,Bus,Regular,5,6,0.111,13.3,85.0
+Badda Link Road,Press Club,Car,Regular,18,1,0.75,9.1,674.0
+City College / Science Lab,Cantonment (Radisson),Bus,Rainy,2,6,0.06,9.8,71.0
+Kakali (Banani),Gulshan 1,Car,Sunny,2,2,0.13,2.1,139.0
+Khilkhet,Chairman Bari,Car,Rainy,9,5,0.68,6.5,643.0
+Cantonment (Radisson),Matsya Bhaban,Car,Sunny,16,6,0.1,9.3,372.0
+Bangla Motor,Jagannath University,CNG,Sunny,7,4,0.84,6.4,256.0
+Gulshan 1,Jagannath University,Bus,Rainy,7,6,0.162,11.3,63.0
+Naya Bazar,Chandpur,Car,Regular,13,3,0.62,80.4,3154.0
+High Court,Sainik Club / Banani Railgate,CNG,Sunny,5,1,0.17,9.0,403.0
+Middle Badda,Darussalam,Bike,Sunny,12,6,0.29,10.5,214.0
+High Court,Satrasta,Car,Rainy,13,5,0.34,5.0,317.0
+Mazar Road,Badda Link Road,Bike,Rainy,21,3,0.67,10.6,305.0
+Abul Hotel,City College / Science Lab,Bus,Sunny,20,6,0.18,8.2,51.0
+Khilgaon Flyover,Rampura Bridge,Bike,Sunny,1,6,0.15,2.5,82.0
+Chairman Bari,Agargaon (IDB Bhaban),Bus,Stormy,18,4,0.144,4.2,43.0
+City College / Science Lab,Bangla Motor,Rickshaw,Rainy,0,3,0.67,1.8,114.0
+Asad Gate,Rajarbagh,CNG,Rainy,12,4,0.97,8.9,459.0
+Kuril / Kuratoli (AIUB),Malibagh Chowdhury Para,CNG,Sunny,4,5,0.96,10.1,462.0
+Abdullahpur,Mohakhali Bus Terminal,Car,Regular,17,5,0.79,17.1,1198.0
+Gulistan,Tikatuli,Rickshaw,Rainy,10,5,0.89,1.2,101.0
+Abdullahpur,Kochukhet,Bus,Sunny,7,5,0.084,14.5,67.0
+Dhanmondi 15/32,Badda Link Road,CNG,Sunny,23,1,0.12,10.8,464.0
+Abul Hotel,Rajarbagh,Car,Regular,14,5,0.58,4.2,225.0
+Amtoli (Mohakhali),Rajlakshmi,Bus,Sunny,5,0,0.11399999999999999,13.8,78.0
+Rajlakshmi,High Court,Bike,Sunny,11,2,0.7,20.7,406.0
+City College / Science Lab,Gulshan 2,Car,Rainy,22,0,0.36,9.3,529.0
+Kakali (Banani),Technical,Bus,Rainy,8,4,0.096,6.5,62.0
+Chairman Bari,Jatrabari,Bike,Stormy,22,4,0.58,12.7,376.0
+New Market / Nilkhet,Chandpur,Bus,Rainy,16,2,0.22499999999999998,83.5,391.0
+Rajlakshmi,Rajarbagh,Car,Regular,10,4,0.83,20.8,1299.0
+Mirpur 12,Abdullahpur,Car,Sunny,16,6,0.93,9.7,406.0
+Kuril / Kuratoli (AIUB),Cantonment (Radisson),CNG,Regular,21,5,0.51,4.3,208.0
+Gulshan 2,Sainik Club / Banani Railgate,CNG,Regular,2,5,0.88,1.3,134.0
+Press Club,Chandpur,CNG,Regular,11,5,0.2,82.0,3206.0
+Mirpur 12,MES,Car,Stormy,11,2,0.51,5.3,386.0
+Badda,Chairman Bari,CNG,Stormy,1,6,0.45,5.0,411.0
+Khilgaon Flyover,Mirpur 11,Car,Rainy,19,1,0.79,13.2,1192.0
+Gulshan 2,Shahbagh,CNG,Sunny,9,6,0.67,8.5,533.0
+Mohakhali Bus Terminal,Pallabi,Car,Sunny,2,3,0.7,8.3,372.0
+House Building,Matsya Bhaban,Car,Regular,6,0,0.67,21.1,873.0
+Bashundhara / Jamuna FP,Shahbagh,Car,Stormy,13,0,0.81,11.6,768.0
+Mirpur 12,Mirpur 10,Bike,Stormy,12,3,0.19,2.9,120.0
+Rajarbagh,Technical,Car,Rainy,4,1,0.96,11.1,672.0
+Nabisco,Agargaon (IDB Bhaban),CNG,Rainy,23,2,0.48,2.3,192.0
+Chandpur,Azampur,Car,Sunny,6,6,0.91,103.8,3698.0
+Jatrabari,Jashimuddin (Uttara),Bike,Rainy,17,3,0.28,24.4,977.0
+Khilgaon Flyover,Mohakhali Bus Terminal,Car,Regular,13,3,0.67,5.7,274.0
+Bangla Motor,Jagannath University,Car,Sunny,7,6,0.4,6.4,272.0
+Jashimuddin (Uttara),Rajlakshmi,Bike,Rainy,1,0,0.52,1.6,98.0
+Rajarbagh,Nabisco,CNG,Sunny,2,2,0.15,6.6,306.0
+Mirpur 12,Karwan Bazar,Car,Rainy,14,0,0.86,11.7,644.0
+Mazar Road,Rajlakshmi,Car,Sunny,15,2,1.0,12.7,509.0
+Farmgate,Middle Badda,CNG,Regular,7,0,0.44,7.4,352.0
+Paltan,Technical,Bike,Rainy,8,0,0.96,10.3,455.0
+Rajarbagh,Notun Bazar,Bus,Stormy,14,0,0.066,8.2,60.0
+Mirpur 1,City College / Science Lab,Bus,Stormy,23,1,0.219,8.4,63.0
+High Court,Mohakhali Bus Terminal,CNG,Sunny,5,5,0.7,6.6,320.0
+Shyamoli,Press Club,Bike,Regular,3,2,0.55,8.6,232.0
+Mugda,New Market / Nilkhet,Car,Regular,4,2,0.53,7.9,393.0
+Bashundhara / Jamuna FP,Agargaon (IDB Bhaban),Bus,Sunny,23,5,0.213,7.9,51.0
+Mirpur 14,Kamalapur,Car,Rainy,22,2,0.67,14.7,795.0
+Malibagh Chowdhury Para,Dhanmondi 27,Car,Sunny,11,0,0.94,8.4,359.0
+Maniknagar,Shyamoli,Bus,Regular,21,2,0.126,12.9,69.0
+Agargaon (IDB Bhaban),Mirpur 11,Bus,Stormy,19,5,0.22799999999999998,5.8,48.0
+Abul Hotel,Bashundhara / Jamuna FP,CNG,Sunny,23,1,0.95,6.9,335.0
+Mirpur 11,Mugda,Bike,Sunny,8,4,0.27,16.1,425.0
+Nabisco,New Market / Nilkhet,Car,Regular,6,2,0.64,6.0,310.0
+Tikatuli,Rajlakshmi,Bike,Rainy,10,6,0.17,22.7,903.0
+Ray Saheb Bazar,Bashundhara / Jamuna FP,Car,Regular,19,3,0.51,15.3,1074.0
+Dhanmondi 15/32,High Court,Car,Sunny,9,0,0.74,4.9,360.0
+MES,Kochukhet,Rickshaw,Regular,1,4,0.26,2.3,86.0
+Dhanmondi 15/32,Technical,Car,Rainy,23,5,0.66,5.4,359.0
+Naya Bazar,Rajlakshmi,CNG,Regular,16,4,0.62,23.3,860.0
+Jagannath University,Malibagh Railgate,Bus,Rainy,13,1,0.23099999999999998,7.2,35.0
+Rajlakshmi,Ray Saheb Bazar,Bus,Regular,8,2,0.033,24.2,168.0
+Nabisco,Amtoli (Mohakhali),Bike,Rainy,7,6,0.28,2.4,114.0
+Satrasta,Chandpur,CNG,Regular,0,2,0.64,87.8,3720.0
+Karwan Bazar,Nadda,Bus,Stormy,12,5,0.138,9.3,46.0
+Mirpur 10,Khilgaon Flyover,Car,Rainy,16,0,0.29,12.2,663.0
+Tikatuli,Mazar Road,Bike,Sunny,5,1,0.55,13.0,294.0
+Bangla Motor,Notun Bazar,Bike,Regular,10,1,0.12,10.1,339.0
+Darussalam,Dhanmondi 27,Bus,Sunny,0,6,0.222,5.5,27.0
+Karwan Bazar,Jagannath University,CNG,Sunny,4,0,0.27,7.2,332.0
+Cantonment (Radisson),Matsya Bhaban,Bus,Sunny,3,3,0.096,9.3,59.0
+Sainik Club / Banani Railgate,Paltan,CNG,Sunny,9,0,0.56,9.6,588.0
+Matsya Bhaban,Satrasta,Rickshaw,Rainy,9,6,0.85,3.9,202.0
+Rampura Bridge,Press Club,Bus,Sunny,22,4,0.075,5.7,32.0
+Rajarbagh,Bangla Motor,Bike,Regular,10,5,0.25,5.2,213.0
+Cantonment (Radisson),Nadda,Bus,Regular,10,4,0.141,4.1,42.0
+Pallabi,Badda Link Road,Bike,Sunny,17,1,0.47,11.6,360.0
+Jagannath University,Matsya Bhaban,CNG,Regular,12,0,0.55,5.3,261.0
+Azampur,Badda,CNG,Sunny,16,2,0.28,16.3,623.0
+Azimpur / Palashi,Dhanmondi 27,Rickshaw,Sunny,16,2,0.16,3.5,120.0
+Paltan,Azampur,Bus,Rainy,21,3,0.219,22.3,106.0
+College Gate,Mirpur 11,CNG,Rainy,15,0,0.54,8.1,475.0
+Ray Saheb Bazar,Nadda,Bike,Regular,14,2,0.11,14.3,296.0
+Khilkhet,Mugda,Bus,Sunny,7,3,0.258,15.5,81.0
+Mirpur 11,Kakali (Banani),Bus,Stormy,9,4,0.15,6.4,50.0
+Sayedabad Bus Terminal,Asad Gate,Car,Rainy,3,2,0.43,10.6,628.0
+Naya Bazar,Tikatuli,Rickshaw,Sunny,1,4,0.19,2.8,85.0
+MES,Rajlakshmi,Bus,Rainy,4,4,0.126,9.5,67.0
+Mirpur 2,Chairman Bari,CNG,Sunny,8,6,0.9,5.6,386.0
+Shahbagh,Mirpur 1,Bike,Sunny,12,2,0.34,9.2,188.0
+Satrasta,Technical,Bike,Regular,11,1,0.56,4.5,121.0
+Tikatuli,City College / Science Lab,Bus,Regular,22,1,0.288,6.3,58.0
+Pallabi,Karwan Bazar,Car,Regular,0,5,0.34,10.8,485.0
+Abdullahpur,Kuril / Kuratoli (AIUB),Bike,Sunny,3,6,0.34,12.6,281.0
+Jatrabari,Jashimuddin (Uttara),Bus,Rainy,19,3,0.072,24.4,160.0
+Khilgaon Flyover,Jagannath University,CNG,Sunny,5,4,0.89,6.7,295.0
+Notun Bazar,Tikatuli,Car,Rainy,5,2,1.0,10.5,626.0
+Amtoli (Mohakhali),Mazar Road,Car,Rainy,9,2,1.0,6.2,612.0
+Badda Link Road,Kalyanpur,CNG,Rainy,10,5,0.38,11.1,929.0
+MES,Matsya Bhaban,Bike,Rainy,3,6,0.85,10.4,343.0
+Agargaon (IDB Bhaban),Rajarbagh,Car,Regular,18,2,0.71,8.9,677.0
+Asad Gate,Abdullahpur,CNG,Regular,4,2,0.5,20.0,907.0
+Mohakhali Bus Terminal,Karwan Bazar,Rickshaw,Regular,10,4,0.71,4.5,166.0
+Asad Gate,Dhanmondi 27,Bike,Sunny,10,4,0.67,1.2,80.0
+Dhanmondi 27,Badda Link Road,Car,Rainy,6,3,0.47,11.0,610.0
+Chandpur,Khilkhet,Bike,Rainy,13,5,0.15,95.9,2324.0
+Satrasta,Bashundhara / Jamuna FP,Car,Regular,12,4,0.63,8.5,345.0
+Azimpur / Palashi,Pallabi,Bus,Sunny,10,3,0.126,13.7,81.0
+Asad Gate,Middle Badda,Car,Sunny,12,2,0.9,10.2,423.0
+MES,House Building,CNG,Rainy,8,2,0.28,10.9,919.0
+Shishu Mela,Khilgaon Flyover,CNG,Sunny,19,3,0.16,9.2,550.0
+New Market / Nilkhet,Mirpur 14,Bus,Sunny,19,1,0.10200000000000001,13.5,72.0
+Malibagh Railgate,Mirpur 10,CNG,Sunny,9,6,0.43,11.7,698.0
+Shahbagh,Rampura Bridge,Bus,Sunny,21,3,0.069,6.0,43.0
+Khilkhet,Tikatuli,Car,Regular,4,5,0.8,16.3,734.0
+Jashimuddin (Uttara),Kakali (Banani),Bus,Regular,16,0,0.153,11.2,71.0
+Dhanmondi 15/32,Shishu Mela,Bike,Regular,12,0,0.62,3.0,98.0
+Gulshan 1,Mirpur 1,Bus,Regular,18,3,0.129,6.9,55.0
+Asad Gate,Farmgate,Bus,Regular,7,4,0.27,3.0,37.0
+Mugda,Darussalam,Bike,Rainy,21,3,0.97,13.6,388.0
+Kalyanpur,Mirpur 2,Bus,Sunny,2,3,0.162,3.9,35.0
+Kalyanpur,Azimpur / Palashi,Car,Rainy,4,5,0.99,7.5,503.0
+Khilkhet,Jatrabari,CNG,Regular,9,1,0.15,18.7,1202.0
+Dhanmondi 27,Shahbagh,Rickshaw,Regular,12,0,0.36,3.9,123.0
+Kalyanpur,Technical,CNG,Regular,16,3,0.78,0.8,99.0
+Middle Badda,Tikatuli,Bike,Regular,6,4,0.79,8.4,198.0
+Rampura Bridge,Chairman Bari,CNG,Rainy,15,6,0.68,5.3,330.0
+Merul Badda,Gulshan 2,Bus,Regular,20,6,0.198,3.6,46.0
+Paltan,Merul Badda,Bus,Rainy,13,0,0.195,7.2,44.0
+Mirpur 14,House Building,Bus,Sunny,7,1,0.135,9.1,45.0
+Badda,Press Club,Bike,Rainy,20,6,0.93,9.3,424.0
+New Market / Nilkhet,Bangla Motor,CNG,Rainy,21,0,0.35,2.6,179.0
+Kuril / Kuratoli (AIUB),Pallabi,Car,Regular,16,5,0.71,8.2,378.0
+Abdullahpur,Pallabi,CNG,Rainy,3,5,0.35,10.6,643.0
+Shyamoli,College Gate,Car,Rainy,9,1,0.99,1.3,226.0
+Mirpur 1,Gulshan 1,Bike,Stormy,11,2,0.18,6.9,247.0
+Abul Hotel,Azampur,Bike,Sunny,23,5,0.15,17.9,356.0
+Gulshan 1,Azampur,Bus,Rainy,9,2,0.273,15.2,113.0
+Merul Badda,Shahbagh,Bus,Rainy,11,1,0.22499999999999998,7.9,57.0
+New Market / Nilkhet,Malibagh Chowdhury Para,Bus,Sunny,22,0,0.15,7.0,43.0
+Kuril / Kuratoli (AIUB),New Market / Nilkhet,Bus,Sunny,0,3,0.108,14.4,81.0
+Cantonment (Radisson),Agargaon (IDB Bhaban),Car,Stormy,2,5,0.57,4.7,379.0
+Dhanmondi 15/32,College Gate,CNG,Sunny,12,5,0.29,2.4,145.0
+Gulshan 1,Kalyanpur,Bike,Rainy,18,5,0.88,7.5,356.0
+Mirpur 14,Mirpur 1,CNG,Sunny,8,6,0.97,3.9,287.0
+College Gate,High Court,Bus,Sunny,0,6,0.09,6.8,45.0
+Mirpur 1,Dhanmondi 27,Bike,Rainy,16,5,0.53,6.8,216.0
+Kakali (Banani),Mugda,Car,Sunny,14,4,0.62,10.4,390.0
+Gulistan,Shahbagh,Bus,Sunny,21,1,0.216,3.4,35.0
+High Court,Azampur,CNG,Sunny,5,5,0.69,21.6,871.0
+Abul Hotel,Rampura Bridge,Bus,Sunny,18,6,0.282,0.8,33.0
+Matsya Bhaban,Shahbagh,Car,Sunny,2,1,0.85,0.5,95.0
+Badda,Mirpur 14,Car,Stormy,2,3,0.47,11.3,793.0
+Shyamoli,Abul Hotel,CNG,Sunny,14,5,0.26,9.8,392.0
+Mazar Road,Jatrabari,CNG,Sunny,12,1,0.6,15.8,605.0
+Khilgaon Flyover,Rajlakshmi,Car,Sunny,6,4,0.85,19.7,682.0
+Shishu Mela,Naya Bazar,Bike,Sunny,17,4,0.8,9.0,264.0
+Farmgate,Darussalam,Bike,Rainy,12,6,0.85,5.6,203.0
+Jatrabari,Jashimuddin (Uttara),Bike,Rainy,7,1,0.56,24.4,635.0
+Gulshan 2,Mugda,Car,Regular,9,2,0.74,9.9,718.0
+Nabisco,Maniknagar,Car,Stormy,19,5,0.8,9.7,1073.0
+Malibagh Railgate,Sayedabad Bus Terminal,Rickshaw,Regular,22,5,0.72,5.0,159.0
+Cantonment (Radisson),Jahangir Gate,Bus,Regular,1,4,0.183,4.8,29.0
+Rajlakshmi,Badda Link Road,Bike,Sunny,22,6,0.11,15.1,296.0
+Rajarbagh,Chandpur,Car,Rainy,21,4,0.37,82.1,3700.0
+Mirpur 2,Mirpur 10,Bike,Stormy,9,1,0.15,1.1,113.0
+Notun Bazar,Technical,Bike,Stormy,11,2,0.38,11.9,385.0
+MES,Mohakhali Bus Terminal,Bus,Sunny,3,6,0.033,4.7,34.0
+Mirpur 14,Kamalapur,Bus,Regular,10,0,0.09,14.7,95.0
+Shahbagh,Khilgaon Flyover,CNG,Sunny,3,3,0.15,4.5,209.0
+Airport,Middle Badda,Bike,Rainy,19,3,0.78,10.6,473.0
+Ray Saheb Bazar,Mirpur 12,Bus,Rainy,19,2,0.087,18.1,115.0
+Asad Gate,Ray Saheb Bazar,Bus,Rainy,3,1,0.141,8.7,53.0
+Middle Badda,Nadda,CNG,Rainy,12,2,0.73,3.9,270.0
+Khilkhet,Dhanmondi 15/32,Bus,Sunny,8,6,0.06,14.2,79.0
+Karwan Bazar,Kochukhet,Bus,Rainy,19,0,0.177,6.3,59.0
+Khilkhet,Kalyanpur,Bus,Sunny,1,4,0.297,11.5,82.0
+Kamalapur,Agargaon (IDB Bhaban),Car,Sunny,2,0,0.56,8.5,376.0
+Rajarbagh,Tikatuli,Bike,Sunny,16,5,0.12,2.4,84.0
+Gulistan,Jagannath University,Car,Regular,3,6,0.11,3.2,182.0
+Kochukhet,Tikatuli,Bike,Rainy,11,2,0.21,11.3,308.0
+Satrasta,City College / Science Lab,Car,Stormy,2,3,0.24,3.9,334.0
+Mohakhali Bus Terminal,MES,CNG,Rainy,12,5,0.21,4.7,291.0
+House Building,Mohakhali Bus Terminal,Bike,Sunny,1,3,0.4,15.5,325.0
+MES,Bashundhara / Jamuna FP,Bus,Rainy,18,3,0.22499999999999998,3.4,39.0
+Jashimuddin (Uttara),Kuril / Kuratoli (AIUB),Bike,Regular,4,1,0.21,8.2,210.0
+Khilkhet,Kochukhet,Bus,Stormy,21,5,0.243,6.3,47.0
+Darussalam,College Gate,Rickshaw,Sunny,12,3,0.65,3.8,105.0
+Middle Badda,Technical,CNG,Rainy,7,2,0.63,10.4,585.0
+Paltan,Merul Badda,Bus,Stormy,21,6,0.165,7.2,52.0
+Amtoli (Mohakhali),Gulistan,Car,Sunny,18,5,0.11,8.5,562.0
+Paltan,Nabisco,CNG,Stormy,2,4,0.56,6.3,438.0
+Khilkhet,Pallabi,CNG,Stormy,7,6,0.53,7.1,483.0
+Chairman Bari,Chandpur,Car,Regular,15,2,0.9,90.3,3533.0
+City College / Science Lab,Press Club,Car,Rainy,4,2,0.21,4.1,286.0
+Bashundhara / Jamuna FP,Gulshan 2,Bus,Regular,18,5,0.054,3.1,39.0
+Shishu Mela,Kalabagan,CNG,Rainy,10,2,0.3,3.7,372.0
+Mirpur 14,Mohakhali Bus Terminal,Bike,Sunny,22,2,0.35,7.9,176.0
+Farmgate,Kalabagan,Bus,Regular,22,5,0.042,2.8,34.0
+Mohakhali Bus Terminal,House Building,Car,Sunny,10,2,0.72,15.5,987.0
+Mohakhali Bus Terminal,Mirpur 11,Car,Rainy,19,5,0.9,7.6,725.0
+Kamalapur,Malibagh Chowdhury Para,CNG,Stormy,11,1,0.79,3.3,280.0
+Bangla Motor,Cantonment (Radisson),CNG,Sunny,12,0,0.85,8.5,357.0
+Dhanmondi 27,Shyamoli,Bus,Rainy,10,0,0.213,3.0,29.0
+Kakali (Banani),Airport,Bike,Regular,14,0,0.44,7.5,170.0
+Dhanmondi 27,Ray Saheb Bazar,Car,Sunny,13,5,0.15,7.6,307.0
+Nabisco,Badda Link Road,Bike,Sunny,15,4,0.2,6.6,131.0
+Kalabagan,Press Club,Rickshaw,Sunny,1,3,0.76,4.8,175.0
+Gulshan 1,Darussalam,Car,Sunny,23,2,0.37,7.2,335.0
+Kalyanpur,Gulistan,Bus,Regular,6,5,0.23399999999999999,10.7,74.0
+Naya Bazar,Khilkhet,Car,Rainy,11,5,0.42,17.3,924.0
+Dhanmondi 15/32,Mirpur 14,CNG,Sunny,22,1,0.26,11.1,438.0
+Farmgate,Shahjahanpur,CNG,Sunny,0,2,0.22,4.3,194.0
+Merul Badda,Tikatuli,Bus,Sunny,11,5,0.063,8.1,43.0
+Karwan Bazar,Bangla Motor,Bike,Regular,10,3,0.28,0.9,63.0
+Mirpur 12,Khilkhet,Bike,Rainy,5,1,0.81,7.1,236.0
+Middle Badda,Abul Hotel,Bus,Regular,18,6,0.159,1.9,43.0
+Shyamoli,Kakali (Banani),CNG,Regular,9,4,0.57,7.3,466.0
+Merul Badda,Mirpur 14,CNG,Sunny,2,2,0.77,10.9,470.0
+Ray Saheb Bazar,Shahbagh,Bus,Sunny,12,4,0.159,4.4,38.0
+Cantonment (Radisson),Jatrabari,Car,Sunny,12,6,0.57,14.9,578.0
+Pallabi,Shahjahanpur,Bus,Sunny,20,0,0.279,13.1,93.0
+Azampur,Mohakhali Bus Terminal,Bus,Sunny,10,5,0.216,15.1,101.0
+Amtoli (Mohakhali),Rajlakshmi,Bike,Stormy,10,5,0.36,13.8,668.0
+City College / Science Lab,Shishu Mela,Car,Rainy,8,3,0.62,4.4,466.0
+Jashimuddin (Uttara),Azimpur / Palashi,CNG,Sunny,19,5,0.66,20.6,1196.0
+Kakali (Banani),MES,Bus,Sunny,17,6,0.12299999999999998,2.7,19.0
+Badda Link Road,Nadda,Car,Sunny,13,5,0.85,3.3,178.0
+City College / Science Lab,Amtoli (Mohakhali),Car,Sunny,22,3,0.48,7.2,298.0
+Kalyanpur,Press Club,Car,Regular,19,4,0.26,9.5,616.0
+Karwan Bazar,Asad Gate,Bus,Rainy,12,5,0.033,3.5,44.0
+Asad Gate,Azampur,CNG,Stormy,0,5,0.42,18.3,1231.0
+Airport,Gulistan,CNG,Regular,22,6,0.25,17.7,748.0
+Shishu Mela,Airport,Car,Regular,17,2,0.84,13.1,936.0
+MES,Mugda,Car,Rainy,12,0,0.82,13.1,712.0
+Satrasta,Sainik Club / Banani Railgate,CNG,Regular,19,4,0.92,5.1,351.0
+Mirpur 11,Rajlakshmi,Bike,Sunny,5,2,0.36,9.1,206.0
+Karwan Bazar,Mugda,CNG,Sunny,1,2,0.26,7.5,330.0
+Jagannath University,Azampur,CNG,Regular,10,1,0.9,26.0,1641.0
+Nadda,Jashimuddin (Uttara),Car,Regular,21,2,0.33,10.5,454.0
+Asad Gate,Notun Bazar,Bike,Regular,12,5,0.63,12.2,271.0
+Jahangir Gate,MES,Car,Sunny,9,1,0.57,5.5,393.0
+Gulshan 1,Merul Badda,Bus,Regular,8,4,0.24599999999999997,2.9,27.0
+Jatrabari,Badda,Car,Regular,4,6,0.7,11.3,533.0
+Rampura Bridge,Jatrabari,Bike,Rainy,8,2,0.14,8.0,354.0
+Shahjahanpur,Malibagh Chowdhury Para,Car,Stormy,9,4,0.29,1.6,220.0
+Gulshan 1,Kalabagan,Bike,Rainy,22,6,0.98,7.6,236.0
+Airport,Naya Bazar,Bike,Rainy,22,6,0.72,18.8,504.0
+Tikatuli,Azampur,CNG,Regular,9,6,0.55,23.7,1498.0
+Shyamoli,Chandpur,Bus,Rainy,18,5,0.138,89.8,525.0
+Kamalapur,Gulistan,Car,Rainy,15,6,0.34,1.2,125.0
+City College / Science Lab,Gulshan 1,Bike,Sunny,19,2,0.89,7.6,267.0
+House Building,Rajarbagh,Bike,Sunny,5,1,0.95,22.2,461.0
+Abdullahpur,Sayedabad Bus Terminal,Car,Rainy,13,2,0.96,27.0,1420.0
+Kalyanpur,Gulshan 1,Car,Stormy,21,2,0.82,7.5,518.0
+Jagannath University,Naya Bazar,Bus,Regular,2,5,0.11399999999999999,1.7,24.0
+Nabisco,Chandpur,Bike,Regular,17,6,0.75,88.2,2644.0
+Kalyanpur,MES,CNG,Stormy,2,3,0.94,7.4,557.0
+Jahangir Gate,House Building,Bike,Regular,7,6,0.32,15.3,306.0
+Cantonment (Radisson),Mazar Road,Bus,Regular,0,1,0.129,5.4,32.0
+Kochukhet,Gulistan,CNG,Regular,13,2,0.32,10.8,458.0
+College Gate,Mazar Road,CNG,Rainy,4,1,0.68,4.5,311.0
+Shyamoli,Tikatuli,Bus,Regular,1,5,0.192,10.8,54.0
+Agargaon (IDB Bhaban),Jahangir Gate,Bus,Sunny,18,0,0.183,0.3,28.0
+Mirpur 11,Shahjahanpur,Car,Stormy,21,5,0.84,12.3,805.0
+Ray Saheb Bazar,Farmgate,Car,Sunny,17,6,0.94,7.4,512.0
+Jatrabari,Abdullahpur,Car,Rainy,0,3,0.31,28.4,1542.0
+Asad Gate,Darussalam,Bike,Sunny,9,0,0.45,4.3,158.0
+Amtoli (Mohakhali),Farmgate,CNG,Regular,14,1,0.88,4.3,240.0
+Naya Bazar,Kalyanpur,Bus,Stormy,23,1,0.297,10.6,67.0
+Mirpur 10,Agargaon (IDB Bhaban),Rickshaw,Rainy,10,4,0.74,4.8,223.0
+Shahjahanpur,MES,Bus,Stormy,23,2,0.036,9.6,63.0
+Kochukhet,Mirpur 1,Rickshaw,Sunny,2,5,0.44,4.0,123.0
+Khilkhet,Chandpur,Bus,Rainy,18,0,0.174,95.9,564.0
+Notun Bazar,Badda,Rickshaw,Rainy,23,5,0.75,1.3,109.0
+Nadda,Shyamoli,Bus,Sunny,17,4,0.042,10.9,63.0
+Kuril / Kuratoli (AIUB),Dhanmondi 27,Bus,Regular,21,1,0.168,13.1,63.0
+Mirpur 10,Badda Link Road,Car,Sunny,22,6,0.28,10.4,408.0
+Sainik Club / Banani Railgate,Agargaon (IDB Bhaban),Car,Rainy,17,4,0.5,4.6,421.0
+Jahangir Gate,Notun Bazar,CNG,Sunny,22,1,0.29,9.8,397.0
+Asad Gate,Mirpur 10,Car,Stormy,1,6,0.85,7.6,577.0
+Karwan Bazar,Ray Saheb Bazar,Bike,Rainy,2,6,0.67,6.5,242.0
+Kochukhet,Sayedabad Bus Terminal,Bike,Regular,17,2,0.16,12.6,394.0
+Jagannath University,Mazar Road,Bus,Regular,6,1,0.069,13.9,84.0
+Technical,Badda Link Road,Car,Sunny,9,2,0.68,10.7,711.0
+College Gate,Nabisco,Car,Rainy,13,2,0.82,4.3,292.0
+Technical,Khilkhet,Bike,Sunny,9,0,0.65,10.8,347.0
+Amtoli (Mohakhali),Karwan Bazar,Rickshaw,Sunny,7,5,0.37,4.8,130.0
+Mazar Road,Shahjahanpur,Bus,Stormy,20,1,0.291,10.0,77.0
+Satrasta,Kalyanpur,Car,Sunny,17,6,0.35,4.4,320.0
+Cantonment (Radisson),Shahjahanpur,CNG,Sunny,14,3,0.3,8.6,357.0
+Nadda,Dhanmondi 15/32,Bike,Regular,13,3,0.66,11.7,263.0
+Mohakhali Bus Terminal,Nadda,Rickshaw,Sunny,11,0,0.38,4.9,136.0
+Sayedabad Bus Terminal,New Market / Nilkhet,Bike,Sunny,19,3,0.95,6.7,250.0
+Middle Badda,Rajlakshmi,CNG,Rainy,0,0,0.12,15.6,902.0
+Middle Badda,Kalyanpur,CNG,Regular,5,3,0.27,10.7,506.0
+Kochukhet,Press Club,Bike,Sunny,19,6,0.2,9.8,316.0
+Mirpur 12,Azampur,Car,Regular,11,5,0.37,8.2,375.0
+Azampur,Kuril / Kuratoli (AIUB),Bus,Regular,7,1,0.036,10.5,62.0
+Airport,Azimpur / Palashi,Bus,Rainy,19,2,0.282,17.0,134.0
+Middle Badda,Matsya Bhaban,Bus,Regular,5,4,0.273,7.8,53.0
+Khilkhet,Notun Bazar,Bus,Rainy,21,5,0.11699999999999999,7.6,49.0
+Nadda,Mugda,Bus,Rainy,10,4,0.24,11.0,65.0
+Kalyanpur,Jahangir Gate,Car,Sunny,2,1,0.77,2.5,160.0
+Karwan Bazar,Gulshan 1,Bike,Rainy,2,6,0.96,5.2,205.0
+Abul Hotel,Rajarbagh,Bus,Sunny,22,5,0.174,4.2,36.0
+Jagannath University,Rampura Bridge,Bus,Sunny,1,1,0.222,9.1,63.0
+Jatrabari,Jahangir Gate,Car,Stormy,16,1,0.63,13.1,851.0
+Mirpur 1,Shishu Mela,Bus,Regular,7,1,0.12,4.5,25.0
+Dhanmondi 15/32,Rajarbagh,CNG,Rainy,7,3,0.18,7.7,453.0
+Dhanmondi 27,Kuril / Kuratoli (AIUB),Bus,Sunny,6,3,0.279,13.1,63.0
+Kamalapur,Rajarbagh,Rickshaw,Rainy,5,5,0.88,1.7,124.0
+Mirpur 14,Kuril / Kuratoli (AIUB),CNG,Sunny,6,0,0.49,7.6,315.0
+College Gate,Shyamoli,Bus,Rainy,15,1,0.084,1.3,31.0
+Matsya Bhaban,Kalabagan,Bike,Sunny,17,5,0.42,3.0,127.0
+Mirpur 14,Naya Bazar,Bus,Sunny,22,3,0.297,16.1,83.0
+Press Club,MES,CNG,Rainy,3,1,0.67,12.0,727.0
+Nadda,Kalyanpur,Car,Sunny,0,3,0.93,10.6,465.0
+Shishu Mela,Maniknagar,Bike,Regular,12,2,0.41,12.4,267.0
+Shyamoli,Tikatuli,Car,Rainy,17,4,0.87,10.8,909.0
+Chandpur,Middle Badda,Bus,Rainy,14,4,0.174,87.3,357.0
+Badda Link Road,Gulshan 2,Bus,Regular,20,5,0.11399999999999999,3.6,44.0
+Airport,Nabisco,CNG,Sunny,15,5,0.79,11.1,457.0
+Mirpur 12,Gulistan,CNG,Sunny,11,3,0.44,16.7,615.0
+Dhanmondi 27,Abdullahpur,Car,Sunny,13,1,0.78,21.2,808.0
+Shyamoli,Chandpur,Bike,Regular,20,0,0.29,89.8,2685.0
+City College / Science Lab,Badda Link Road,Car,Rainy,5,6,0.16,10.4,614.0
+Dhanmondi 27,City College / Science Lab,Bike,Sunny,3,6,0.68,2.1,98.0
+Pallabi,Shahjahanpur,CNG,Rainy,10,2,0.59,13.1,1085.0
+Jatrabari,Mohakhali Bus Terminal,CNG,Sunny,9,3,0.31,11.3,670.0
+Badda,Shahbagh,Bike,Rainy,16,5,0.7,9.4,269.0
+Azimpur / Palashi,Gulistan,Car,Regular,22,0,0.75,4.2,241.0
+Merul Badda,Abdullahpur,Bus,Stormy,11,5,0.291,18.7,104.0
+Azimpur / Palashi,College Gate,CNG,Regular,11,6,0.3,5.2,247.0
+Kuril / Kuratoli (AIUB),Badda,Bike,Rainy,18,5,0.65,5.8,291.0
+Mazar Road,Shahbagh,Bus,Rainy,18,4,0.084,8.9,70.0
+Asad Gate,Rajarbagh,Bike,Sunny,6,4,0.51,8.9,171.0
+Rajarbagh,Darussalam,Car,Regular,0,3,0.97,11.5,557.0
+Amtoli (Mohakhali),Mirpur 2,Car,Rainy,0,4,0.79,6.0,368.0
+Shishu Mela,Jagannath University,Bike,Regular,15,5,0.56,10.4,225.0
+Abdullahpur,Maniknagar,CNG,Regular,5,0,0.35,27.0,1183.0
+Mirpur 10,Sayedabad Bus Terminal,Bike,Regular,8,2,0.76,16.0,524.0
+Kalabagan,Chairman Bari,CNG,Rainy,23,6,0.74,8.1,512.0
+Mirpur 1,Mohakhali Bus Terminal,Bike,Stormy,8,0,0.12,6.0,342.0
+Nadda,Badda,CNG,Stormy,20,5,0.58,3.5,418.0
+Farmgate,Shahbagh,CNG,Sunny,4,5,0.55,3.0,163.0
+City College / Science Lab,Jashimuddin (Uttara),CNG,Regular,18,3,0.22,19.3,1226.0
+Naya Bazar,Chandpur,Car,Sunny,0,6,0.13,80.4,3015.0
+Kalyanpur,Mirpur 1,Bus,Regular,15,5,0.051000000000000004,3.0,10.0
+High Court,Mirpur 14,Bus,Sunny,5,2,0.138,13.6,74.0
+City College / Science Lab,Matsya Bhaban,Bike,Sunny,3,6,0.97,2.5,107.0
+Rajlakshmi,Ray Saheb Bazar,Bus,Sunny,13,5,0.10200000000000001,24.2,107.0
+Asad Gate,Agargaon (IDB Bhaban),Rickshaw,Sunny,11,1,0.39,3.5,101.0
+New Market / Nilkhet,Mohakhali Bus Terminal,Bus,Stormy,17,1,0.15,7.9,66.0
+Mirpur 12,Mirpur 14,Rickshaw,Rainy,22,6,0.71,1.2,87.0
+Jahangir Gate,Kakali (Banani),Bike,Sunny,1,3,0.72,4.6,132.0
+Paltan,Mirpur 12,Car,Sunny,9,2,0.17,15.7,1002.0
+Badda,Dhanmondi 15/32,Car,Regular,9,0,0.3,11.1,784.0
+Jatrabari,Rajlakshmi,Car,Regular,3,0,0.37,25.4,1082.0
+MES,Asad Gate,Car,Sunny,11,0,0.8,9.0,381.0
+Tikatuli,Dhanmondi 15/32,Bike,Sunny,10,2,0.79,7.7,262.0
+Asad Gate,Mirpur 12,Car,Rainy,11,4,0.72,10.4,542.0
+Gulshan 2,Shishu Mela,CNG,Sunny,23,4,0.57,8.3,352.0
+Kochukhet,College Gate,Bike,Regular,1,2,0.15,6.6,172.0
+Mirpur 11,Kochukhet,Rickshaw,Sunny,19,0,0.15,4.9,151.0
+Jahangir Gate,Karwan Bazar,Bike,Rainy,19,0,0.49,4.3,224.0
+Azimpur / Palashi,Dhanmondi 15/32,Rickshaw,Regular,14,4,0.13,2.8,79.0
+Karwan Bazar,Bangla Motor,Car,Sunny,9,6,0.22,0.9,125.0
+Middle Badda,Asad Gate,Car,Regular,1,5,0.7,10.2,492.0
+Kalyanpur,Jahangir Gate,Bus,Rainy,12,3,0.198,2.5,24.0
+Karwan Bazar,Jahangir Gate,Bus,Regular,14,1,0.168,4.3,29.0
+Nadda,Shahjahanpur,CNG,Rainy,18,6,1.0,8.5,740.0
+Malibagh Railgate,Kalyanpur,Car,Rainy,20,6,0.98,9.9,919.0
+Sainik Club / Banani Railgate,Pallabi,Car,Sunny,14,1,0.89,6.7,325.0
+Tikatuli,Mirpur 10,Bike,Sunny,1,1,0.52,14.6,322.0
+Darussalam,Gulistan,Bike,Sunny,3,5,0.94,11.6,274.0
+Sayedabad Bus Terminal,Badda Link Road,CNG,Sunny,20,4,0.73,10.1,559.0
+Azampur,Gulshan 1,CNG,Sunny,15,0,0.11,15.2,578.0
+Rampura Bridge,College Gate,Car,Sunny,21,2,0.84,9.1,379.0
+Shyamoli,Mirpur 1,Car,Sunny,10,0,0.6,4.0,308.0
+Shahjahanpur,Middle Badda,Bike,Rainy,21,3,0.27,5.3,182.0
+Karwan Bazar,Gulistan,CNG,Sunny,8,0,0.64,5.2,358.0
+Mirpur 14,Maniknagar,Bike,Sunny,3,0,0.21,17.8,376.0
+Kalabagan,Rajlakshmi,CNG,Rainy,5,4,0.8,19.4,1012.0
+Chandpur,Khilkhet,CNG,Regular,23,3,0.68,95.9,4075.0
+Jagannath University,Jatrabari,Car,Sunny,11,4,0.92,4.3,195.0
+Matsya Bhaban,Jashimuddin (Uttara),Bus,Sunny,7,2,0.20400000000000001,19.1,89.0
+Mirpur 12,Amtoli (Mohakhali),CNG,Regular,9,2,0.36,8.9,593.0
+Kochukhet,Kalyanpur,Car,Sunny,16,1,0.28,5.7,241.0
+Shahbagh,Paltan,Bus,Regular,23,2,0.111,3.0,29.0
+Mirpur 10,Jahangir Gate,Car,Sunny,10,4,0.28,4.6,297.0
+Dhanmondi 15/32,Shahbagh,Bus,Stormy,20,1,0.126,3.2,40.0
+Kuril / Kuratoli (AIUB),Kakali (Banani),CNG,Sunny,20,0,0.9,4.7,348.0
+Shyamoli,Kalyanpur,Car,Rainy,18,0,0.8,1.1,191.0
+Malibagh Chowdhury Para,Naya Bazar,Bus,Sunny,16,1,0.282,6.3,48.0
+Gulshan 2,Amtoli (Mohakhali),Rickshaw,Stormy,9,0,0.66,2.1,169.0
+Mazar Road,Shishu Mela,CNG,Regular,13,0,0.33,3.9,202.0
+Mohakhali Bus Terminal,Ray Saheb Bazar,CNG,Sunny,17,0,0.19,10.2,620.0
+Kalabagan,Bangla Motor,Bus,Rainy,4,5,0.297,2.1,32.0
+Kakali (Banani),Shahjahanpur,Bike,Sunny,2,5,0.29,7.0,163.0
+Naya Bazar,Shahjahanpur,Bike,Sunny,2,5,0.56,5.0,143.0
+City College / Science Lab,Rampura Bridge,Bus,Sunny,22,0,0.036,7.7,45.0
+Gulistan,MES,Bike,Sunny,12,5,0.53,12.9,253.0
+Chairman Bari,Badda Link Road,Car,Sunny,1,4,0.55,4.6,214.0
+Pallabi,Rampura Bridge,Car,Regular,23,4,0.41,12.6,512.0
+Technical,Shyamoli,Rickshaw,Rainy,16,3,0.64,1.8,92.0
+Kalabagan,Sainik Club / Banani Railgate,Bus,Rainy,17,2,0.22799999999999998,8.8,85.0
+Naya Bazar,Khilgaon Flyover,Bike,Sunny,8,2,0.87,5.3,197.0
+Mirpur 14,House Building,Bike,Regular,18,1,0.11,9.1,318.0
+Middle Badda,Jashimuddin (Uttara),Bike,Sunny,7,4,0.5,14.4,259.0
+Maniknagar,Airport,CNG,Sunny,10,6,0.15,19.2,1098.0
+Notun Bazar,Gulistan,Bike,Sunny,6,0,0.53,10.8,247.0
+Mugda,Cantonment (Radisson),Bike,Regular,23,1,0.63,12.1,291.0
+Mugda,House Building,Bus,Regular,21,2,0.066,23.8,111.0
+Rampura Bridge,Rajarbagh,CNG,Sunny,8,6,0.52,3.5,254.0
+Rajlakshmi,Rampura Bridge,Bike,Rainy,1,2,0.57,17.6,503.0
+Nadda,Mirpur 12,Bike,Stormy,19,3,0.68,9.6,507.0
+Malibagh Railgate,Agargaon (IDB Bhaban),CNG,Stormy,17,3,0.17,7.6,765.0
+MES,Jashimuddin (Uttara),Car,Regular,10,6,0.82,8.7,645.0
+Ray Saheb Bazar,Shahbagh,Bus,Sunny,8,2,0.129,4.4,42.0
+Tikatuli,Rajlakshmi,Bike,Rainy,18,1,0.98,22.7,918.0
+Chairman Bari,Abdullahpur,CNG,Rainy,7,1,0.94,15.6,848.0
+Sainik Club / Banani Railgate,Naya Bazar,CNG,Sunny,10,4,0.14,11.7,630.0
+Technical,Gulistan,Car,Sunny,1,0,0.11,11.1,464.0
+Shyamoli,Maniknagar,Bus,Regular,19,6,0.252,12.9,90.0
+Bashundhara / Jamuna FP,Azampur,Bike,Rainy,5,0,0.23,11.2,331.0
+Rampura Bridge,Bashundhara / Jamuna FP,Bus,Regular,18,2,0.17099999999999999,7.6,66.0
+Maniknagar,Airport,CNG,Sunny,21,2,0.66,19.2,734.0
+New Market / Nilkhet,Middle Badda,Bike,Sunny,12,4,0.1,10.3,189.0
+Sainik Club / Banani Railgate,MES,Bus,Sunny,17,6,0.056999999999999995,2.4,15.0
+Azimpur / Palashi,Notun Bazar,Bus,Regular,22,2,0.072,12.4,78.0
+Ray Saheb Bazar,Airport,CNG,Sunny,16,0,0.83,19.7,750.0
+Shyamoli,Abul Hotel,CNG,Sunny,18,4,0.54,9.8,548.0
+High Court,Rajlakshmi,Bus,Stormy,23,4,0.06,20.7,102.0
+Kamalapur,Badda,Car,Regular,7,5,0.42,8.4,387.0
+Kuril / Kuratoli (AIUB),City College / Science Lab,Car,Sunny,16,0,0.55,13.4,535.0
+Shahjahanpur,Dhanmondi 27,CNG,Sunny,19,5,0.36,6.9,430.0
+Asad Gate,Jagannath University,CNG,Sunny,1,6,0.15,9.3,400.0
+Dhanmondi 27,Mirpur 14,Bike,Regular,9,0,0.57,10.7,371.0
+Shahbagh,Kalyanpur,CNG,Regular,19,1,0.21,7.3,501.0
+Mirpur 2,Gulshan 1,Bus,Rainy,21,2,0.084,6.9,50.0
+Malibagh Chowdhury Para,Middle Badda,Car,Sunny,14,4,0.59,4.2,186.0
+New Market / Nilkhet,Karwan Bazar,Car,Rainy,10,3,0.43,3.4,367.0
+Khilgaon Flyover,Naya Bazar,Car,Rainy,22,5,0.56,5.3,355.0
+Malibagh Railgate,Mirpur 2,Bus,Regular,20,6,0.048,10.9,76.0
+Kuril / Kuratoli (AIUB),Darussalam,Bus,Sunny,17,6,0.132,10.1,68.0
+Shahjahanpur,Shahbagh,CNG,Regular,17,0,0.51,3.5,267.0
+Amtoli (Mohakhali),Mugda,Car,Rainy,11,4,0.4,8.9,460.0
+Kamalapur,Ray Saheb Bazar,Bus,Sunny,13,5,0.111,3.6,42.0
+Mugda,Abdullahpur,Bike,Sunny,23,5,0.8,25.4,521.0
+Jashimuddin (Uttara),Mirpur 11,Bike,Rainy,10,3,0.65,9.1,410.0
+Kochukhet,Airport,CNG,Stormy,21,1,0.18,7.3,484.0
+Jashimuddin (Uttara),Khilgaon Flyover,Bike,Rainy,20,3,0.42,18.7,746.0
+Maniknagar,New Market / Nilkhet,Bike,Sunny,6,6,0.44,7.7,173.0
+Satrasta,Farmgate,Bus,Sunny,20,1,0.288,1.0,22.0
+Rajlakshmi,Kamalapur,Bus,Sunny,11,6,0.135,21.3,90.0
+Kamalapur,Jashimuddin (Uttara),CNG,Sunny,1,1,0.76,20.5,828.0
+Shahjahanpur,Azimpur / Palashi,Car,Regular,15,4,0.82,5.3,245.0
+Nadda,Satrasta,Car,Sunny,3,2,0.13,8.1,355.0
+Abdullahpur,High Court,Bike,Regular,21,2,0.27,23.6,486.0
+Chandpur,Dhanmondi 27,Car,Sunny,11,4,0.95,86.8,2798.0
+Tikatuli,Gulshan 2,Bike,Regular,9,1,0.97,10.4,374.0
+Mugda,Bashundhara / Jamuna FP,Car,Sunny,19,0,0.5,12.3,809.0
+Matsya Bhaban,Mirpur 14,CNG,Stormy,17,0,0.36,12.6,1240.0
+Sainik Club / Banani Railgate,Khilkhet,Car,Rainy,6,2,0.67,5.7,367.0
+Sainik Club / Banani Railgate,Karwan Bazar,CNG,Sunny,7,1,0.57,6.7,285.0
+Cantonment (Radisson),Dhanmondi 15/32,CNG,Sunny,16,4,0.61,9.2,350.0
+Shyamoli,Jahangir Gate,Bike,Rainy,18,0,0.42,2.7,161.0
+Khilgaon Flyover,Malibagh Railgate,Rickshaw,Stormy,2,2,0.52,0.6,77.0
+College Gate,Jagannath University,Bus,Stormy,11,2,0.20400000000000001,9.8,68.0
+Mirpur 12,Kalabagan,CNG,Stormy,0,1,0.74,12.6,887.0
+Malibagh Chowdhury Para,Kamalapur,Car,Regular,9,5,0.97,3.3,286.0
+Asad Gate,Shahbagh,Rickshaw,Regular,16,1,0.52,4.7,160.0
+Abdullahpur,Darussalam,Car,Regular,7,6,0.15,15.9,667.0
+Airport,Gulshan 1,Car,Regular,22,4,0.62,9.4,392.0
+Dhanmondi 27,Maniknagar,CNG,Regular,18,2,0.9,10.6,717.0
+Mazar Road,Farmgate,CNG,Rainy,21,5,0.68,6.0,381.0
+Kalabagan,Press Club,Rickshaw,Stormy,15,5,0.55,4.8,208.0
+Gulistan,Kakali (Banani),Bus,Rainy,16,6,0.084,10.3,43.0
+Mohakhali Bus Terminal,Azimpur / Palashi,Bus,Rainy,6,1,0.24599999999999997,7.8,56.0
+Matsya Bhaban,Asad Gate,Rickshaw,Sunny,17,0,0.34,5.0,168.0
+Gulistan,Rajarbagh,Rickshaw,Regular,5,2,0.7,2.8,124.0
+Dhanmondi 27,Sainik Club / Banani Railgate,Car,Rainy,13,6,0.23,8.6,489.0
+Kochukhet,Mazar Road,Rickshaw,Rainy,5,3,0.41,4.5,203.0
+Badda,Technical,Bike,Regular,17,4,0.58,11.2,337.0
+Kalyanpur,Mirpur 1,Car,Stormy,22,1,0.5,3.0,262.0
+Cantonment (Radisson),High Court,Bus,Regular,7,5,0.23099999999999998,10.1,73.0
+Satrasta,Nadda,Car,Regular,18,2,0.97,8.1,613.0
+Kalabagan,MES,Car,Regular,16,0,0.64,10.4,462.0
+Asad Gate,Rajlakshmi,Bike,Rainy,6,0,0.99,17.4,468.0
+Shishu Mela,Rampura Bridge,Car,Rainy,6,0,0.86,9.3,548.0
+Kochukhet,Chandpur,CNG,Sunny,12,6,0.75,91.6,3259.0
+Mirpur 11,Middle Badda,CNG,Stormy,20,3,0.76,11.1,1100.0
+Kochukhet,Khilgaon Flyover,CNG,Rainy,8,5,0.2,8.5,719.0
+Jahangir Gate,Ray Saheb Bazar,Car,Regular,18,3,0.27,10.7,762.0
+Shishu Mela,Bangla Motor,CNG,Sunny,6,0,0.18,4.7,210.0
+Notun Bazar,Rajarbagh,Bus,Rainy,0,4,0.162,8.2,76.0
+Mirpur 10,Kalabagan,Car,Rainy,13,6,0.43,9.7,541.0
+Maniknagar,Jatrabari,Bus,Rainy,20,4,0.207,1.5,21.0
+Azampur,College Gate,Bus,Regular,23,3,0.201,17.8,106.0
+Khilgaon Flyover,Sayedabad Bus Terminal,Rickshaw,Rainy,1,6,0.89,4.4,200.0
+House Building,Jashimuddin (Uttara),Car,Sunny,16,5,0.45,3.1,167.0
+Satrasta,New Market / Nilkhet,CNG,Regular,19,2,0.57,5.1,379.0
+Gulshan 2,Badda Link Road,Car,Rainy,3,3,0.38,3.6,270.0
+Mirpur 14,City College / Science Lab,CNG,Rainy,2,1,0.79,12.1,731.0
+Sainik Club / Banani Railgate,Shahbagh,Bike,Rainy,10,3,0.6,8.6,381.0
+Gulshan 1,Gulistan,CNG,Sunny,1,5,0.3,8.3,382.0
+Amtoli (Mohakhali),Gulistan,Car,Sunny,10,6,0.34,8.5,563.0
+Shishu Mela,New Market / Nilkhet,Bike,Sunny,17,1,0.39,5.7,203.0
+Tikatuli,Chairman Bari,Bike,Sunny,9,4,0.37,10.1,271.0
+Tikatuli,Kuril / Kuratoli (AIUB),CNG,Rainy,23,3,0.4,14.3,850.0
+Khilkhet,Bashundhara / Jamuna FP,Bike,Rainy,0,5,0.89,3.2,165.0
+Jashimuddin (Uttara),Asad Gate,Bike,Sunny,5,5,0.89,17.1,379.0
+Badda Link Road,City College / Science Lab,Car,Sunny,4,0,0.11,10.4,425.0
+Amtoli (Mohakhali),Sayedabad Bus Terminal,Bus,Rainy,9,5,0.141,10.2,66.0
+Mohakhali Bus Terminal,Paltan,Bike,Rainy,18,0,0.42,7.2,325.0
+Naya Bazar,Mirpur 14,Bus,Sunny,21,1,0.261,16.1,88.0
+Jagannath University,Gulshan 2,Bus,Regular,3,3,0.273,13.1,84.0
+Khilkhet,Notun Bazar,Bus,Sunny,6,0,0.072,7.6,40.0
+MES,Kamalapur,CNG,Regular,18,4,0.9,11.9,728.0
+Mirpur 14,Darussalam,CNG,Stormy,14,3,0.1,5.4,383.0
+Gulshan 2,Jashimuddin (Uttara),Bus,Rainy,12,0,0.078,11.5,62.0
+MES,Press Club,Bike,Sunny,2,0,0.87,12.0,283.0
+Rajarbagh,Mirpur 11,Bike,Rainy,14,6,1.0,14.2,398.0
+Mirpur 2,Nabisco,Bus,Regular,8,5,0.186,5.8,55.0
+Mirpur 1,Shahjahanpur,Bus,Sunny,0,2,0.192,10.0,80.0
+Shahbagh,Bangla Motor,CNG,Rainy,3,4,0.88,1.2,150.0
+Mazar Road,City College / Science Lab,Bike,Sunny,17,1,0.15,7.9,248.0
+Mirpur 10,Merul Badda,Bus,Sunny,19,1,0.24,10.2,54.0
+High Court,Azimpur / Palashi,Rickshaw,Regular,9,5,0.21,3.0,129.0
+Merul Badda,Ray Saheb Bazar,CNG,Sunny,16,1,0.15,10.6,409.0
+Malibagh Railgate,Ray Saheb Bazar,Bike,Sunny,16,6,0.96,6.4,163.0
+Jagannath University,Maniknagar,Bus,Stormy,2,0,0.24899999999999997,5.0,54.0
+Chandpur,Gulshan 2,Bike,Stormy,21,5,0.31,90.4,2590.0
+Middle Badda,Jagannath University,CNG,Sunny,17,4,0.45,11.8,632.0
+Chairman Bari,Khilgaon Flyover,Bike,Stormy,17,2,0.43,7.1,374.0
+Bashundhara / Jamuna FP,Kuril / Kuratoli (AIUB),CNG,Regular,17,1,0.77,1.1,146.0
+Naya Bazar,Gulshan 2,Car,Rainy,22,3,0.56,11.4,644.0
+Badda,Bashundhara / Jamuna FP,CNG,Regular,5,6,0.56,5.1,275.0
+Naya Bazar,Rajlakshmi,Car,Regular,23,5,0.89,23.3,1018.0
+Airport,MES,CNG,Sunny,1,0,0.96,5.1,269.0
+Matsya Bhaban,Mohakhali Bus Terminal,CNG,Rainy,21,1,0.87,5.9,356.0
+Dhanmondi 27,Satrasta,Bike,Sunny,8,0,0.29,3.6,137.0
+Asad Gate,Jatrabari,Car,Rainy,14,2,0.94,11.9,687.0
+Nabisco,Mirpur 12,CNG,Stormy,14,5,0.54,9.4,621.0
+Dhanmondi 27,Gulistan,Bike,Sunny,17,5,0.53,7.3,251.0
+Khilgaon Flyover,Sayedabad Bus Terminal,Car,Rainy,21,0,0.35,4.4,291.0
+Abul Hotel,Shahjahanpur,CNG,Sunny,10,3,0.29,3.4,238.0
+Khilgaon Flyover,Jatrabari,Car,Regular,5,6,0.83,5.7,304.0
+MES,Dhanmondi 15/32,Bus,Rainy,10,4,0.207,10.1,58.0
+MES,Azampur,Bike,Sunny,18,2,0.5,10.4,320.0
+Shyamoli,Abdullahpur,CNG,Sunny,21,4,0.83,18.4,639.0
+Malibagh Chowdhury Para,Badda,Car,Rainy,10,0,0.58,5.1,525.0
+Press Club,Naya Bazar,Car,Stormy,17,6,0.48,2.0,309.0
+Kakali (Banani),Mirpur 1,Bus,Sunny,5,5,0.141,5.6,43.0
+Chairman Bari,Chandpur,CNG,Rainy,19,5,0.22,90.3,6982.0
+Asad Gate,Mazar Road,Rickshaw,Rainy,21,4,0.95,5.0,198.0
+Merul Badda,Mirpur 11,Car,Sunny,13,3,0.62,10.9,447.0
+Azimpur / Palashi,Mirpur 11,Car,Rainy,10,0,0.43,12.7,1146.0
+Shishu Mela,Merul Badda,Car,Rainy,22,3,0.71,10.0,574.0
+Airport,Jashimuddin (Uttara),Car,Rainy,8,4,0.17,3.8,352.0
+City College / Science Lab,Mirpur 10,Bus,Sunny,3,0,0.11399999999999999,10.3,65.0
+Asad Gate,Amtoli (Mohakhali),Bus,Stormy,0,3,0.033,6.5,53.0
+Mirpur 1,Rajlakshmi,Bus,Regular,10,0,0.072,12.0,83.0
+Jashimuddin (Uttara),College Gate,Car,Sunny,1,2,0.93,16.7,695.0
+Mirpur 14,Airport,Bus,Stormy,20,1,0.24899999999999997,5.8,55.0
+Mirpur 2,Paltan,Bus,Regular,1,3,0.039,12.1,83.0
+Malibagh Railgate,Technical,Bike,Sunny,8,3,0.78,9.9,315.0
+Rajarbagh,Mirpur 2,CNG,Rainy,17,6,0.31,12.4,1028.0
+Jahangir Gate,Dhanmondi 15/32,Bus,Stormy,21,3,0.11399999999999999,4.8,52.0
+Rajarbagh,Satrasta,Bus,Rainy,22,2,0.141,6.7,43.0
+Kalabagan,Shishu Mela,Bus,Rainy,8,6,0.216,3.7,48.0
+Darussalam,Satrasta,Bus,Rainy,18,1,0.051000000000000004,4.9,45.0
+Mirpur 14,Jahangir Gate,Bike,Stormy,12,0,0.99,6.4,257.0
+Matsya Bhaban,Kuril / Kuratoli (AIUB),Bus,Sunny,2,6,0.23399999999999999,12.3,80.0
+Mugda,Press Club,Bus,Rainy,20,5,0.252,4.5,48.0
+Merul Badda,Mugda,Bus,Sunny,19,1,0.048,6.8,71.0
+City College / Science Lab,Gulshan 2,Car,Regular,5,5,0.34,9.3,441.0
+Chandpur,City College / Science Lab,Car,Rainy,18,1,0.97,84.9,7124.0
+Ray Saheb Bazar,Badda,Bus,Regular,3,1,0.159,12.0,67.0
+Azimpur / Palashi,Kochukhet,Bike,Stormy,17,5,0.78,9.6,501.0
+College Gate,Cantonment (Radisson),Bike,Rainy,5,5,0.92,8.0,273.0
+Kochukhet,Gulistan,Bus,Rainy,23,1,0.075,10.8,54.0
+Kochukhet,Cantonment (Radisson),Rickshaw,Stormy,12,2,0.59,1.4,103.0
+Sainik Club / Banani Railgate,Notun Bazar,Car,Sunny,6,3,0.36,5.8,266.0
+Kalyanpur,Gulistan,Bus,Regular,2,5,0.264,10.7,67.0
+Jashimuddin (Uttara),Mirpur 10,Bus,Regular,4,5,0.045,9.9,79.0
+Farmgate,Mirpur 2,Bike,Sunny,3,4,0.5,7.0,147.0
+Shahbagh,Shishu Mela,Bike,Rainy,12,0,0.33,5.8,198.0
+Jahangir Gate,Jagannath University,CNG,Sunny,21,4,0.27,11.4,399.0
+Cantonment (Radisson),Jahangir Gate,Bike,Stormy,1,6,0.13,4.8,183.0
+Gulshan 2,Naya Bazar,CNG,Sunny,0,0,0.65,11.4,490.0
+Kalyanpur,Press Club,CNG,Sunny,16,0,0.95,9.5,397.0
+Mirpur 10,Malibagh Chowdhury Para,CNG,Stormy,5,0,0.16,11.9,834.0
+Sayedabad Bus Terminal,New Market / Nilkhet,Car,Regular,17,1,0.82,6.7,535.0
+Badda,Darussalam,Bus,Sunny,16,3,0.048,11.1,63.0
+Malibagh Railgate,Kuril / Kuratoli (AIUB),CNG,Stormy,15,5,0.21,10.4,664.0
+Gulshan 1,Badda,Rickshaw,Regular,14,5,0.83,4.0,143.0
+Gulistan,Malibagh Chowdhury Para,Rickshaw,Sunny,2,4,0.17,4.5,133.0
+Gulshan 2,Kamalapur,Bus,Sunny,22,0,0.174,9.1,50.0
+Dhanmondi 27,Badda,CNG,Sunny,2,0,0.66,11.4,500.0
+Amtoli (Mohakhali),House Building,CNG,Regular,2,3,0.25,15.2,684.0
+Azampur,Khilkhet,Bike,Sunny,0,3,0.59,8.1,200.0
+Badda Link Road,Darussalam,Car,Rainy,11,2,0.48,10.7,591.0
+Pallabi,Naya Bazar,Bus,Sunny,6,0,0.216,16.3,73.0
+Dhanmondi 27,Mazar Road,Bike,Rainy,10,6,0.19,6.2,302.0
+MES,Cantonment (Radisson),Bus,Rainy,15,2,0.066,1.1,10.0
+Agargaon (IDB Bhaban),Kalyanpur,Bus,Regular,23,6,0.048,2.8,27.0
+Kakali (Banani),Jagannath University,CNG,Sunny,19,1,0.88,13.1,782.0
+Pallabi,Chairman Bari,Bike,Regular,14,4,0.27,7.3,150.0
+Jagannath University,Jatrabari,Car,Sunny,0,3,0.21,4.3,219.0
+Jatrabari,Merul Badda,Bike,Regular,21,2,0.86,10.2,238.0
+Khilkhet,Shyamoli,Car,Sunny,15,0,0.45,12.2,487.0
+Malibagh Chowdhury Para,College Gate,Car,Regular,0,0,0.84,9.0,422.0
+Kalabagan,Rajarbagh,Bike,Regular,12,2,0.19,7.2,173.0
+Kalabagan,High Court,Rickshaw,Regular,22,4,0.46,4.3,115.0
+Agargaon (IDB Bhaban),Pallabi,CNG,Rainy,23,6,0.46,6.7,446.0
+Darussalam,Airport,Bus,Rainy,23,4,0.051000000000000004,10.4,57.0
+Mirpur 14,Kalabagan,Bus,Rainy,0,0,0.066,11.6,77.0
+Azampur,Jagannath University,Bus,Sunny,0,0,0.081,26.0,133.0
+Mazar Road,Gulistan,Bus,Regular,0,1,0.243,12.1,68.0
+Shahjahanpur,Kalabagan,Bike,Sunny,2,1,0.63,5.8,171.0
+Kochukhet,Kuril / Kuratoli (AIUB),Car,Rainy,21,2,0.51,5.6,356.0
+Mirpur 2,Farmgate,Bus,Rainy,4,0,0.108,7.0,53.0
+Bashundhara / Jamuna FP,Kochukhet,Rickshaw,Rainy,5,3,0.85,4.6,213.0
+Sayedabad Bus Terminal,Kalabagan,Bike,Regular,3,0,0.67,8.3,209.0
+Kakali (Banani),Jatrabari,Bike,Rainy,13,2,0.67,13.3,371.0
+Kochukhet,Press Club,CNG,Rainy,23,0,0.84,9.8,605.0
+Amtoli (Mohakhali),Technical,Bus,Rainy,18,4,0.22499999999999998,6.2,47.0
+Shahjahanpur,Gulshan 2,Car,Regular,12,1,0.84,6.7,320.0
+Nabisco,College Gate,CNG,Rainy,17,0,0.21,4.3,424.0
+Dhanmondi 27,Mazar Road,Car,Sunny,4,6,0.7,6.2,300.0
+Press Club,Notun Bazar,CNG,Rainy,15,6,0.66,10.5,577.0
+Karwan Bazar,Mohakhali Bus Terminal,Car,Sunny,15,0,0.86,4.5,219.0
+Ray Saheb Bazar,Middle Badda,Bus,Rainy,12,4,0.054,11.0,55.0
+Sayedabad Bus Terminal,High Court,Rickshaw,Rainy,23,3,0.23,4.3,177.0
+Kakali (Banani),Badda,Bike,Rainy,4,5,0.89,5.2,199.0
+Darussalam,Airport,Car,Sunny,12,0,0.49,10.4,415.0
+Azimpur / Palashi,Gulshan 2,Bus,Regular,23,1,0.069,10.1,61.0
+Amtoli (Mohakhali),Khilgaon Flyover,Car,Rainy,11,3,0.2,6.0,356.0
+Kamalapur,Jahangir Gate,CNG,Regular,8,5,0.35,8.8,598.0
+Mirpur 11,Rajarbagh,CNG,Sunny,12,4,0.39,14.2,499.0
+Ray Saheb Bazar,Maniknagar,CNG,Sunny,7,2,0.26,4.6,208.0
+Matsya Bhaban,Merul Badda,Car,Sunny,6,1,0.77,7.3,311.0
+Mirpur 10,Ray Saheb Bazar,Bike,Rainy,18,2,0.63,15.3,629.0
+Merul Badda,Mohakhali Bus Terminal,Car,Regular,15,3,0.34,3.9,204.0
+Abul Hotel,Agargaon (IDB Bhaban),Bus,Sunny,21,3,0.159,7.4,46.0
+Shahjahanpur,Dhanmondi 27,CNG,Sunny,13,5,0.62,6.9,291.0
+Darussalam,City College / Science Lab,Bike,Regular,0,5,0.61,7.3,202.0
+Mirpur 11,Satrasta,Car,Rainy,18,2,0.83,8.1,761.0
+Jahangir Gate,Kalyanpur,Car,Rainy,13,3,0.25,2.5,183.0
+City College / Science Lab,Paltan,Bike,Regular,19,3,0.11,4.9,197.0
+Karwan Bazar,Press Club,Bike,Rainy,21,0,0.89,4.0,155.0
+Jahangir Gate,Merul Badda,CNG,Sunny,6,0,0.58,7.8,332.0
+Rampura Bridge,MES,CNG,Rainy,15,4,0.4,8.5,439.0
+Gulshan 2,Kochukhet,Car,Regular,9,1,0.67,2.8,271.0
+Cantonment (Radisson),Satrasta,Car,Rainy,12,4,0.71,5.9,324.0
+Nabisco,MES,Bus,Sunny,17,3,0.258,6.0,47.0
+Farmgate,Mazar Road,Car,Regular,17,0,0.59,6.0,458.0
+Kochukhet,Dhanmondi 27,CNG,Rainy,11,2,0.27,7.7,424.0
+MES,Paltan,Bus,Regular,3,5,0.267,11.8,69.0
+Mirpur 1,Cantonment (Radisson),Rickshaw,Sunny,21,5,0.85,4.9,125.0
+Matsya Bhaban,Rampura Bridge,Car,Sunny,23,6,0.86,5.5,269.0
+City College / Science Lab,Asad Gate,Bike,Sunny,3,0,0.37,3.2,108.0
+Satrasta,Bangla Motor,Bike,Regular,22,4,0.7,2.7,96.0
+Mirpur 12,Gulshan 2,Bike,Rainy,10,6,0.95,8.6,396.0
+Kalabagan,Khilkhet,Bus,Sunny,5,5,0.23099999999999998,14.4,91.0
+Badda,Paltan,CNG,Rainy,15,6,0.45,8.6,482.0
+House Building,Shahbagh,Bus,Rainy,2,3,0.273,21.3,114.0
+Shahjahanpur,Middle Badda,CNG,Rainy,9,0,0.3,5.3,492.0
+Chairman Bari,Mirpur 11,Car,Sunny,15,0,0.83,6.7,295.0
+Cantonment (Radisson),Shishu Mela,Car,Regular,0,6,0.1,7.7,377.0
+Kakali (Banani),Mirpur 14,Bus,Stormy,21,3,0.11399999999999999,6.4,33.0
+Abul Hotel,Jahangir Gate,CNG,Stormy,14,5,0.5,7.7,521.0
+Darussalam,Kochukhet,Bike,Regular,8,0,0.23,4.8,180.0
+College Gate,Kakali (Banani),Bus,Rainy,22,2,0.105,7.5,42.0
+Sayedabad Bus Terminal,Pallabi,Bus,Stormy,10,1,0.237,17.9,124.0
+Jashimuddin (Uttara),Satrasta,Bus,Rainy,11,4,0.036,15.5,79.0
+Azampur,Karwan Bazar,Car,Sunny,20,5,0.12,18.8,1186.0
+Amtoli (Mohakhali),Kamalapur,CNG,Sunny,8,4,0.12,7.5,425.0
+Agargaon (IDB Bhaban),House Building,Bus,Regular,12,6,0.258,15.4,80.0
+Darussalam,Dhanmondi 27,CNG,Sunny,21,4,0.35,5.5,212.0
+Sayedabad Bus Terminal,Kalabagan,Bus,Sunny,17,3,0.22799999999999998,8.3,59.0
+Malibagh Railgate,Notun Bazar,Bike,Sunny,22,3,0.78,6.8,170.0
+Mirpur 14,Mirpur 11,Bike,Rainy,9,1,0.32,1.1,91.0
+Paltan,Bashundhara / Jamuna FP,Bike,Regular,19,2,0.47,12.0,399.0
+Mirpur 14,Kochukhet,Car,Sunny,17,2,0.32,5.1,373.0
+Mirpur 1,Kuril / Kuratoli (AIUB),Car,Sunny,14,5,0.41,9.0,367.0
+Mazar Road,Cantonment (Radisson),Car,Regular,11,2,0.5,5.4,284.0
+Rajlakshmi,Shyamoli,Bus,Rainy,0,2,0.12,16.0,96.0
+Farmgate,Airport,Bus,Sunny,14,2,0.282,12.9,56.0
+College Gate,Pallabi,Car,Sunny,15,0,0.29,9.0,363.0
+Press Club,Azampur,Bike,Rainy,22,0,0.32,22.4,577.0
+Rajarbagh,Middle Badda,Bike,Regular,22,2,0.23,6.1,149.0
+Shahbagh,Azimpur / Palashi,Car,Stormy,5,1,0.31,1.8,201.0
+Khilkhet,Mugda,Bike,Regular,2,3,0.47,15.5,357.0
+Shishu Mela,Pallabi,Bike,Rainy,13,1,0.37,8.4,251.0
+Amtoli (Mohakhali),Mohakhali Bus Terminal,Rickshaw,Regular,3,2,0.77,0.3,66.0
+Dhanmondi 27,Rajlakshmi,Bike,Stormy,20,2,0.99,18.6,898.0
+Mirpur 12,Rajlakshmi,CNG,Sunny,3,2,0.57,7.5,359.0
+Mazar Road,Jahangir Gate,Bus,Rainy,4,2,0.138,2.7,45.0
+Shahjahanpur,Airport,Car,Sunny,9,4,0.73,14.3,822.0
+Maniknagar,Kochukhet,Car,Stormy,14,0,0.32,12.8,833.0
+New Market / Nilkhet,Jatrabari,Car,Stormy,23,2,0.26,7.9,565.0
+Amtoli (Mohakhali),Middle Badda,Car,Stormy,1,0,0.48,4.3,370.0
+Nabisco,MES,Car,Sunny,0,3,0.69,6.0,285.0
+Badda,City College / Science Lab,CNG,Sunny,16,5,0.39,10.8,422.0
+Ray Saheb Bazar,Press Club,Car,Rainy,2,0,0.94,2.9,257.0
+Bangla Motor,Ray Saheb Bazar,Bus,Rainy,15,3,0.06,5.6,28.0
+Malibagh Chowdhury Para,Khilkhet,Bike,Stormy,21,1,0.19,12.2,391.0
+Rajlakshmi,Technical,Car,Rainy,5,3,0.28,14.2,817.0
+Mazar Road,Jatrabari,Bike,Sunny,17,1,0.69,15.8,472.0
+Merul Badda,Jahangir Gate,Car,Sunny,4,2,0.92,7.8,375.0
+Kalabagan,Abdullahpur,Bus,Rainy,19,3,0.141,22.1,141.0
+Shyamoli,Malibagh Chowdhury Para,Bus,Sunny,9,6,0.192,9.7,73.0
+MES,Mirpur 14,Bus,Sunny,13,2,0.048,4.1,32.0
+MES,Badda Link Road,Car,Sunny,16,0,0.65,6.9,323.0
+Malibagh Railgate,Mazar Road,Bike,Rainy,11,6,0.5,10.6,315.0
+Agargaon (IDB Bhaban),Bangla Motor,CNG,Rainy,2,4,0.68,4.9,307.0
+Cantonment (Radisson),Maniknagar,Bus,Regular,21,5,0.297,13.6,84.0
+Mohakhali Bus Terminal,Azampur,CNG,Rainy,2,1,0.94,15.1,895.0
+Jashimuddin (Uttara),Kuril / Kuratoli (AIUB),Bus,Stormy,14,5,0.078,8.2,41.0
+Mohakhali Bus Terminal,City College / Science Lab,CNG,Regular,7,2,0.4,6.9,318.0
+Shishu Mela,MES,Bus,Sunny,15,6,0.033,8.3,49.0
+High Court,Dhanmondi 27,Car,Rainy,9,0,0.28,5.6,556.0
+Jahangir Gate,Nadda,Car,Rainy,5,2,0.24,8.2,499.0
+Kalabagan,Mugda,CNG,Regular,1,3,0.5,9.1,445.0
+Abul Hotel,Mirpur 14,Car,Sunny,19,6,0.46,11.7,766.0
+Naya Bazar,Amtoli (Mohakhali),Car,Sunny,2,6,0.48,9.6,429.0
+Notun Bazar,Sainik Club / Banani Railgate,Car,Sunny,16,5,0.61,5.8,273.0
+Rajlakshmi,Kalabagan,CNG,Sunny,18,2,0.74,19.4,1138.0
+Shahjahanpur,Bangla Motor,Car,Sunny,15,6,0.43,3.7,192.0
+Abul Hotel,Naya Bazar,Bus,Rainy,4,4,0.048,8.4,47.0
+Technical,Kalabagan,Bus,Sunny,10,0,0.069,6.0,33.0
+Azampur,Kochukhet,Car,Rainy,7,2,0.73,12.6,702.0
+Paltan,Jagannath University,CNG,Sunny,10,4,0.16,4.2,255.0
+Mazar Road,House Building,CNG,Sunny,9,4,0.63,13.7,723.0
+Middle Badda,Khilgaon Flyover,CNG,Stormy,7,0,0.58,5.1,379.0
+Dhanmondi 15/32,House Building,Car,Sunny,0,3,0.35,20.1,801.0
+Malibagh Chowdhury Para,Kuril / Kuratoli (AIUB),CNG,Stormy,21,0,0.8,10.1,667.0
+Kakali (Banani),Shahjahanpur,Bus,Rainy,11,4,0.054,7.0,30.0
+Chandpur,Shahbagh,Bus,Rainy,16,4,0.282,83.9,349.0
+Gulshan 2,Kalyanpur,CNG,Sunny,21,4,0.93,8.1,316.0
+City College / Science Lab,New Market / Nilkhet,Car,Rainy,9,6,0.39,1.4,207.0
+Agargaon (IDB Bhaban),City College / Science Lab,Bus,Regular,20,4,0.144,5.6,52.0
+Rajlakshmi,Merul Badda,CNG,Sunny,10,0,0.62,15.7,922.0
+Abul Hotel,Agargaon (IDB Bhaban),CNG,Regular,11,0,0.63,7.4,342.0
+Agargaon (IDB Bhaban),Naya Bazar,Car,Regular,3,5,0.83,9.6,470.0
+Chairman Bari,Merul Badda,CNG,Sunny,16,4,0.25,4.3,181.0
+Mohakhali Bus Terminal,Merul Badda,Bike,Regular,22,4,0.7,3.9,115.0
+Shishu Mela,Kalabagan,Car,Sunny,20,1,0.54,3.7,290.0
+Tikatuli,Mirpur 12,Bike,Sunny,10,4,0.26,17.3,450.0
+Abdullahpur,Sayedabad Bus Terminal,Bus,Regular,12,2,0.033,27.0,129.0
+Azampur,Dhanmondi 27,Bike,Rainy,9,3,0.54,19.4,783.0
+College Gate,Badda Link Road,Bus,Sunny,22,4,0.144,10.8,53.0
+Tikatuli,Kalyanpur,Car,Sunny,7,5,0.96,11.7,479.0
+Notun Bazar,Dhanmondi 15/32,Bus,Regular,6,2,0.156,12.3,58.0
+Khilkhet,High Court,CNG,Sunny,10,2,0.95,14.6,881.0
+Jashimuddin (Uttara),Jatrabari,CNG,Regular,16,1,0.38,24.4,993.0
+MES,Mirpur 14,Rickshaw,Rainy,11,4,0.28,4.1,130.0
+High Court,Rajlakshmi,CNG,Regular,19,6,0.46,20.7,1308.0
+Rajarbagh,Pallabi,Car,Stormy,18,2,0.91,15.0,1582.0
+Abdullahpur,Azampur,Bike,Regular,22,1,0.13,2.0,72.0
+Asad Gate,Gulistan,Bike,Regular,16,3,0.46,8.2,208.0
+Jatrabari,Airport,CNG,Regular,0,3,0.12,20.6,906.0
+Malibagh Chowdhury Para,Tikatuli,Car,Sunny,21,0,0.44,4.3,198.0
+Satrasta,Darussalam,Bike,Rainy,20,2,0.9,4.9,238.0
+Mirpur 14,Press Club,Bus,Rainy,4,0,0.252,14.4,101.0
+Naya Bazar,Kakali (Banani),Bus,Regular,16,3,0.087,11.4,72.0
+Technical,Malibagh Railgate,CNG,Sunny,9,3,0.45,9.9,603.0
+Amtoli (Mohakhali),Khilgaon Flyover,CNG,Regular,2,6,0.35,6.0,312.0
+Merul Badda,Tikatuli,CNG,Regular,19,3,0.19,8.1,538.0
+Abdullahpur,Asad Gate,Bike,Sunny,5,6,0.29,20.0,411.0
+MES,Farmgate,CNG,Rainy,19,1,0.63,7.9,695.0
+Cantonment (Radisson),Technical,Bus,Regular,5,4,0.12299999999999998,6.3,30.0
+Maniknagar,Gulshan 2,Bus,Sunny,19,3,0.11399999999999999,11.6,83.0
+Khilgaon Flyover,Jashimuddin (Uttara),CNG,Sunny,20,2,0.7,18.7,1106.0
+Mirpur 11,Jagannath University,Bike,Regular,18,3,0.33,17.1,552.0
+Mirpur 14,Bashundhara / Jamuna FP,CNG,Regular,1,3,0.7,7.3,373.0
+Kochukhet,Mirpur 14,Car,Sunny,11,0,0.36,5.1,234.0
+Kamalapur,Press Club,Car,Sunny,23,5,0.37,1.4,110.0
+Dhanmondi 27,Karwan Bazar,Bike,Regular,12,4,0.45,3.2,86.0
+Chandpur,College Gate,Car,Sunny,17,6,0.7,88.5,5301.0
+Mirpur 2,Naya Bazar,CNG,Sunny,19,4,0.87,13.4,731.0
+Notun Bazar,Maniknagar,Car,Regular,20,1,0.93,10.9,794.0
+Bangla Motor,Nadda,Bus,Sunny,6,2,0.252,10.1,59.0
+Sainik Club / Banani Railgate,Chandpur,CNG,Regular,2,3,0.68,91.2,3883.0
+Notun Bazar,Shahbagh,CNG,Sunny,17,4,0.93,10.6,582.0
+Middle Badda,Kakali (Banani),Bike,Sunny,5,3,0.49,4.8,134.0
+Jatrabari,Shishu Mela,Bus,Sunny,23,3,0.033,13.0,69.0
+Press Club,Kuril / Kuratoli (AIUB),Bus,Sunny,12,5,0.24,13.5,63.0
+New Market / Nilkhet,MES,Car,Rainy,7,3,0.6,11.9,665.0
+Mugda,Jashimuddin (Uttara),Bus,Sunny,12,3,0.22499999999999998,21.3,103.0
+Mugda,Mirpur 2,Bike,Regular,7,4,0.72,14.4,299.0
+Technical,Shishu Mela,Car,Sunny,22,4,0.88,2.4,133.0
+Maniknagar,Abul Hotel,Bus,Regular,0,5,0.252,7.3,56.0
+Bangla Motor,Agargaon (IDB Bhaban),Bike,Regular,4,1,0.41,4.9,144.0
+Merul Badda,Gulshan 2,Car,Sunny,16,4,0.58,3.6,166.0
+Azimpur / Palashi,Agargaon (IDB Bhaban),CNG,Regular,21,5,0.34,7.0,312.0
+Press Club,Kamalapur,Bus,Sunny,8,0,0.24,1.4,44.0
+Malibagh Chowdhury Para,Kalabagan,Bus,Rainy,20,0,0.153,7.4,53.0
+Ray Saheb Bazar,Kalabagan,CNG,Regular,15,6,0.56,6.2,297.0
+Jahangir Gate,Kalyanpur,Rickshaw,Regular,2,6,0.72,2.5,120.0
+Nadda,Kalabagan,Bus,Regular,19,2,0.17099999999999999,11.7,94.0
+Karwan Bazar,Mirpur 1,CNG,Sunny,19,1,0.32,7.2,437.0
+Nadda,Shahjahanpur,CNG,Regular,12,1,0.2,8.5,380.0
+Rajarbagh,Mirpur 11,CNG,Stormy,1,3,0.7,14.2,988.0
+Dhanmondi 27,Azampur,CNG,Regular,3,1,0.57,19.4,876.0
+Dhanmondi 27,Satrasta,Rickshaw,Sunny,5,6,0.3,3.6,130.0
+Farmgate,Merul Badda,CNG,Rainy,15,6,0.84,6.9,418.0
+Shahjahanpur,Mirpur 2,Bike,Sunny,4,2,0.57,10.5,238.0
+Mirpur 2,Jashimuddin (Uttara),Bike,Rainy,22,6,0.75,10.9,313.0
+Kakali (Banani),Mirpur 11,Bike,Rainy,12,5,0.98,6.4,207.0
+Kuril / Kuratoli (AIUB),Rajlakshmi,Bus,Sunny,21,1,0.219,9.5,62.0
+Technical,Shishu Mela,Car,Rainy,21,3,0.79,2.4,201.0
+Jahangir Gate,Abdullahpur,Car,Sunny,22,5,0.42,16.8,641.0
+Technical,New Market / Nilkhet,CNG,Rainy,14,2,0.14,8.0,429.0
+House Building,Azimpur / Palashi,Bus,Stormy,7,6,0.264,22.4,116.0
+Kalabagan,Rajarbagh,Bus,Regular,22,1,0.243,7.2,57.0
+House Building,Notun Bazar,Bus,Regular,9,4,0.039,16.3,101.0
+Mazar Road,Tikatuli,Bike,Rainy,9,3,0.67,13.0,544.0
+Bashundhara / Jamuna FP,Agargaon (IDB Bhaban),CNG,Sunny,9,6,0.64,7.9,491.0
+Gulshan 1,Jahangir Gate,Bike,Stormy,13,0,0.96,5.0,224.0
+Mohakhali Bus Terminal,Gulshan 1,Rickshaw,Sunny,3,6,0.49,1.0,75.0
+Bangla Motor,Merul Badda,Car,Stormy,12,2,0.49,7.4,527.0
+Kalabagan,Rajarbagh,Bus,Regular,5,2,0.255,7.2,46.0
+Sainik Club / Banani Railgate,Badda Link Road,Bus,Regular,15,5,0.282,5.0,41.0
+Pallabi,Nadda,Car,Regular,4,1,0.95,9.2,452.0
+Paltan,Chandpur,Car,Stormy,7,5,0.21,81.9,4804.0
+Mazar Road,Agargaon (IDB Bhaban),Rickshaw,Sunny,3,5,0.51,3.0,139.0
+MES,Mirpur 12,Bike,Rainy,7,5,0.66,5.3,184.0
+House Building,Kuril / Kuratoli (AIUB),Bus,Sunny,12,5,0.219,11.1,59.0
+Notun Bazar,Paltan,Bus,Sunny,4,4,0.174,9.8,70.0
+Technical,Airport,Bus,Sunny,18,1,0.096,11.1,77.0
+Merul Badda,Technical,Car,Sunny,23,0,0.14,10.0,418.0
+Malibagh Railgate,Azimpur / Palashi,CNG,Stormy,13,1,0.38,6.2,450.0
+Asad Gate,Shishu Mela,Rickshaw,Stormy,15,0,0.12,1.2,86.0
+Jahangir Gate,Karwan Bazar,CNG,Rainy,15,1,0.86,4.3,298.0
+College Gate,Mohakhali Bus Terminal,Bus,Rainy,12,5,0.156,6.4,56.0
+Chandpur,Press Club,Bus,Rainy,20,2,0.12299999999999998,82.0,486.0
+Khilkhet,Badda,Car,Sunny,4,5,0.74,8.2,385.0
+Jagannath University,Azampur,Bike,Regular,20,2,0.82,26.0,834.0
+House Building,Dhanmondi 15/32,Bike,Regular,15,1,0.99,20.1,421.0
+Sayedabad Bus Terminal,Kochukhet,Car,Sunny,13,5,0.83,12.6,515.0
+Amtoli (Mohakhali),Jatrabari,CNG,Rainy,8,2,0.15,11.6,969.0
+Asad Gate,Jagannath University,Bike,Sunny,8,3,0.63,9.3,305.0
+Mohakhali Bus Terminal,House Building,Car,Regular,20,3,0.16,15.5,1071.0
+New Market / Nilkhet,Pallabi,CNG,Rainy,15,6,0.27,13.6,728.0
+Amtoli (Mohakhali),Kalabagan,Car,Rainy,3,6,0.11,7.1,440.0
+Pallabi,Rajarbagh,Bike,Regular,20,5,1.0,15.0,511.0
+Sayedabad Bus Terminal,Ray Saheb Bazar,Rickshaw,Sunny,16,5,0.19,3.4,90.0
+Kuril / Kuratoli (AIUB),Dhanmondi 27,Bus,Sunny,19,0,0.045,13.1,87.0
+Rampura Bridge,Sayedabad Bus Terminal,Bike,Sunny,5,5,0.57,6.8,169.0
+Maniknagar,Shishu Mela,Bike,Regular,16,4,0.95,12.4,254.0
+Abdullahpur,Kalyanpur,Bus,Rainy,17,3,0.081,17.4,123.0
+Shishu Mela,Shyamoli,Car,Stormy,15,4,0.62,0.6,107.0
+Dhanmondi 27,MES,Bike,Rainy,15,6,0.97,9.9,303.0
+Rampura Bridge,MES,Bus,Stormy,17,4,0.072,8.5,61.0
+Khilkhet,Middle Badda,Car,Sunny,9,0,0.84,8.6,590.0
+Press Club,Gulistan,Bike,Rainy,20,3,0.76,1.2,126.0
+Shahjahanpur,Gulistan,Car,Rainy,4,4,0.85,3.5,248.0
+Middle Badda,Airport,CNG,Rainy,0,6,0.38,10.6,651.0
+Kochukhet,Middle Badda,CNG,Sunny,19,6,0.41,6.3,415.0
+Kuril / Kuratoli (AIUB),Nabisco,CNG,Sunny,21,5,0.94,8.6,359.0
+MES,Mazar Road,Car,Sunny,15,1,0.58,5.7,241.0
+Mazar Road,Rampura Bridge,Bus,Stormy,21,4,0.129,10.3,57.0
+MES,Mirpur 12,CNG,Sunny,6,6,0.81,5.3,246.0
+Technical,Mirpur 2,CNG,Sunny,21,1,0.52,3.1,173.0
+Mohakhali Bus Terminal,Maniknagar,Bike,Regular,14,3,0.17,10.1,234.0
+Gulistan,Malibagh Chowdhury Para,CNG,Rainy,11,1,0.66,4.5,293.0
+Kalyanpur,Merul Badda,Bike,Rainy,22,1,0.29,10.3,300.0
+Chairman Bari,Middle Badda,Bike,Rainy,16,5,0.15,4.5,144.0
+Technical,House Building,Bus,Sunny,7,4,0.168,15.2,61.0
+Satrasta,Mugda,Bike,Sunny,12,6,0.44,8.7,170.0
+Rampura Bridge,Shahjahanpur,Bus,Rainy,21,1,0.162,2.7,27.0
+Nabisco,Maniknagar,Bike,Sunny,19,1,0.24,9.7,300.0
+Abdullahpur,House Building,Rickshaw,Rainy,4,5,0.36,1.6,110.0
+Azampur,Jashimuddin (Uttara),Bus,Regular,14,2,0.135,2.4,20.0
+Mirpur 11,Pallabi,Car,Stormy,9,2,0.82,0.9,216.0
+Karwan Bazar,Amtoli (Mohakhali),Car,Rainy,2,0,0.7,4.8,337.0
+Mirpur 11,Kuril / Kuratoli (AIUB),Car,Regular,6,4,0.28,8.2,328.0
+Airport,Khilgaon Flyover,Bus,Sunny,9,6,0.17099999999999999,14.8,99.0
+Farmgate,Mirpur 12,Bike,Sunny,8,1,0.88,10.8,347.0
+Sayedabad Bus Terminal,Amtoli (Mohakhali),CNG,Regular,0,3,0.45,10.2,492.0
+Azampur,Kuril / Kuratoli (AIUB),Bus,Regular,14,3,0.048,10.5,80.0
+Kochukhet,Bashundhara / Jamuna FP,Bike,Sunny,12,0,0.17,4.6,110.0
+Rampura Bridge,MES,Bike,Rainy,2,2,0.31,8.5,276.0
+Shahbagh,Kalabagan,Car,Regular,14,0,0.28,2.6,173.0
+House Building,Abul Hotel,Bus,Regular,9,4,0.069,18.4,110.0
+Shahjahanpur,Notun Bazar,Bike,Regular,4,5,0.29,7.5,188.0
+Malibagh Railgate,Kakali (Banani),CNG,Regular,17,4,0.33,7.0,434.0
+Agargaon (IDB Bhaban),Shishu Mela,Bike,Sunny,3,3,0.34,3.0,92.0
+Mugda,Bashundhara / Jamuna FP,Bike,Rainy,10,4,0.66,12.3,482.0
+Sayedabad Bus Terminal,Gulshan 1,Bus,Regular,20,6,0.216,9.8,70.0
+Kochukhet,Bangla Motor,Bike,Sunny,2,1,0.79,7.2,192.0
+Kalyanpur,Shahjahanpur,Bus,Rainy,14,1,0.126,9.1,48.0
+Satrasta,Abul Hotel,Bus,Sunny,3,0,0.276,5.9,53.0
+Shahjahanpur,Kalyanpur,Bus,Stormy,17,3,0.207,9.1,69.0
+Shahjahanpur,Gulistan,Bus,Regular,0,3,0.20400000000000001,3.5,36.0
+Mirpur 12,Rajlakshmi,Bike,Sunny,6,1,0.63,7.5,170.0
+House Building,Karwan Bazar,Bus,Sunny,3,1,0.126,19.2,103.0
+Gulshan 2,Middle Badda,Car,Stormy,18,1,0.62,3.7,460.0
+Tikatuli,Shishu Mela,Bus,Sunny,9,5,0.063,10.2,58.0
+Sainik Club / Banani Railgate,Dhanmondi 15/32,Bike,Rainy,11,3,0.47,8.7,255.0
+Cantonment (Radisson),Karwan Bazar,CNG,Sunny,7,6,0.4,7.6,324.0
+Bangla Motor,Khilgaon Flyover,CNG,Sunny,10,3,0.28,4.8,326.0
+Mirpur 11,Rajlakshmi,Bus,Sunny,0,1,0.186,9.1,71.0
+High Court,Jahangir Gate,Car,Rainy,19,6,0.27,7.5,718.0
+College Gate,Notun Bazar,Car,Rainy,15,3,0.19,12.2,658.0
+Shyamoli,Shahjahanpur,Bike,Rainy,12,4,0.12,8.5,212.0
+Shishu Mela,Paltan,Car,Rainy,21,3,0.25,8.6,488.0
+Shyamoli,Khilkhet,Bus,Sunny,14,1,0.111,12.2,58.0
+Shishu Mela,Kalyanpur,Car,Sunny,1,6,0.72,1.7,133.0
+MES,Gulistan,Bus,Rainy,0,6,0.09,12.9,80.0
+Kakali (Banani),Farmgate,CNG,Rainy,11,4,0.17,5.8,303.0
+Jashimuddin (Uttara),Rampura Bridge,Bus,Sunny,20,3,0.10200000000000001,16.5,79.0
+Azampur,Kalabagan,Bike,Sunny,23,3,0.39,20.3,420.0
+Gulshan 2,Darussalam,CNG,Rainy,18,4,0.81,7.4,599.0
+Jashimuddin (Uttara),Farmgate,Bus,Regular,12,1,0.06,16.5,88.0
+Darussalam,Sainik Club / Banani Railgate,CNG,Sunny,9,2,0.85,6.3,417.0
+Kochukhet,Bashundhara / Jamuna FP,Bike,Regular,20,5,0.96,4.6,199.0
+Nadda,Agargaon (IDB Bhaban),Bus,Rainy,21,6,0.288,8.0,43.0
+Cantonment (Radisson),MES,Rickshaw,Regular,16,1,0.54,1.1,69.0
+Farmgate,College Gate,Bus,Sunny,15,5,0.23399999999999999,3.3,28.0
+Chairman Bari,Agargaon (IDB Bhaban),Rickshaw,Rainy,3,0,0.94,4.2,203.0
+Kalyanpur,High Court,Car,Regular,23,5,0.6,8.8,432.0
+Rajarbagh,House Building,Car,Sunny,7,3,0.11,22.2,824.0
+House Building,Mirpur 10,Bike,Rainy,0,1,0.41,11.0,336.0
+Naya Bazar,Khilgaon Flyover,CNG,Stormy,0,2,0.37,5.3,422.0
+Mirpur 14,Amtoli (Mohakhali),Car,Sunny,2,6,0.78,7.6,358.0
+Bashundhara / Jamuna FP,Rajlakshmi,Bus,Regular,12,5,0.24,10.2,61.0
+High Court,Badda,CNG,Sunny,22,4,0.65,8.8,326.0
+Middle Badda,Rampura Bridge,Bus,Regular,14,6,0.282,2.7,45.0
+Bangla Motor,Asad Gate,Bus,Stormy,22,6,0.084,3.7,24.0
+Tikatuli,Azampur,Bus,Rainy,14,6,0.039,23.7,116.0
+Mugda,Nadda,Bus,Rainy,16,6,0.075,11.0,70.0
+Kalabagan,Mirpur 2,Bike,Sunny,16,0,0.34,8.7,181.0
+Airport,Gulshan 1,CNG,Regular,21,3,0.3,9.4,414.0
+Satrasta,House Building,Bike,Sunny,6,5,0.75,17.3,327.0
+Rampura Bridge,Shishu Mela,Bike,Rainy,5,0,0.71,9.3,297.0
+Jatrabari,Shyamoli,Bus,Rainy,23,6,0.039,13.6,100.0
+Dhanmondi 27,Khilgaon Flyover,CNG,Sunny,19,5,0.9,8.0,511.0
+Farmgate,Merul Badda,CNG,Sunny,19,3,0.48,6.9,450.0
+Malibagh Chowdhury Para,Azimpur / Palashi,Car,Sunny,16,3,0.46,6.9,306.0
+Rajlakshmi,Pallabi,Car,Sunny,12,5,0.48,8.3,346.0
+City College / Science Lab,Dhanmondi 27,Bike,Rainy,10,5,0.75,2.1,145.0
+Badda,Kamalapur,Bus,Sunny,14,3,0.033,8.4,60.0
+Rampura Bridge,Nadda,CNG,Sunny,3,1,0.9,6.3,315.0
+Nadda,Jashimuddin (Uttara),Car,Rainy,10,2,0.29,10.5,965.0
