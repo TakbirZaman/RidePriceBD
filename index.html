@@ -583,7 +583,7 @@ input[type="time"]:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,1
   </div>
 
   <!-- Button -->
-  <button class="btn" onclick="getPrice()">Calculate Fare</button>
+  <button class="btn" onclick="getPrice()">Calculate Price</button>
 
   <!-- Error -->
   <div class="err-box" id="err">⚠️ Could not calculate. Please check your selection.</div>
@@ -768,7 +768,7 @@ const VD={
   Rickshaw:{base:25,per_km:20,per_min:0},
   Bike:    {base:27,per_km:12,per_min:0.75},
   Car:     {base:45,per_km:23,per_min:3},
-  Bus:     {base:10,per_km:4, per_min:0},
+  Bus:     {base:10,per_km:2, per_min:0},
   CNG:     {base:40,per_km:27,per_min:2},
 };
 const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
@@ -782,17 +782,24 @@ function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
   const speed=isR?8:(isN?20:15);
   const mins =(dist/speed)*60;
   let base=v.base+dist*v.per_km+mins*v.per_min;
-  const wm=vehicle==='Bus'?Math.min(WM[weather]||1,1.10):(WM[weather]||1);
-  const dAdd=vehicle==='Bus'?demand*8:demand*25;
-  if(isR) base*=1.30;
-  if(isN) base*=1.15;
-  if(isFri)base*=0.90;
-  let price=Math.max(v.base,Math.round(base*wm+dAdd));
+  let price;
+  if(vehicle==='Bus'){
+    // Bus = fixed government rate, no surge/weather/demand premium
+    price=Math.max(v.base,Math.round(base));
+  } else {
+    const wm=WM[weather]||1;
+    const dAdd=demand*25;
+    if(isR) base*=1.30;
+    if(isN) base*=1.15;
+    if(isFri)base*=0.90;
+    price=Math.max(v.base,Math.round(base*wm+dAdd));
+  }
   const distFare=Math.round(v.base+dist*v.per_km);
   const timeFare=Math.round(mins*v.per_min);
-  const wAdd=Math.round(base*(wm-1));
-  const rAdd=Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
-  const fDisc=isFri?Math.round((v.base+dist*v.per_km)*0.10):0;
+  const wm2=vehicle==='Bus'?1:(WM[weather]||1);
+  const wAdd=vehicle==='Bus'?0:Math.round(base*(wm2-1));
+  const rAdd=vehicle==='Bus'?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
+  const fDisc=vehicle==='Bus'?0:(isFri?Math.round((v.base+dist*v.per_km)*0.10):0);
   const T={Rickshaw:[60,100,140],Bike:[120,200,280],Car:[200,350,500],Bus:[30,60,90],CNG:[120,200,300]}[vehicle];
   const surge=price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
   return{price,distance_km:dist,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,
