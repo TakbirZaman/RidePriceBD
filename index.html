@@ -776,30 +776,26 @@ const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
 function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
   const dist =haversine(COORDS[from_loc],COORDS[to_loc]);
   const v    =VD[vehicle];
+  const isBus=vehicle==='Bus';
   const isR  =(hour>=8&&hour<=10)||(hour>=17&&hour<=20);
   const isN  =hour>=23||hour<=5;
   const isFri=new Date().getDay()===5;
   const speed=isR?8:(isN?20:15);
   const mins =(dist/speed)*60;
+  const wm   =isBus?1:(WM[weather]||1);
+  const dAdd =isBus?0:demand*25;
   let base=v.base+dist*v.per_km+mins*v.per_min;
-  let price;
-  if(vehicle==='Bus'){
-    // Bus = fixed government rate, no surge/weather/demand premium
-    price=Math.max(v.base,Math.round(base));
-  } else {
-    const wm=WM[weather]||1;
-    const dAdd=demand*25;
-    if(isR) base*=1.30;
-    if(isN) base*=1.15;
+  if(!isBus){
+    if(isR)  base*=1.30;
+    if(isN)  base*=1.15;
     if(isFri)base*=0.90;
-    price=Math.max(v.base,Math.round(base*wm+dAdd));
   }
+  const price=Math.max(v.base,Math.round(base*wm+dAdd));
   const distFare=Math.round(v.base+dist*v.per_km);
   const timeFare=Math.round(mins*v.per_min);
-  const wm2=vehicle==='Bus'?1:(WM[weather]||1);
-  const wAdd=vehicle==='Bus'?0:Math.round(base*(wm2-1));
-  const rAdd=vehicle==='Bus'?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
-  const fDisc=vehicle==='Bus'?0:(isFri?Math.round((v.base+dist*v.per_km)*0.10):0);
+  const wAdd =isBus?0:Math.round(base*(wm-1));
+  const rAdd =isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
+  const fDisc=isBus?0:(isFri?Math.round((v.base+dist*v.per_km)*0.10):0);
   const T={Rickshaw:[60,100,140],Bike:[120,200,280],Car:[200,350,500],Bus:[30,60,90],CNG:[120,200,300]}[vehicle];
   const surge=price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
   return{price,distance_km:dist,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,
