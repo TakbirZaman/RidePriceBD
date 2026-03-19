@@ -682,11 +682,11 @@ function setDemand(val,el){
 
 // ── Pricing engine ────────────────────────────────────────────────────────
 const VD={
-  Rickshaw:{base:25,per_km:32,  per_min:0  },
-  Bike:    {base:35,per_km:12,  per_min:1  },
-  Car:     {base:45,per_km:22,  per_min:4  },
+  Rickshaw:{base:13,per_km:16,  per_min:0  },  // half of previous
+  Bike:    {base:18,per_km:8,   per_min:0.5},
+  Car:     {base:34,per_km:16.5,per_min:3  },  // 0.75 of previous
   Bus:     {base:8, per_km:1.5, per_min:0  },
-  CNG:     {base:80,per_km:21,  per_min:2  },
+  CNG:     {base:60,per_km:16,  per_min:1.5},  // 0.75 of previous
 };
 const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
 
