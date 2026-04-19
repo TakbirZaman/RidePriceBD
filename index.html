@@ -405,7 +405,10 @@ input[type="time"]:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,1
         </div>
       </div>
     </div>
-    <div class="dist-chip"><span id="distChip">📏 Select locations</span></div>
+    <div class="dist-chip" style="display:flex;align-items:center;justify-content:space-between;margin-top:10px">
+      <span id="distChip">📏 Select locations</span>
+      <button onclick="clearLocations()" style="background:none;border:none;font-size:11px;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:8px;transition:all .15s" onmouseover="this.style.background='#fee2e2';this.style.color='#dc2626'" onmouseout="this.style.background='none';this.style.color='var(--muted)'">✕ Clear</button>
+    </div>
   </div>
 
   <!-- Vehicle Card -->
@@ -577,6 +580,80 @@ const COORDS = {
   "House Building": [23.88,90.378],
   "Abdullahpur": [23.89,90.375],
   "Chandpur": [23.2333,90.6552],
+  "ECB Square": [23.81,90.405],
+  "Kuril Biswa Road": [23.823,90.427],
+  "Hatirjheel FDC Mor": [23.76,90.41],
+  "Police Plaza": [23.755,90.415],
+  "Mahanagar Project": [23.758,90.418],
+  "Signboard / Matuail": [23.695,90.44],
+  "Mirpur DOHS": [23.818,90.39],
+  "Matikata": [23.825,90.398],
+  "Manikdi": [23.828,90.4],
+  "Eastern Housing Pallabi": [23.831,90.362],
+  "Senpara Parbata": [23.81,90.365],
+  "Shewrapara": [23.798,90.372],
+  "Kazipara": [23.802,90.37],
+  "Taltola": [23.796,90.37],
+  "Rupnagar": [23.805,90.358],
+  "Kafrul / Ibrahimpur": [23.805,90.382],
+  "Vasantek": [23.815,90.375],
+  "Jigatola": [23.735,90.375],
+  "Shankar": [23.732,90.373],
+  "Hazaribagh": [23.725,90.37],
+  "Green Road": [23.75,90.387],
+  "Panthapath": [23.752,90.387],
+  "Kanthalbagan": [23.754,90.391],
+  "Free School Street": [23.756,90.392],
+  "Gabtoli Bus Terminal": [23.77,90.345],
+  "Mohammadpur Bus Stand": [23.76,90.358],
+  "Tajmahal Road": [23.755,90.355],
+  "Bosila": [23.745,90.348],
+  "Adabor": [23.758,90.353],
+  "Rayerbazar": [23.738,90.37],
+  "Sadarghat": [23.707,90.408],
+  "Lalbagh": [23.718,90.393],
+  "Chawkbazar": [23.72,90.398],
+  "Wari": [23.718,90.415],
+  "Sutrapur / Gandaria": [23.71,90.42],
+  "Islampur": [23.715,90.405],
+  "Postagola": [23.698,90.435],
+  "Demra": [23.7,90.458],
+  "Bangshal": [23.722,90.41],
+  "Nawabpur": [23.723,90.412],
+  "Tantibazar": [23.71,90.407],
+  "Jurain": [23.7,90.428],
+  "Gendaria": [23.712,90.422],
+  "Postogola Bridge": [23.696,90.43],
+  "Moghbazar": [23.749,90.41],
+  "Wireless Gate": [23.752,90.413],
+  "Kakrail": [23.738,90.405],
+  "Shantinagar": [23.74,90.412],
+  "Bailey Road": [23.743,90.408],
+  "Eskaton": [23.745,90.4],
+  "Segunbagicha": [23.737,90.403],
+  "Nakhalpara": [23.77,90.393],
+  "Tejgaon Industrial": [23.768,90.398],
+  "Banasree": [23.77,90.45],
+  "South Banasree": [23.765,90.452],
+  "Aftabnagar": [23.775,90.448],
+  "Goran": [23.74,90.445],
+  "Basabo": [23.745,90.438],
+  "Madartek": [23.748,90.442],
+  "Meradia": [23.76,90.455],
+  "Trimohoni": [23.765,90.458],
+  "Vatara": [23.802,90.435],
+  "Solmaid": [23.805,90.438],
+  "Joar Sahara": [23.828,90.418],
+  "Namapara": [23.83,90.42],
+  "Kamarpara": [23.895,90.387],
+  "Baridhara Diplomatic Zone": [23.805,90.428],
+  "Baridhara DOHS": [23.81,90.43],
+  "Niketan": [23.79,90.41],
+  "Diyabari": [23.905,90.38],
+  "Dakshinkhan": [23.875,90.42],
+  "Uttarkhan": [23.885,90.41],
+  "Purbachal 300 Feet": [23.82,90.5],
+  "Mohakhali DOHS": [23.795,90.41],
 };
 
 let selectedVehicle = 'Rickshaw';
@@ -613,8 +690,8 @@ const LOC_LIST = Object.keys(COORDS).map(name => {
   return {name, km};
 }).sort((a,b) => a.km - b.km);
 
-let selectedFrom = LOC_LIST[0].name;
-let selectedTo   = LOC_LIST[1].name;
+let selectedFrom = 'Jagannath University';
+let selectedTo   = 'Kuril / Kuratoli (AIUB)';
 
 function buildDrop(side, filter='') {
   const drop = document.getElementById(side+'Drop');
@@ -645,6 +722,16 @@ function selectLoc(side, name) {
   else              selectedTo=name;
   document.getElementById(side+'Input').value = name;
   document.getElementById(side+'Drop').classList.remove('open');
+  updateDist();
+}
+
+function clearLocations() {
+  selectedFrom = 'Jagannath University';
+  selectedTo   = 'Kuril / Kuratoli (AIUB)';
+  document.getElementById('fromInput').value = selectedFrom;
+  document.getElementById('toInput').value   = selectedTo;
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('mlCard').classList.remove('show');
   updateDist();
 }
 
