@@ -18,29 +18,6 @@ A ride fare estimator for Dhaka, Bangladesh. Instantly calculates expected costs
 
 👉 [ridepricebd.netlify.app](https://ridepricebd.netlify.app)
 
-## 🧠 How It Works
-
-The fare engine is a trained `GradientBoostingRegressor` model (scikit-learn) with features:
-
-| Feature | Description |
-|---|---|
-| Distance | Haversine × 1.35 road factor |
-| Vehicle | Rickshaw / Bike / Car / Bus / CNG |
-| Weather | Sunny / Regular / Rainy / Stormy |
-| Time of day | Hour + rush/night detection |
-| Day of week | Friday discount applied |
-| Demand | Regular / Busy Hour / Emergency |
-
-## 🛠 Tech Stack
-
-| Layer | Tech |
-|---|---|
-| ML Model | Python, scikit-learn, pandas |
-| API | Flask + Gunicorn |
-| Frontend | Vanilla HTML/CSS/JS |
-| Deployment | Render (API) + Netlify (frontend) |
-
-`
 
 ## 👤 Author
 
