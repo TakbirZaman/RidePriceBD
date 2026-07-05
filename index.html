@@ -7,676 +7,543 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --green:  #006A4E;
-  --green2: #008B67;
-  --amber:  #F4A61B;
-  --amber2: #FFC84A;
-  --dark:   #0D1F1A;
-  --card:   #ffffff;
-  --bg:     #F0F5F2;
-  --border: #D4E6DD;
-  --text:   #1A3329;
-  --muted:  #6B8C7E;
-  --red:    #E03E3E;
-  --orange: #F97316;
+  --green:#006A4E;--green2:#008B67;--amber:#F4A61B;--amber2:#FFC84A;
+  --dark:#0D1F1A;--card:#ffffff;--bg:#F5F7F5;--border:#D9E8E0;
+  --text:#1A3329;--muted:#6B8C7E;--red:#E03E3E;--orange:#F97316;
+}
+html[data-theme="dark"]{
+  --green:#1FBF8F;--green2:#22D3A8;--amber:#F4A61B;--amber2:#FFC84A;
+  --dark:#050D0A;--card:#122019;--bg:#0A130F;--border:#1E3A2E;
+  --text:#E7F3ED;--muted:#7FA394;--red:#F16565;--orange:#FB923C;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  min-height:100vh;
-  color:var(--text);
-}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);min-height:100vh;color:var(--text);transition:background .25s,color .25s}
 
-/* ── TOP BANNER ── */
-.banner{
-  background:linear-gradient(135deg,var(--dark) 0%,#0f3327 50%,#0a2a1f 100%);
-  padding:28px 24px 24px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-.banner::before{
-  content:'';position:absolute;inset:0;
-  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006A4E' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.banner-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(32px,7vw,52px);
-  font-weight:800;
-  color:#fff;
-  letter-spacing:-.5px;
-  position:relative;
-}
-.banner-title span{color:var(--amber)}
-.banner-sub{
-  font-size:13px;color:rgba(255,255,255,.6);
-  margin-top:5px;position:relative;
-  font-weight:300;letter-spacing:.04em;
-}
-.banner-badge{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:20px;padding:6px 16px;
-  font-size:12px;color:rgba(255,255,255,.75);
-  margin-top:14px;position:relative;
-}
-.dot{width:7px;height:7px;border-radius:50%;background:#94a3b8;flex-shrink:0}
-.dot.green{background:#4ade80;box-shadow:0 0 8px #4ade80}
-.dot.red{background:#f87171}
+/* HEADER */
+.header{background:linear-gradient(135deg,var(--dark) 0%,#0f3327 60%,#0a2a1f 100%);padding:22px 20px 18px;position:relative;overflow:hidden}
+html[data-theme="dark"] .header{background:linear-gradient(135deg,#000 0%,#0a1a13 60%,#050f0b 100%)}
+.header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23006A4E' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.header-inner{max-width:540px;margin:0 auto;position:relative;display:flex;justify-content:space-between;align-items:flex-start}
+.header-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.3px}
+.header-title span{color:var(--amber)}
+.header-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px;font-weight:300}
+.status-row{display:inline-flex;align-items:center;gap:6px;margin-top:7px;font-size:11px;color:rgba(255,255,255,.45)}
+.dot{width:7px;height:7px;border-radius:50%;background:#64748b;flex-shrink:0}
+.dot.green{background:#4ade80;box-shadow:0 0 7px #4ade80}
+.theme-toggle{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;width:38px;height:38px;border-radius:12px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;margin-top:2px}
+.theme-toggle:hover{background:rgba(255,255,255,.16);transform:scale(1.05)}
 
-/* ── MAIN ── */
-.main{max-width:520px;margin:0 auto;padding:20px 16px 60px}
+/* TABS */
+.mode-tabs{display:flex;gap:0;background:var(--card);border-radius:16px;padding:5px;margin-bottom:12px;border:1px solid var(--border);box-shadow:0 1px 8px rgba(0,106,78,.05)}
+.tab-btn{flex:1;padding:10px 8px;border:none;border-radius:12px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s;color:var(--muted);background:transparent}
+.tab-btn.active{background:var(--green);color:#fff;box-shadow:0 2px 10px rgba(0,106,78,.3)}
 
-/* ── CARD ── */
-.card{
-  background:var(--card);border-radius:20px;
-  box-shadow:0 2px 20px rgba(0,106,78,.08);
-  padding:22px 20px;margin-bottom:14px;
-  border:1px solid var(--border);
-}
+/* MAIN */
+.main{max-width:540px;margin:0 auto;padding:16px 14px 60px}
 
-/* ── SECTION LABEL ── */
-.sec-label{
-  font-size:10px;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--muted);
-  margin-bottom:10px;display:flex;align-items:center;gap:8px;
-}
-.sec-label::before{content:'';width:14px;height:2px;background:var(--amber);border-radius:1px}
+/* CARD */
+.card{background:var(--card);border-radius:18px;box-shadow:0 1px 12px rgba(0,106,78,.06);padding:18px 16px;margin-bottom:10px;border:1px solid var(--border);animation:popUp .3s ease both}
 
-/* ── ROUTE SECTION ── */
-.route-wrap{
-  display:grid;grid-template-columns:1fr 40px 1fr;
-  align-items:end;gap:8px;
-}
-.route-field label{
-  font-size:11px;font-weight:600;color:var(--muted);
-  text-transform:uppercase;letter-spacing:.08em;
-  display:flex;align-items:center;gap:5px;margin-bottom:6px;
-}
-.dot-from{width:10px;height:10px;border-radius:50%;background:#22c55e;flex-shrink:0}
-.dot-to{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0}
+/* SECTION LABEL */
+.sec-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:11px;display:flex;align-items:center;gap:8px}
+.sec-label::before{content:'';width:12px;height:2px;background:var(--amber);border-radius:1px}
 
-select{
-  width:100%;padding:11px 14px;
-  border:1.5px solid var(--border);border-radius:12px;
-  font-size:13px;font-family:inherit;font-weight:500;
-  color:var(--text);background:#fff;outline:none;
-  appearance:none;-webkit-appearance:none;
-  cursor:pointer;transition:border-color .2s,box-shadow .2s;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B8C7E' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;
-  padding-right:34px;
-}
-select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
+/* ROUTE WRAP */
+.route-wrap{display:grid;grid-template-columns:1fr 36px 1fr;align-items:end;gap:7px}
+.route-field label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:5px;margin-bottom:5px}
+.dot-from{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.dot-to{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
 
-.swap-btn{
-  background:var(--bg);border:1.5px solid var(--border);
-  border-radius:12px;width:40px;height:42px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:18px;cursor:pointer;transition:all .2s;
-  align-self:end;color:var(--green);font-weight:bold;
-}
+/* LOCATION SELECTOR */
+.loc-selector{position:relative}
+.loc-chip{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1.5px solid var(--border);border-radius:11px;padding:9px 11px;cursor:pointer;transition:border-color .2s,box-shadow .2s;min-height:42px;gap:6px}
+.loc-chip:hover{border-color:var(--green2)}
+.loc-chip.active{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.09)}
+.loc-chip-text{font-size:13px;font-weight:500;color:var(--text);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.loc-chip-text.placeholder{color:var(--muted);font-weight:400}
+.loc-chip-clear{width:19px;height:19px;border-radius:50%;background:#edf2ee;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--muted);flex-shrink:0;transition:all .15s;padding:0;line-height:1}
+html[data-theme="dark"] .loc-chip-clear{background:#1c332a}
+.loc-chip-clear:hover{background:#fecaca;color:#dc2626}
+.loc-chip-clear.hidden{display:none}
+.loc-drop{display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;background:var(--card);border:1.5px solid var(--border);border-radius:13px;z-index:999;box-shadow:0 10px 28px rgba(0,106,78,.13);overflow:hidden}
+.loc-drop.open{display:block}
+.loc-search-wrap{padding:9px 9px 5px;border-bottom:1px solid var(--border)}
+.loc-search{width:100%;padding:7px 11px;border:1.5px solid var(--border);border-radius:9px;font-size:13px;font-family:inherit;font-weight:500;color:var(--text);background:var(--card);outline:none;transition:border-color .2s,box-shadow .2s}
+.loc-search:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.09)}
+.loc-list{max-height:195px;overflow-y:auto}
+.drop-item{padding:9px 13px;font-size:13px;font-weight:500;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);transition:background .1s}
+.drop-item:last-child{border-bottom:none}
+.drop-item:hover,.drop-item.sel{background:rgba(0,106,78,.12);color:var(--green)}
+.drop-km{font-size:10px;color:var(--muted);font-weight:400}
+.drop-empty{padding:13px;font-size:13px;color:var(--muted);text-align:center}
+
+/* SWAP */
+.swap-btn{background:var(--bg);border:1.5px solid var(--border);border-radius:11px;width:36px;height:42px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s;align-self:end;color:var(--green)}
 .swap-btn:hover{background:var(--green);color:#fff;border-color:var(--green);transform:rotate(180deg)}
 
-/* ── DIST CHIP ── */
-.dist-chip{
-  text-align:center;margin:10px 0 0;
-}
-.dist-chip span{
-  background:linear-gradient(90deg,#e6f4ef,#f0faf5);
-  border:1px solid #b3d9c9;color:var(--green);
-  font-size:12px;font-weight:600;padding:5px 16px;
-  border-radius:20px;display:inline-flex;align-items:center;gap:5px;
-}
+/* DISTANCE ROW */
+.dist-row{display:flex;align-items:center;justify-content:space-between;margin-top:11px;padding-top:11px;border-top:1px solid var(--border)}
+.dist-info{display:inline-flex;align-items:center;gap:6px;background:rgba(0,106,78,.1);border:1px solid var(--border);color:var(--green);font-size:12px;font-weight:600;padding:5px 13px;border-radius:18px}
 
-/* ── VEHICLE GRID ── */
-.v-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:2px}
-.v-card{
-  border:1.5px solid var(--border);border-radius:12px;
-  padding:9px 3px 8px;text-align:center;cursor:pointer;
-  background:#fafffe;transition:all .18s;user-select:none;
-}
-.v-card:hover{border-color:var(--green2);background:#e6f4ef}
-.v-card.active{
-  border-color:var(--green);background:linear-gradient(135deg,#e6f4ef,#f0faf5);
-  box-shadow:0 0 0 3px rgba(0,106,78,.12);
-}
-.v-icon{font-size:22px;line-height:1}
-.v-img{width:26px;height:26px;object-fit:contain;display:block;margin:0 auto;filter:invert(1)}
-.v-name{font-size:10px;font-weight:700;color:var(--text);margin-top:4px;letter-spacing:.02em}
+/* VEHICLE */
+.v-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.v-card{border:1.5px solid var(--border);border-radius:11px;padding:8px 3px 7px;text-align:center;cursor:pointer;background:var(--bg);transition:all .17s;user-select:none}
+.v-card:hover{border-color:var(--green2);background:rgba(0,106,78,.08)}
+.v-card.active{border-color:var(--green);background:rgba(0,106,78,.14);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
+.v-icon{font-size:21px;line-height:1}
+.v-name{font-size:10px;font-weight:700;color:var(--text);margin-top:3px}
 
+/* WEATHER */
+.w-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.w-btn{border:1.5px solid var(--border);border-radius:11px;padding:8px 3px;text-align:center;cursor:pointer;background:var(--bg);transition:all .17s;user-select:none}
+.w-btn:hover{border-color:var(--amber);background:rgba(244,166,27,.08)}
+.w-btn.active{border-color:var(--amber);background:rgba(244,166,27,.14);box-shadow:0 0 0 3px rgba(244,166,27,.1)}
+.w-icon{font-size:19px}.w-label{font-size:10px;font-weight:700;color:var(--text);margin-top:3px}
 
-/* ── WEATHER GRID ── */
-.w-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.w-btn{
-  border:1.5px solid var(--border);border-radius:12px;
-  padding:9px 3px;text-align:center;cursor:pointer;
-  background:#fafffe;transition:all .18s;user-select:none;
-}
-.w-btn:hover{border-color:var(--amber);background:#fffbf0}
-.w-btn.active{border-color:var(--amber);background:linear-gradient(135deg,#fffbf0,#fff8e1);box-shadow:0 0 0 3px rgba(244,166,27,.12)}
-.w-icon{font-size:20px}
-.w-label{font-size:10px;font-weight:700;color:var(--text);margin-top:3px}
-
-/* ── TRIP TYPE ── */
-.trip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.d-btn{
-  border:1.5px solid var(--border);border-radius:12px;
-  padding:10px 5px;text-align:center;cursor:pointer;
-  background:#fafffe;transition:all .18s;user-select:none;
-}
-.d-btn:hover{border-color:var(--green2);background:#e6f4ef}
-.d-btn.active{border-color:var(--green);background:linear-gradient(135deg,#e6f4ef,#f0faf5);box-shadow:0 0 0 3px rgba(0,106,78,.12)}
-.d-icon{font-size:20px}
-.d-name{font-size:11px;font-weight:700;color:var(--text);margin-top:4px}
+/* TRIP TYPE */
+.trip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.d-btn{border:1.5px solid var(--border);border-radius:11px;padding:9px 5px;text-align:center;cursor:pointer;background:var(--bg);transition:all .17s;user-select:none}
+.d-btn:hover{border-color:var(--green2);background:rgba(0,106,78,.08)}
+.d-btn.active{border-color:var(--green);background:rgba(0,106,78,.14);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
+.d-icon{font-size:19px}.d-name{font-size:11px;font-weight:700;color:var(--text);margin-top:3px}
 .d-desc{font-size:10px;color:var(--muted);margin-top:1px}
 
-/* ── TIME ── */
-input[type="time"]{
-  width:100%;padding:11px 14px;
-  border:1.5px solid var(--border);border-radius:12px;
-  font-size:14px;font-family:inherit;font-weight:500;
-  color:var(--text);background:#fff;outline:none;
-  transition:border-color .2s,box-shadow .2s;
-}
-input[type="time"]:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
+/* TIME INPUT */
+input[type="time"]{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:11px;font-size:14px;font-family:inherit;font-weight:500;color:var(--text);background:var(--card);outline:none;transition:border-color .2s,box-shadow .2s;color-scheme:light}
+html[data-theme="dark"] input[type="time"]{color-scheme:dark}
+input[type="time"]:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.09)}
 
-/* ── BUTTON ── */
-.btn{
-  width:100%;padding:15px;
-  background:linear-gradient(135deg,var(--green),var(--green2));
-  color:#fff;font-size:15px;font-weight:700;
-  font-family:'Syne',sans-serif;letter-spacing:.04em;
-  border:none;border-radius:14px;cursor:pointer;
-  transition:all .2s;box-shadow:0 4px 16px rgba(0,106,78,.3);
-}
-.btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,106,78,.4)}
+/* BUTTON */
+.btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;font-size:15px;font-weight:700;font-family:'Syne',sans-serif;letter-spacing:.04em;border:none;border-radius:13px;cursor:pointer;transition:all .2s;box-shadow:0 3px 14px rgba(0,106,78,.28)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(0,106,78,.38)}
 .btn:active{transform:translateY(0)}
-.btn:disabled{background:#9dbfb5;box-shadow:none;cursor:not-allowed;transform:none}
+.btn-outline{width:100%;padding:12px;background:transparent;color:var(--green);font-size:13px;font-weight:700;font-family:'Syne',sans-serif;letter-spacing:.03em;border:1.5px solid var(--green);border-radius:13px;cursor:pointer;transition:all .2s;margin-top:8px}
+.btn-outline:hover{background:rgba(0,106,78,.08)}
 
-/* ── RESULT CARD ── */
-.result-card{
-  background:linear-gradient(135deg,var(--dark) 0%,#0f3327 100%);
-  border-radius:20px;padding:24px 20px;display:none;
-  animation:popUp .35s cubic-bezier(.34,1.56,.64,1) both;
-  position:relative;overflow:hidden;
-}
-.result-card::before{
-  content:'';position:absolute;top:-40px;right:-40px;
-  width:150px;height:150px;border-radius:50%;
-  background:rgba(244,166,27,.08);
-}
+/* RESULT CARD */
+.result-card{background:linear-gradient(135deg,var(--dark) 0%,#0f3327 100%);border-radius:18px;padding:20px 16px;display:none;animation:popUp .3s cubic-bezier(.34,1.56,.64,1) both;position:relative;overflow:hidden;margin-top:10px}
+.result-card::before{content:'';position:absolute;top:-35px;right:-35px;width:130px;height:130px;border-radius:50%;background:rgba(244,166,27,.07)}
 .result-card.show{display:block}
 .result-card.surge-moderate{background:linear-gradient(135deg,#1a1200,#2d1f00)}
 .result-card.surge-high{background:linear-gradient(135deg,#1a0a00,#2d1200)}
 .result-card.surge-red{background:linear-gradient(135deg,#1a0000,#2d0808)}
+.fare-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.fare-amount{font-family:'Syne',sans-serif;font-size:clamp(48px,11vw,72px);font-weight:800;color:#fff;line-height:1;letter-spacing:-2px;margin:3px 0}
+.fare-taka{font-size:.44em;vertical-align:top;margin-top:10px;display:inline-block;color:var(--amber)}
+.fare-range{font-size:12px;color:rgba(255,255,255,.45);margin-top:3px}
+.fare-range b{color:rgba(255,255,255,.7)}
+.surge-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 13px;border-radius:18px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+.sb-normal{background:rgba(74,222,128,.14);color:#4ade80;border:1px solid rgba(74,222,128,.28)}
+.sb-moderate{background:rgba(251,191,36,.14);color:#fbbf24;border:1px solid rgba(251,191,36,.28)}
+.sb-high{background:rgba(249,115,22,.14);color:#fb923c;border:1px solid rgba(249,115,22,.28)}
+.sb-peak{background:rgba(248,113,113,.14);color:#f87171;border:1px solid rgba(248,113,113,.28)}
+.fare-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.09)}
+.fm-label{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em}
+.fm-val{font-size:13px;font-weight:600;color:#fff;margin-top:2px}
 
-.fare-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.fare-amount{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(52px,12vw,80px);
-  font-weight:800;color:#fff;line-height:1;
-  letter-spacing:-2px;margin:4px 0;
-}
-.fare-taka{font-size:.45em;vertical-align:top;margin-top:12px;display:inline-block;color:var(--amber)}
-.fare-range{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px}
-.fare-range b{color:rgba(255,255,255,.8)}
+/* UBER BREAKDOWN */
+.uber-card{background:var(--card);border-radius:15px;padding:16px;display:none;border:1px solid var(--border);animation:popUp .3s ease both;margin-top:10px}
+.uber-card.show{display:block}
+.uber-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:13px;display:flex;align-items:center;gap:8px}
+.uber-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.uber-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+.uber-row:last-child{border-bottom:none}
+.uber-row-left{display:flex;align-items:center;gap:9px}
+.uber-row-icon{font-size:13px;width:20px;text-align:center}
+.uber-row-label{font-size:12px;font-weight:500;color:var(--text)}
+.uber-row-sub{font-size:10px;color:var(--muted);margin-top:1px}
+.uber-row-val{font-size:13px;font-weight:700;color:var(--text);text-align:right}
+.uber-row-val.surge{color:#ea580c}
+.uber-divider{height:1px;background:var(--border);margin:7px 0}
+.uber-total-row{display:flex;align-items:center;justify-content:space-between;padding:9px 0 3px}
+.uber-total-label{font-size:13px;font-weight:700;color:var(--text)}
+.uber-total-val{font-size:17px;font-weight:800;color:var(--green);font-family:'Syne',sans-serif}
+.surge-mult-badge{display:inline-flex;align-items:center;gap:3px;background:rgba(234,88,12,.1);border:1px solid rgba(234,88,12,.3);color:#ea580c;font-size:9px;font-weight:700;padding:2px 7px;border-radius:7px;margin-left:5px}
 
-.surge-badge{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:5px 14px;border-radius:20px;
-  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  margin-top:10px;
-}
-.sb-normal  {background:rgba(74,222,128,.15);color:#4ade80;border:1px solid rgba(74,222,128,.3)}
-.sb-moderate{background:rgba(251,191,36,.15);color:#fbbf24;border:1px solid rgba(251,191,36,.3)}
-.sb-high    {background:rgba(249,115,22,.15);color:#fb923c;border:1px solid rgba(249,115,22,.3)}
-.sb-peak    {background:rgba(248,113,113,.15);color:#f87171;border:1px solid rgba(248,113,113,.3)}
-
-.fare-meta{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:10px;margin-top:18px;padding-top:16px;
-  border-top:1px solid rgba(255,255,255,.1);
-}
-.fm-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em}
-.fm-val{font-size:13px;font-weight:600;color:#fff;margin-top:3px}
-
-/* ── ML BREAKDOWN ── */
-.ml-card{
-  background:#fff;border-radius:16px;padding:18px;display:none;
-  border:1px solid var(--border);
-  animation:popUp .3s ease both;
-}
+/* ML BREAKDOWN */
+.ml-card{background:var(--card);border-radius:15px;padding:16px;display:none;border:1px solid var(--border);animation:popUp .3s ease both;margin-top:10px}
 .ml-card.show{display:block}
-.ml-title{
-  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:14px;
-  display:flex;align-items:center;gap:8px;
-}
+.ml-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:13px;display:flex;align-items:center;gap:8px}
 .ml-title::after{content:'';flex:1;height:1px;background:var(--border)}
-
-.f-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.f-row{display:flex;align-items:center;gap:9px;margin-bottom:8px}
 .f-row:last-child{margin-bottom:0}
-.f-ico{font-size:13px;width:18px;text-align:center;flex-shrink:0}
-.f-lbl{font-size:11px;color:var(--text);font-weight:500;width:120px;flex-shrink:0}
-.f-bwrap{flex:1;height:6px;background:#e8f0ec;border-radius:3px;overflow:hidden}
+.f-ico{font-size:12px;width:17px;text-align:center;flex-shrink:0}
+.f-lbl{font-size:11px;color:var(--text);font-weight:500;width:115px;flex-shrink:0}
+.f-bwrap{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
 .f-bar{height:100%;border-radius:3px;transition:width .6s cubic-bezier(.34,1.56,.64,1)}
-.fb-green {background:var(--green)}
-.fb-teal  {background:#14b8a6}
-.fb-amber {background:var(--amber)}
-.fb-orange{background:#f97316}
-.fb-purple{background:#8b5cf6}
-.f-val{font-size:11px;font-weight:700;color:var(--text);min-width:48px;text-align:right}
-
-.cond-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
-.chip{
-  font-size:10px;font-weight:700;padding:3px 10px;
-  border-radius:10px;letter-spacing:.04em;
-}
-.chip-rush   {background:#fef9c3;color:#854d0e}
-.chip-night  {background:#ede9fe;color:#6d28d9}
-.chip-fri    {background:#dcfce7;color:#166534}
-.chip-rain   {background:#dbeafe;color:#1e40af}
-.chip-storm  {background:#fce7f3;color:#9d174d}
-
-.conf-row{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-top:12px;padding-top:10px;border-top:1px solid var(--border);
-}
-.conf-lbl{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
-.conf-bwrap{width:100px;height:6px;background:#e8f0ec;border-radius:3px;overflow:hidden}
+.fb-green{background:var(--green)}.fb-teal{background:#14b8a6}.fb-amber{background:var(--amber)}.fb-orange{background:#f97316}.fb-purple{background:#8b5cf6}
+.f-val{font-size:11px;font-weight:700;color:var(--text);min-width:45px;text-align:right}
+.cond-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.chip{font-size:10px;font-weight:700;padding:3px 9px;border-radius:9px;letter-spacing:.03em}
+.chip-rush{background:#fef9c3;color:#854d0e}.chip-night{background:#ede9fe;color:#6d28d9}.chip-fri{background:#dcfce7;color:#166534}.chip-rain{background:#dbeafe;color:#1e40af}.chip-storm{background:#fce7f3;color:#9d174d}
+.conf-row{display:flex;align-items:center;justify-content:space-between;margin-top:11px;padding-top:9px;border-top:1px solid var(--border)}
+.conf-lbl{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em}
+.conf-bwrap{width:90px;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
 .conf-b{height:100%;width:88%;background:linear-gradient(90deg,var(--green),var(--amber));border-radius:3px}
 .conf-pct{font-size:11px;font-weight:700;color:var(--green)}
+.ml-estimate-row{display:flex;align-items:center;justify-content:space-between;background:rgba(0,106,78,.08);border:1px solid var(--border);border-radius:10px;padding:9px 12px;margin-top:11px}
+.ml-estimate-lbl{font-size:11px;font-weight:700;color:var(--text)}
+.ml-estimate-val{font-size:14px;font-weight:800;color:var(--green);font-family:'Syne',sans-serif}
+.ml-sub{font-size:10px;color:var(--muted);margin-top:7px;line-height:1.5}
 
-/* ── HISTORY ── */
-.hist-title{
-  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:10px;
-  display:flex;align-items:center;gap:8px;
-}
-.hist-title::after{content:'';flex:1;height:1px;background:var(--border)}
-.h-row{
-  background:#fff;border-radius:14px;padding:12px 14px;
-  margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;
-  border:1px solid var(--border);animation:popUp .25s ease;
-  transition:box-shadow .2s;
-}
-.h-row:hover{box-shadow:0 4px 12px rgba(0,106,78,.08)}
-.h-main{font-size:13px;font-weight:600;color:var(--text)}
-.h-sub{font-size:11px;color:var(--muted);margin-top:2px}
-.h-price{font-size:20px;font-weight:800;color:var(--green);font-family:'Syne',sans-serif}
+/* COMPARE CHART */
+.compare-card{background:var(--card);border-radius:15px;padding:16px;display:none;border:1px solid var(--border);animation:popUp .3s ease both;margin-top:10px}
+.compare-card.show{display:block}
+.compare-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.compare-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.cmp-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.cmp-row:last-child{margin-bottom:0}
+.cmp-ico{font-size:17px;width:24px;text-align:center;flex-shrink:0}
+.cmp-lbl{font-size:11px;font-weight:700;color:var(--text);width:62px;flex-shrink:0}
+.cmp-bwrap{flex:1;height:22px;background:var(--bg);border-radius:7px;overflow:hidden;position:relative;border:1px solid var(--border)}
+.cmp-bar{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;transition:width .7s cubic-bezier(.34,1.56,.64,1);min-width:36px}
+.cmp-bar span{font-size:10px;font-weight:800;color:#fff;white-space:nowrap}
+.cmp-bar.best{box-shadow:0 0 0 2px var(--amber) inset}
+.cmp-note{font-size:11px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
 
-/* ── ERROR ── */
-.err-box{
-  background:#fef2f2;border:1.5px solid #fecaca;color:#b91c1c;
-  border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.6;
-  margin-top:14px;display:none;
-}
+/* WARN / ERR */
+.warn-box{background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:9px;padding:7px 11px;font-size:12px;display:none;margin-bottom:9px}
+.warn-box.show{display:block}
+.err-box{background:#fef2f2;border:1.5px solid #fecaca;color:#b91c1c;border-radius:11px;padding:11px 14px;font-size:13px;line-height:1.6;margin-top:10px;display:none}
 .err-box.show{display:block}
 
-/* ── WARN ── */
-.warn-box{
-  background:#fffbeb;border:1px solid #fde68a;color:#92400e;
-  border-radius:10px;padding:8px 12px;font-size:12px;
-  display:none;margin-bottom:12px;
-}
-.warn-box.show{display:block}
+/* HISTORY */
+.hist-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.hist-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.hist-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+.hist-clear{font-size:10px;font-weight:700;color:var(--muted);background:none;border:1px solid var(--border);border-radius:8px;padding:4px 9px;cursor:pointer}
+.hist-clear:hover{color:var(--red);border-color:var(--red)}
+.h-row{background:var(--card);border-radius:13px;padding:11px 13px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);animation:popUp .25s ease;transition:box-shadow .2s}
+.h-row:hover{box-shadow:0 3px 10px rgba(0,106,78,.07)}
+.h-main{font-size:13px;font-weight:600;color:var(--text)}
+.h-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.h-price{font-size:19px;font-weight:800;color:var(--green);font-family:'Syne',sans-serif}
 
-/* ── FOOTER ── */
-.footer{
-  text-align:center;padding:20px 0 8px;
-  font-size:11px;color:var(--muted);
-}
+/* ─── LONG ROUTE SECTION ─── */
+.lr-section{display:none}
+.lr-section.show{display:block}
+.city-search-wrap{margin-bottom:10px}
+.city-search{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:11px;font-size:13px;font-family:inherit;font-weight:500;color:var(--text);background:var(--card);outline:none;transition:border-color .2s,box-shadow .2s}
+.city-search:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.09)}
+.city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px;max-height:340px;overflow-y:auto;padding-right:2px}
+.city-btn{border:1.5px solid var(--border);border-radius:11px;padding:10px 5px 9px;text-align:center;cursor:pointer;background:var(--bg);transition:all .17s;user-select:none}
+.city-btn:hover{border-color:var(--green2);background:rgba(0,106,78,.08)}
+.city-btn.active{border-color:var(--green);background:rgba(0,106,78,.14);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
+.city-icon{font-size:20px}
+.city-name{font-size:11px;font-weight:700;color:var(--text);margin-top:3px}
+.city-dist{font-size:10px;color:var(--muted);margin-top:1px}
+.city-empty{grid-column:1/-1;padding:14px;text-align:center;font-size:12px;color:var(--muted)}
+
+.lr-result{background:var(--card);border-radius:15px;padding:16px;display:none;border:1px solid var(--border);margin-top:10px;animation:popUp .3s ease both}
+.lr-result.show{display:block}
+.lr-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.lr-route{font-size:14px;font-weight:700;color:var(--text)}
+.lr-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.lr-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(0,106,78,.1);border:1px solid var(--border);color:var(--green);font-size:10px;font-weight:700;padding:3px 10px;border-radius:18px}
+.transport-rows{display:flex;flex-direction:column;gap:8px}
+.tr-row{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-radius:12px;background:var(--bg);border:1px solid var(--border);transition:border-color .15s}
+.tr-row:hover{border-color:var(--green2)}
+.tr-left{display:flex;align-items:center;gap:11px}
+.tr-icon{font-size:22px;width:28px;text-align:center;flex-shrink:0}
+.tr-name{font-size:13px;font-weight:700;color:var(--text)}
+.tr-detail{font-size:11px;color:var(--muted);margin-top:2px}
+.tr-price-wrap{text-align:right}
+.tr-price{font-size:15px;font-weight:800;color:var(--green);font-family:'Syne',sans-serif}
+.tr-price-range{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.5}
+.tr-tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:7px;margin-top:3px;letter-spacing:.04em}
+.tag-cheap{background:#dcfce7;color:#166534}
+.tag-fast{background:#dbeafe;color:#1e40af}
+.tag-comfort{background:#ede9fe;color:#6d28d9}
+.tag-scenic{background:#fef9c3;color:#854d0e}
+.lr-note{font-size:11px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--border);line-height:1.6}
+.lr-note a{color:var(--green);font-weight:600;text-decoration:none}
+.lr-note a:hover{text-decoration:underline}
+
+/* FOOTER */
+.footer{text-align:center;padding:18px 0 8px;font-size:11px;color:var(--muted)}
 .footer a{color:var(--green);font-weight:600;text-decoration:none}
 .footer a:hover{text-decoration:underline}
 
-/* ── ANIMATIONS ── */
-@keyframes popUp{
-  from{opacity:0;transform:translateY(10px) scale(.97)}
-  to  {opacity:1;transform:translateY(0)     scale(1)}
-}
-.card{animation:popUp .35s ease both}
-.card:nth-child(2){animation-delay:.05s}
-.card:nth-child(3){animation-delay:.10s}
-.card:nth-child(4){animation-delay:.15s}
-
-/* ── Searchable dropdown ── */
-.search-select{position:relative}
-.search-input{
-  width:100%;padding:11px 14px;
-  border:1.5px solid var(--border);border-radius:12px;
-  font-size:13px;font-family:inherit;font-weight:500;
-  color:var(--text);background:#fff;outline:none;
-  transition:border-color .2s,box-shadow .2s;
-}
-.search-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,106,78,.1)}
-.search-drop{
-  display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;
-  background:#fff;border:1.5px solid var(--border);border-radius:12px;
-  max-height:220px;overflow-y:auto;z-index:999;
-  box-shadow:0 8px 24px rgba(0,106,78,.12);
-}
-.search-drop.open{display:block}
-.drop-item{
-  padding:10px 14px;font-size:13px;font-weight:500;color:var(--text);
-  cursor:pointer;border-bottom:1px solid #f0f5f2;transition:background .12s;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.drop-item:last-child{border-bottom:none}
-.drop-item:hover,.drop-item.selected{background:#e6f4ef;color:var(--green)}
-.drop-item .drop-km{font-size:11px;color:var(--muted);font-weight:400}
-.drop-empty{padding:12px 14px;font-size:13px;color:var(--muted);text-align:center}
-
+@keyframes popUp{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<div style="padding:24px 20px 0;max-width:520px;margin:0 auto">
-  <h1 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--dark);letter-spacing:-.3px">RidePrice <span style="color:var(--green)">BD</span></h1>
-  <p style="font-size:13px;color:var(--muted);margin-top:3px;font-weight:400">Know your fare before you ride 🛺</p>
-  <div style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:11px;color:var(--muted)">
-    <div class="dot" id="dot"></div>
-    <span id="statusText">Connecting…</span>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">RidePrice <span>BD</span></div>
+      <div class="header-sub">Know your fare before you ride 🛺</div>
+      <div class="status-row">
+        <div class="dot" id="dot"></div>
+        <span id="statusText">Connecting…</span>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
   </div>
 </div>
 
 <div class="main">
 
-  <!-- Route Card -->
-  <div class="card">
-    <div class="sec-label">Route</div>
-    <div class="route-wrap">
-      <div class="route-field">
-        <label><div class="dot-from"></div> From</label>
-        <div class="search-select" id="fromWrap">
-          <input type="text" class="search-input" id="fromInput" placeholder="Search location…" autocomplete="off" oninput="filterList('from')" onfocus="openDrop('from')" onblur="closeDrop('from')"/>
-          <div class="search-drop" id="fromDrop"></div>
+  <!-- MODE TABS -->
+  <div class="mode-tabs">
+    <button class="tab-btn active" onclick="switchMode('city',this)">🛺 City Ride</button>
+    <button class="tab-btn" onclick="switchMode('long',this)">🚌 Long Route</button>
+  </div>
+
+  <!-- ══════════ CITY RIDE ══════════ -->
+  <div id="citySection">
+
+    <!-- Route -->
+    <div class="card">
+      <div class="sec-label">Route</div>
+      <div class="route-wrap">
+        <div class="route-field">
+          <label><div class="dot-from"></div> From</label>
+          <div class="loc-selector" id="fromSel">
+            <div class="loc-chip" id="fromChip" onclick="toggleDrop('from')">
+              <span class="loc-chip-text" id="fromLabel">Jagannath University</span>
+              <button class="loc-chip-clear" id="fromClear" onclick="clearLoc(event,'from')" title="Clear">✕</button>
+            </div>
+            <div class="loc-drop" id="fromDrop">
+              <div class="loc-search-wrap">
+                <input class="loc-search" id="fromSearch" placeholder="Search location…" autocomplete="off" oninput="filterDrop('from')" onkeydown="handleKey(event,'from')"/>
+              </div>
+              <div class="loc-list" id="fromList"></div>
+            </div>
+          </div>
+        </div>
+        <button class="swap-btn" onclick="swapLocations()" title="Swap">⇅</button>
+        <div class="route-field">
+          <label><div class="dot-to"></div> To</label>
+          <div class="loc-selector" id="toSel">
+            <div class="loc-chip" id="toChip" onclick="toggleDrop('to')">
+              <span class="loc-chip-text" id="toLabel">Kuril / Kuratoli (AIUB)</span>
+              <button class="loc-chip-clear" id="toClear" onclick="clearLoc(event,'to')" title="Clear">✕</button>
+            </div>
+            <div class="loc-drop" id="toDrop">
+              <div class="loc-search-wrap">
+                <input class="loc-search" id="toSearch" placeholder="Search location…" autocomplete="off" oninput="filterDrop('to')" onkeydown="handleKey(event,'to')"/>
+              </div>
+              <div class="loc-list" id="toList"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="swap-btn" onclick="swapLocations()" title="Swap">⇅</button>
-      <div class="route-field">
-        <label><div class="dot-to"></div> To</label>
-        <div class="search-select" id="toWrap">
-          <input type="text" class="search-input" id="toInput" placeholder="Search location…" autocomplete="off" oninput="filterList('to')" onfocus="openDrop('to')" onblur="closeDrop('to')"/>
-          <div class="search-drop" id="toDrop"></div>
+      <div class="dist-row">
+        <div class="dist-info" id="distChip">📏 Select locations</div>
+      </div>
+    </div>
+
+    <!-- Vehicle -->
+    <div class="card">
+      <div class="sec-label">Ride Type</div>
+      <div class="v-grid">
+        <div class="v-card active" onclick="setVehicle('Rickshaw',this)"><div class="v-icon">🛺</div><div class="v-name">Rickshaw</div></div>
+        <div class="v-card" onclick="setVehicle('Bike',this)"><div class="v-icon">🏍️</div><div class="v-name">Bike</div></div>
+        <div class="v-card" onclick="setVehicle('Car',this)"><div class="v-icon">🚗</div><div class="v-name">Car</div></div>
+        <div class="v-card" onclick="setVehicle('Bus',this)"><div class="v-icon">🚌</div><div class="v-name">Bus</div></div>
+        <div class="v-card" onclick="setVehicle('CNG',this)"><div class="v-icon">🛻</div><div class="v-name">CNG</div></div>
+      </div>
+      <div class="warn-box" id="rickshawWarn">⚠️ Rickshaws aren't ideal for trips over 6 km. Consider Bike or CNG.</div>
+    </div>
+
+    <!-- Conditions -->
+    <div class="card">
+      <div class="sec-label" style="margin-bottom:10px">Weather</div>
+      <div class="w-grid" style="margin-bottom:16px">
+        <div class="w-btn active" onclick="setWeather('Sunny',this)"><div class="w-icon">☀️</div><div class="w-label">Sunny</div></div>
+        <div class="w-btn" onclick="setWeather('Regular',this)"><div class="w-icon">⛅</div><div class="w-label">Regular</div></div>
+        <div class="w-btn" onclick="setWeather('Rainy',this)"><div class="w-icon">🌧️</div><div class="w-label">Rainy</div></div>
+        <div class="w-btn" onclick="setWeather('Stormy',this)"><div class="w-icon">⛈️</div><div class="w-label">Stormy</div></div>
+      </div>
+      <div class="sec-label" style="margin-bottom:10px">Trip Type</div>
+      <div class="trip-grid" style="margin-bottom:16px">
+        <div class="d-btn active" onclick="setDemand(0.30,this)"><div class="d-icon">🟢</div><div class="d-name">Regular</div><div class="d-desc">Normal ride</div></div>
+        <div class="d-btn" onclick="setDemand(0.65,this)"><div class="d-icon">🟡</div><div class="d-name">Busy Hour</div><div class="d-desc">Peak traffic</div></div>
+        <div class="d-btn" onclick="setDemand(1.00,this)"><div class="d-icon">🔴</div><div class="d-name">Emergency</div><div class="d-desc">Need urgently</div></div>
+      </div>
+      <div class="sec-label" style="margin-bottom:7px">Pickup Time</div>
+      <input type="time" id="time" value="08:30"/>
+    </div>
+
+    <button class="btn" onclick="getPrice()">Calculate Fare</button>
+    <button class="btn-outline" onclick="compareRides()">📊 Compare All Ride Types</button>
+    <div class="err-box" id="err">⚠️ Could not calculate. Please check your selection.</div>
+
+    <!-- Result -->
+    <div class="result-card" id="result">
+      <div class="fare-label">Estimated Fare</div>
+      <div class="fare-amount"><span class="fare-taka">৳</span><span id="priceNum">—</span></div>
+      <div class="fare-range">Range: <b id="priceLow">—</b> – <b id="priceHigh">—</b> ৳</div>
+      <div class="surge-badge sb-normal" id="surgeTag">Normal</div>
+      <div class="fare-meta" id="fareMeta"></div>
+    </div>
+
+    <!-- Uber breakdown (Car & CNG) -->
+    <div class="uber-card" id="uberCard">
+      <div class="uber-title">🚗 Uber-Style Fare Breakdown</div>
+      <div id="uberRows"></div>
+      <div class="uber-divider"></div>
+      <div class="uber-total-row">
+        <div class="uber-total-label">Estimated Total</div>
+        <div class="uber-total-val" id="uberTotal">৳—</div>
+      </div>
+    </div>
+
+    <!-- ML Breakdown -->
+    <div class="ml-card" id="mlCard">
+      <div class="ml-title">🤖 ML Fare Model — Linear Regression</div>
+      <div class="f-row"><span class="f-ico">📏</span><span class="f-lbl">Distance fare</span><div class="f-bwrap"><div class="f-bar fb-green" id="fBarBase" style="width:0%"></div></div><span class="f-val" id="fValBase">—</span></div>
+      <div class="f-row" id="timeChargeRow"><span class="f-ico">⏱️</span><span class="f-lbl">Traffic time</span><div class="f-bwrap"><div class="f-bar fb-teal" id="fBarTimeCharge" style="width:0%"></div></div><span class="f-val" id="fValTimeCharge">—</span></div>
+      <div class="f-row"><span class="f-ico">🌤</span><span class="f-lbl">Weather impact</span><div class="f-bwrap"><div class="f-bar fb-amber" id="fBarWeather" style="width:0%"></div></div><span class="f-val" id="fValWeather">—</span></div>
+      <div class="f-row"><span class="f-ico">🕐</span><span class="f-lbl">Rush hour add</span><div class="f-bwrap"><div class="f-bar fb-orange" id="fBarTime" style="width:0%"></div></div><span class="f-val" id="fValTime">—</span></div>
+      <div class="f-row"><span class="f-ico">📊</span><span class="f-lbl">Trip type add</span><div class="f-bwrap"><div class="f-bar fb-purple" id="fBarDemand" style="width:0%"></div></div><span class="f-val" id="fValDemand">—</span></div>
+      <div class="f-row" id="fridayRow" style="display:none"><span class="f-ico">🕌</span><span class="f-lbl">Friday discount</span><div class="f-bwrap"><div class="f-bar fb-green" id="fBarFriday" style="width:0%"></div></div><span class="f-val" id="fValFriday">—</span></div>
+      <div class="cond-chips" id="condChips"></div>
+      <div class="ml-estimate-row" id="mlEstimateRow">
+        <div class="ml-estimate-lbl">🧠 ML Model Estimate</div>
+        <div class="ml-estimate-val" id="mlEstimateVal">৳—</div>
+      </div>
+      <div class="conf-row">
+        <span class="conf-lbl">Model accuracy (R²)</span>
+        <div class="conf-bwrap"><div class="conf-b" id="confBar" style="width:88%"></div></div>
+        <span class="conf-pct" id="confPct">—</span>
+      </div>
+      <div class="ml-sub" id="mlSub">Linear regression · trained in-browser</div>
+      <div class="ml-estimate-row" id="serverCheckRow" style="display:none;margin-top:8px"></div>
+    </div>
+
+
+    <!-- Compare chart -->
+    <div class="compare-card" id="compareCard">
+      <div class="compare-title">📊 Fare Comparison — All Ride Types</div>
+      <div id="compareRows"></div>
+      <div class="cmp-note">Comparison uses your selected route, weather &amp; trip type. 🏆 outlined bar = cheapest option.</div>
+    </div>
+
+    <!-- History -->
+    <div id="histBox" style="display:none;margin-top:18px">
+      <div class="hist-head">
+        <div class="hist-title" style="margin-bottom:0;flex:1">Recent Estimates</div>
+        <button class="hist-clear" onclick="clearHistory()">Clear</button>
+      </div>
+      <div id="histList"></div>
+    </div>
+
+  </div><!-- end citySection -->
+
+  <!-- ══════════ LONG ROUTE ══════════ -->
+  <div id="longSection" style="display:none">
+
+    <div class="card">
+      <div class="sec-label">Select Destination</div>
+      <div class="city-search-wrap">
+        <input class="city-search" id="citySearch" placeholder="Search district / city…" autocomplete="off" oninput="filterCities()"/>
+      </div>
+      <div class="city-grid" id="cityGrid"></div>
+    </div>
+
+    <div class="lr-result" id="lrResult">
+      <div class="lr-header">
+        <div>
+          <div class="lr-route" id="lrRoute">Dhaka → —</div>
+          <div class="lr-sub" id="lrSub">— km · — hours</div>
         </div>
+        <div class="lr-badge" id="lrBadge">🗺️ —</div>
       </div>
-    </div>
-    <div class="dist-chip" style="display:flex;align-items:center;justify-content:space-between;margin-top:10px">
-      <span id="distChip">📏 Select locations</span>
-      <button onclick="clearLocations()" style="background:none;border:none;font-size:11px;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:8px;transition:all .15s" onmouseover="this.style.background='#fee2e2';this.style.color='#dc2626'" onmouseout="this.style.background='none';this.style.color='var(--muted)'">✕ Clear</button>
-    </div>
-  </div>
-
-  <!-- Vehicle Card -->
-  <div class="card">
-    <div class="sec-label">Ride Type</div>
-    <div class="v-grid">
-      <div class="v-card active" onclick="setVehicle('Rickshaw',this)">
-        <div class="v-icon"><img class="v-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAHEBMPERIVExMWDxgQDhgYDw8VFRAYFRIWGBURFRUYHSggGBolHhUTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NEQ0NDi0ZFRkrLSsrKystNysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAV4BXgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABbEAABAwIDBAUECg0HCgUFAAABAAIDBBEFBhIHEyExQVFhcYEUIjKRFSNCQ1KTobHB0RYXM1NUYnKCkpTC0tNEVWOipLLDJDRFZHODhJWj4gglhbPwJjV04eP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEh/9oADAMBAAIRAxEAPwC8UREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARdNRUMp263ua1o5lzg1o8Sopi20vCcMuDUCVw4aYWukPrHm/KgmKKncU22tFxTUhPU6WVrf6jL/ADqKYjtYxasvpkjgH9HE248X3KEejVhVWKU9F91mij69crG/OV5ar8x12I/dqqd/YZn6fUCAtWfONz9ZRY9P1W0DCaX0q2L81zn/ANwFYtLtIwyqLtErixgvLIYJWRRdWpzwOJ6BzPQFQuXMC9lBJPM8xUkIBqpLXI6oYx7uR3IDtue3GxvFfZAhkbNzTxkiniBuGD4bz7uU9Lj3DgAhF5y7X8KY7SDM4XtqFOdPfxIPyKXYHjVNj0QnppBIw8DbgWn4LmniD2FeTFYuw3EX02IugBOiancXC/DVHpLHd9tY8UI9AoiIgiIgIiICIiAiIgIiICIi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" alt="Rickshaw"/></div>
-        <div class="v-name">Rickshaw</div>
-      </div>
-      <div class="v-card" onclick="setVehicle('Bike',this)">
-        <div class="v-icon">🏍️</div>
-        <div class="v-name">Bike</div>
-      </div>
-      <div class="v-card" onclick="setVehicle('Car',this)">
-        <div class="v-icon">🚗</div>
-        <div class="v-name">Car</div>
-      </div>
-      <div class="v-card" onclick="setVehicle('Bus',this)">
-        <div class="v-icon">🚌</div>
-        <div class="v-name">Bus</div>
-      </div>
-      <div class="v-card" onclick="setVehicle('CNG',this)">
-        <div class="v-icon">🛺</div>
-        <div class="v-name">CNG</div>
-      </div>
-    </div>
-    <div class="warn-box" id="rickshawWarn">⚠️ Rickshaws aren't ideal for trips over 6 km. Consider Bike or CNG.</div>
-  </div>
-
-  <!-- Conditions Card -->
-  <div class="card">
-    <div class="sec-label" style="margin-bottom:10px">Weather</div>
-    <div class="w-grid" style="margin-bottom:18px">
-      <div class="w-btn active" onclick="setWeather('Sunny',this)"><div class="w-icon">☀️</div><div class="w-label">Sunny</div></div>
-      <div class="w-btn" onclick="setWeather('Regular',this)"><div class="w-icon">⛅</div><div class="w-label">Regular</div></div>
-      <div class="w-btn" onclick="setWeather('Rainy',this)"><div class="w-icon">🌧️</div><div class="w-label">Rainy</div></div>
-      <div class="w-btn" onclick="setWeather('Stormy',this)"><div class="w-icon">⛈️</div><div class="w-label">Stormy</div></div>
+      <div class="transport-rows" id="lrRows"></div>
+      <div class="lr-note">⚠️ Prices are estimates (2025–26) based on typical fare structures and may vary by operator/season. Book at <a href="https://eticket.railway.gov.bd" target="_blank">eticket.railway.gov.bd</a> or <a href="https://shohoz.com" target="_blank">Shohoz</a> for exact fares &amp; schedules.</div>
     </div>
 
-    <div class="sec-label" style="margin-bottom:10px">Trip Type</div>
-    <div class="trip-grid" style="margin-bottom:18px">
-      <div class="d-btn active" onclick="setDemand(0.30,this)"><div class="d-icon">🟢</div><div class="d-name">Regular</div><div class="d-desc">Normal ride</div></div>
-      <div class="d-btn" onclick="setDemand(0.65,this)"><div class="d-icon">🟡</div><div class="d-name">Busy Hour</div><div class="d-desc">Peak traffic</div></div>
-      <div class="d-btn" onclick="setDemand(1.00,this)"><div class="d-icon">🔴</div><div class="d-name">Emergency</div><div class="d-desc">Need urgently</div></div>
-    </div>
+  </div><!-- end longSection -->
 
-    <div class="sec-label" style="margin-bottom:8px">Pickup Time</div>
-    <input type="time" id="time" value="08:30"/>
-  </div>
-
-  <!-- Button -->
-  <button class="btn" onclick="getPrice()">Calculate Price</button>
-
-  <!-- Error -->
-  <div class="err-box" id="err">⚠️ Could not calculate. Please check your selection.</div>
-
-  <!-- Result -->
-  <div class="result-card" id="result" style="margin-top:14px">
-    <div class="fare-label">Estimated Fare</div>
-    <div class="fare-amount"><span class="fare-taka">৳</span><span id="priceNum">—</span></div>
-    <div class="fare-range">Range: <b id="priceLow">—</b> – <b id="priceHigh">—</b> ৳</div>
-    <div class="surge-badge sb-normal" id="surgeTag">Normal</div>
-    <div class="fare-meta" id="fareMeta"></div>
-  </div>
-
-  <!-- ML Breakdown -->
-  <div class="ml-card" id="mlCard" style="margin-top:14px">
-    <div class="ml-title">🤖 Price Breakdown</div>
-    <div class="f-row"><span class="f-ico">📏</span><span class="f-lbl">Distance fare</span><div class="f-bwrap"><div class="f-bar fb-green" id="fBarBase" style="width:0%"></div></div><span class="f-val" id="fValBase">—</span></div>
-    <div class="f-row" id="timeChargeRow"><span class="f-ico">⏱️</span><span class="f-lbl">Traffic time</span><div class="f-bwrap"><div class="f-bar fb-teal" id="fBarTimeCharge" style="width:0%"></div></div><span class="f-val" id="fValTimeCharge">—</span></div>
-    <div class="f-row"><span class="f-ico">🌤</span><span class="f-lbl">Weather impact</span><div class="f-bwrap"><div class="f-bar fb-amber" id="fBarWeather" style="width:0%"></div></div><span class="f-val" id="fValWeather">—</span></div>
-    <div class="f-row"><span class="f-ico">🕐</span><span class="f-lbl">Rush hour add</span><div class="f-bwrap"><div class="f-bar fb-orange" id="fBarTime" style="width:0%"></div></div><span class="f-val" id="fValTime">—</span></div>
-    <div class="f-row"><span class="f-ico">📊</span><span class="f-lbl">Trip type add</span><div class="f-bwrap"><div class="f-bar fb-purple" id="fBarDemand" style="width:0%"></div></div><span class="f-val" id="fValDemand">—</span></div>
-    <div class="f-row" id="fridayRow" style="display:none"><span class="f-ico">🕌</span><span class="f-lbl">Friday discount</span><div class="f-bwrap"><div class="f-bar fb-green" id="fBarFriday" style="width:0%"></div></div><span class="f-val" id="fValFriday">—</span></div>
-    <div class="cond-chips" id="condChips"></div>
-    <div class="conf-row"><span class="conf-lbl">Model confidence</span><div class="conf-bwrap"><div class="conf-b"></div></div><span class="conf-pct">88%</span></div>
-  </div>
-
-  <!-- History -->
-  <div id="histBox" style="display:none;margin-top:20px">
-    <div class="hist-title">Recent Estimates</div>
-    <div id="histList"></div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    Developed by <a href="https://www.linkedin.com/in/takbir-zaman-bhuiyan" target="_blank">Takbir Zaman Bhuiyan</a>
-  </div>
-
+  <div class="footer">Developed by <a href="https://www.linkedin.com/in/takbir-zaman-bhuiyan" target="_blank">Takbir Zaman Bhuiyan</a></div>
 </div>
+
+<input type="hidden" id="demand" value="0.30"/>
 
 <script>
 const API = "https://ridepricebd.onrender.com";
+
+// ── COORDINATES (150+ Dhaka locations) ────────────────────────────────────
 const COORDS = {
-  "Jagannath University": [23.7066,90.407],
-  "Ray Saheb Bazar": [23.712,90.408],
-  "Naya Bazar": [23.718,90.406],
-  "Gulistan": [23.726,90.4167],
-  "Tikatuli": [23.725,90.425],
-  "Press Club": [23.731,90.41],
-  "Sayedabad Bus Terminal": [23.718,90.432],
-  "Paltan": [23.733,90.4167],
-  "Jatrabari": [23.71,90.438],
-  "Kamalapur": [23.7334,90.4196],
-  "High Court": [23.736,90.408],
-  "Azimpur / Palashi": [23.7313,90.387],
-  "New Market / Nilkhet": [23.7313,90.3855],
-  "Maniknagar": [23.72,90.44],
-  "Shahbagh": [23.7394,90.3964],
-  "Matsya Bhaban": [23.741,90.4],
-  "Rajarbagh": [23.74,90.43],
-  "City College / Science Lab": [23.74,90.382],
-  "Mugda": [23.733,90.443],
-  "Bangla Motor": [23.747,90.393],
-  "Shahjahanpur": [23.749,90.42],
-  "Khilgaon Flyover": [23.747,90.428],
-  "Kalabagan": [23.743,90.378],
-  "Malibagh Railgate": [23.751,90.427],
-  "Karwan Bazar": [23.753,90.393],
-  "Dhanmondi 15/32": [23.7461,90.3742],
-  "Malibagh Chowdhury Para": [23.753,90.431],
-  "Farmgate": [23.7582,90.39],
-  "Dhanmondi 27": [23.749,90.37],
-  "Rampura Bridge": [23.763,90.432],
-  "Satrasta": [23.765,90.39],
-  "Asad Gate": [23.757,90.368],
-  "Nabisco": [23.77,90.395],
-  "College Gate": [23.76,90.366],
-  "Abul Hotel": [23.768,90.433],
-  "Shishu Mela": [23.764,90.364],
-  "Mohakhali Bus Terminal": [23.7799,90.407],
-  "Shyamoli": [23.7678,90.362],
-  "Agargaon (IDB Bhaban)": [23.7772,90.38],
-  "Amtoli (Mohakhali)": [23.782,90.407],
-  "Gulshan 1": [23.7814,90.4143],
-  "Merul Badda": [23.7779,90.4351],
-  "Jahangir Gate": [23.778,90.378],
-  "Middle Badda": [23.78,90.438],
-  "Kalyanpur": [23.775,90.36],
-  "Chairman Bari": [23.79,90.407],
-  "Technical": [23.78,90.362],
-  "Badda Link Road": [23.785,90.44],
-  "Badda": [23.785,90.443],
-  "Kakali (Banani)": [23.7937,90.4066],
-  "Gulshan 2": [23.7936,90.4153],
-  "Darussalam": [23.785,90.362],
-  "Sainik Club / Banani Railgate": [23.796,90.406],
-  "Kochukhet": [23.795,90.395],
-  "Mazar Road": [23.79,90.363],
-  "Notun Bazar": [23.792,90.448],
-  "Mirpur 1": [23.794,90.366],
-  "Cantonment (Radisson)": [23.803,90.4],
-  "Mirpur 2": [23.8,90.368],
-  "Nadda": [23.805,90.43],
-  "MES": [23.81,90.398],
-  "Mirpur 10": [23.8073,90.368],
-  "Bashundhara / Jamuna FP": [23.813,90.4224],
-  "Mirpur 11": [23.814,90.366],
-  "Kuril / Kuratoli (AIUB)": [23.82,90.425],
-  "Mirpur 14": [23.82,90.37],
-  "Pallabi": [23.82,90.365],
-  "Mirpur 12": [23.826,90.364],
-  "Khilkhet": [23.833,90.415],
-  "Airport": [23.8433,90.4033],
-  "Jashimuddin (Uttara)": [23.868,90.396],
-  "Rajlakshmi": [23.872,90.385],
-  "Azampur": [23.878,90.382],
-  "House Building": [23.88,90.378],
-  "Abdullahpur": [23.89,90.375],
-  "Chandpur": [23.2333,90.6552],
-  "ECB Square": [23.81,90.405],
-  "Kuril Biswa Road": [23.823,90.427],
-  "Hatirjheel FDC Mor": [23.76,90.41],
-  "Police Plaza": [23.755,90.415],
-  "Mahanagar Project": [23.758,90.418],
-  "Signboard / Matuail": [23.695,90.44],
-  "Mirpur DOHS": [23.818,90.39],
-  "Matikata": [23.825,90.398],
-  "Manikdi": [23.828,90.4],
-  "Eastern Housing Pallabi": [23.831,90.362],
-  "Senpara Parbata": [23.81,90.365],
-  "Shewrapara": [23.798,90.372],
-  "Kazipara": [23.802,90.37],
-  "Taltola": [23.796,90.37],
-  "Rupnagar": [23.805,90.358],
-  "Kafrul / Ibrahimpur": [23.805,90.382],
-  "Vasantek": [23.815,90.375],
-  "Jigatola": [23.735,90.375],
-  "Shankar": [23.732,90.373],
-  "Hazaribagh": [23.725,90.37],
-  "Green Road": [23.75,90.387],
-  "Panthapath": [23.752,90.387],
-  "Kanthalbagan": [23.754,90.391],
-  "Free School Street": [23.756,90.392],
-  "Gabtoli Bus Terminal": [23.77,90.345],
-  "Mohammadpur Bus Stand": [23.76,90.358],
-  "Tajmahal Road": [23.755,90.355],
-  "Bosila": [23.745,90.348],
-  "Adabor": [23.758,90.353],
-  "Rayerbazar": [23.738,90.37],
-  "Sadarghat": [23.707,90.408],
-  "Lalbagh": [23.718,90.393],
-  "Chawkbazar": [23.72,90.398],
-  "Wari": [23.718,90.415],
-  "Sutrapur / Gandaria": [23.71,90.42],
-  "Islampur": [23.715,90.405],
-  "Postagola": [23.698,90.435],
-  "Demra": [23.7,90.458],
-  "Bangshal": [23.722,90.41],
-  "Nawabpur": [23.723,90.412],
-  "Tantibazar": [23.71,90.407],
-  "Jurain": [23.7,90.428],
-  "Gendaria": [23.712,90.422],
-  "Postogola Bridge": [23.696,90.43],
-  "Moghbazar": [23.749,90.41],
-  "Wireless Gate": [23.752,90.413],
-  "Kakrail": [23.738,90.405],
-  "Shantinagar": [23.74,90.412],
-  "Bailey Road": [23.743,90.408],
-  "Eskaton": [23.745,90.4],
-  "Segunbagicha": [23.737,90.403],
-  "Nakhalpara": [23.77,90.393],
-  "Tejgaon Industrial": [23.768,90.398],
-  "Banasree": [23.77,90.45],
-  "South Banasree": [23.765,90.452],
-  "Aftabnagar": [23.775,90.448],
-  "Goran": [23.74,90.445],
-  "Basabo": [23.745,90.438],
-  "Madartek": [23.748,90.442],
-  "Meradia": [23.76,90.455],
-  "Trimohoni": [23.765,90.458],
-  "Vatara": [23.802,90.435],
-  "Solmaid": [23.805,90.438],
-  "Joar Sahara": [23.828,90.418],
-  "Namapara": [23.83,90.42],
-  "Kamarpara": [23.895,90.387],
-  "Baridhara Diplomatic Zone": [23.805,90.428],
-  "Baridhara DOHS": [23.81,90.43],
-  "Niketan": [23.79,90.41],
-  "Diyabari": [23.905,90.38],
-  "Dakshinkhan": [23.875,90.42],
-  "Uttarkhan": [23.885,90.41],
-  "Purbachal 300 Feet": [23.82,90.5],
-  "Mohakhali DOHS": [23.795,90.41],
+  "Jagannath University":[23.7066,90.407],"Ray Saheb Bazar":[23.712,90.408],"Naya Bazar":[23.718,90.406],
+  "Gulistan":[23.726,90.4167],"Tikatuli":[23.725,90.425],"Press Club":[23.731,90.41],
+  "Sayedabad Bus Terminal":[23.718,90.432],"Paltan":[23.733,90.4167],"Jatrabari":[23.71,90.438],
+  "Kamalapur / Dhaka Railway Station":[23.7334,90.4196],"High Court":[23.736,90.408],
+  "Azimpur / Palashi":[23.7313,90.387],"New Market / Nilkhet":[23.7313,90.3855],
+  "Maniknagar":[23.72,90.44],"Shahbagh":[23.7394,90.3964],"Matsya Bhaban":[23.741,90.4],
+  "Rajarbagh":[23.74,90.43],"City College / Science Lab":[23.74,90.382],"Mugda":[23.733,90.443],
+  "Bangla Motor":[23.747,90.393],"Shahjahanpur":[23.749,90.42],"Khilgaon Flyover":[23.747,90.428],
+  "Kalabagan":[23.743,90.378],"Malibagh Railgate":[23.751,90.427],"Karwan Bazar":[23.753,90.393],
+  "Dhanmondi 15/32":[23.7461,90.3742],"Malibagh Chowdhury Para":[23.753,90.431],
+  "Farmgate":[23.7582,90.39],"Dhanmondi 27":[23.749,90.37],"Rampura Bridge":[23.763,90.432],
+  "Satrasta":[23.765,90.39],"Asad Gate":[23.757,90.368],"Nabisco":[23.77,90.395],
+  "College Gate":[23.76,90.366],"Abul Hotel":[23.768,90.433],"Shishu Mela":[23.764,90.364],
+  "Mohakhali Bus Terminal":[23.7799,90.407],"Shyamoli":[23.7678,90.362],
+  "Agargaon (IDB Bhaban)":[23.7772,90.38],"Amtoli (Mohakhali)":[23.782,90.407],
+  "Gulshan 1":[23.7814,90.4143],"Merul Badda":[23.7779,90.4351],"Jahangir Gate":[23.778,90.378],
+  "Middle Badda":[23.78,90.438],"Kalyanpur":[23.775,90.36],"Chairman Bari":[23.79,90.407],
+  "Technical":[23.78,90.362],"Badda Link Road":[23.785,90.44],"Badda":[23.785,90.443],
+  "Kakali (Banani)":[23.7937,90.4066],"Gulshan 2":[23.7936,90.4153],"Darussalam":[23.785,90.362],
+  "Sainik Club / Banani Railgate":[23.796,90.406],"Kochukhet":[23.795,90.395],
+  "Mazar Road":[23.79,90.363],"Notun Bazar":[23.792,90.448],"Mirpur 1":[23.794,90.366],
+  "Cantonment (Radisson)":[23.803,90.4],"Mirpur 2":[23.8,90.368],"Nadda":[23.805,90.43],
+  "MES":[23.81,90.398],"Mirpur 10":[23.8073,90.368],"Bashundhara / Jamuna FP":[23.813,90.4224],
+  "Mirpur 11":[23.814,90.366],"Kuril / Kuratoli (AIUB)":[23.82,90.425],"Mirpur 14":[23.82,90.37],
+  "Pallabi":[23.82,90.365],"Mirpur 12":[23.826,90.364],"Khilkhet":[23.833,90.415],
+  "Airport":[23.8433,90.4033],"Jashimuddin (Uttara)":[23.868,90.396],"Rajlakshmi":[23.872,90.385],
+  "Azampur":[23.878,90.382],"House Building (Uttara)":[23.88,90.378],"Abdullahpur":[23.89,90.375],
+  "ECB Square":[23.81,90.405],"Kuril Biswa Road":[23.823,90.427],
+  "Hatirjheel FDC Mor":[23.76,90.41],"Police Plaza":[23.755,90.415],
+  "Mahanagar Project":[23.758,90.418],"Signboard / Matuail":[23.695,90.44],
+  "Mirpur DOHS":[23.818,90.39],"Matikata":[23.825,90.398],"Manikdi":[23.828,90.4],
+  "Eastern Housing Pallabi":[23.831,90.362],"Senpara Parbata":[23.81,90.365],
+  "Shewrapara":[23.798,90.372],"Kazipara":[23.802,90.37],"Taltola":[23.796,90.37],
+  "Rupnagar":[23.805,90.358],"Kafrul / Ibrahimpur":[23.805,90.382],"Vasantek":[23.815,90.375],
+  "Jigatola":[23.735,90.375],"Shankar":[23.732,90.373],"Hazaribagh":[23.725,90.37],
+  "Green Road":[23.75,90.387],"Panthapath":[23.752,90.387],"Kanthalbagan":[23.754,90.391],
+  "Free School Street":[23.756,90.392],"Gabtoli Bus Terminal":[23.77,90.345],
+  "Mohammadpur Bus Stand":[23.76,90.358],"Tajmahal Road":[23.755,90.355],"Bosila":[23.745,90.348],
+  "Adabor":[23.758,90.353],"Rayerbazar":[23.738,90.37],"Sadarghat":[23.707,90.408],
+  "Lalbagh":[23.718,90.393],"Chawkbazar":[23.72,90.398],"Wari":[23.718,90.415],
+  "Sutrapur / Gandaria":[23.71,90.42],"Islampur":[23.715,90.405],"Postagola":[23.698,90.435],
+  "Demra":[23.7,90.458],"Bangshal":[23.722,90.41],"Nawabpur":[23.723,90.412],
+  "Tantibazar":[23.71,90.407],"Jurain":[23.7,90.428],"Gendaria":[23.712,90.422],
+  "Postogola Bridge":[23.696,90.43],"Moghbazar":[23.749,90.41],"Wireless Gate":[23.752,90.413],
+  "Kakrail":[23.738,90.405],"Shantinagar":[23.74,90.412],"Bailey Road":[23.743,90.408],
+  "Eskaton":[23.745,90.4],"Segunbagicha":[23.737,90.403],"Nakhalpara":[23.77,90.393],
+  "Tejgaon Industrial":[23.768,90.398],"Banasree":[23.77,90.45],"South Banasree":[23.765,90.452],
+  "Aftabnagar":[23.775,90.448],"Goran":[23.74,90.445],"Basabo":[23.745,90.438],
+  "Madartek":[23.748,90.442],"Meradia":[23.76,90.455],"Trimohoni":[23.765,90.458],
+  "Vatara":[23.802,90.435],"Solmaid":[23.805,90.438],"Joar Sahara":[23.828,90.418],
+  "Namapara":[23.83,90.42],"Kamarpara":[23.895,90.387],
+  "Baridhara Diplomatic Zone":[23.805,90.428],"Baridhara DOHS":[23.81,90.43],
+  "Niketan":[23.79,90.41],"Diyabari":[23.905,90.38],"Dakshinkhan":[23.875,90.42],
+  "Uttarkhan":[23.885,90.41],"Purbachal 300 Feet":[23.82,90.5],
+  "Mohakhali DOHS":[23.795,90.41],"Chankharpul":[23.726,90.405],
+  "Purana Paltan":[23.734,90.415],"Motijheel":[23.73,90.418],"Dilkusha":[23.732,90.416],
+  "Bijoy Nagar":[23.739,90.4],"Topkhana Road":[23.736,90.413],"Ramna":[23.74,90.407],
+  "Hatirpool":[23.748,90.388],"Newmarket Nilkhet":[23.731,90.386],"Elephant Road":[23.742,90.385],
+  "Khilgaon":[23.751,90.432],"Rayer Bazar":[23.737,90.368],"Mohammadpur":[23.762,90.357],
+  "Sat Masjid Road":[23.754,90.373],"Lalmatia":[23.754,90.376],"Tejkunipara":[23.765,90.385],
+  "Begunbari":[23.762,90.407],"Nayatola":[23.749,90.413],"Outer Circular Road":[23.752,90.419],
+  "Banani 11":[23.792,90.401],"Banani 17":[23.793,90.405],"Chairmanbari (Khilkhet)":[23.835,90.42],
+  "Turag (Diabari)":[23.87,90.355],"Gazipur Chowrasta":[23.99,90.415],
+  "Narayanganj":[23.622,90.5],"Savar":[23.858,90.266],"Ashulia":[23.9,90.31],
+  "Keraniganj":[23.69,90.375],"Kadamtali":[23.698,90.44],"Shampur":[23.705,90.44],
+  "Donia":[23.692,90.433],"Shonir Akhra":[23.688,90.443],"Kodomtali":[23.701,90.437],
+  "Rayer Bazar (South)":[23.73,90.365],"Aminbazar":[23.773,90.335],
+  "Birulia":[23.8,90.335],"Hemayetpur":[23.798,90.305],"Dhamrai":[23.893,90.208],
 };
 
-let selectedVehicle = 'Rickshaw';
-let selectedWeather = 'Sunny';
-let history = [];
+// ── SORTED LOCATION LIST ──────────────────────────────────────────────────
+const LOC_LIST = Object.keys(COORDS)
+  .map(n=>({name:n,km:haversine(COORDS['Jagannath University'],COORDS[n])}))
+  .sort((a,b)=>a.km-b.km);
 
-// ── Keep-alive ping ───────────────────────────────────────────────────────
-function pingAPI(){ fetch(`${API}/health`).catch(()=>{}); }
-pingAPI();
-setInterval(pingAPI, 14*60*1000);
-
-// ── API status check ──────────────────────────────────────────────────────
-fetch(`${API}/health`).then(r=>{
-  if(r.ok){
-    document.getElementById('dot').className='dot green';
-    document.getElementById('statusText').textContent='Live · Instant Calculation';
-  }
-}).catch(()=>{
-  document.getElementById('dot').className='dot';
-  document.getElementById('statusText').textContent='Offline mode';
-});
-
-// ── Haversine ─────────────────────────────────────────────────────────────
+// ── HAVERSINE ─────────────────────────────────────────────────────────────
 function haversine(l1,l2){
   const R=6371,toR=x=>x*Math.PI/180;
   const dLat=toR(l2[0]-l1[0]),dLon=toR(l2[1]-l1[1]);
@@ -684,204 +551,927 @@ function haversine(l1,l2){
   return Math.round(R*2*Math.asin(Math.sqrt(a))*1.35*10)/10;
 }
 
-// ── Location data sorted by distance ─────────────────────────────────────
-const LOC_LIST = Object.keys(COORDS).map(name => {
-  const km = haversine(COORDS['Jagannath University'], COORDS[name]);
-  return {name, km};
-}).sort((a,b) => a.km - b.km);
+// ── LONG ROUTE DATA (estimated 2025-26 fare ranges) ──────────────────────
+// Train classes: shovon = 2nd Class (Shovon Chair), first = 1st Class Seat/Chair,
+// snigdha = Snigdha (AC Chair), acBerth = AC Berth / Cabin (overnight sleeper)
+const CITIES=[
+  {id:'chittagong',name:'Chittagong',emoji:'🏙️',dist:265,hours:'5–6h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Subarna / Mohanagar / Turna Express',tags:['comfort','scenic'],
+     shovon:310,first:345,snigdha:585,acBerth:1055,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Greenline / Shyamoli / Hanif',tags:['fast'],
+     low:700,high:1200,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators from Sayedabad',tags:['cheap'],
+     low:480,high:600,duration:'6–7h'},
+  ]},
+  {id:'sylhet',name:'Sylhet',emoji:'🍵',dist:245,hours:'5–7h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Parabat / Jayantika / Upaban / Kalni',tags:['comfort','scenic'],
+     shovon:265,first:310,snigdha:530,acBerth:1465,duration:'6.5–7.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Greenline / Shyamoli / ENA',tags:['fast'],
+     low:700,high:1500,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:500,high:680,duration:'6–7h'},
+  ]},
+  {id:'rajshahi',name:'Rajshahi',emoji:'🍇',dist:245,hours:'5–6h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Silk City / Padma / Dhumketu / Bonolota',tags:['comfort'],
+     shovon:260,first:290,snigdha:490,acBerth:855,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli / National Travels',tags:['fast'],
+     low:650,high:1200,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:400,high:550,duration:'6–7h'},
+  ]},
+  {id:'khulna',name:'Khulna',emoji:'🦁',dist:246,hours:'6–8h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Sundarban / Kapotaksha Express',tags:['comfort','scenic'],
+     shovon:295,first:320,snigdha:545,acBerth:975,duration:'8–9h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Greenline / Shyamoli',tags:['fast'],
+     low:770,high:1400,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad/Gabtoli',tags:['cheap'],
+     low:500,high:650,duration:'7–8h'},
+    {type:'launch',icon:'🚢',name:'Launch (Rocket)',detail:'Sadarghat → Khulna via Barisal',tags:['scenic'],
+     low:500,high:1200,duration:'18–22h (overnight)'},
+  ]},
+  {id:'barisal',name:'Barisal',emoji:'🌊',dist:180,hours:'4–6h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Soudia / Eagle / Greenline',tags:['fast'],
+     low:600,high:1000,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:400,high:550,duration:'5–6h'},
+    {type:'launch',icon:'🚢',name:'Launch / Steamer',detail:'Sadarghat → Barisal (overnight)',tags:['scenic','cheap'],
+     low:300,high:900,duration:'8–12h'},
+  ]},
+  {id:'rangpur',name:'Rangpur',emoji:'❄️',dist:300,hours:'6–8h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rangpur Express / Lalmoni Express',tags:['comfort'],
+     shovon:330,first:370,snigdha:620,acBerth:1100,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli / S Alam',tags:['fast'],
+     low:800,high:1400,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli/Kalyanpur',tags:['cheap'],
+     low:500,high:700,duration:'7–8h'},
+  ]},
+  {id:'coxsbazar',name:"Cox's Bazar",emoji:'🏖️',dist:402,hours:'8–10h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:"Cox's Bazar Express (from Kamalapur)",tags:['comfort','scenic'],
+     shovon:410,first:470,snigdha:810,acBerth:1450,duration:'8–9h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Greenline / S Alam / Shyamoli',tags:['fast'],
+     low:900,high:1800,duration:'8–10h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:650,high:900,duration:'10–12h'},
+  ]},
+  {id:'mymensingh',name:'Mymensingh',emoji:'🌾',dist:120,hours:'2–3h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Brahmaputra / Haor / Aggarwal Express',tags:['comfort'],
+     shovon:130,first:155,snigdha:265,acBerth:480,duration:'2.5–3h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Mohakhali',tags:['fast'],
+     low:250,high:450,duration:'2–3h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:150,high:250,duration:'2.5–3.5h'},
+  ]},
+  {id:'comilla',name:'Cumilla (Comilla)',emoji:'🏛️',dist:110,hours:'2–3h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Mahanagar / Turna Express',tags:['comfort'],
+     shovon:130,first:150,snigdha:250,acBerth:450,duration:'2–2.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Sayedabad',tags:['fast'],
+     low:200,high:400,duration:'2–3h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:130,high:200,duration:'2.5–3h'},
+  ]},
+  {id:'chandpur',name:'Chandpur',emoji:'🐟',dist:100,hours:'3–5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Comilla Transport / BRTC',tags:['fast'],
+     low:250,high:400,duration:'2.5–3h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:130,high:200,duration:'3–4h'},
+    {type:'launch',icon:'🚢',name:'Launch',detail:'Sadarghat → Chandpur (popular river route)',tags:['scenic'],
+     low:150,high:400,duration:'4–5h'},
+  ]},
+  {id:'jessore',name:'Jessore',emoji:'🌻',dist:186,hours:'4–5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Shyamoli / Hanif / Greenline',tags:['fast'],
+     low:550,high:900,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:350,high:500,duration:'5–6h'},
+  ]},
+  {id:'dinajpur',name:'Dinajpur',emoji:'🌿',dist:360,hours:'7–9h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Ekota / Drutojan Express',tags:['comfort'],
+     shovon:380,first:420,snigdha:700,acBerth:1250,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / S Alam / Shyamoli',tags:['fast'],
+     low:900,high:1500,duration:'7–9h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:600,high:800,duration:'9–11h'},
+  ]},
+  {id:'bogra',name:'Bogura (Bogra)',emoji:'🏺',dist:200,hours:'4–5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Nilsagar / Rangpur Express (stop)',tags:['comfort'],
+     shovon:210,first:240,snigdha:405,acBerth:720,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli / TR Travels',tags:['fast'],
+     low:500,high:900,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:350,high:500,duration:'5–6h'},
+  ]},
+  {id:'rangamati',name:'Rangamati',emoji:'⛰️',dist:340,hours:'8–10h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'S Alam / Shyamoli (via Chittagong)',tags:['fast','scenic'],
+     low:750,high:1250,duration:'8–9h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:500,high:700,duration:'9–11h'},
+  ]},
+  {id:'bandarban',name:'Bandarban',emoji:'🏔️',dist:380,hours:'9–11h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Shyamoli / Hanif (via Chittagong)',tags:['fast','scenic'],
+     low:850,high:1350,duration:'9–10h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:550,high:750,duration:'10–12h'},
+  ]},
+  {id:'khagrachari',name:'Khagrachari',emoji:'🌄',dist:320,hours:'7–9h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Shanti / Eagle Paribahan',tags:['fast','scenic'],
+     low:700,high:1150,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:450,high:650,duration:'8–9h'},
+  ]},
+  {id:'noakhali',name:'Noakhali',emoji:'🌊',dist:210,hours:'5–6h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Noakhali Express',tags:['comfort'],
+     shovon:220,first:255,snigdha:435,acBerth:770,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Ekushey / Shyamoli',tags:['fast'],
+     low:600,high:1000,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:350,high:450,duration:'6–7h'},
+  ]},
+  {id:'feni',name:'Feni',emoji:'🛣️',dist:155,hours:'3–4h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Chittagong-line express (stop)',tags:['comfort'],
+     shovon:170,first:200,snigdha:340,acBerth:600,duration:'3–4h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'S Alam / Shyamoli',tags:['fast'],
+     low:400,high:700,duration:'3–4h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:250,high:350,duration:'4–5h'},
+  ]},
+  {id:'brahmanbaria',name:'Brahmanbaria',emoji:'🎶',dist:120,hours:'2.5–3.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Chittagong/Sylhet-line express (stop)',tags:['comfort'],
+     shovon:140,first:165,snigdha:280,acBerth:500,duration:'2.5–3h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Sayedabad',tags:['fast'],
+     low:300,high:500,duration:'2.5–3.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:180,high:280,duration:'3–4h'},
+  ]},
+  {id:'patuakhali',name:'Patuakhali',emoji:'🌴',dist:260,hours:'6–8h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Sakura / Surjomukhi Paribahan',tags:['fast'],
+     low:600,high:1000,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:400,high:550,duration:'7–8h'},
+    {type:'launch',icon:'🚢',name:'Launch',detail:'Sadarghat → Patuakhali (overnight)',tags:['scenic'],
+     low:350,high:800,duration:'10–12h'},
+  ]},
+  {id:'bhola',name:'Bhola',emoji:'🏝️',dist:230,hours:'6–9h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus (+ferry)',detail:'Via Lakshmipur/Bhola ferry crossing',tags:['fast'],
+     low:500,high:900,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus (+ferry)',detail:'Local operators',tags:['cheap'],
+     low:350,high:500,duration:'7–9h'},
+    {type:'launch',icon:'🚢',name:'Launch',detail:'Sadarghat → Bhola (overnight)',tags:['scenic'],
+     low:300,high:700,duration:'8–10h'},
+  ]},
+  {id:'pirojpur',name:'Pirojpur',emoji:'🌾',dist:250,hours:'6–7h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Sundarban / Saintmartin Paribahan',tags:['fast'],
+     low:550,high:900,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:350,high:500,duration:'7–8h'},
+  ]},
+  {id:'jhalokati',name:'Jhalokati',emoji:'🚤',dist:245,hours:'6–7h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Sakura / Eagle Paribahan',tags:['fast'],
+     low:550,high:900,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:350,high:480,duration:'7–8h'},
+    {type:'launch',icon:'🚢',name:'Launch',detail:'Sadarghat → Jhalokati (overnight)',tags:['scenic'],
+     low:300,high:700,duration:'8–10h'},
+  ]},
+  {id:'satkhira',name:'Satkhira',emoji:'🐅',dist:305,hours:'6–8h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Greenline / National Travels',tags:['fast'],
+     low:700,high:1100,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:450,high:600,duration:'7–8h'},
+  ]},
+  {id:'kushtia',name:'Kushtia',emoji:'🎼',dist:195,hours:'4–5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:500,high:850,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:350,high:480,duration:'5–6h'},
+  ]},
+  {id:'meherpur',name:'Meherpur',emoji:'🌳',dist:230,hours:'5–6h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:550,high:900,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:380,high:500,duration:'6–7h'},
+  ]},
+  {id:'chuadanga',name:'Chuadanga',emoji:'🚉',dist:210,hours:'4–5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Chitra / Rupsha Express (stop)',tags:['comfort'],
+     shovon:230,first:270,snigdha:450,acBerth:800,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:500,high:850,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:350,high:480,duration:'5–6h'},
+  ]},
+  {id:'jhenaidah',name:'Jhenaidah',emoji:'🕌',dist:195,hours:'4–5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:500,high:800,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:320,high:450,duration:'5–6h'},
+  ]},
+  {id:'magura',name:'Magura',emoji:'🌱',dist:165,hours:'3.5–4.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Gabtoli',tags:['fast'],
+     low:450,high:750,duration:'3.5–4.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:300,high:400,duration:'4.5–5.5h'},
+  ]},
+  {id:'narail',name:'Narail',emoji:'🎨',dist:210,hours:'4.5–5.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Gabtoli',tags:['fast'],
+     low:500,high:850,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:330,high:460,duration:'5.5–6.5h'},
+  ]},
+  {id:'faridpur',name:'Faridpur',emoji:'🌉',dist:150,hours:'3–4h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Via Padma Bridge — Hanif / Shohagh',tags:['fast'],
+     low:400,high:650,duration:'3–3.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:250,high:350,duration:'3.5–4.5h'},
+  ]},
+  {id:'gopalganj',name:'Gopalganj',emoji:'🕊️',dist:170,hours:'3.5–4.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Via Padma Bridge — Comfort Line',tags:['fast'],
+     low:450,high:700,duration:'3.5–4h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:280,high:380,duration:'4–5h'},
+  ]},
+  {id:'madaripur',name:'Madaripur',emoji:'🚤',dist:145,hours:'3–3.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Via Padma Bridge — Shohagh',tags:['fast'],
+     low:380,high:600,duration:'3–3.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:230,high:320,duration:'3.5–4h'},
+  ]},
+  {id:'shariatpur',name:'Shariatpur',emoji:'🌾',dist:90,hours:'2–2.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Via Padma Bridge',tags:['fast'],
+     low:250,high:400,duration:'2–2.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:150,high:220,duration:'2.5–3h'},
+  ]},
+  {id:'rajbari',name:'Rajbari',emoji:'🚉',dist:130,hours:'2.5–3.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rajshahi-line express (stop)',tags:['comfort'],
+     shovon:150,first:175,snigdha:300,acBerth:520,duration:'3h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Gabtoli',tags:['fast'],
+     low:350,high:550,duration:'2.5–3h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:200,high:280,duration:'3–3.5h'},
+  ]},
+  {id:'manikganj',name:'Manikganj',emoji:'🏡',dist:65,hours:'1.5–2h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Gabtoli',tags:['fast'],
+     low:180,high:300,duration:'1.5–2h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:100,high:150,duration:'2–2.5h'},
+  ]},
+  {id:'munshiganj',name:'Munshiganj',emoji:'⛵',dist:35,hours:'1–1.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'Local Bus',detail:'Direct from Gulistan/Jatrabari',tags:['cheap','fast'],
+     low:60,high:100,duration:'1–1.5h'},
+  ]},
+  {id:'narsingdi',name:'Narsingdi',emoji:'🧵',dist:55,hours:'1–1.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Commuter Train',detail:'Frequent local/commuter service',tags:['cheap'],
+     shovon:40,first:60,snigdha:0,acBerth:0,duration:'1–1.5h'},
+    {type:'bus',icon:'🚌',name:'Local Bus',detail:'Direct from Gulistan/Sayedabad',tags:['fast'],
+     low:60,high:100,duration:'1–1.5h'},
+  ]},
+  {id:'gazipur',name:'Gazipur',emoji:'🏭',dist:35,hours:'1–1.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Commuter Train',detail:'Frequent local/commuter service',tags:['cheap'],
+     shovon:25,first:40,snigdha:0,acBerth:0,duration:'45min–1h'},
+    {type:'bus',icon:'🚌',name:'Local Bus',detail:'Direct from Mohakhali/Airport',tags:['fast'],
+     low:40,high:70,duration:'1–1.5h'},
+  ]},
+  {id:'tangail',name:'Tangail',emoji:'🧶',dist:100,hours:'2–2.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rangpur/Dinajpur-line express (stop)',tags:['comfort'],
+     shovon:110,first:130,snigdha:220,acBerth:400,duration:'2–2.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Mohakhali',tags:['fast'],
+     low:250,high:400,duration:'2–2.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:150,high:220,duration:'2.5–3h'},
+  ]},
+  {id:'jamalpur',name:'Jamalpur',emoji:'🌊',dist:180,hours:'4–5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Jamalpur / Tista / Brahmaputra Express',tags:['comfort'],
+     shovon:190,first:220,snigdha:370,acBerth:650,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Mohakhali',tags:['fast'],
+     low:450,high:700,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:280,high:380,duration:'5–6h'},
+  ]},
+  {id:'sherpur',name:'Sherpur',emoji:'🏞️',dist:200,hours:'4.5–5.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Mohakhali',tags:['fast'],
+     low:480,high:750,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:300,high:400,duration:'5.5–6.5h'},
+  ]},
+  {id:'netrokona',name:'Netrokona',emoji:'🌊',dist:165,hours:'3.5–4.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Haor / Mohanganj Express (stop)',tags:['comfort'],
+     shovon:170,first:200,snigdha:0,acBerth:0,duration:'4–5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Mohakhali',tags:['fast'],
+     low:400,high:650,duration:'3.5–4.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:260,high:350,duration:'4.5–5.5h'},
+  ]},
+  {id:'sunamganj',name:'Sunamganj',emoji:'🌫️',dist:250,hours:'6–7h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Via Sylhet — Shyamoli / Ena',tags:['fast','scenic'],
+     low:550,high:900,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Sayedabad',tags:['cheap'],
+     low:350,high:480,duration:'7–8h'},
+  ]},
+  {id:'habiganj',name:'Habiganj',emoji:'🍃',dist:210,hours:'4.5–5.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Sylhet-line express (Shaistaganj stop)',tags:['comfort'],
+     shovon:225,first:265,snigdha:450,acBerth:790,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Sayedabad',tags:['fast'],
+     low:500,high:800,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:320,high:450,duration:'5.5–6.5h'},
+  ]},
+  {id:'moulvibazar',name:'Moulvibazar',emoji:'🍃',dist:210,hours:'4.5–5.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Sylhet-line express (Kulaura/Sreemangal stop)',tags:['comfort','scenic'],
+     shovon:225,first:265,snigdha:450,acBerth:790,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Various operators, Sayedabad',tags:['fast','scenic'],
+     low:500,high:800,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:320,high:450,duration:'5.5–6.5h'},
+  ]},
+  {id:'panchagarh',name:'Panchagarh',emoji:'🏔️',dist:440,hours:'9–11h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Panchagarh Express',tags:['comfort'],
+     shovon:440,first:500,snigdha:820,acBerth:1450,duration:'9–10h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Nabil / Hanif Paribahan',tags:['fast'],
+     low:900,high:1400,duration:'9–11h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:650,high:850,duration:'11–13h'},
+  ]},
+  {id:'thakurgaon',name:'Thakurgaon',emoji:'🌾',dist:410,hours:'8–10h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Panchagarh Express (stop)',tags:['comfort'],
+     shovon:420,first:480,snigdha:790,acBerth:1400,duration:'8–9h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Nabil / Hanif Paribahan',tags:['fast'],
+     low:850,high:1300,duration:'8–10h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:600,high:800,duration:'10–12h'},
+  ]},
+  {id:'nilphamari',name:'Nilphamari',emoji:'☃️',dist:335,hours:'7–8h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Nilsagar Express',tags:['comfort'],
+     shovon:340,first:390,snigdha:650,acBerth:1150,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:750,high:1150,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:500,high:650,duration:'8–9h'},
+  ]},
+  {id:'lalmonirhat',name:'Lalmonirhat',emoji:'🚂',dist:350,hours:'7–9h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Lalmoni Express',tags:['comfort'],
+     shovon:360,first:400,snigdha:670,acBerth:1180,duration:'7–8h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:780,high:1200,duration:'7–9h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:550,high:700,duration:'9–10h'},
+  ]},
+  {id:'kurigram',name:'Kurigram',emoji:'🌊',dist:370,hours:'8–9h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli (via Rangpur)',tags:['fast'],
+     low:800,high:1250,duration:'8–9h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:580,high:750,duration:'9–11h'},
+  ]},
+  {id:'gaibandha',name:'Gaibandha',emoji:'🌾',dist:280,hours:'6–7h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rangpur-line express (stop)',tags:['comfort'],
+     shovon:290,first:330,snigdha:560,acBerth:980,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:650,high:1000,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:420,high:550,duration:'7–8h'},
+  ]},
+  {id:'joypurhat',name:'Joypurhat',emoji:'🪨',dist:260,hours:'5–6h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rajshahi/Rangpur-line express (stop)',tags:['comfort'],
+     shovon:270,first:310,snigdha:520,acBerth:900,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:600,high:950,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:400,high:520,duration:'6–7h'},
+  ]},
+  {id:'naogaon',name:'Naogaon',emoji:'🌾',dist:250,hours:'5–6h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli (via Rajshahi)',tags:['fast'],
+     low:580,high:900,duration:'5–6h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:380,high:500,duration:'6–7h'},
+  ]},
+  {id:'natore',name:'Natore',emoji:'🍬',dist:220,hours:'4.5–5.5h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rajshahi-line express (stop)',tags:['comfort'],
+     shovon:230,first:270,snigdha:460,acBerth:800,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:550,high:850,duration:'4.5–5.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:350,high:480,duration:'5.5–6.5h'},
+  ]},
+  {id:'chapainawabganj',name:'Chapainawabganj',emoji:'🥭',dist:300,hours:'6–7h',
+   transport:[
+    {type:'train',icon:'🚂',name:'Intercity Train',detail:'Rajshahi-line extension express',tags:['comfort'],
+     shovon:310,first:350,snigdha:590,acBerth:1020,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:700,high:1050,duration:'6–7h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators',tags:['cheap'],
+     low:450,high:600,duration:'7–8h'},
+  ]},
+  {id:'pabna',name:'Pabna',emoji:'🌉',dist:160,hours:'3.5–4.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:400,high:650,duration:'3.5–4.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:250,high:350,duration:'4.5–5.5h'},
+  ]},
+  {id:'sirajganj',name:'Sirajganj',emoji:'🌊',dist:140,hours:'3–3.5h',
+   transport:[
+    {type:'bus',icon:'🚌',name:'AC Bus',detail:'Hanif / Shyamoli',tags:['fast'],
+     low:350,high:550,duration:'3–3.5h'},
+    {type:'bus',icon:'🚌',name:'Non-AC Bus',detail:'Local operators, Gabtoli',tags:['cheap'],
+     low:220,high:300,duration:'3.5–4.5h'},
+  ]},
+];
 
-let selectedFrom = 'Jagannath University';
-let selectedTo   = 'Kuril / Kuratoli (AIUB)';
+// ── INIT ──────────────────────────────────────────────────────────────────
+let selectedFrom='Jagannath University',selectedTo='Kuril / Kuratoli (AIUB)';
+let selectedVehicle='Rickshaw',selectedWeather='Sunny';
+let selectedCity=null;
+let history=[];
 
-function buildDrop(side, filter='') {
-  const drop = document.getElementById(side+'Drop');
-  const q = filter.toLowerCase();
-  const items = LOC_LIST.filter(l => l.name.toLowerCase().includes(q));
-  if(!items.length){ drop.innerHTML='<div class="drop-empty">No results</div>'; return; }
-  const current = side==='from' ? selectedFrom : selectedTo;
-  drop.innerHTML = items.map(l => `
-    <div class="drop-item${l.name===current?' selected':''}"
-      onmousedown="selectLoc('${side}','${l.name.replace(/'/g,"\'")}')">
-      ${l.name}<span class="drop-km">${l.km} km</span>
-    </div>`).join('');
-}
+initTheme();
+loadHistory();
 
-function openDrop(side) {
-  buildDrop(side, document.getElementById(side+'Input').value);
-  document.getElementById(side+'Drop').classList.add('open');
-}
-function closeDrop(side) {
-  setTimeout(()=>document.getElementById(side+'Drop').classList.remove('open'), 150);
-}
-function filterList(side) {
-  buildDrop(side, document.getElementById(side+'Input').value);
-  document.getElementById(side+'Drop').classList.add('open');
-}
-function selectLoc(side, name) {
-  if(side==='from') selectedFrom=name;
-  else              selectedTo=name;
-  document.getElementById(side+'Input').value = name;
-  document.getElementById(side+'Drop').classList.remove('open');
-  updateDist();
-}
+pingAPI();
+setInterval(pingAPI,14*60*1000);
+fetch(`${API}/health`).then(r=>{if(r.ok){document.getElementById('dot').className='dot green';document.getElementById('statusText').textContent='Live · Instant Calculation';}}).catch(()=>{});
+function pingAPI(){fetch(`${API}/health`).catch(()=>{})}
 
-function clearLocations() {
-  selectedFrom = 'Jagannath University';
-  selectedTo   = 'Kuril / Kuratoli (AIUB)';
-  document.getElementById('fromInput').value = selectedFrom;
-  document.getElementById('toInput').value   = selectedTo;
-  document.getElementById('result').classList.remove('show');
-  document.getElementById('mlCard').classList.remove('show');
-  updateDist();
-}
+// The real backend (Flask + a trained GradientBoostingRegressor) only knows
+// a fixed set of ~76 locations/5 vehicles it was trained on. Fetch that list
+// once, quietly, so we only ever call /predict when it can actually answer —
+// never send it a location it'll reject.
+let API_LOCATIONS=null;
+fetch(`${API}/locations`).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.locations)API_LOCATIONS=new Set(d.locations);}).catch(()=>{});
 
-function updateDist() {
-  const chip = document.getElementById('distChip');
-  if(selectedFrom===selectedTo){chip.textContent='⚠️ Same location selected';return;}
-  const km = haversine(COORDS[selectedFrom], COORDS[selectedTo]);
-  chip.textContent = `📏 ${km} km  (${selectedFrom} → ${selectedTo})`;
-  document.getElementById('rickshawWarn').className =
-    (selectedVehicle==='Rickshaw'&&km>6)?'warn-box show':'warn-box';
-}
-
-// Init inputs
-document.getElementById('fromInput').value = selectedFrom;
-document.getElementById('toInput').value   = selectedTo;
+document.getElementById('fromLabel').textContent=selectedFrom;
+document.getElementById('toLabel').textContent=selectedTo;
 updateDist();
+buildCityGrid();
 
-// ── Selectors ─────────────────────────────────────────────────────────────
-function setVehicle(val,el){
-  selectedVehicle=val;
-  document.querySelectorAll('.v-card').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
+// ── DARK MODE ─────────────────────────────────────────────────────────────
+function initTheme(){
+  let theme='light';
+  try{theme=localStorage.getItem('ridepricebd_theme')||'light';}catch(e){}
+  applyTheme(theme);
+}
+function applyTheme(theme){
+  document.documentElement.setAttribute('data-theme',theme);
+  document.getElementById('themeToggle').textContent=theme==='dark'?'☀️':'🌙';
+}
+function toggleTheme(){
+  const cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';
+  const next=cur==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('ridepricebd_theme',next);}catch(e){}
+}
+
+// ── LOCATION SELECTOR ─────────────────────────────────────────────────────
+function buildList(side,filter=''){
+  const list=document.getElementById(side+'List');
+  const q=filter.toLowerCase();
+  const current=side==='from'?selectedFrom:selectedTo;
+  const items=LOC_LIST.filter(l=>l.name.toLowerCase().includes(q));
+  if(!items.length){list.innerHTML='<div class="drop-empty">No results found</div>';return;}
+  list.innerHTML=items.map(l=>`<div class="drop-item${l.name===current?' sel':''}" onmousedown="selectLoc('${side}','${l.name.replace(/'/g,"\\'")}')"><span>${l.name}</span><span class="drop-km">${l.km} km</span></div>`).join('');
+}
+function toggleDrop(side){
+  const drop=document.getElementById(side+'Drop'),chip=document.getElementById(side+'Chip'),search=document.getElementById(side+'Search');
+  const isOpen=drop.classList.contains('open');
+  closeAllDrops();
+  if(!isOpen){drop.classList.add('open');chip.classList.add('active');search.value='';buildList(side);search.focus();}
+}
+function closeAllDrops(){['from','to'].forEach(s=>{document.getElementById(s+'Drop').classList.remove('open');document.getElementById(s+'Chip').classList.remove('active');})}
+function filterDrop(side){buildList(side,document.getElementById(side+'Search').value)}
+function handleKey(e,side){if(e.key==='Escape')closeAllDrops()}
+function selectLoc(side,name){
+  if(side==='from')selectedFrom=name;else selectedTo=name;
+  document.getElementById(side+'Label').textContent=name;
+  document.getElementById(side+'Label').classList.remove('placeholder');
+  document.getElementById(side+'Clear').classList.remove('hidden');
+  closeAllDrops();updateDist();
+}
+function clearLoc(e,side){
+  e.stopPropagation();
+  if(side==='from')selectedFrom=null;else selectedTo=null;
+  document.getElementById(side+'Label').textContent='Search location…';
+  document.getElementById(side+'Label').classList.add('placeholder');
+  document.getElementById(side+'Clear').classList.add('hidden');
+  document.getElementById('distChip').textContent='📏 Select locations';
+  hideResults();updateDist();
+}
+function swapLocations(){
+  if(!selectedFrom||!selectedTo)return;
+  [selectedFrom,selectedTo]=[selectedTo,selectedFrom];
+  document.getElementById('fromLabel').textContent=selectedFrom;
+  document.getElementById('toLabel').textContent=selectedTo;
   updateDist();
 }
-function setWeather(val,el){
-  selectedWeather=val;
-  document.querySelectorAll('.w-btn').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
+function updateDist(){
+  const chip=document.getElementById('distChip');
+  if(!selectedFrom||!selectedTo){chip.textContent='📏 Select locations';return;}
+  if(selectedFrom===selectedTo){chip.textContent='⚠️ Same location selected';return;}
+  const km=haversine(COORDS[selectedFrom],COORDS[selectedTo]);
+  chip.innerHTML=`📏 <b>${km} km</b> &nbsp;${selectedFrom} → ${selectedTo}`;
+  document.getElementById('rickshawWarn').className=(selectedVehicle==='Rickshaw'&&km>6)?'warn-box show':'warn-box';
 }
-function setDemand(val,el){
-  document.getElementById('demand').value=val;
-  document.querySelectorAll('.d-btn').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
-}
+document.addEventListener('click',e=>{if(!e.target.closest('.loc-selector'))closeAllDrops()});
 
-// ── Pricing engine ────────────────────────────────────────────────────────
-const VD={
-  Rickshaw:{base:13,per_km:16,  per_min:0  },  // half of previous
-  Bike:    {base:18,per_km:8,   per_min:0.5},
-  Car:     {base:34,per_km:16.5,per_min:3  },  // 0.75 of previous
-  Bus:     {base:8, per_km:1.5, per_min:0  },
-  CNG:     {base:60,per_km:16,  per_min:1.5},  // 0.75 of previous
-};
+// ── CONTROLS ──────────────────────────────────────────────────────────────
+function setVehicle(v,el){selectedVehicle=v;document.querySelectorAll('.v-card').forEach(e=>e.classList.remove('active'));el.classList.add('active');updateDist();}
+function setWeather(v,el){selectedWeather=v;document.querySelectorAll('.w-btn').forEach(e=>e.classList.remove('active'));el.classList.add('active');}
+function setDemand(v,el){document.getElementById('demand').value=v;document.querySelectorAll('.d-btn').forEach(e=>e.classList.remove('active'));el.classList.add('active');}
+
+// ── VEHICLE RATES ─────────────────────────────────────────────────────────
+const VD={Rickshaw:{base:13,per_km:16,per_min:0},Bike:{base:18,per_km:8,per_min:0.5},Car:{base:34,per_km:16.5,per_min:3},Bus:{base:8,per_km:1.5,per_min:0},CNG:{base:60,per_km:16,per_min:1.5}};
+const UBER_RATES={Car:{base:35,per_km:22,per_min:3,min_fare:80},CNG:{base:25,per_km:14,per_min:1.5,min_fare:50}};
 const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
+const VEHICLE_ICONS={Rickshaw:'🛺',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛻'};
 
-function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
-  const dist =haversine(COORDS[from_loc],COORDS[to_loc]);
-  const v    =VD[vehicle];
-  const isBus=vehicle==='Bus';
-  const isR  =(hour>=8&&hour<=10)||(hour>=17&&hour<=20);
-  const isN  =hour>=23||hour<=5;
-  const isFri=new Date().getDay()===5;
+// ── CITY CALC (core, distance-based — reused for real quotes AND for
+//    generating the synthetic training data that feeds the ML model below) ──
+function calcPriceFromDist(dist,vehicle,weather,hour,demand,fridayOverride=null){
+  const v=VD[vehicle],isBus=vehicle==='Bus';
+  const isR=(hour>=8&&hour<=10)||(hour>=17&&hour<=20),isN=hour>=23||hour<=5;
+  const isFri=fridayOverride!==null?fridayOverride:(new Date().getDay()===5);
   const speed=isR?8:(isN?20:15);
-  const mins =(dist/speed)*60;
-  const wm   =isBus?1:(WM[weather]||1);
-  const dAdd =isBus?0:demand*25;
+  const mins=(dist/speed)*60;
+  const wm=isBus?1:(WM[weather]||1);
+  const dAdd=isBus?0:demand*25;
   let base=v.base+dist*v.per_km+mins*v.per_min;
-  if(!isBus){
-    if(isR)  base*=1.30;
-    if(isN)  base*=1.15;
-    if(isFri)base*=0.90;
-  }
+  if(!isBus){if(isR)base*=1.30;if(isN)base*=1.15;if(isFri)base*=0.90;}
   const price=Math.max(v.base,Math.round(base*wm+dAdd));
   const distFare=Math.round(v.base+dist*v.per_km);
   const timeFare=Math.round(mins*v.per_min);
-  const wAdd =isBus?0:Math.round(base*(wm-1));
-  const rAdd =isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
+  const wAdd=isBus?0:Math.round(base*(wm-1));
+  const rAdd=isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
   const fDisc=isBus?0:(isFri?Math.round((v.base+dist*v.per_km)*0.10):0);
   const T={Rickshaw:[60,100,140],Bike:[120,200,280],Car:[200,350,500],Bus:[30,60,90],CNG:[120,200,300]}[vehicle];
   const surge=price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
-  return{price,distance_km:dist,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,
-    factors:{base_fare:distFare,time_fare:timeFare,est_mins:Math.round(mins),weather_add:wAdd,time_add:rAdd,demand_add:Math.round(dAdd),friday_disc:fDisc,is_rush:isR,is_night:isN,is_friday:isFri}};
+  let uberBreakdown=null;
+  if(vehicle==='Car'||vehicle==='CNG'){
+    const ur=UBER_RATES[vehicle];
+    const sm=isR?1.5:(selectedWeather==='Rainy'?1.4:selectedWeather==='Stormy'?2.0:1.0);
+    const bfU=ur.base,dcU=Math.round(ur.per_km*dist*10)/10,tcU=Math.round(ur.per_min*mins*10)/10;
+    const sub=Math.round(bfU+dcU+tcU);
+    const sp=sm>1?Math.round(sub*(sm-1)):0;
+    const totalU=Math.max(ur.min_fare,sub+sp+Math.round(dAdd));
+    uberBreakdown={baseFare:bfU,distCost:dcU,dist,timeCost:tcU,mins:Math.round(mins),surgeMult:sm,surgePrem:sp,demandAdd:Math.round(dAdd),minFare:ur.min_fare,total:totalU,applied:totalU===ur.min_fare};
+  }
+  return{price,distance_km:dist,mins,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,uberBreakdown,factors:{base_fare:distFare,time_fare:timeFare,est_mins:Math.round(mins),weather_add:wAdd,time_add:rAdd,demand_add:Math.round(dAdd),friday_disc:fDisc,is_rush:isR,is_night:isN,is_friday:isFri}};
+}
+function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
+  const dist=haversine(COORDS[from_loc],COORDS[to_loc]);
+  return calcPriceFromDist(dist,vehicle,weather,hour,demand);
 }
 
-// ── Get Price ─────────────────────────────────────────────────────────────
+// ── ML FARE MODEL ─────────────────────────────────────────────────────────
+// A genuine (if small) linear regression, trained client-side via the normal
+// equations. It's trained on synthetic trips generated from the same rules
+// as calcPriceFromDist plus random noise — this is disclosed in the UI, not
+// claimed to be trained on real historical ride data.
+const WEATHER_SCORE={Sunny:0,Regular:1,Rainy:2,Stormy:3};
+const MODELS={};
+
+function extractFeatures(dist,weather,hour,demand,isFriOverride=null){
+  const isR=(hour>=8&&hour<=10)||(hour>=17&&hour<=20),isN=hour>=23||hour<=5;
+  const isFri=isFriOverride!==null?isFriOverride:(new Date().getDay()===5);
+  const speed=isR?8:(isN?20:15);
+  const mins=(dist/speed)*60;
+  const w=WEATHER_SCORE[weather]??0;
+  return{vector:[1,dist,mins,w,isR?1:0,isN?1:0,isFri?1:0,demand],isR,isN,isFri,mins,w};
+}
+
+// Solve a small linear system A·x = b via Gaussian elimination with partial pivoting.
+function solveLinearSystem(A,b){
+  const n=b.length;
+  const M=A.map((row,i)=>[...row,b[i]]);
+  for(let c=0;c<n;c++){
+    let piv=c;
+    for(let r=c+1;r<n;r++)if(Math.abs(M[r][c])>Math.abs(M[piv][c]))piv=r;
+    [M[c],M[piv]]=[M[piv],M[c]];
+    if(Math.abs(M[c][c])<1e-9)M[c][c]=1e-9;
+    for(let r=0;r<n;r++){
+      if(r===c)continue;
+      const f=M[r][c]/M[c][c];
+      for(let k=c;k<=n;k++)M[r][k]-=f*M[c][k];
+    }
+  }
+  return M.map((row,i)=>row[n]/row[i]);
+}
+
+function trainLinearRegression(X,y,lambda=0.05){
+  const n=X.length,p=X[0].length;
+  const XtX=Array.from({length:p},()=>new Array(p).fill(0));
+  const Xty=new Array(p).fill(0);
+  for(let i=0;i<n;i++){
+    for(let a=0;a<p;a++){
+      Xty[a]+=X[i][a]*y[i];
+      for(let bIdx=0;bIdx<p;bIdx++)XtX[a][bIdx]+=X[i][a]*X[i][bIdx];
+    }
+  }
+  for(let a=1;a<p;a++)XtX[a][a]+=lambda; // ridge (skip intercept)
+  return solveLinearSystem(XtX,Xty);
+}
+
+function dot(beta,vec){let s=0;for(let i=0;i<beta.length;i++)s+=beta[i]*vec[i];return s;}
+
+function trainModelFor(vehicle){
+  const nTrain=220,nTest=60,samples=[];
+  const weathers=Object.keys(WEATHER_SCORE);
+  for(let i=0;i<nTrain+nTest;i++){
+    const dist=0.5+Math.random()*34.5;
+    const hour=Math.floor(Math.random()*24);
+    const weather=weathers[Math.floor(Math.random()*weathers.length)];
+    const demand=Math.random();
+    const isFri=Math.random()<(1/7);
+    const truth=calcPriceFromDist(dist,vehicle,weather,hour,demand,isFri).price;
+    const noisy=Math.max(5,truth*(1+(Math.random()-0.5)*0.08)); // ~±4% real-world noise
+    const feat=extractFeatures(dist,weather,hour,demand,isFri);
+    samples.push({x:feat.vector,y:noisy});
+  }
+  const train=samples.slice(0,nTrain),test=samples.slice(nTrain);
+  const beta=trainLinearRegression(train.map(s=>s.x),train.map(s=>s.y));
+  const preds=test.map(s=>dot(beta,s.x));
+  const actualMean=test.reduce((a,s)=>a+s.y,0)/test.length;
+  let ssRes=0,ssTot=0,absErr=0;
+  test.forEach((s,i)=>{ssRes+=(s.y-preds[i])**2;ssTot+=(s.y-actualMean)**2;absErr+=Math.abs(s.y-preds[i]);});
+  const r2=Math.max(0,1-ssRes/ssTot);
+  const mae=absErr/test.length;
+  return{beta,r2,mae};
+}
+
+function getModel(vehicle){
+  if(!MODELS[vehicle])MODELS[vehicle]=trainModelFor(vehicle);
+  return MODELS[vehicle];
+}
+
+function pretrainModels(){Object.keys(VD).forEach(v=>getModel(v));}
+if('requestIdleCallback' in window){requestIdleCallback(pretrainModels);}else{setTimeout(pretrainModels,50);}
+
 function getPrice(){
-  const from_loc=selectedFrom;
-  const to_loc=selectedTo;
-  const err     =document.getElementById('err');
-  if(from_loc===to_loc){alert('Please select different From and To locations.');return;}
-  err.classList.remove('show');
-  const hour  =parseInt(document.getElementById('time').value.split(':')[0]);
-  const demand=parseFloat(document.getElementById('demand')?document.getElementById('demand').value:0.3);
+  const err=document.getElementById('err');err.classList.remove('show');
+  if(!selectedFrom||!selectedTo){alert('Please select both From and To locations.');return;}
+  if(selectedFrom===selectedTo){alert('Please select different From and To locations.');return;}
+  const hour=parseInt(document.getElementById('time').value.split(':')[0]);
+  const demand=parseFloat(document.getElementById('demand').value);
   try{
-    const data=calcPrice(from_loc,to_loc,selectedVehicle,selectedWeather,hour,demand);
-    showResult(data,from_loc,to_loc);
-    addHistory(from_loc,to_loc,data);
+    const data=calcPrice(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand);
+    showResult(data);
+    addHistory(selectedFrom,selectedTo,data);
+    checkServerModel(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand); // async, never blocks the above
   }catch(e){err.classList.add('show');}
 }
 
-// ── Show Result ───────────────────────────────────────────────────────────
-function showResult(data,from_loc,to_loc){
+// Optional live cross-check against the real trained backend model
+// (Flask + GradientBoostingRegressor on Render). Purely additive: the price
+// above is already shown instantly from the client-side engine, so this can
+// only add information, never add latency to the main result. Skips silently
+// if the route isn't in the model's training set, the API is cold/asleep, or
+// it doesn't respond within 6s.
+function checkServerModel(from_loc,to_loc,vehicle,weather,hour,demand){
+  const row=document.getElementById('serverCheckRow');
+  row.style.display='none';
+  if(!API_LOCATIONS||!API_LOCATIONS.has(from_loc)||!API_LOCATIONS.has(to_loc))return;
+  row.style.display='flex';
+  row.innerHTML='<div class="ml-estimate-lbl">🖥️ Live server model</div><div class="ml-estimate-val" style="color:var(--muted)">Checking…</div>';
+  const controller=new AbortController();
+  const timer=setTimeout(()=>controller.abort(),6000);
+  fetch(`${API}/predict`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_loc,to_loc,vehicle,weather,hour,demand}),signal:controller.signal})
+    .then(r=>r.ok?r.json():Promise.reject(r))
+    .then(d=>{
+      clearTimeout(timer);
+      row.innerHTML=`<div class="ml-estimate-lbl">🖥️ Live server model (GradientBoosting)</div><div class="ml-estimate-val">৳${Math.round(d.price).toLocaleString()}</div>`;
+    })
+    .catch(()=>{clearTimeout(timer);row.style.display='none';});
+}
+
+function showResult(data){
+  document.getElementById('compareCard').classList.remove('show');
   document.getElementById('priceNum').textContent=data.price.toLocaleString();
   document.getElementById('priceLow').textContent=data.price_low.toLocaleString();
   document.getElementById('priceHigh').textContent=data.price_high.toLocaleString();
-
   const sMap={Normal:['sb-normal',''],Moderate:['sb-moderate','surge-moderate'],High:['sb-high','surge-high'],Peak:['sb-peak','surge-red']};
-  const[sc,rc]=sMap[data.surge_label];
+  const [sc,rc]=sMap[data.surge_label];
   const stag=document.getElementById('surgeTag');
-  stag.className=`surge-badge ${sc}`;
-  stag.textContent=data.surge_label+' Demand';
+  stag.className=`surge-badge ${sc}`;stag.textContent=data.surge_label+' Demand';
   document.getElementById('result').className=`result-card show ${rc}`;
-
-  const icons={Rickshaw:'🚲',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛺'};
-  document.getElementById('fareMeta').innerHTML=`
-    <div><div class="fm-label">Vehicle</div><div class="fm-val">${icons[selectedVehicle]} ${selectedVehicle}</div></div>
-    <div><div class="fm-label">Distance</div><div class="fm-val">~${data.distance_km} km</div></div>
-    <div><div class="fm-label">Weather</div><div class="fm-val">${selectedWeather}</div></div>`;
-
+  document.getElementById('fareMeta').innerHTML=`<div><div class="fm-label">Vehicle</div><div class="fm-val">${VEHICLE_ICONS[selectedVehicle]} ${selectedVehicle}</div></div><div><div class="fm-label">Distance</div><div class="fm-val">~${data.distance_km} km</div></div><div><div class="fm-label">Weather</div><div class="fm-val">${selectedWeather}</div></div>`;
+  const uberCard=document.getElementById('uberCard');
+  if(data.uberBreakdown){
+    const ub=data.uberBreakdown;
+    const sl=ub.surgeMult>1?`<span class="surge-mult-badge">×${ub.surgeMult}</span>`:'';
+    document.getElementById('uberRows').innerHTML=`
+      <div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">🏁</div><div><div class="uber-row-label">Base Fare</div><div class="uber-row-sub">Pickup charge</div></div></div><div class="uber-row-val">৳${ub.baseFare}</div></div>
+      <div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">📏</div><div><div class="uber-row-label">Distance</div><div class="uber-row-sub">${ub.dist} km × ৳${UBER_RATES[selectedVehicle].per_km}/km</div></div></div><div class="uber-row-val">৳${ub.distCost}</div></div>
+      <div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">⏱️</div><div><div class="uber-row-label">Time</div><div class="uber-row-sub">~${ub.mins} min × ৳${UBER_RATES[selectedVehicle].per_min}/min</div></div></div><div class="uber-row-val">৳${ub.timeCost}</div></div>
+      ${ub.surgePrem>0?`<div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">⚡</div><div><div class="uber-row-label">Surge Premium ${sl}</div><div class="uber-row-sub">Rush/weather pricing</div></div></div><div class="uber-row-val surge">+৳${ub.surgePrem}</div></div>`:''}
+      ${ub.demandAdd>0?`<div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">📊</div><div><div class="uber-row-label">Trip Type</div><div class="uber-row-sub">Demand adjustment</div></div></div><div class="uber-row-val surge">+৳${ub.demandAdd}</div></div>`:''}
+      ${ub.applied?`<div class="uber-row"><div class="uber-row-left"><div class="uber-row-icon">🔒</div><div><div class="uber-row-label">Minimum Fare Applied</div><div class="uber-row-sub">৳${ub.minFare} floor</div></div></div><div class="uber-row-val" style="color:var(--muted)">min</div></div>`:''}`;
+    document.getElementById('uberTotal').textContent='৳'+ub.total.toLocaleString();
+    uberCard.classList.add('show');
+  }else{uberCard.classList.remove('show');}
   const f=data.factors;
-  const max=f.base_fare+f.time_fare+f.weather_add+f.time_add+f.demand_add+1;
-  function sb(bId,vId,amt,mx){
-    document.getElementById(bId).style.width=Math.min(100,Math.round((amt/mx)*100))+'%';
-    document.getElementById(vId).textContent='৳'+Math.abs(amt).toLocaleString();
-  }
-  sb('fBarBase','fValBase',f.base_fare,max);
-  const tcr=document.getElementById('timeChargeRow');
-  if(f.time_fare>0){tcr.style.display='';sb('fBarTimeCharge','fValTimeCharge',f.time_fare,max);document.getElementById('fValTimeCharge').textContent='৳'+f.time_fare+' (~'+f.est_mins+' min)';}
-  else tcr.style.display='none';
-  sb('fBarWeather','fValWeather',f.weather_add,max);
-  sb('fBarTime','fValTime',f.time_add,max);
-  sb('fBarDemand','fValDemand',f.demand_add,max);
-  const fr=document.getElementById('fridayRow');
-  if(f.is_friday&&f.friday_disc>0){fr.style.display='';sb('fBarFriday','fValFriday',f.friday_disc,max);document.getElementById('fValFriday').textContent='-৳'+f.friday_disc;}
-  else fr.style.display='none';
 
+  // ── Train/fetch the real linear-regression model for this vehicle, and
+  // use its LEARNED coefficients (not the hand-written formula) to drive
+  // both the feature-importance bars and the "ML model estimate".
+  const model=getModel(selectedVehicle);
+  const feat=extractFeatures(data.distance_km,selectedWeather,parseInt(document.getElementById('time').value.split(':')[0]),parseFloat(document.getElementById('demand').value),f.is_friday);
+  const beta=model.beta; // [intercept, dist, mins, weatherScore, isRush, isNight, isFriday, demand]
+  const contrib={
+    base:beta[1]*data.distance_km,
+    time:beta[2]*feat.mins,
+    weather:beta[3]*feat.w,
+    timeOfDay:beta[4]*feat.isR+beta[5]*feat.isN,
+    demand:beta[7]*parseFloat(document.getElementById('demand').value),
+    friday:beta[6]*(feat.isFri?1:0),
+  };
+  const mlEstimate=Math.max(5,Math.round(dot(beta,feat.vector)));
+  const max=Math.max(1,Math.abs(contrib.base)+Math.abs(contrib.time)+Math.abs(contrib.weather)+Math.abs(contrib.timeOfDay)+Math.abs(contrib.demand));
+  function sb(bId,vId,amt,mx){document.getElementById(bId).style.width=Math.min(100,Math.round((Math.abs(amt)/mx)*100))+'%';document.getElementById(vId).textContent=(amt<0?'-':'')+'৳'+Math.abs(Math.round(amt)).toLocaleString();}
+  sb('fBarBase','fValBase',contrib.base,max);
+  const tcr=document.getElementById('timeChargeRow');
+  if(Math.abs(contrib.time)>0.5){tcr.style.display='';sb('fBarTimeCharge','fValTimeCharge',contrib.time,max);document.getElementById('fValTimeCharge').textContent=(contrib.time<0?'-':'')+'৳'+Math.abs(Math.round(contrib.time))+' (~'+f.est_mins+' min)';}else tcr.style.display='none';
+  sb('fBarWeather','fValWeather',contrib.weather,max);sb('fBarTime','fValTime',contrib.timeOfDay,max);sb('fBarDemand','fValDemand',contrib.demand,max);
+  const fr=document.getElementById('fridayRow');
+  if(f.is_friday){fr.style.display='';sb('fBarFriday','fValFriday',contrib.friday,max);}else fr.style.display='none';
   const chips=[];
-  if(f.is_rush)  chips.push('<span class="chip chip-rush">🚦 Rush Hour</span>');
-  if(f.is_night) chips.push('<span class="chip chip-night">🌙 Late Night</span>');
+  if(f.is_rush)chips.push('<span class="chip chip-rush">🚦 Rush Hour</span>');
+  if(f.is_night)chips.push('<span class="chip chip-night">🌙 Late Night</span>');
   if(f.is_friday)chips.push('<span class="chip chip-fri">🕌 Friday</span>');
-  if(selectedWeather==='Rainy') chips.push('<span class="chip chip-rain">🌧️ Rain Surge</span>');
+  if(selectedWeather==='Rainy')chips.push('<span class="chip chip-rain">🌧️ Rain Surge</span>');
   if(selectedWeather==='Stormy')chips.push('<span class="chip chip-storm">⛈️ Storm Surge</span>');
   document.getElementById('condChips').innerHTML=chips.join('');
+
+  const diffPct=Math.round(Math.abs(mlEstimate-data.price)/data.price*100);
+  document.getElementById('mlEstimateVal').textContent='৳'+mlEstimate.toLocaleString()+' ('+(diffPct===0?'exact match':'Δ'+diffPct+'%')+')';
+  const r2Pct=Math.round(model.r2*1000)/10;
+  document.getElementById('confPct').textContent=r2Pct+'%';
+  document.getElementById('confBar').style.width=Math.min(100,r2Pct)+'%';
+  document.getElementById('mlSub').textContent=`Trained in-browser on 220 synthetic trips (60 held out) · R² ${r2Pct}% · MAE ±৳${Math.round(model.mae)} · vehicle: ${selectedVehicle}`;
   document.getElementById('mlCard').classList.add('show');
 }
 
-// ── History ───────────────────────────────────────────────────────────────
+function hideResults(){
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('uberCard').classList.remove('show');
+  document.getElementById('mlCard').classList.remove('show');
+  document.getElementById('compareCard').classList.remove('show');
+  document.getElementById('serverCheckRow').style.display='none';
+}
+
+// ── FARE COMPARISON CHART ─────────────────────────────────────────────────
+function compareRides(){
+  if(!selectedFrom||!selectedTo){alert('Please select both From and To locations.');return;}
+  if(selectedFrom===selectedTo){alert('Please select different From and To locations.');return;}
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('uberCard').classList.remove('show');
+  document.getElementById('mlCard').classList.remove('show');
+  const hour=parseInt(document.getElementById('time').value.split(':')[0]);
+  const demand=parseFloat(document.getElementById('demand').value);
+  const vehicles=['Rickshaw','Bike','CNG','Bus','Car'];
+  const results=vehicles.map(v=>({vehicle:v,price:calcPrice(selectedFrom,selectedTo,v,selectedWeather,hour,demand).price}));
+  const maxPrice=Math.max(...results.map(r=>r.price));
+  const minPrice=Math.min(...results.map(r=>r.price));
+  const colors={Rickshaw:'#22c55e',Bike:'#3b82f6',Car:'#f97316',Bus:'#8b5cf6',CNG:'#f4a61b'};
+  document.getElementById('compareRows').innerHTML=results.map(r=>{
+    const pct=Math.max(14,Math.round((r.price/maxPrice)*100));
+    const isBest=r.price===minPrice;
+    return `<div class="cmp-row">
+      <div class="cmp-ico">${VEHICLE_ICONS[r.vehicle]}</div>
+      <div class="cmp-lbl">${r.vehicle}</div>
+      <div class="cmp-bwrap"><div class="cmp-bar${isBest?' best':''}" style="width:${pct}%;background:${colors[r.vehicle]}"><span>৳${r.price.toLocaleString()}${isBest?' 🏆':''}</span></div></div>
+    </div>`;
+  }).join('');
+  document.getElementById('compareCard').classList.add('show');
+}
+
+// ── HISTORY (persisted via localStorage) ─────────────────────────────────
+function loadHistory(){
+  try{const raw=localStorage.getItem('ridepricebd_history');history=raw?JSON.parse(raw):[];}catch(e){history=[];}
+  renderHistory();
+}
+function saveHistory(){try{localStorage.setItem('ridepricebd_history',JSON.stringify(history));}catch(e){}}
 function addHistory(from_loc,to_loc,data){
-  history.unshift({from_loc,to_loc,vehicle:selectedVehicle,price:data.price,surge:data.surge_label});
-  if(history.length>6)history.pop();
-  const icons={Rickshaw:'🚲',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛺'};
-  document.getElementById('histBox').style.display='';
-  document.getElementById('histList').innerHTML=history.map(h=>`
-    <div class="h-row">
-      <div><div class="h-main">${h.from_loc} → ${h.to_loc}</div>
-      <div class="h-sub">${icons[h.vehicle]} ${h.vehicle} · ${h.surge} demand</div></div>
-      <div class="h-price">৳${h.price.toLocaleString()}</div>
-    </div>`).join('');
+  history.unshift({from_loc,to_loc,vehicle:selectedVehicle,price:data.price,surge:data.surge_label,ts:Date.now()});
+  if(history.length>8)history.pop();
+  saveHistory();renderHistory();
+}
+function renderHistory(){
+  const box=document.getElementById('histBox');
+  if(!history.length){box.style.display='none';return;}
+  box.style.display='';
+  document.getElementById('histList').innerHTML=history.map(h=>`<div class="h-row"><div><div class="h-main">${h.from_loc} → ${h.to_loc}</div><div class="h-sub">${VEHICLE_ICONS[h.vehicle]} ${h.vehicle} · ${h.surge}</div></div><div class="h-price">৳${h.price.toLocaleString()}</div></div>`).join('');
+}
+function clearHistory(){history=[];saveHistory();renderHistory();}
+
+// ── MODE SWITCH ───────────────────────────────────────────────────────────
+function switchMode(mode,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('citySection').style.display=mode==='city'?'':'none';
+  document.getElementById('longSection').style.display=mode==='long'?'':'none';
+}
+
+// ── LONG ROUTE ────────────────────────────────────────────────────────────
+function buildCityGrid(filter=''){
+  const grid=document.getElementById('cityGrid');
+  const q=filter.toLowerCase();
+  const list=CITIES.filter(c=>c.name.toLowerCase().includes(q));
+  if(!list.length){grid.innerHTML='<div class="city-empty">No matching city found</div>';return;}
+  grid.innerHTML=list.map(c=>`<div class="city-btn${selectedCity&&selectedCity.id===c.id?' active':''}" onclick="selectCity('${c.id}',this)"><div class="city-icon">${c.emoji}</div><div class="city-name">${c.name}</div><div class="city-dist">${c.dist} km</div></div>`).join('');
+}
+function filterCities(){buildCityGrid(document.getElementById('citySearch').value)}
+
+function selectCity(id,el){
+  document.querySelectorAll('.city-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  selectedCity=CITIES.find(c=>c.id===id);
+  showLongRoute(selectedCity);
+}
+
+function showLongRoute(city){
+  const result=document.getElementById('lrResult');
+  document.getElementById('lrRoute').textContent=`Dhaka → ${city.name}`;
+  document.getElementById('lrSub').textContent=`~${city.dist} km · ~${city.hours}`;
+  document.getElementById('lrBadge').textContent=`${city.emoji} ${city.name}`;
+
+  const tagHtml={cheap:'<span class="tr-tag tag-cheap">💰 Budget</span>',fast:'<span class="tr-tag tag-fast">⚡ Faster</span>',comfort:'<span class="tr-tag tag-comfort">💺 Comfort</span>',scenic:'<span class="tr-tag tag-scenic">🌄 Scenic</span>'};
+
+  document.getElementById('lrRows').innerHTML=city.transport.map(t=>{
+    let priceHtml='';
+    if(t.type==='train'){
+      const parts=[`2nd Class (Shovon) ৳${t.shovon}`,`1st Class ৳${t.first}`];
+      if(t.snigdha>0)parts.push(`Snigdha (AC Chair) ৳${t.snigdha}`);
+      if(t.acBerth>0)parts.push(`AC Berth/Cabin ৳${t.acBerth}`);
+      priceHtml=`<div class="tr-price">৳${t.shovon}+</div><div class="tr-price-range">${parts.join('<br>')}</div>`;
+    }else{
+      priceHtml=`<div class="tr-price">৳${t.low}–${t.high}</div><div class="tr-price-range">per person</div>`;
+    }
+    const tags=(t.tags||[]).map(tg=>tagHtml[tg]||'').join(' ');
+    return `<div class="tr-row">
+      <div class="tr-left">
+        <div class="tr-icon">${t.icon}</div>
+        <div>
+          <div class="tr-name">${t.name}</div>
+          <div class="tr-detail">${t.detail}</div>
+          <div class="tr-detail" style="margin-top:2px">⏱ ${t.duration}</div>
+          <div style="margin-top:4px">${tags}</div>
+        </div>
+      </div>
+      <div class="tr-price-wrap">${priceHtml}</div>
+    </div>`;
+  }).join('');
+
+  result.classList.add('show');
 }
 </script>
-<input type="hidden" id="demand" value="0.30"/>
 </body>
 </html>

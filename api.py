@@ -40,6 +40,18 @@ def health():
 def home():
     return jsonify({"service": "RidePrice BD API", "status": "running"})
 
+@app.route("/locations")
+def locations():
+    # Lets any client (e.g. the web frontend, which supports far more
+    # locations than the model was trained on) check what this model
+    # actually knows about before calling /predict, instead of guessing
+    # and getting a KeyError back.
+    return jsonify({
+        "locations": sorted(LOCS.keys()),
+        "vehicles": sorted(VEHICLES.keys()),
+        "count": len(LOCS),
+    })
+
 @app.route("/predict", methods=["POST"])
 def predict():
     d        = request.json
@@ -50,6 +62,12 @@ def predict():
     hour     = int(d["hour"])
     demand   = float(d["demand"])
     dow      = datetime.now().weekday()
+
+    if from_loc not in LOCS or to_loc not in LOCS:
+        return jsonify({"error": "unknown location", "hint": "GET /locations for the supported list"}), 400
+    if vehicle not in VEHICLES:
+        return jsonify({"error": "unknown vehicle", "hint": "GET /locations for the supported list"}), 400
+
     dist     = calc_distance(from_loc, to_loc)
 
     row = pd.DataFrame([{
@@ -90,6 +108,7 @@ def predict():
         "Bike":     [100, 160, 220],
         "Car":      [180, 300, 420],
         "Bus":      [40,  70,  100],
+        "CNG":      [110, 190, 270],
     }
     t = thresholds[vehicle]
     if   price < t[0]: surge = ("Normal",   "green")
