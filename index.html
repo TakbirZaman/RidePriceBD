@@ -1259,14 +1259,18 @@ function getPrice(){
   const err=document.getElementById('err');err.classList.remove('show');
   if(!selectedFrom||!selectedTo){alert('Please select both From and To locations.');return;}
   if(selectedFrom===selectedTo){alert('Please select different From and To locations.');return;}
-  const hour=parseInt(document.getElementById('time').value.split(':')[0]);
+  const rawHour=parseInt((document.getElementById('time').value||'').split(':')[0]);
+  const hour=Number.isFinite(rawHour)?rawHour:new Date().getHours(); // some mobile/in-app browsers can return an empty or non-24h value here
   const demand=parseFloat(document.getElementById('demand').value);
   try{
     const data=calcPrice(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand);
     showResult(data);
     addHistory(selectedFrom,selectedTo,data);
-    checkServerModel(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand); // async, never blocks the above
-  }catch(e){err.classList.add('show');}
+  }catch(e){err.classList.add('show');console.error('RidePriceBD calc error:',e);return;}
+  // Kept OUTSIDE the try above on purpose: this is an optional, additive
+  // live-server comparison. It must never be able to wipe out a fare that
+  // was already calculated successfully.
+  checkServerModel(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand);
 }
 
 // Optional live cross-check against the real trained backend model
@@ -1276,20 +1280,30 @@ function getPrice(){
 // if the route isn't in the model's training set, the API is cold/asleep, or
 // it doesn't respond within 6s.
 function checkServerModel(from_loc,to_loc,vehicle,weather,hour,demand){
-  const row=document.getElementById('serverCheckRow');
-  row.style.display='none';
-  if(!API_LOCATIONS||!API_LOCATIONS.has(from_loc)||!API_LOCATIONS.has(to_loc))return;
-  row.style.display='flex';
-  row.innerHTML='<div class="ml-estimate-lbl">🖥️ Live server model</div><div class="ml-estimate-val" style="color:var(--muted)">Checking…</div>';
-  const controller=new AbortController();
-  const timer=setTimeout(()=>controller.abort(),6000);
-  fetch(`${API}/predict`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_loc,to_loc,vehicle,weather,hour,demand}),signal:controller.signal})
-    .then(r=>r.ok?r.json():Promise.reject(r))
-    .then(d=>{
-      clearTimeout(timer);
-      row.innerHTML=`<div class="ml-estimate-lbl">🖥️ Live server model (GradientBoosting)</div><div class="ml-estimate-val">৳${Math.round(d.price).toLocaleString()}</div>`;
-    })
-    .catch(()=>{clearTimeout(timer);row.style.display='none';});
+  // Fully self-contained: NOTHING in here is allowed to throw back into the
+  // caller. A missing DOM node, an unsupported AbortController, a blocked
+  // fetch (common in restrictive mobile/in-app browsers) — all degrade to
+  // "just skip the live check" instead of killing the already-computed fare.
+  try{
+    const row=document.getElementById('serverCheckRow');
+    if(!row)return;
+    row.style.display='none';
+    if(!API_LOCATIONS||!API_LOCATIONS.has(from_loc)||!API_LOCATIONS.has(to_loc))return;
+    row.style.display='flex';
+    row.innerHTML='<div class="ml-estimate-lbl">🖥️ Live server model</div><div class="ml-estimate-val" style="color:var(--muted)">Checking…</div>';
+    const hasAbort=typeof AbortController!=='undefined';
+    const controller=hasAbort?new AbortController():null;
+    const timer=setTimeout(()=>{if(controller)controller.abort();},6000);
+    const opts={method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_loc,to_loc,vehicle,weather,hour,demand})};
+    if(controller)opts.signal=controller.signal;
+    fetch(`${API}/predict`,opts)
+      .then(r=>r.ok?r.json():Promise.reject(r))
+      .then(d=>{
+        clearTimeout(timer);
+        if(row)row.innerHTML=`<div class="ml-estimate-lbl">🖥️ Live server model (GradientBoosting)</div><div class="ml-estimate-val">৳${Math.round(d.price).toLocaleString()}</div>`;
+      })
+      .catch(()=>{clearTimeout(timer);if(row)row.style.display='none';});
+  }catch(e){/* never let the optional live-model check break the main result */}
 }
 
 function showResult(data){
@@ -1374,7 +1388,8 @@ function compareRides(){
   document.getElementById('result').classList.remove('show');
   document.getElementById('uberCard').classList.remove('show');
   document.getElementById('mlCard').classList.remove('show');
-  const hour=parseInt(document.getElementById('time').value.split(':')[0]);
+  const rawHour=parseInt((document.getElementById('time').value||'').split(':')[0]);
+  const hour=Number.isFinite(rawHour)?rawHour:new Date().getHours();
   const demand=parseFloat(document.getElementById('demand').value);
   const vehicles=['Rickshaw','Bike','CNG','Bus','Car'];
   const results=vehicles.map(v=>({vehicle:v,price:calcPrice(selectedFrom,selectedTo,v,selectedWeather,hour,demand).price}));
