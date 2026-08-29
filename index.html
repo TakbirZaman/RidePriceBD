@@ -551,6 +551,12 @@ function haversine(l1,l2){
   return Math.round(R*2*Math.asin(Math.sqrt(a))*1.35*10)/10;
 }
 
+// ── VEHICLE RATES ─────────────────────────────────────────────────────────
+const VD={Rickshaw:{base:13,per_km:16,per_min:0},Bike:{base:18,per_km:8,per_min:0.5},Car:{base:34,per_km:16.5,per_min:3},Bus:{base:8,per_km:1.5,per_min:0},CNG:{base:60,per_km:16,per_min:1.5}};
+const UBER_RATES={Car:{base:35,per_km:22,per_min:3,min_fare:80},CNG:{base:25,per_km:14,per_min:1.5,min_fare:50}};
+const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
+const VEHICLE_ICONS={Rickshaw:'🛺',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛻'};
+
 // ── LONG ROUTE DATA (estimated 2025-26 fare ranges) ──────────────────────
 // Train classes: shovon = 2nd Class (Shovon Chair), first = 1st Class Seat/Chair,
 // snigdha = Snigdha (AC Chair), acBerth = AC Berth / Cabin (overnight sleeper)
@@ -1128,12 +1134,6 @@ document.addEventListener('click',e=>{if(!e.target.closest('.loc-selector'))clos
 function setVehicle(v,el){selectedVehicle=v;document.querySelectorAll('.v-card').forEach(e=>e.classList.remove('active'));el.classList.add('active');updateDist();}
 function setWeather(v,el){selectedWeather=v;document.querySelectorAll('.w-btn').forEach(e=>e.classList.remove('active'));el.classList.add('active');}
 function setDemand(v,el){document.getElementById('demand').value=v;document.querySelectorAll('.d-btn').forEach(e=>e.classList.remove('active'));el.classList.add('active');}
-
-// ── VEHICLE RATES ─────────────────────────────────────────────────────────
-const VD={Rickshaw:{base:13,per_km:16,per_min:0},Bike:{base:18,per_km:8,per_min:0.5},Car:{base:34,per_km:16.5,per_min:3},Bus:{base:8,per_km:1.5,per_min:0},CNG:{base:60,per_km:16,per_min:1.5}};
-const UBER_RATES={Car:{base:35,per_km:22,per_min:3,min_fare:80},CNG:{base:25,per_km:14,per_min:1.5,min_fare:50}};
-const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
-const VEHICLE_ICONS={Rickshaw:'🛺',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛻'};
 
 // ── CITY CALC (core, distance-based — reused for real quotes AND for
 //    generating the synthetic training data that feeds the ML model below) ──
