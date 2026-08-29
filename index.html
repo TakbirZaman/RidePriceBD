@@ -1117,6 +1117,7 @@ function updateDist(){
   const chip=document.getElementById('distChip');
   if(!selectedFrom||!selectedTo){chip.textContent='📏 Select locations';return;}
   if(selectedFrom===selectedTo){chip.textContent='⚠️ Same location selected';return;}
+  if(!COORDS[selectedFrom]||!COORDS[selectedTo]){chip.textContent='⚠️ Location data missing';return;}
   const km=haversine(COORDS[selectedFrom],COORDS[selectedTo]);
   chip.innerHTML=`📏 <b>${km} km</b> &nbsp;${selectedFrom} → ${selectedTo}`;
   document.getElementById('rickshawWarn').className=(selectedVehicle==='Rickshaw'&&km>6)?'warn-box show':'warn-box';
@@ -1167,6 +1168,8 @@ function calcPriceFromDist(dist,vehicle,weather,hour,demand,fridayOverride=null)
   return{price,distance_km:dist,mins,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,uberBreakdown,factors:{base_fare:distFare,time_fare:timeFare,est_mins:Math.round(mins),weather_add:wAdd,time_add:rAdd,demand_add:Math.round(dAdd),friday_disc:fDisc,is_rush:isR,is_night:isN,is_friday:isFri}};
 }
 function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
+  if(!COORDS[from_loc])throw new Error('Location not found: '+from_loc);
+  if(!COORDS[to_loc])throw new Error('Location not found: '+to_loc);
   const dist=haversine(COORDS[from_loc],COORDS[to_loc]);
   return calcPriceFromDist(dist,vehicle,weather,hour,demand);
 }
@@ -1256,7 +1259,7 @@ function pretrainModels(){Object.keys(VD).forEach(v=>getModel(v));}
 if('requestIdleCallback' in window){requestIdleCallback(pretrainModels);}else{setTimeout(pretrainModels,50);}
 
 function getPrice(){
-  const err=document.getElementById('err');err.classList.remove('show');
+  const err=document.getElementById('err');err.textContent='⚠️ Could not calculate. Please check your selection.';err.classList.remove('show');
   if(!selectedFrom||!selectedTo){alert('Please select both From and To locations.');return;}
   if(selectedFrom===selectedTo){alert('Please select different From and To locations.');return;}
   const rawHour=parseInt((document.getElementById('time').value||'').split(':')[0]);
@@ -1266,7 +1269,7 @@ function getPrice(){
     const data=calcPrice(selectedFrom,selectedTo,selectedVehicle,selectedWeather,hour,demand);
     showResult(data);
     addHistory(selectedFrom,selectedTo,data);
-  }catch(e){err.classList.add('show');console.error('RidePriceBD calc error:',e);return;}
+  }catch(e){err.textContent='⚠️ '+e.message;err.classList.add('show');console.error('RidePriceBD calc error:',e);return;}
   // Kept OUTSIDE the try above on purpose: this is an optional, additive
   // live-server comparison. It must never be able to wipe out a fare that
   // was already calculated successfully.
