@@ -548,13 +548,13 @@ function haversine(l1,l2){
   const R=6371,toR=x=>x*Math.PI/180;
   const dLat=toR(l2[0]-l1[0]),dLon=toR(l2[1]-l1[1]);
   const a=Math.sin(dLat/2)**2+Math.cos(toR(l1[0]))*Math.cos(toR(l2[0]))*Math.sin(dLon/2)**2;
-  return Math.round(R*2*Math.asin(Math.sqrt(a))*1.35*10)/10;
+  return Math.round(R*2*Math.asin(Math.sqrt(a))*1.25*10)/10;
 }
 
-// ── VEHICLE RATES ─────────────────────────────────────────────────────────
-const VD={Rickshaw:{base:13,per_km:16,per_min:0},Bike:{base:18,per_km:8,per_min:0.5},Car:{base:34,per_km:16.5,per_min:3},Bus:{base:8,per_km:1.5,per_min:0},CNG:{base:60,per_km:16,per_min:1.5}};
-const UBER_RATES={Car:{base:35,per_km:22,per_min:3,min_fare:80},CNG:{base:25,per_km:14,per_min:1.5,min_fare:50}};
-const WM={Sunny:1.0,Regular:1.1,Rainy:1.4,Stormy:1.65};
+// ── VEHICLE RATES (Uber/BRTA-aligned, Dhaka 2025-26 — must match setup.py) ──
+const VD={Rickshaw:{base:20,per_km:22,per_min:0},Bike:{base:30,per_km:12,per_min:0.5},Car:{base:40,per_km:18,per_min:3},Bus:{base:10,per_km:2.6,per_min:0},CNG:{base:40,per_km:14,per_min:1}};
+const UBER_RATES={Car:{base:40,per_km:18,per_min:3,min_fare:80},CNG:{base:40,per_km:14,per_min:1,min_fare:60}};
+const WM={Sunny:1.0,Regular:1.05,Rainy:1.2,Stormy:1.4};
 const VEHICLE_ICONS={Rickshaw:'🛺',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛻'};
 
 // ── LONG ROUTE DATA (estimated 2025-26 fare ranges) ──────────────────────
@@ -1141,24 +1141,25 @@ function calcPriceFromDist(dist,vehicle,weather,hour,demand,fridayOverride=null)
   const v=VD[vehicle],isBus=vehicle==='Bus';
   const isR=(hour>=8&&hour<=10)||(hour>=17&&hour<=20),isN=hour>=23||hour<=5;
   const isFri=fridayOverride!==null?fridayOverride:(new Date().getDay()===5);
-  const speed=isR?8:(isN?20:15);
+  const speed=isR?12:(isN?25:22);
   const mins=(dist/speed)*60;
   const wm=isBus?1:(WM[weather]||1);
-  const dAdd=isBus?0:demand*25;
+  const dAdd=isBus?0:demand*15;
   let base=v.base+dist*v.per_km+mins*v.per_min;
-  if(!isBus){if(isR)base*=1.30;if(isN)base*=1.15;if(isFri)base*=0.90;}
+  if(vehicle==='Bus')base=dist*v.per_km; // BRTA: min fare, not base+distance
+  if(!isBus){if(isR)base*=1.20;if(isN)base*=1.10;if(isFri)base*=0.95;}
   const price=Math.max(v.base,Math.round(base*wm+dAdd));
-  const distFare=Math.round(v.base+dist*v.per_km);
+  const distFare=vehicle==='Bus'?Math.max(v.base,Math.round(dist*v.per_km)):Math.round(v.base+dist*v.per_km);
   const timeFare=Math.round(mins*v.per_min);
   const wAdd=isBus?0:Math.round(base*(wm-1));
-  const rAdd=isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.30:isN?0.15:0));
-  const fDisc=isBus?0:(isFri?Math.round((v.base+dist*v.per_km)*0.10):0);
-  const T={Rickshaw:[60,100,140],Bike:[120,200,280],Car:[200,350,500],Bus:[30,60,90],CNG:[120,200,300]}[vehicle];
+  const rAdd=isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.20:isN?0.10:0));
+  const fDisc=isBus?0:(isFri?Math.round((v.base+dist*v.per_km)*0.05):0);
+  const T={Rickshaw:[60,100,140],Bike:[100,170,240],Car:[170,280,400],Bus:[25,45,70],CNG:[100,170,250]}[vehicle];
   const surge=price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
   let uberBreakdown=null;
   if(vehicle==='Car'||vehicle==='CNG'){
     const ur=UBER_RATES[vehicle];
-    const sm=isR?1.5:(selectedWeather==='Rainy'?1.4:selectedWeather==='Stormy'?2.0:1.0);
+    const sm=isR?1.25:(selectedWeather==='Rainy'?1.2:selectedWeather==='Stormy'?1.4:1.0);
     const bfU=ur.base,dcU=Math.round(ur.per_km*dist*10)/10,tcU=Math.round(ur.per_min*mins*10)/10;
     const sub=Math.round(bfU+dcU+tcU);
     const sp=sm>1?Math.round(sub*(sm-1)):0;
@@ -1185,7 +1186,7 @@ const MODELS={};
 function extractFeatures(dist,weather,hour,demand,isFriOverride=null){
   const isR=(hour>=8&&hour<=10)||(hour>=17&&hour<=20),isN=hour>=23||hour<=5;
   const isFri=isFriOverride!==null?isFriOverride:(new Date().getDay()===5);
-  const speed=isR?8:(isN?20:15);
+  const speed=isR?12:(isN?25:22);
   const mins=(dist/speed)*60;
   const w=WEATHER_SCORE[weather]??0;
   return{vector:[1,dist,mins,w,isR?1:0,isN?1:0,isFri?1:0,demand],isR,isN,isFri,mins,w};

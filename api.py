@@ -30,7 +30,7 @@ def calc_distance(loc1, loc2):
     dlat = math.radians(lat2 - lat1)
     dlon = math.radians(lon2 - lon1)
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)**2
-    return round(math.sqrt(a) * R * 2 * 1.35, 1)
+    return round(math.sqrt(a) * R * 2 * 1.25, 1)
 
 @app.route("/health")
 def health():
@@ -86,29 +86,32 @@ def predict():
 
     # ── Factor breakdown ──────────────────────────────────────────────
     v         = VEHICLES[vehicle]
-    base_fare = v["base"] + dist * v["per_km"]
+    if vehicle == "Bus":
+        base_fare = max(v["base"], dist * v["per_km"])
+    else:
+        base_fare = v["base"] + dist * v["per_km"]
 
-    WEATHER_M = {"Sunny":1.0,"Regular":1.1,"Rainy":1.4,"Stormy":1.65}
+    WEATHER_M = {"Sunny":1.0,"Regular":1.05,"Rainy":1.20,"Stormy":1.40}
     is_rush   = 8 <= hour <= 10 or 17 <= hour <= 20
     is_night  = hour >= 23 or hour <= 5
     is_friday = dow == 4
 
     weather_add = round(base_fare * (WEATHER_M.get(weather, 1.0) - 1.0), 0)
-    time_add    = round(base_fare * (0.30 if is_rush else (0.15 if is_night else 0.0)), 0)
-    demand_add  = round(demand * 25, 0)
-    friday_disc = round(base_fare * 0.10, 0) if is_friday else 0
+    time_add    = round(base_fare * (0.20 if is_rush else (0.10 if is_night else 0.0)), 0)
+    demand_add  = round(demand * 15, 0)
+    friday_disc = round(base_fare * 0.05, 0) if is_friday else 0
 
     # Confidence range: ±8% (model uncertainty)
     price_low  = round(price * 0.92, 0)
     price_high = round(price * 1.08, 0)
 
-    # ── Surge tier ────────────────────────────────────────────────────
+    # ── Surge tier (recalibrated to Uber-like fare levels) ───────────────
     thresholds = {
-        "Rickshaw": [80,  120, 160],
-        "Bike":     [100, 160, 220],
-        "Car":      [180, 300, 420],
-        "Bus":      [40,  70,  100],
-        "CNG":      [110, 190, 270],
+        "Rickshaw": [60,  100, 140],
+        "Bike":     [100, 170, 240],
+        "Car":      [170, 280, 400],
+        "Bus":      [25,  45,  70],
+        "CNG":      [100, 170, 250],
     }
     t = thresholds[vehicle]
     if   price < t[0]: surge = ("Normal",   "green")

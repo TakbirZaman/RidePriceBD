@@ -94,19 +94,24 @@ LOCATIONS = {
 }
 
 VEHICLES = {
-    # base=minimum fare, per_km=avg negotiated rate, per_min=time charge, max_km=practical limit
-    "Rickshaw": {"base": 25,  "per_km": 20,  "per_min": 0,   "max_km": 5},
-    "Bike":     {"base": 28,  "per_km": 13,  "per_min": 1,   "max_km": 999},
-    "Car":      {"base": 45,  "per_km": 23,  "per_min": 3,   "max_km": 999},
-    "Bus":      {"base": 10,  "per_km":  4,  "per_min": 0,   "max_km": 999},
-    "CNG":      {"base": 40,  "per_km": 27,  "per_min": 2,   "max_km": 999},
+    # Uber/BRTA-aligned (Dhaka 2025-26, fair street prices):
+    # Bike = Uber Moto (base 30, 12/km, 0.5/min)
+    # Car  = UberX (base 40, 18/km, 3/min)
+    # CNG  = BRTA meter (40/2km + 12/km) + street reality -> ~15/km, 1/min
+    # Bus  = BRTA city bus 2.6/km, min 10
+    # Rickshaw = negotiated street rate, short-trip friendly
+    "Rickshaw": {"base": 20,  "per_km": 22,  "per_min": 0,   "max_km": 6},
+    "Bike":     {"base": 30,  "per_km": 12,  "per_min": 0.5, "max_km": 999},
+    "Car":      {"base": 40,  "per_km": 18,  "per_min": 3,   "max_km": 999},
+    "Bus":      {"base": 10,  "per_km": 2.6, "per_min": 0,   "max_km": 999},
+    "CNG":      {"base": 40,  "per_km": 14,  "per_min": 1,   "max_km": 999},
 }
 
 WEATHER_MULT = {
     "Sunny":   1.00,
-    "Regular": 1.10,
-    "Rainy":   1.40,
-    "Stormy":  1.65,
+    "Regular": 1.05,
+    "Rainy":   1.20,
+    "Stormy":  1.40,
 }
 
 def distance_km(loc1, loc2):
@@ -116,7 +121,8 @@ def distance_km(loc1, loc2):
     dlat = math.radians(lat2 - lat1)
     dlon = math.radians(lon2 - lon1)
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
-    return round(math.sqrt(a) * R * 2 * 1.35, 1)
+    # 1.25x road-detour factor (was 1.35x, overstated Dhaka road distance)
+    return round(math.sqrt(a) * R * 2 * 1.25, 1)
 
 loc_list = list(LOCATIONS.keys())
 rows = []
@@ -136,23 +142,26 @@ for _ in range(1500):
     if vehicle == "Rickshaw" and dist > v["max_km"]:
         continue
 
-    # Estimate travel time: base speed 15km/h in Dhaka, slower in rush
+    # Estimate travel time: Dhaka avg ~22km/h, ~12km/h in rush, ~25km/h at night
     is_rush  = 8 <= hour <= 10 or 17 <= hour <= 20
     is_night = hour >= 23 or hour <= 5
-    speed    = 8 if is_rush else (20 if is_night else 15)
+    speed    = 12 if is_rush else (25 if is_night else 22)
     est_mins = (dist / speed) * 60
 
     base  = v["base"] + dist * v["per_km"] + est_mins * v["per_min"]
+    if vehicle == "Bus":
+        # BRTA style: per-km fare with minimum, not base ON TOP of distance
+        base = dist * v["per_km"]
     w_m   = WEATHER_MULT[weather]
 
-    if is_rush:  base *= 1.30
-    if is_night: base *= 1.15
-    if dow == 4: base *= 0.90
+    if is_rush:  base *= 1.20
+    if is_night: base *= 1.10
+    if dow == 4: base *= 0.95
     if vehicle == "Bus":
-        w_m     = min(w_m, 1.10)
+        w_m     = min(w_m, 1.05)
         demand *= 0.3
 
-    price = base * w_m + demand * 25 + np.random.normal(0, 8)
+    price = base * w_m + demand * 15 + np.random.normal(0, 6)
     price = round(max(v["base"], price), 0)
 
     rows.append([from_loc, to_loc, vehicle, weather, hour, dow, demand, dist, price])
