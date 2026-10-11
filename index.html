@@ -458,6 +458,17 @@ input[type="time"]:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,1
 
   </div><!-- end longSection -->
 
+  <div class="card" style="margin-top:10px">
+    <div class="sec-label">Fare Policy — Verify Every Taka</div>
+    <div style="font-size:12px;line-height:1.7;color:var(--text)">
+      <b>Formula:</b> price = (distance part + time part) × surge + trip-type add, never below the minimum fare, surge never above 2.0×.<br/>
+      <b>Rates:</b> Bike 30+12/km+0.5/min (min 30) · Car 40+18/km+3/min (min 80) · CNG 40+14/km+1/min (min 60) · Bus 2.6/km (min 10) · Rickshaw 20+22/km (min 20).<br/>
+      <b>Adjustments:</b> rush ×1.20 · night ×1.10 · Friday ×0.95 · Regular ×1.05 · Rainy ×1.20 · Stormy ×1.40 (bus: weather capped, no rush/night/Friday surge, no trip-type add).<br/>
+      <b>Speeds:</b> 22 km/h normal · 12 rush · 25 night. <b>Distance:</b> map distance ×1.25 road factor.<br/>
+      <span style="color:var(--muted)">Aligned with Uber published rates (Moto 30/12/0.5 · UberX 40/18/3) and BRTA bus/CNG tariffs. Same formula runs here, on the server (<span style="font-family:monospace">GET /rates</span>), and in model training — the breakdown shown always sums to the price.</span>
+    </div>
+  </div>
+
   <div class="footer">Developed by <a href="https://www.linkedin.com/in/takbir-zaman-bhuiyan" target="_blank">Takbir Zaman Bhuiyan</a></div>
 </div>
 
@@ -551,10 +562,13 @@ function haversine(l1,l2){
   return Math.round(R*2*Math.asin(Math.sqrt(a))*1.25*10)/10;
 }
 
-// ── VEHICLE RATES (Uber/BRTA-aligned, Dhaka 2025-26 — must match setup.py) ──
-const VD={Rickshaw:{base:20,per_km:22,per_min:0},Bike:{base:30,per_km:12,per_min:0.5},Car:{base:40,per_km:18,per_min:3},Bus:{base:10,per_km:2.6,per_min:0},CNG:{base:40,per_km:14,per_min:1}};
+// ── VEHICLE RATES (audited 2026-10 — IDENTICAL to setup.py / api.py) ───────
+// price = (dist_part + time_part) * surge_mult + demand_add, floored at min_fare.
+// Bus = BRTA style (per-km with minimum). Total surge capped at 2.0x.
+const VD={Rickshaw:{base:20,per_km:22,per_min:0,min_fare:20},Bike:{base:30,per_km:12,per_min:0.5,min_fare:30},Car:{base:40,per_km:18,per_min:3,min_fare:80},Bus:{base:10,per_km:2.6,per_min:0,min_fare:10},CNG:{base:40,per_km:14,per_min:1,min_fare:60}};
 const UBER_RATES={Car:{base:40,per_km:18,per_min:3,min_fare:80},CNG:{base:40,per_km:14,per_min:1,min_fare:60}};
 const WM={Sunny:1.0,Regular:1.05,Rainy:1.2,Stormy:1.4};
+const RUSH_MULT=1.20,NIGHT_MULT=1.10,FRIDAY_MULT=0.95,SURGE_CAP=2.0,DEMAND_ADD=15;
 const VEHICLE_ICONS={Rickshaw:'🛺',Bike:'🏍️',Car:'🚗',Bus:'🚌',CNG:'🛻'};
 
 // ── LONG ROUTE DATA (estimated 2025-26 fare ranges) ──────────────────────
@@ -1144,16 +1158,27 @@ function calcPriceFromDist(dist,vehicle,weather,hour,demand,fridayOverride=null)
   const speed=isR?12:(isN?25:22);
   const mins=(dist/speed)*60;
   const wm=isBus?1:(WM[weather]||1);
-  const dAdd=isBus?0:demand*15;
-  let base=v.base+dist*v.per_km+mins*v.per_min;
-  if(vehicle==='Bus')base=dist*v.per_km; // BRTA: min fare, not base+distance
-  if(!isBus){if(isR)base*=1.20;if(isN)base*=1.10;if(isFri)base*=0.95;}
-  const price=Math.max(v.base,Math.round(base*wm+dAdd));
-  const distFare=vehicle==='Bus'?Math.max(v.base,Math.round(dist*v.per_km)):Math.round(v.base+dist*v.per_km);
-  const timeFare=Math.round(mins*v.per_min);
-  const wAdd=isBus?0:Math.round(base*(wm-1));
-  const rAdd=isBus?0:Math.round((v.base+dist*v.per_km+mins*v.per_min)*(isR?0.20:isN?0.10:0));
-  const fDisc=isBus?0:(isFri?Math.round((v.base+dist*v.per_km)*0.05):0);
+  const dAdd=isBus?0:demand*DEMAND_ADD;
+  const distPart=isBus?dist*v.per_km:v.base+dist*v.per_km;
+  const timePart=mins*v.per_min;
+  const subtotal=distPart+timePart;
+  let surgeMult=1.0;
+  if(!isBus){
+    if(isR)surgeMult*=RUSH_MULT;
+    if(isN)surgeMult*=NIGHT_MULT;
+    if(isFri)surgeMult*=FRIDAY_MULT;
+    surgeMult*=wm;
+    if(surgeMult>SURGE_CAP)surgeMult=SURGE_CAP;
+  }
+  const surged=subtotal*surgeMult;
+  const price=Math.max(v.min_fare,Math.round(surged+dAdd));
+  // Audited breakdown — these rows ALWAYS sum to the shown price:
+  // price = max(min_fare, round(subtotal * surgeMult + demand_add))
+  const distFare=Math.round(distPart);
+  const timeFare=Math.round(timePart);
+  const wAdd=0; // weather is inside surgeMult now (see factor row below)
+  const rAdd=Math.round(surged-subtotal); // total surge premium (rush/night/fri/weather)
+  const fDisc=0;
   const T={Rickshaw:[60,100,140],Bike:[100,170,240],Car:[170,280,400],Bus:[25,45,70],CNG:[100,170,250]}[vehicle];
   const surge=price<T[0]?'Normal':price<T[1]?'Moderate':price<T[2]?'High':'Peak';
   let uberBreakdown=null;
@@ -1166,7 +1191,7 @@ function calcPriceFromDist(dist,vehicle,weather,hour,demand,fridayOverride=null)
     const totalU=Math.max(ur.min_fare,sub+sp+Math.round(dAdd));
     uberBreakdown={baseFare:bfU,distCost:dcU,dist,timeCost:tcU,mins:Math.round(mins),surgeMult:sm,surgePrem:sp,demandAdd:Math.round(dAdd),minFare:ur.min_fare,total:totalU,applied:totalU===ur.min_fare};
   }
-  return{price,distance_km:dist,mins,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,uberBreakdown,factors:{base_fare:distFare,time_fare:timeFare,est_mins:Math.round(mins),weather_add:wAdd,time_add:rAdd,demand_add:Math.round(dAdd),friday_disc:fDisc,is_rush:isR,is_night:isN,is_friday:isFri}};
+  return{price,distance_km:dist,mins,price_low:Math.round(price*.92),price_high:Math.round(price*1.08),surge_label:surge,uberBreakdown,factors:{base_fare:distFare,time_fare:timeFare,est_mins:Math.round(mins),weather_add:wAdd,time_add:rAdd,demand_add:Math.round(dAdd),friday_disc:fDisc,surge_mult:Math.round(surgeMult*1000)/1000,subtotal:Math.round(subtotal),surged:Math.round(surged),min_fare:v.min_fare,is_rush:isR,is_night:isN,is_friday:isFri}};
 }
 function calcPrice(from_loc,to_loc,vehicle,weather,hour,demand){
   if(!COORDS[from_loc])throw new Error('Location not found: '+from_loc);

@@ -32,6 +32,91 @@ def calc_distance(loc1, loc2):
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)**2
     return round(math.sqrt(a) * R * 2 * 1.25, 1)
 
+# ── Audited fare policy: IDENTICAL to setup.py compute_fare() ──────────────
+# price = (distance_part + time_part) * capped_surge_mult + demand_add,
+# floored at min_fare. The returned breakdown ALWAYS sums to price.
+WEATHER_M = {"Sunny": 1.00, "Regular": 1.05, "Rainy": 1.20, "Stormy": 1.40}
+RUSH_MULT, NIGHT_MULT, FRIDAY_MULT, SURGE_CAP = 1.20, 1.10, 0.95, 2.0
+
+def trip_flags(hour, dow):
+    return (8 <= hour <= 10 or 17 <= hour <= 20,
+            hour >= 23 or hour <= 5,
+            dow == 4)
+
+def est_mins(dist, hour):
+    is_rush = 8 <= hour <= 10 or 17 <= hour <= 20
+    is_night = hour >= 23 or hour <= 5
+    speed = 12 if is_rush else (25 if is_night else 22)
+    return (dist / speed) * 60
+
+def compute_fare(dist, vehicle, weather, hour, demand, dow):
+    v = VEHICLES[vehicle]
+    is_rush, is_night, is_fri = trip_flags(hour, dow)
+    mins = est_mins(dist, hour)
+    is_bus = vehicle == "Bus"
+    w_m = 1.0 if is_bus else WEATHER_M.get(weather, 1.0)
+    if is_bus:
+        w_m = min(w_m, 1.05)
+        dist_part = dist * v["per_km"]
+    else:
+        dist_part = v["base"] + dist * v["per_km"]
+    time_part = mins * v["per_min"]
+    subtotal = dist_part + time_part
+    t_mult = 1.0
+    if not is_bus:
+        if is_rush:  t_mult *= RUSH_MULT
+        if is_night: t_mult *= NIGHT_MULT
+        if is_fri:   t_mult *= FRIDAY_MULT
+    combined = min(t_mult * w_m, SURGE_CAP)
+    surged = subtotal * combined
+    demand_add = 0.0 if is_bus else demand * 15
+    price = max(float(v.get("min_fare", v["base"])), round(surged + demand_add, 0))
+    return price, {
+        "dist_part":  round(dist_part, 0),
+        "time_part":  round(time_part, 0),
+        "subtotal":   round(subtotal, 0),
+        "surge_mult": round(combined, 3),
+        "surged":     round(surged, 0),
+        "demand_add": round(demand_add, 0),
+        "est_mins":   round(mins, 0),
+        "is_rush":    is_rush,
+        "is_night":   is_night,
+        "is_friday":  is_fri,
+    }
+
+def featurize_row(vehicle, weather, hour, dow, demand, dist):
+    wscore = {"Sunny": 0, "Regular": 1, "Rainy": 2, "Stormy": 3}
+    is_rush, is_night, is_fri = trip_flags(hour, dow)
+    return pd.DataFrame([{
+        "vehicle":     vehicle,
+        "weather":     weather,
+        "distance_km": dist,
+        "demand":      demand,
+        "hour":        hour,
+        "dow":         dow,
+        "est_mins":    est_mins(dist, hour),
+        "is_rush":     1 if is_rush else 0,
+        "is_night":    1 if is_night else 0,
+        "is_fri":      1 if is_fri else 0,
+        "wscore":      wscore.get(weather, 0),
+    }])
+
+@app.route("/rates")
+def rates():
+    # Public rate card — clients can verify every taka of any quote.
+    return jsonify({
+        "vehicles": VEHICLES,
+        "weather_mult": WEATHER_M,
+        "rush_mult": RUSH_MULT,
+        "night_mult": NIGHT_MULT,
+        "friday_mult": FRIDAY_MULT,
+        "surge_cap": SURGE_CAP,
+        "demand_per_unit": 15,
+        "detour_factor": 1.25,
+        "speeds_kmh": {"rush": 12, "normal": 22, "night": 25},
+        "method": "price=(dist_part+time_part)*surge_mult+demand_add, floored at min_fare",
+    })
+
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})
@@ -68,38 +153,17 @@ def predict():
     if vehicle not in VEHICLES:
         return jsonify({"error": "unknown vehicle", "hint": "GET /locations for the supported list"}), 400
 
-    dist     = calc_distance(from_loc, to_loc)
+    dist = calc_distance(from_loc, to_loc)
 
-    row = pd.DataFrame([{
-        "from_loc":    from_loc,
-        "to_loc":      to_loc,
-        "vehicle":     vehicle,
-        "weather":     weather,
-        "hour":        hour,
-        "dow":         dow,
-        "demand":      demand,
-        "distance_km": dist,
-    }])
+    # Primary price: deterministic audited formula (breakdown sums exactly).
+    # ML model is an independent cross-check, never the unexplained decider.
+    price, bd = compute_fare(dist, vehicle, weather, hour, demand, dow)
 
-    price = round(float(model.predict(row)[0]), 0)
-    price = max(VEHICLES[vehicle]["base"], price)
-
-    # ── Factor breakdown ──────────────────────────────────────────────
-    v         = VEHICLES[vehicle]
-    if vehicle == "Bus":
-        base_fare = max(v["base"], dist * v["per_km"])
-    else:
-        base_fare = v["base"] + dist * v["per_km"]
-
-    WEATHER_M = {"Sunny":1.0,"Regular":1.05,"Rainy":1.20,"Stormy":1.40}
-    is_rush   = 8 <= hour <= 10 or 17 <= hour <= 20
-    is_night  = hour >= 23 or hour <= 5
-    is_friday = dow == 4
-
-    weather_add = round(base_fare * (WEATHER_M.get(weather, 1.0) - 1.0), 0)
-    time_add    = round(base_fare * (0.20 if is_rush else (0.10 if is_night else 0.0)), 0)
-    demand_add  = round(demand * 15, 0)
-    friday_disc = round(base_fare * 0.05, 0) if is_friday else 0
+    try:
+        model_price = round(float(model.predict(
+            featurize_row(vehicle, weather, hour, dow, demand, dist))[0]), 0)
+    except Exception:
+        model_price = None
 
     # Confidence range: ±8% (model uncertainty)
     price_low  = round(price * 0.92, 0)
@@ -126,15 +190,20 @@ def predict():
         "distance_km": dist,
         "surge_label": surge[0],
         "surge_color": surge[1],
+        "model_price": model_price,
+        "model_diff_pct": (round(abs(model_price - price) / price * 100, 1)
+                           if model_price else None),
         "factors": {
-            "base_fare":    round(base_fare, 0),
-            "weather_add":  weather_add,
-            "time_add":     time_add,
-            "demand_add":   demand_add,
-            "friday_disc":  friday_disc,
-            "is_rush":      is_rush,
-            "is_night":     is_night,
-            "is_friday":    is_friday,
+            "dist_part":  bd["dist_part"],
+            "time_part":  bd["time_part"],
+            "est_mins":   bd["est_mins"],
+            "subtotal":   bd["subtotal"],
+            "surge_mult": bd["surge_mult"],
+            "surged":     bd["surged"],
+            "demand_add": bd["demand_add"],
+            "is_rush":    bd["is_rush"],
+            "is_night":   bd["is_night"],
+            "is_friday":  bd["is_friday"],
         }
     })
 

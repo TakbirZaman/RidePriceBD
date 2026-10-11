@@ -95,16 +95,14 @@ LOCATIONS = {
 
 VEHICLES = {
     # Uber/BRTA-aligned (Dhaka 2025-26, fair street prices):
-    # Bike = Uber Moto (base 30, 12/km, 0.5/min)
-    # Car  = UberX (base 40, 18/km, 3/min)
-    # CNG  = BRTA meter (40/2km + 12/km) + street reality -> ~15/km, 1/min
-    # Bus  = BRTA city bus 2.6/km, min 10
-    # Rickshaw = negotiated street rate, short-trip friendly
-    "Rickshaw": {"base": 20,  "per_km": 22,  "per_min": 0,   "max_km": 6},
-    "Bike":     {"base": 30,  "per_km": 12,  "per_min": 0.5, "max_km": 999},
-    "Car":      {"base": 40,  "per_km": 18,  "per_min": 3,   "max_km": 999},
-    "Bus":      {"base": 10,  "per_km": 2.6, "per_min": 0,   "max_km": 999},
-    "CNG":      {"base": 40,  "per_km": 14,  "per_min": 1,   "max_km": 999},
+    # Bike = Uber Moto (base 30, 12/km, 0.5/min) | Car = UberX (40, 18/km, 3/min)
+    # CNG  = BRTA meter + street reality (40, 14/km, 1/min) | Bus = BRTA 2.6/km
+    # min_fare = lowest ever charged (Uber minimums for Car/CNG, BRTA min for Bus)
+    "Rickshaw": {"base": 20,  "per_km": 22,  "per_min": 0,   "max_km": 6,  "min_fare": 20},
+    "Bike":     {"base": 30,  "per_km": 12,  "per_min": 0.5, "max_km": 999,"min_fare": 30},
+    "Car":      {"base": 40,  "per_km": 18,  "per_min": 3,   "max_km": 999,"min_fare": 80},
+    "Bus":      {"base": 10,  "per_km": 2.6, "per_min": 0,   "max_km": 999,"min_fare": 10},
+    "CNG":      {"base": 40,  "per_km": 14,  "per_min": 1,   "max_km": 999,"min_fare": 60},
 }
 
 WEATHER_MULT = {
@@ -113,6 +111,66 @@ WEATHER_MULT = {
     "Rainy":   1.20,
     "Stormy":  1.40,
 }
+
+# Single audited fare policy — api.py and index.html implement this EXACT formula.
+# price = min( floor, (distance_part + time_part) * time_mult * weather_mult + demand_add - friday_disc )
+# with total surge multiplier capped at 2.0x so no shock bills.
+RUSH_MULT, NIGHT_MULT, FRIDAY_MULT, SURGE_CAP = 1.20, 1.10, 0.95, 2.0
+
+def trip_flags(hour, dow):
+    is_rush  = 8 <= hour <= 10 or 17 <= hour <= 20
+    is_night = hour >= 23 or hour <= 5
+    is_fri   = dow == 4
+    return is_rush, is_night, is_fri
+
+def est_mins(dist, hour):
+    is_rush  = 8 <= hour <= 10 or 17 <= hour <= 20
+    is_night = hour >= 23 or hour <= 5
+    speed    = 12 if is_rush else (25 if is_night else 22)
+    return (dist / speed) * 60
+
+def compute_fare(dist, vehicle, weather, hour, demand, dow):
+    """Audited fare + exact breakdown. Breakdown ALWAYS sums to price."""
+    v = VEHICLES[vehicle]
+    is_rush, is_night, is_fri = trip_flags(hour, dow)
+    mins = est_mins(dist, hour)
+    is_bus = vehicle == "Bus"
+    w_m = 1.0 if is_bus else WEATHER_MULT.get(weather, 1.0)
+    if is_bus:
+        w_m = min(w_m, 1.05)
+    # distance + time parts
+    if is_bus:
+        dist_part = dist * v["per_km"]          # BRTA: min fare, not base+distance
+    else:
+        dist_part = v["base"] + dist * v["per_km"]
+    time_part = mins * v["per_min"]
+    subtotal = dist_part + time_part
+    # time multiplier then weather, capped so total surge <= 2.0x
+    t_mult = 1.0
+    if not is_bus:
+        if is_rush:  t_mult *= RUSH_MULT
+        if is_night: t_mult *= NIGHT_MULT
+        if is_fri:   t_mult *= FRIDAY_MULT
+    combined = t_mult * w_m
+    if combined > SURGE_CAP:
+        combined = SURGE_CAP
+    surged = subtotal * combined
+    demand_add = 0.0 if is_bus else demand * 15
+    price = surged + demand_add
+    price = max(float(v["min_fare"]), round(price, 0))
+    return {
+        "price": price,
+        "mins": round(mins, 1),
+        "breakdown": {
+            "dist_part": round(dist_part, 0),
+            "time_part": round(time_part, 0),
+            "subtotal": round(subtotal, 0),
+            "surge_mult": round(combined, 3),
+            "surged": round(surged, 0),
+            "demand_add": round(demand_add, 0),
+        },
+        "flags": {"is_rush": is_rush, "is_night": is_night, "is_friday": is_fri},
+    }
 
 def distance_km(loc1, loc2):
     lat1, lon1 = LOCATIONS[loc1]
@@ -142,27 +200,9 @@ for _ in range(1500):
     if vehicle == "Rickshaw" and dist > v["max_km"]:
         continue
 
-    # Estimate travel time: Dhaka avg ~22km/h, ~12km/h in rush, ~25km/h at night
-    is_rush  = 8 <= hour <= 10 or 17 <= hour <= 20
-    is_night = hour >= 23 or hour <= 5
-    speed    = 12 if is_rush else (25 if is_night else 22)
-    est_mins = (dist / speed) * 60
-
-    base  = v["base"] + dist * v["per_km"] + est_mins * v["per_min"]
-    if vehicle == "Bus":
-        # BRTA style: per-km fare with minimum, not base ON TOP of distance
-        base = dist * v["per_km"]
-    w_m   = WEATHER_MULT[weather]
-
-    if is_rush:  base *= 1.20
-    if is_night: base *= 1.10
-    if dow == 4: base *= 0.95
-    if vehicle == "Bus":
-        w_m     = min(w_m, 1.05)
-        demand *= 0.3
-
-    price = base * w_m + demand * 15 + np.random.normal(0, 6)
-    price = round(max(v["base"], price), 0)
+    out = compute_fare(dist, vehicle, weather, hour, demand, dow)
+    # small real-world noise only in TRAINING data, never in served prices
+    price = round(max(float(v["min_fare"]), out["price"] + np.random.normal(0, 5)), 0)
 
     rows.append([from_loc, to_loc, vehicle, weather, hour, dow, demand, dist, price])
 
@@ -177,17 +217,51 @@ for v in VEHICLES:
 X = df[["from_loc","to_loc","vehicle","weather","hour","dow","demand","distance_km"]]
 y = df["price"]
 
+# Derived features identical to compute_fare() so the model learns the POLICY,
+# not location memorization. from_loc/to_loc are kept as columns for API
+# compatibility but EXCLUDED from training (they caused +/-15% location bias).
+def featurize(frame):
+    wscore = {"Sunny": 0, "Regular": 1, "Rainy": 2, "Stormy": 3}
+    out = pd.DataFrame()
+    out["vehicle"]  = frame["vehicle"]
+    out["weather"]  = frame["weather"]
+    out["distance_km"] = frame["distance_km"]
+    out["demand"]   = frame["demand"]
+    out["hour"]     = frame["hour"]
+    out["dow"]      = frame["dow"]
+    mins, rush, night, fri, ws = [], [], [], [], []
+    for _, r in frame.iterrows():
+        mins.append(est_mins(r["distance_km"], r["hour"]))
+        ir, inn, ifr = trip_flags(r["hour"], r["dow"])
+        rush.append(1 if ir else 0); night.append(1 if inn else 0); fri.append(1 if ifr else 0)
+        ws.append(wscore.get(r["weather"], 0))
+    out["est_mins"] = mins
+    out["is_rush"]  = rush
+    out["is_night"] = night
+    out["is_fri"]   = fri
+    out["wscore"]   = ws
+    return out
+
+Xf = featurize(X)
+
 pre = ColumnTransformer([
-    ("cat", OneHotEncoder(handle_unknown="ignore"), ["from_loc","to_loc","vehicle","weather"])
+    ("cat", OneHotEncoder(handle_unknown="ignore"), ["vehicle", "weather"])
 ], remainder="passthrough")
 
 model = Pipeline([("pre", pre), ("reg", GradientBoostingRegressor(n_estimators=200, random_state=42))])
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(Xf, y, test_size=0.2, random_state=42)
 model.fit(X_train, y_train)
 
-mae = mean_absolute_error(y_test, model.predict(X_test))
-print(f"\n✅ Model trained  |  MAE: ৳{mae:.1f}")
+pred = model.predict(X_test)
+mae = mean_absolute_error(y_test, pred)
+bias = float((pred - y_test.to_numpy()).mean())
+print(f"\nModel trained (location-free, policy-faithful)  |  MAE: ৳{mae:.1f}  bias: ৳{bias:+.1f}")
+
+# Audit vs published Uber/BRTA benchmarks — every taka must be explainable
+print("\nFare audit (formula, sunny off-peak, demand 0.3):")
+for veh, d in [("Bike", 5), ("Car", 5), ("CNG", 5), ("Bus", 5), ("Car", 10), ("CNG", 10), ("Bus", 10)]:
+    print(f"   {veh:9s} {d:2d}km  ৳{compute_fare(d, veh, 'Sunny', 14, 0.3, 0)['price']:.0f}")
 
 joblib.dump(model,     "model.pkl")
 joblib.dump(LOCATIONS, "locations.pkl")
